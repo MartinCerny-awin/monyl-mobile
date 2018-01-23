@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import {
   Platform,
-  Image,
   ImageBackground,
   TouchableOpacity,
   Dimensions,
@@ -10,35 +9,22 @@ import {
   View as RNView
 } from "react-native";
 import { connect } from "react-redux";
-import {
-  Container,
-  Header,
-  Content,
-  Text,
-  Button,
-  Icon,
-  Left,
-  Body,
-  Right,
-  View,
-  Spinner
-} from "native-base";
+import { Container, Content, Text, Icon, View, Spinner } from "native-base";
 import CustomHeader from "../../components/CustomHeader";
 
 import { Grid, Col } from "react-native-easy-grid";
 import Carousel from "react-native-carousel-view";
 
 import { itemsFetchData } from "../../actions";
-import datas from "./data.json";
+import data from "./data.json";
 
 import styles from "./styles";
 
 const deviceWidth = Dimensions.get("window").width;
-const headerLogo = require("../../../assets/header-logo.png");
 
 class Home extends Component {
   componentDidMount() {
-    this.props.fetchData(datas);
+    this.props.fetchData(data);
   }
   _renderItem = ({ item }) => {
     return (
@@ -52,22 +38,16 @@ class Home extends Component {
           </Text>
           <Grid style={styles.swiperContentBox}>
             <Col style={{ flexDirection: "row" }}>
-              <Text style={styles.newsLink}>
-                {item.link}
-              </Text>
+              <Text style={styles.newsLink}>{item.link}</Text>
               <Icon name="ios-time-outline" style={styles.timeIcon} />
-              <Text style={styles.newsLink}>
-                {item.time}
-              </Text>
+              <Text style={styles.newsLink}>{item.time}</Text>
             </Col>
             <Col>
               <TouchableOpacity
                 style={styles.newsTypeView}
                 onPress={() => this.props.navigation.navigate("Channel")}
               >
-                <Text style={styles.newsTypeText}>
-                  {item.category}
-                </Text>
+                <Text style={styles.newsTypeText}>{item.category}</Text>
               </TouchableOpacity>
             </Col>
           </Grid>
@@ -134,7 +114,8 @@ class Home extends Component {
                                 <Text
                                   style={styles.newsPosterTypeText}
                                   onPress={() =>
-                                    this.props.navigation.navigate("Channel")}
+                                    this.props.navigation.navigate("Channel")
+                                  }
                                 >
                                   SCIENCE
                                 </Text>
@@ -179,7 +160,8 @@ class Home extends Component {
                                 <Text
                                   style={styles.newsPosterTypeText}
                                   onPress={() =>
-                                    this.props.navigation.navigate("Channel")}
+                                    this.props.navigation.navigate("Channel")
+                                  }
                                 >
                                   ENVIRONMENT
                                 </Text>
@@ -225,7 +207,8 @@ class Home extends Component {
                                 <Text
                                   style={styles.newsPosterTypeText}
                                   onPress={() =>
-                                    this.props.navigation.navigate("Channel")}
+                                    this.props.navigation.navigate("Channel")
+                                  }
                                 >
                                   WORLD
                                 </Text>

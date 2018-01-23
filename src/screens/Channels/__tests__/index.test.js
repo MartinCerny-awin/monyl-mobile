@@ -5,11 +5,11 @@ import renderer from "react-test-renderer";
 
 import Channels from "../index";
 
-describe('$1', () => {
+describe("$1", () => {
 	it("renders correctly", () => {
 		const tree = renderer.create(<Channels />).toJSON();
 
 		expect(tree).toMatchSnapshot();
 	});
-	
-  })
+
+  });

@@ -1,21 +1,16 @@
 // @flow
 import React, { Component } from "react";
-import { Image } from "react-native";
-
 import {
   Container,
-  Header,
   Content,
   Text,
   Button,
   Icon,
   Item,
   Input,
-  Left,
-  Right,
-  Body,
   View
 } from "native-base";
+
 import styles from "./styles";
 import CustomHeader from "../../components/CustomHeader";
 

@@ -54,7 +54,8 @@ const RootComponent = StackNavigator(
   }
 );
 
-export default () =>
+export default () => (
   <Root>
     <RootComponent />
-  </Root>;
+  </Root>
+);
