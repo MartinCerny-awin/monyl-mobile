@@ -20,12 +20,6 @@ export default {
   btnHeader: {
     alignSelf: "center"
   },
-  imageHeader: {
-    height: 25,
-    width: 95,
-    resizeMode: "contain",
-    alignSelf: "center"
-  },
   container: {
     flex: 1,
     width: null,

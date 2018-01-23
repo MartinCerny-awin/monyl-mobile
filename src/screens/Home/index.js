@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import {
   Platform,
+  Image,
   ImageBackground,
   TouchableOpacity,
   Dimensions,
@@ -22,6 +23,7 @@ import {
   View,
   Spinner
 } from "native-base";
+import CustomHeader from "../../components/CustomHeader";
 
 import { Grid, Col } from "react-native-easy-grid";
 import Carousel from "react-native-carousel-view";
@@ -74,25 +76,13 @@ class Home extends Component {
     );
   };
   render() {
+    const navigation = this.props.navigation;
     if (this.props.isLoading) {
       return <Spinner />;
     } else {
       return (
         <Container>
-          <Header>
-            <Left>
-              <Button
-                transparent
-                onPress={() => this.props.navigation.navigate("DrawerOpen")}
-              >
-                <Icon active name="menu" />
-              </Button>
-            </Left>
-            <Body>
-              <ImageBackground source={headerLogo} style={styles.ImageBackgroundHeader} />
-            </Body>
-            <Right />
-          </Header>
+            <CustomHeader hasTabs navigation={navigation} />
           <Content
             showsVerticalScrollIndicator={false}
             style={{ backgroundColor: "#fff" }}

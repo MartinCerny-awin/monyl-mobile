@@ -17,8 +17,9 @@ import {
   View
 } from "native-base";
 import styles from "./styles";
+import CustomHeader from "../../components/CustomHeader";
 
-const headerLogo = require("../../../assets/header-logo.png");
+// const headerLogo = require("../../../assets/header-logo.png");
 const primary = require("../../theme/variables/commonColor").brandPrimary;
 type Props = {
   navigation: () => void
@@ -45,20 +46,7 @@ class Feedback extends Component {
     const navigation = this.props.navigation;
     return (
       <Container style={{ backgroundColor: "#FFF" }}>
-        <Header hasTabs>
-          <Left>
-            <Button
-              transparent
-              onPress={() => navigation.navigate("DrawerOpen")}
-            >
-              <Icon active name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Image source={headerLogo} style={styles.imageHeader} />
-          </Body>
-          <Right />
-        </Header>
+        <CustomHeader hasTabs navigation={navigation} />
         <Content
           showsVerticalScrollIndicator={false}
           contentOffset={this.state.offset}

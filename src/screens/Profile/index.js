@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { ImageBackground, TouchableOpacity, ListView } from "react-native";
+import { Image, ImageBackground, TouchableOpacity, ListView } from "react-native";
 
 import {
   Container,
@@ -134,7 +134,7 @@ class Profile extends Component {
                         }}
                         onPress={() => navigation.navigate("Story")}
                       >
-                        <ImageBackground source={data.url} style={styles.newsImageBackground} />
+                        <Image source={data.url} style={styles.newsImage} />
                         <View style={styles.newsContent}>
                           <Text numberOfLines={2} style={styles.newsHeader}>
                             {data.headline}
