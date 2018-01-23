@@ -37,7 +37,6 @@ export default {
   newsPoster: {
     height: 330,
     width: null,
-    resizeMode: "cover",
     flex: 1,
     position: "relative"
   },
@@ -141,9 +140,4 @@ export default {
     alignSelf: "stretch",
     paddingTop: Platform.OS === "android" ? 0 : 0
   },
-  imageHeader: {
-    height: 25,
-    width: 95,
-    resizeMode: "contain"
-  }
 };

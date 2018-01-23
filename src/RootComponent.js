@@ -36,7 +36,7 @@ const Drawer = DrawerNavigator(
   }
 );
 
-const App = StackNavigator(
+const RootComponent = StackNavigator(
   {
     Login: { screen: Login },
     SignUp: { screen: SignUp },
@@ -56,5 +56,5 @@ const App = StackNavigator(
 
 export default () =>
   <Root>
-    <App />
+    <RootComponent />
   </Root>;

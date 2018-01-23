@@ -2,11 +2,19 @@
 import { AsyncStorage } from "react-native";
 import devTools from "remote-redux-devtools";
 import { createStore, applyMiddleware, compose } from "redux";
+import { persistCombineReducers } from "redux-persist"
 import thunk from "redux-thunk";
 import { persistStore } from "redux-persist";
-import reducer from "../reducers";
+import reducers from "../reducers";
 
-export default function configureStore(onCompletion: () => void): any {
+const persistConfig = {
+  key: 'primary',
+  storage: AsyncStorage
+};
+
+let persistedReducer = persistCombineReducers(persistConfig, reducers)
+
+export default function configureStore(): any {
   const enhancer = compose(
     applyMiddleware(thunk),
     devTools({
@@ -15,8 +23,8 @@ export default function configureStore(onCompletion: () => void): any {
     })
   );
 
-  const store = createStore(reducer, enhancer);
-  persistStore(store, { storage: AsyncStorage }, onCompletion);
+  const store = createStore(persistedReducer, enhancer);
+  const persistor = persistStore(store)
 
-  return store;
+  return { store, persistor }
 }

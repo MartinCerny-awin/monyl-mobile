@@ -82,7 +82,7 @@ class Home extends Component {
     } else {
       return (
         <Container>
-            <CustomHeader hasTabs navigation={navigation} />
+          <CustomHeader hasTabs navigation={navigation} />
           <Content
             showsVerticalScrollIndicator={false}
             style={{ backgroundColor: "#fff" }}
