@@ -27,7 +27,8 @@
     "ios": "react-native run-ios",
     "test": "jest && eslint",
     "precommit": "yarn test",
-    "react-devtools": "react-devtools"
+    "react-devtools": "react-devtools",
+    "flow": "flow"
   },
   "jest": {
     "preset": "react-native",

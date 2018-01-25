@@ -5,9 +5,12 @@ import { Icon, Button, Left, Right, Body, Header } from "native-base";
 
 import styles from "./styles";
 
-const headerLogo = require("../../../assets/header-logo.png");
+type Props = {
+  navigation: () => void,
+  hasTabs?: boolean
+};
 
-class CustomHeader extends Component {
+class CustomHeader extends Component<Props> {
   render() {
     const navigation = this.props.navigation;
     return (
@@ -18,7 +21,10 @@ class CustomHeader extends Component {
           </Button>
         </Left>
         <Body>
-          <Image source={headerLogo} style={styles.imageHeader} />
+          <Image
+            source={require("../../../assets/header-logo.png")}
+            style={styles.imageHeader}
+          />
         </Body>
         <Right />
       </Header>
