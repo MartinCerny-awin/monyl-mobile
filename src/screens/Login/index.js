@@ -5,10 +5,7 @@ import {
   Container,
   Content,
   Text,
-  Item,
-  Input,
   Button,
-  Icon,
   View,
   Left,
   Right,
@@ -16,67 +13,18 @@ import {
 } from "native-base";
 import { Field, reduxForm } from "redux-form";
 
+import InputField from "../../components/form/InputField";
+import { required, email } from "../../utils/validator";
 import styles from "./styles";
-// import commonColor from "../../theme/variables/commonColor";
 
 const bg = require("../../../assets/bg.png");
 const logo = require("../../../assets/logo.png");
 
-const required = value => (value ? undefined : "Required");
-const maxLength = max => value =>
-  value && value.length > max ? `Must be ${max} characters or less` : undefined;
-const maxLength15 = maxLength(15);
-const minLength = min => value =>
-  value && value.length < min ? `Must be ${min} characters or more` : undefined;
-const minLength8 = minLength(8);
-const email = value =>
-  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? "Invalid email address"
-    : undefined;
-const alphaNumeric = value =>
-  value && /[^a-zA-Z0-9 ]/i.test(value)
-    ? "Only alphanumeric characters"
-    : undefined;
+type Props = {
+  navigation: () => void
+};
 
-declare type Any = any;
-class LoginForm extends Component {
-  textInput: Any;
-
-  renderInput({ input, label, type, meta: { touched, error, warning } }) {
-    return (
-      <View>
-        <Item error={error && touched} rounded style={styles.inputGrp}>
-          <Icon
-            active
-            name={input.name === "email" ? "mail" : "unlock"}
-            style={{ color: "#fff" }}
-          />
-          <Input
-            ref={c => (this.textInput = c)}
-            placeholderTextColor="#FFF"
-            style={styles.input}
-            placeholder={input.name === "email" ? "Email" : "Password"}
-            secureTextEntry={input.name === "password" ? true : false}
-            {...input}
-          />
-          {touched && error
-            ? <Icon
-                active
-                style={styles.formErrorIcon}
-                onPress={() => this.textInput._root.clear()}
-                name="close"
-              />
-            : <Text />}
-        </Item>
-        {touched && error
-          ? <Text style={styles.formErrorText1}>
-              {error}
-            </Text>
-          : <Text style={styles.formErrorText2}>error here</Text>}
-      </View>
-    );
-  }
-
+class LoginForm extends Component<Props> {
   login() {
     if (this.props.valid) {
       this.props.navigation.navigate("Walkthrough");
@@ -104,15 +52,15 @@ class LoginForm extends Component {
               <View style={styles.form}>
                 <Field
                   name="email"
-                  component={this.renderInput}
+                  component={InputField}
                   type="email"
-                  validate={[email, required]}
+                  validate={[required, email]}
                 />
                 <Field
                   name="password"
-                  component={this.renderInput}
+                  component={InputField}
                   type="password"
-                  validate={[alphaNumeric, minLength8, maxLength15, required]}
+                  validate={[required]}
                 />
 
                 <Button
@@ -166,10 +114,8 @@ class LoginForm extends Component {
                   >
                     <Text
                       style={
-                        (
-                          [styles.helpBtns],
-                          { top: Platform.OS === "ios" ? null : 0 }
-                        )
+                        ([styles.helpBtns],
+                        { top: Platform.OS === "ios" ? null : 0 })
                       }
                     >
                       Skip

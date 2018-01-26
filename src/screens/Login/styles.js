@@ -1,6 +1,5 @@
 const React = require("react-native");
 const { Dimensions, Platform } = React;
-const commonColor = require("../../theme/variables/commonColor");
 
 const deviceHeight = Dimensions.get("window").height;
 
@@ -27,23 +26,6 @@ export default {
     paddingLeft: 20,
     paddingRight: 20
   },
-  formErrorIcon: {
-    color: "#fff",
-    marginTop: 5,
-    right: 10
-  },
-  formErrorText1: {
-    fontSize: Platform.OS === "android" ? 12 : 15,
-    color: commonColor.brandDanger,
-    textAlign: "right",
-    top: -10
-  },
-  formErrorText2: {
-    fontSize: Platform.OS === "android" ? 12 : 15,
-    color: "transparent",
-    textAlign: "right",
-    top: -10
-  },
   loginBtn: {
     marginTop: 7,
     height: 50
@@ -56,26 +38,15 @@ export default {
     opacity: 0.9,
     fontWeight: "bold",
     color: "#fff",
-    fontSize: Platform.OS === "android" ? 12 : 12
-  },
-  inputGrp: {
-    flexDirection: "row",
-    backgroundColor: "rgba(255,255,255,0.3)",
-    marginBottom: 8,
-    borderWidth: 0,
-    borderColor: "transparent"
-  },
-  input: {
-    paddingLeft: 10,
-    color: "#fff"
+    fontSize: 14
   },
   skipBtn: {
     alignSelf: "flex-end",
     marginTop: 10,
-    borderWidth: 0.3,
+    borderWidth: 0.4,
     borderColor: "#FFF",
     position: "absolute",
-    bottom: 15,
+    bottom: 10,
     right: 0
   }
 };

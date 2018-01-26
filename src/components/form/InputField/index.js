@@ -1,0 +1,38 @@
+import React from "react";
+import { Text, Item, Input, Icon, View } from "native-base";
+import styles from "./styles";
+
+export default ({ input, label, type, meta: { touched, error, warning } }) => (
+  <View>
+    <Item error={error && touched} rounded style={styles.inputGrp}>
+      <Icon
+        active
+        name={input.name === "email" ? "mail" : "unlock"}
+        style={{ color: "#fff" }}
+      />
+      <Input
+        ref={c => (this.textInput = c)}
+        placeholderTextColor="#FFF"
+        style={styles.input}
+        placeholder={input.name === "email" ? "Email" : "Password"}
+        secureTextEntry={input.name === "password" ? true : false}
+        {...input}
+      />
+      {touched && error ? (
+        <Icon
+          active
+          style={styles.formErrorIcon}
+          onPress={() => this.textInput._root.clear()}
+          name="close"
+        />
+      ) : (
+        <Text />
+      )}
+    </Item>
+    {touched && error ? (
+      <Text style={styles.formErrorText1}>{error}</Text>
+    ) : (
+      <Text style={styles.formErrorText2}>error here</Text>
+    )}
+  </View>
+);
