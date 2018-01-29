@@ -1,17 +1,12 @@
 import React from 'react';
 import { Text, Item, Input, Icon, View } from 'native-base';
+import type { FieldProps } from 'redux-form';
 import styles from './styles';
 
-export default ({
-  input, label, type, meta: { touched, error, warning },
-}) => (
+export default ({ input, meta: { touched, error } }: FieldProps) => (
   <View>
     <Item error={error && touched} rounded style={styles.inputGrp}>
-      <Icon
-        active
-        name={input.name === 'email' ? 'mail' : 'unlock'}
-        style={{ color: '#fff' }}
-      />
+      <Icon active name={input.name === 'email' ? 'mail' : 'unlock'} style={{ color: '#fff' }} />
       <Input
         ref={c => (this.textInput = c)}
         placeholderTextColor="#FFF"
