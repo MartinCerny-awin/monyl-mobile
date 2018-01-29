@@ -1480,9 +1480,9 @@ color-string@^1.4.0, color-string@^1.5.2:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
-color@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/color/-/color-2.0.1.tgz#e4ed78a3c4603d0891eba5430b04b86314f4c839"
+color@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/color/-/color-3.0.0.tgz#d920b4328d534a3ac8295d68f7bd4ba6c427be9a"
   dependencies:
     color-convert "^1.9.1"
     color-string "^1.5.2"
@@ -5237,9 +5237,9 @@ react-native-vector-icons@~4.4.2:
     prop-types "^15.5.10"
     yargs "^8.0.2"
 
-react-native@0.52.1:
-  version "0.52.1"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.52.1.tgz#68ca222f9c6a9bbe4a6f95896a5f9611c1311c31"
+react-native@0.52.2:
+  version "0.52.2"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.52.2.tgz#1ae9a4c4441bd6e54a8ffc8aae4ac2b5c7cccd68"
   dependencies:
     absolute-path "^0.0.0"
     art "^0.10.0"
@@ -6681,10 +6681,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
-
-validator@^9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/validator/-/validator-9.2.0.tgz#ad216eed5f37cac31a6fe00ceab1f6b88bded03e"
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"
