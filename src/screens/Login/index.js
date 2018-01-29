@@ -14,6 +14,7 @@ const logo = require('../../../assets/logo.png');
 type Props = {
   navigation: () => void,
   valid: boolean,
+  change: void,
 };
 
 class LoginForm extends Component<Props> {
@@ -31,7 +32,7 @@ class LoginForm extends Component<Props> {
   }
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, change } = this.props;
     return (
       <Container>
         <StatusBar barStyle="light-content" />
@@ -46,12 +47,14 @@ class LoginForm extends Component<Props> {
                   name="email"
                   component={InputField}
                   type="email"
+                  change={change}
                   validate={[required, email]}
                 />
                 <Field
                   name="password"
                   component={InputField}
                   type="password"
+                  change={change}
                   validate={[required]}
                 />
 
