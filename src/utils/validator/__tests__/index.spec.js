@@ -1,5 +1,4 @@
 import * as validator from "../index";
-import { email } from "../index";
 
 describe("validator test", () => {
   it("required", () => {

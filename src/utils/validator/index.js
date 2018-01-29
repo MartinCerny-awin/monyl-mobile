@@ -1,9 +1,9 @@
-import get from "lodash/get";
-import isFunction from "lodash/isFunction";
+// import get from "lodash/get";
+// import isFunction from "lodash/isFunction";
 
 const isEmpty = value => value === undefined || value === null || value === "";
-const join = rules => (value, data) =>
-  rules.map(rule => rule(value, data)).filter(error => !!error)[0];
+// const join = rules => (value, data) =>
+//   rules.map(rule => rule(value, data)).filter(error => !!error)[0];
 
 export function required(value) {
   if (isEmpty(value)) {
