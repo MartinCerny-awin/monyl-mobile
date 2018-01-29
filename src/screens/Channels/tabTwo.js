@@ -1,11 +1,11 @@
 // @flow
-import React, { Component } from "react";
-import { ImageBackground, TouchableOpacity, Platform } from "react-native";
+import React, { Component } from 'react';
+import { ImageBackground, TouchableOpacity, Platform } from 'react-native';
 
-import { Content, Text, View } from "native-base";
-import { Grid, Col, Row } from "react-native-easy-grid";
+import { Content, Text, View } from 'native-base';
+import { Grid, Col, Row } from 'react-native-easy-grid';
 
-import styles from "./styles";
+import styles from './styles';
 
 class TabTwo extends Component {
   render() {
@@ -17,15 +17,15 @@ class TabTwo extends Component {
             <Row>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/10.jpg")}
+                    source={require('../../../assets/NewsIcons/10.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -37,15 +37,15 @@ class TabTwo extends Component {
               </Col>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/13.jpg")}
+                    source={require('../../../assets/NewsIcons/13.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -59,15 +59,15 @@ class TabTwo extends Component {
             <Row>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/6.jpg")}
+                    source={require('../../../assets/NewsIcons/6.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -79,15 +79,15 @@ class TabTwo extends Component {
               </Col>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/1.jpg")}
+                    source={require('../../../assets/NewsIcons/1.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -101,15 +101,15 @@ class TabTwo extends Component {
             <Row>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/8.jpg")}
+                    source={require('../../../assets/NewsIcons/8.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -121,15 +121,15 @@ class TabTwo extends Component {
               </Col>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/7.jpg")}
+                    source={require('../../../assets/NewsIcons/7.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -143,15 +143,15 @@ class TabTwo extends Component {
             <Row>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/11.jpg")}
+                    source={require('../../../assets/NewsIcons/11.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -163,15 +163,15 @@ class TabTwo extends Component {
               </Col>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/12.jpg")}
+                    source={require('../../../assets/NewsIcons/12.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -185,15 +185,15 @@ class TabTwo extends Component {
             <Row>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/9.jpg")}
+                    source={require('../../../assets/NewsIcons/9.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }
@@ -205,15 +205,15 @@ class TabTwo extends Component {
               </Col>
               <Col>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Channel")}
+                  onPress={() => navigation.navigate('Channel')}
                 >
                   <ImageBackground
-                    source={require("../../../assets/NewsIcons/2.jpg")}
+                    source={require('../../../assets/NewsIcons/2.jpg')}
                     style={styles.channelImg}
                   >
                     <Text
                       style={
-                        Platform.OS === "android"
+                        Platform.OS === 'android'
                           ? styles.achannelImgText
                           : styles.ioschannelImgText
                       }

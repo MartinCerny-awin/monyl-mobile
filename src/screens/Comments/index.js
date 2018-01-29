@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { ImageBackground, View } from "react-native";
+import React, { Component } from 'react';
+import { ImageBackground, View } from 'react-native';
 
 import {
   Container,
@@ -13,16 +13,16 @@ import {
   Item,
   Tabs,
   Tab,
-  Content
-} from "native-base";
+  Content,
+} from 'native-base';
 
-import styles from "./style";
+import styles from './style';
 
-import TabOne from "./tabOne";
-import TabTwo from "./tabTwo";
-import TabThree from "./tabThree";
+import TabOne from './tabOne';
+import TabTwo from './tabTwo';
+import TabThree from './tabThree';
 
-const bg = require("../../../assets/bg-transparent.png");
+const bg = require('../../../assets/bg-transparent.png');
 
 type Props = {
   navigation: () => void
@@ -40,8 +40,8 @@ class Comments extends Component {
     this.state = {
       offset: {
         x: 0,
-        y: 0
-      }
+        y: 0,
+      },
     };
   }
 
@@ -51,7 +51,7 @@ class Comments extends Component {
         <ImageBackground source={bg} style={styles.container}>
           <Header style={styles.headerStyle}>
             <Body
-              style={{ flexDirection: "row", justifyContent: "space-around" }}
+              style={{ flexDirection: 'row', justifyContent: 'space-around' }}
             >
               <Button
                 transparent
@@ -79,7 +79,7 @@ class Comments extends Component {
             contentContainerStyle={styles.commentHeadbg}
           >
             <Text style={styles.commentHeader}>23 COMMENTS</Text>
-            <Tabs style={{ backgroundColor: "#fff" }}>
+            <Tabs style={{ backgroundColor: '#fff' }}>
               <Tab heading="Best">
                 <TabOne />
               </Tab>
@@ -92,15 +92,15 @@ class Comments extends Component {
             </Tabs>
 
             <View style={styles.commentBox}>
-              <Item style={{ alignItems: "center" }}>
+              <Item style={{ alignItems: 'center' }}>
                 <Icon name="ios-attach" style={styles.attachIcon} />
                 <Input
                   placeholder="Write something..."
                   placeholderTextColor="#797979"
                   style={styles.input}
                 />
-                <Button transparent small style={{ alignSelf: "center" }}>
-                  <Text style={{ fontWeight: "600" }}>Send</Text>
+                <Button transparent small style={{ alignSelf: 'center' }}>
+                  <Text style={{ fontWeight: '600' }}>Send</Text>
                 </Button>
               </Item>
             </View>

@@ -1,26 +1,26 @@
 // @flow
-import { AsyncStorage } from "react-native";
-import devTools from "remote-redux-devtools";
-import { createStore, applyMiddleware, compose } from "redux";
-import { persistCombineReducers } from "redux-persist";
-import thunk from "redux-thunk";
-import { persistStore } from "redux-persist";
-import reducers from "../reducers";
+import { AsyncStorage } from 'react-native';
+import devTools from 'remote-redux-devtools';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { persistCombineReducers } from 'redux-persist';
+import thunk from 'redux-thunk';
+import { persistStore } from 'redux-persist';
+import reducers from '../reducers';
 
 const persistConfig = {
-  key: "primary",
-  storage: AsyncStorage
+  key: 'primary',
+  storage: AsyncStorage,
 };
 
-let persistedReducer = persistCombineReducers(persistConfig, reducers);
+const persistedReducer = persistCombineReducers(persistConfig, reducers);
 
 export default function configureStore(): any {
   const enhancer = compose(
     applyMiddleware(thunk),
     devTools({
-      name: "flatapp",
-      realtime: true
-    })
+      name: 'flatapp',
+      realtime: true,
+    }),
   );
 
   const store = createStore(persistedReducer, enhancer);

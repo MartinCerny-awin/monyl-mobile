@@ -1,9 +1,9 @@
 // @flow
-import React, { Component } from "react";
-import { Image } from "react-native";
-import { Icon, Button, Left, Right, Body, Header } from "native-base";
+import React, { Component } from 'react';
+import { Image } from 'react-native';
+import { Icon, Button, Left, Right, Body, Header } from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 type Props = {
   navigation: () => void,
@@ -16,13 +16,13 @@ class CustomHeader extends Component<Props> {
     return (
       <Header hasTabs={this.props.hasTabs}>
         <Left>
-          <Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
+          <Button transparent onPress={() => navigation.navigate('DrawerOpen')}>
             <Icon active name="menu" />
           </Button>
         </Left>
         <Body>
           <Image
-            source={require("../../../assets/header-logo.png")}
+            source={require('../../../assets/header-logo.png')}
             style={styles.imageHeader}
           />
         </Body>

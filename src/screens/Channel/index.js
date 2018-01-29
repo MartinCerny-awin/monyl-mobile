@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image, ImageBackground, TouchableOpacity, Platform } from "react-native";
+import React, { Component } from 'react';
+import { Image, ImageBackground, TouchableOpacity, Platform } from 'react-native';
 
 import {
   Container,
@@ -12,20 +12,20 @@ import {
   Left,
   Right,
   Body,
-  View
-} from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
+  View,
+} from 'native-base';
+import { Grid, Col } from 'react-native-easy-grid';
 
-import styles from "./styles";
+import styles from './styles';
 
-const headerLogo = require("../../../assets/header-logo.png");
-const primary = require("../../theme/variables/commonColor").brandPrimary;
+const headerLogo = require('../../../assets/header-logo.png');
+const primary = require('../../theme/variables/commonColor').brandPrimary;
 
 class Channel extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
-      <Container style={{ backgroundColor: "#fff" }}>
+      <Container style={{ backgroundColor: '#fff' }}>
         <Header>
           <Left>
             <Button transparent onPress={() => navigation.goBack()}>
@@ -41,13 +41,13 @@ class Channel extends Component {
         <Content showsVerticalScrollIndicator={false}>
           <View>
             <ImageBackground
-              source={require("../../../assets/NewsIcons/2.jpg")}
+              source={require('../../../assets/NewsIcons/2.jpg')}
               style={styles.newsPoster}
             >
               <View>
                 <Text
                   style={
-                    Platform.OS === "android"
+                    Platform.OS === 'android'
                       ? styles.achannelHeader
                       : styles.ioschannelHeader
                   }
@@ -57,18 +57,18 @@ class Channel extends Component {
                 <Button
                   rounded
                   style={styles.followBtn}
-                  onPress={() => this.props.navigation.navigate("Profile")}
+                  onPress={() => this.props.navigation.navigate('Profile')}
                 >
                   <Text
                     style={
-                      Platform.OS === "android"
+                      Platform.OS === 'android'
                         ? {
                             color: primary,
                             fontSize: 13,
-                            fontWeight: "900",
-                            textAlign: "center"
+                            fontWeight: '900',
+                            textAlign: 'center',
                           }
-                        : { color: primary, fontSize: 13, fontWeight: "900" }
+                        : { color: primary, fontSize: 13, fontWeight: '900' }
                     }
                   >
                     Following
@@ -81,10 +81,10 @@ class Channel extends Component {
             </ImageBackground>
           </View>
 
-          <View foregroundColor={"white"} style={{ backgroundColor: "#fff" }}>
+          <View foregroundColor="white" style={{ backgroundColor: '#fff' }}>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <View style={styles.newsContentWrap}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
@@ -92,7 +92,7 @@ class Channel extends Component {
                   the solar nebula.
                 </Text>
                 <Grid style={styles.newsContent}>
-                  <Col style={{ flexDirection: "row" }}>
+                  <Col style={{ flexDirection: 'row' }}>
                     <Text style={styles.newsLink}>CNN</Text>
                     <Icon name="ios-time-outline" style={styles.timeIcon} />
                     <Text style={styles.newsLink}>May 24, 2016</Text>
@@ -101,16 +101,16 @@ class Channel extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <View style={styles.newsContentWrap}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
-                  {" "}A "giant impact" collision is thought to have been
+                  {' '}A "giant impact" collision is thought to have been
                   responsible for forming the Moon.
                 </Text>
                 <Grid style={styles.newsContent}>
-                  <Col style={{ flexDirection: "row" }}>
+                  <Col style={{ flexDirection: 'row' }}>
                     <Text style={styles.newsLink}>SPACE.com</Text>
                     <Icon name="ios-time-outline" style={styles.timeIcon} />
                     <Text style={styles.newsLink}>Apr 17, 2016</Text>
@@ -119,8 +119,8 @@ class Channel extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <View style={styles.newsContentWrap}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
@@ -128,7 +128,7 @@ class Channel extends Component {
                   and 2.4 billion years ago.
                 </Text>
                 <Grid style={styles.newsContent}>
-                  <Col style={{ flexDirection: "row" }}>
+                  <Col style={{ flexDirection: 'row' }}>
                     <Text style={styles.newsLink}>CNN</Text>
                     <Icon name="ios-time-outline" style={styles.timeIcon} />
                     <Text style={styles.newsLink}>Feb 03, 2016</Text>
@@ -137,8 +137,8 @@ class Channel extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <View style={styles.newsContentWrap}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
@@ -146,7 +146,7 @@ class Channel extends Component {
                   million years ago.
                 </Text>
                 <Grid style={styles.newsContent}>
-                  <Col style={{ flexDirection: "row" }}>
+                  <Col style={{ flexDirection: 'row' }}>
                     <Text style={styles.newsLink}>SKY.com</Text>
                     <Icon name="ios-time-outline" style={styles.timeIcon} />
                     <Text style={styles.newsLink}>Dec 17, 2015</Text>
@@ -156,15 +156,15 @@ class Channel extends Component {
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <View style={styles.newsContentWrap}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
                   The history of Earth is divided into four great eons.
                 </Text>
                 <Grid style={styles.newsContent}>
-                  <Col style={{ flexDirection: "row" }}>
+                  <Col style={{ flexDirection: 'row' }}>
                     <Text style={styles.newsLink}>SPACE.com</Text>
                     <Icon name="ios-time-outline" style={styles.timeIcon} />
                     <Text style={styles.newsLink}>Apr 17, 2016</Text>
@@ -173,15 +173,15 @@ class Channel extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <View style={styles.newsContentWrap}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
                   The Earth and Moon have the same oxygen isotopic signature.
                 </Text>
                 <Grid style={styles.newsContent}>
-                  <Col style={{ flexDirection: "row" }}>
+                  <Col style={{ flexDirection: 'row' }}>
                     <Text style={styles.newsLink}>CNN</Text>
                     <Icon name="ios-time-outline" style={styles.timeIcon} />
                     <Text style={styles.newsLink}>Feb 03, 2016</Text>
@@ -190,15 +190,15 @@ class Channel extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <View style={styles.newsContentWrap}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
                   Ice might have covered the oceans 3 billion years ago.
                 </Text>
                 <Grid style={styles.newsContent}>
-                  <Col style={{ flexDirection: "row" }}>
+                  <Col style={{ flexDirection: 'row' }}>
                     <Text style={styles.newsLink}>SKY.com</Text>
                     <Icon name="ios-time-outline" style={styles.timeIcon} />
                     <Text style={styles.newsLink}>Dec 17, 2015</Text>

@@ -1,21 +1,23 @@
-import React from "react";
-import { Text, Item, Input, Icon, View } from "native-base";
-import styles from "./styles";
+import React from 'react';
+import { Text, Item, Input, Icon, View } from 'native-base';
+import styles from './styles';
 
-export default ({ input, label, type, meta: { touched, error, warning } }) => (
+export default ({
+  input, label, type, meta: { touched, error, warning },
+}) => (
   <View>
     <Item error={error && touched} rounded style={styles.inputGrp}>
       <Icon
         active
-        name={input.name === "email" ? "mail" : "unlock"}
-        style={{ color: "#fff" }}
+        name={input.name === 'email' ? 'mail' : 'unlock'}
+        style={{ color: '#fff' }}
       />
       <Input
         ref={c => (this.textInput = c)}
         placeholderTextColor="#FFF"
         style={styles.input}
-        placeholder={input.name === "email" ? "Email" : "Password"}
-        secureTextEntry={input.name === "password" ? true : false}
+        placeholder={input.name === 'email' ? 'Email' : 'Password'}
+        secureTextEntry={input.name === 'password'}
         {...input}
       />
       {touched && error ? (

@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image, ImageBackground, TouchableOpacity, ListView } from "react-native";
+import React, { Component } from 'react';
+import { Image, ImageBackground, TouchableOpacity, ListView } from 'react-native';
 
 import {
   Container,
@@ -11,13 +11,13 @@ import {
   List,
   ListItem,
   Button,
-  Icon
-} from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
-import CustomHeader from "../../components/CustomHeader";
+  Icon,
+} from 'native-base';
+import { Grid, Col } from 'react-native-easy-grid';
+import CustomHeader from '../../components/CustomHeader';
 
-import styles from "./styles";
-import datas from "./data";
+import styles from './styles';
+import datas from './data';
 
 type Props = {
   navigation: () => void
@@ -32,7 +32,7 @@ class Profile extends Component {
     super(props);
     this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
-      listViewData: datas
+      listViewData: datas,
     };
   }
 
@@ -47,15 +47,15 @@ class Profile extends Component {
     return (
       <Container>
         <ImageBackground
-          source={require("../../../assets/bg-transparent.png")}
+          source={require('../../../assets/bg-transparent.png')}
           style={styles.container}
         >
           <CustomHeader hasTabs navigation={navigation} />
 
           <View style={styles.profileInfoContainer}>
-            <View style={{ alignSelf: "center" }}>
+            <View style={{ alignSelf: 'center' }}>
               <Thumbnail
-                source={require("../../../assets/Contacts/sanket.png")}
+                source={require('../../../assets/Contacts/sanket.png')}
                 style={styles.profilePic}
               />
             </View>
@@ -68,7 +68,7 @@ class Profile extends Component {
           </View>
           <Content
             showsVerticalScrollIndicator={false}
-            style={{ backgroundColor: "#fff" }}
+            style={{ backgroundColor: '#fff' }}
           >
             <View style={styles.linkTabs}>
               <Grid>
@@ -101,38 +101,38 @@ class Profile extends Component {
 
             {this.ds.cloneWithRows(this.state.listViewData).getRowCount() === 0
               ? <View style={styles.linkTabs}>
-                  <ListItem
-                    style={{
-                      backgroundColor: "#fff",
-                      justifyContent: "center"
+                <ListItem
+                  style={{
+                      backgroundColor: '#fff',
+                      justifyContent: 'center',
                     }}
-                  >
-                    <Text style={styles.textNote}>Empty List</Text>
-                  </ListItem>
+                >
+                  <Text style={styles.textNote}>Empty List</Text>
+                </ListItem>
                 </View>
               : <View>
-                  <View style={styles.linkTabs}>
-                    <ListItem
-                      style={{
-                        backgroundColor: "#fff",
-                        justifyContent: "center"
+                <View style={styles.linkTabs}>
+                  <ListItem
+                    style={{
+                        backgroundColor: '#fff',
+                        justifyContent: 'center',
                       }}
-                    >
-                      <Text style={styles.textNote}>
+                  >
+                    <Text style={styles.textNote}>
                         Swipe the items to left and right
-                      </Text>
-                    </ListItem>
-                  </View>
-                  <List
-                    dataSource={this.ds.cloneWithRows(this.state.listViewData)}
-                    renderRow={data =>
-                      <ListItem
+                    </Text>
+                  </ListItem>
+                </View>
+                <List
+                  dataSource={this.ds.cloneWithRows(this.state.listViewData)}
+                  renderRow={data =>
+                      (<ListItem
                         swipeList
                         style={{
-                          flexDirection: "row",
-                          backgroundColor: "#FFF"
+                          flexDirection: 'row',
+                          backgroundColor: '#FFF',
                         }}
-                        onPress={() => navigation.navigate("Story")}
+                        onPress={() => navigation.navigate('Story')}
                       >
                         <Image source={data.url} style={styles.newsImage} />
                         <View style={styles.newsContent}>
@@ -156,30 +156,30 @@ class Profile extends Component {
                             </Col>
                           </Grid>
                         </View>
-                      </ListItem>}
-                    renderLeftHiddenRow={data =>
-                      <Button
+                       </ListItem>)}
+                  renderLeftHiddenRow={data =>
+                      (<Button
                         full
-                        style={([styles.swipeBtn], { backgroundColor: "#CCC" })}
+                        style={([styles.swipeBtn], { backgroundColor: '#CCC' })}
                       >
                         <Icon
                           active
                           name="information-circle"
                           style={{ fontSize: 35 }}
                         />
-                      </Button>}
-                    renderRightHiddenRow={(data, secId, rowId, rowMap) =>
-                      <Button
+                       </Button>)}
+                  renderRightHiddenRow={(data, secId, rowId, rowMap) =>
+                      (<Button
                         full
                         danger
                         onPress={_ => this.deleteRow(secId, rowId, rowMap)}
                         style={styles.swipeBtn}
                       >
                         <Icon active name="trash" style={{ fontSize: 35 }} />
-                      </Button>}
-                    leftOpenValue={100}
-                    rightOpenValue={-100}
-                  />
+                       </Button>)}
+                  leftOpenValue={100}
+                  rightOpenValue={-100}
+                />
                 </View>}
           </Content>
         </ImageBackground>

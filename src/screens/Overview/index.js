@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image, Platform } from "react-native";
+import React, { Component } from 'react';
+import { Image, Platform } from 'react-native';
 import {
   Container,
   Header,
@@ -13,26 +13,26 @@ import {
   Icon,
   View,
   Grid,
-  Col
-} from "native-base";
+  Col,
+} from 'native-base';
 
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import ProgressBar from '../../components/ProgressBar/ProgressBar';
 
-import styles from "./styles";
+import styles from './styles';
 
-const headerLogo = require("../../../assets/header-logo.png");
+const headerLogo = require('../../../assets/header-logo.png');
 
 class Overview extends Component {
   render() {
     const navigation = this.props.navigation;
-    const primary = require("../../theme/variables/commonColor").brandPrimary;
+    const primary = require('../../theme/variables/commonColor').brandPrimary;
     return (
       <Container>
         <Header hasTabs>
           <Left>
             <Button
               transparent
-              onPress={() => navigation.navigate("DrawerOpen")}
+              onPress={() => navigation.navigate('DrawerOpen')}
             >
               <Icon active name="menu" />
             </Button>
@@ -51,13 +51,13 @@ class Overview extends Component {
 
         <Content
           showsVerticalScrollIndicator={false}
-          style={{ backgroundColor: "#fff" }}
+          style={{ backgroundColor: '#fff' }}
         >
           <View style={styles.overviewContent}>
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -75,7 +75,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -93,7 +93,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -111,7 +111,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -129,7 +129,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -147,7 +147,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -165,7 +165,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -183,7 +183,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -201,7 +201,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }
@@ -219,7 +219,7 @@ class Overview extends Component {
             <View style={styles.overviewTopicsBox}>
               <Grid
                 style={
-                  Platform.OS === "android"
+                  Platform.OS === 'android'
                     ? { paddingBottom: 0 }
                     : { paddingBottom: 15 }
                 }

@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image, ImageBackground, Platform, StatusBar } from "react-native";
+import React, { Component } from 'react';
+import { Image, ImageBackground, Platform, StatusBar } from 'react-native';
 import {
   Container,
   Content,
@@ -9,16 +9,16 @@ import {
   View,
   Left,
   Right,
-  Toast
-} from "native-base";
-import { Field, reduxForm } from "redux-form";
+  Toast,
+} from 'native-base';
+import { Field, reduxForm } from 'redux-form';
 
-import InputField from "../../components/form/InputField";
-import { required, email } from "../../utils/validator";
-import styles from "./styles";
+import InputField from '../../components/form/InputField';
+import { required, email } from '../../utils/validator';
+import styles from './styles';
 
-const bg = require("../../../assets/bg.png");
-const logo = require("../../../assets/logo.png");
+const bg = require('../../../assets/bg.png');
+const logo = require('../../../assets/logo.png');
 
 type Props = {
   navigation: () => void
@@ -27,13 +27,13 @@ type Props = {
 class LoginForm extends Component<Props> {
   login() {
     if (this.props.valid) {
-      this.props.navigation.navigate("Walkthrough");
+      this.props.navigation.navigate('Walkthrough');
     } else {
       Toast.show({
-        text: "Enter Valid Username & password!",
+        text: 'Enter Valid Username & password!',
         duration: 2500,
-        position: "top",
-        textStyle: { textAlign: "center" }
+        position: 'top',
+        textStyle: { textAlign: 'center' },
       });
     }
   }
@@ -73,9 +73,9 @@ class LoginForm extends Component<Props> {
                 >
                   <Text
                     style={
-                      Platform.OS === "android"
-                        ? { fontSize: 16, textAlign: "center", top: -5 }
-                        : { fontSize: 16, fontWeight: "900" }
+                      Platform.OS === 'android'
+                        ? { fontSize: 16, textAlign: 'center', top: -5 }
+                        : { fontSize: 16, fontWeight: '900' }
                     }
                   >
                     Get Started
@@ -87,8 +87,8 @@ class LoginForm extends Component<Props> {
                     <Button
                       small
                       transparent
-                      style={{ alignSelf: "flex-start" }}
-                      onPress={() => navigation.navigate("SignUp")}
+                      style={{ alignSelf: 'flex-start' }}
+                      onPress={() => navigation.navigate('SignUp')}
                     >
                       <Text style={styles.helpBtns}>Create Account</Text>
                     </Button>
@@ -97,25 +97,25 @@ class LoginForm extends Component<Props> {
                     <Button
                       small
                       transparent
-                      style={{ alignSelf: "flex-end" }}
-                      onPress={() => navigation.navigate("ForgotPassword")}
+                      style={{ alignSelf: 'flex-end' }}
+                      onPress={() => navigation.navigate('ForgotPassword')}
                     >
                       <Text style={styles.helpBtns}>Forgot Password</Text>
                     </Button>
                   </Right>
                 </View>
-                <View style={{ flex: 1, alignSelf: "flex-end" }}>
+                <View style={{ flex: 1, alignSelf: 'flex-end' }}>
                   <Button
                     light
                     small
                     transparent
                     style={styles.skipBtn}
-                    onPress={() => navigation.navigate("Walkthrough")}
+                    onPress={() => navigation.navigate('Walkthrough')}
                   >
                     <Text
                       style={
                         ([styles.helpBtns],
-                        { top: Platform.OS === "ios" ? null : 0 })
+                        { top: Platform.OS === 'ios' ? null : 0 })
                       }
                     >
                       Skip
@@ -131,6 +131,6 @@ class LoginForm extends Component<Props> {
   }
 }
 const Login = reduxForm({
-  form: "login"
+  form: 'login',
 })(LoginForm);
 export default Login;

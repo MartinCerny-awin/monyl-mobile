@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { ProgressBarAndroid } from "react-native";
+import React, { Component } from 'react';
+import { ProgressBarAndroid } from 'react-native';
 
 export default class SpinnerNB extends Component {
   render() {
@@ -10,7 +10,7 @@ export default class SpinnerNB extends Component {
         styleAttr="Horizontal"
         indeterminate={false}
         progress={this.props.progress ? this.props.progress / 100 : 0.5}
-        color={this.props.color ? this.props.color : "#FFF"}
+        color={this.props.color ? this.props.color : '#FFF'}
       />
     );
   }

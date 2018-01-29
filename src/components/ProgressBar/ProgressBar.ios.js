@@ -1,7 +1,7 @@
 // @flow
-import React, { Component } from "react";
-import { ProgressViewIOS } from "react-native";
-import color from "color";
+import React, { Component } from 'react';
+import { ProgressViewIOS } from 'react-native';
+import color from 'color';
 
 type Props = {
   progress?: number,
@@ -14,7 +14,7 @@ export default class ProgressBarNB extends Component<Props> {
       <ProgressViewIOS
         {...this.props}
         progress={this.props.progress ? this.props.progress / 100 : 0.5}
-        progressTintColor={this.props.color ? this.props.color : "#FFF"}
+        progressTintColor={this.props.color ? this.props.color : '#FFF'}
         trackTintColor={color(this.props.color)
           .lighten(1)
           .hex()}

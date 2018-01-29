@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { ImageBackground, StatusBar } from "react-native";
+import React, { Component } from 'react';
+import { ImageBackground, StatusBar } from 'react-native';
 import {
   Container,
   Content,
@@ -11,16 +11,16 @@ import {
   Input,
   View,
   Toast,
-  Footer
-} from "native-base";
-import { Field, reduxForm } from "redux-form";
-import styles from "./styles";
+  Footer,
+} from 'native-base';
+import { Field, reduxForm } from 'redux-form';
+import styles from './styles';
 
-const required = value => (value ? undefined : "Required");
+const required = value => (value ? undefined : 'Required');
 const email = value =>
-  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? "Invalid email address"
-    : undefined;
+  (value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+    ? 'Invalid email address'
+    : undefined);
 type Props = {
   navigation: () => void
 };
@@ -39,17 +39,19 @@ class ForgotPasswordForm extends Component {
     this.state = {
       offset: {
         x: 0,
-        y: 0
+        y: 0,
       },
-      name: ""
+      name: '',
     };
   }
 
-  renderInput({ input, label, type, meta: { touched, error, warning } }) {
+  renderInput({
+    input, label, type, meta: { touched, error, warning },
+  }) {
     return (
       <View>
         <Item error={error && touched} rounded style={styles.inputGrp}>
-          <Icon active name="mail" style={{ color: "#fff" }} />
+          <Icon active name="mail" style={{ color: '#fff' }} />
           <Input
             placeholderTextColor="#FFF"
             style={styles.input}
@@ -59,16 +61,16 @@ class ForgotPasswordForm extends Component {
           />
           {touched && error
             ? <Icon
-                active
-                style={styles.formErrorIcon}
-                onPress={() => this.textInput._root.clear()}
-                name="close"
-              />
+              active
+              style={styles.formErrorIcon}
+              onPress={() => this.textInput._root.clear()}
+              name="close"
+            />
             : <Text />}
         </Item>
         {touched && error
           ? <Text style={styles.formErrorText1}>
-              {error}
+            {error}
             </Text>
           : <Text style={styles.formErrorText2}>error here</Text>}
       </View>
@@ -80,10 +82,10 @@ class ForgotPasswordForm extends Component {
       this.props.navigation.goBack();
     } else {
       Toast.show({
-        text: "Enter Valid Email",
+        text: 'Enter Valid Email',
         duration: 2500,
-        position: "top",
-        textStyle: { textAlign: "center" }
+        position: 'top',
+        textStyle: { textAlign: 'center' },
       });
     }
   }
@@ -93,7 +95,7 @@ class ForgotPasswordForm extends Component {
       <Container>
         <StatusBar barStyle="light-content" />
         <ImageBackground
-          source={require("../../../assets/bg-signup.png")}
+          source={require('../../../assets/bg-signup.png')}
           style={styles.background}
         >
           <Content contentOffset={this.state.offset}>
@@ -116,7 +118,7 @@ class ForgotPasswordForm extends Component {
                   onPress={() => this.forgotPassword()}
                   style={styles.emailBtn}
                 >
-                  <Text style={{ color: "#FFF" }}>Send Email</Text>
+                  <Text style={{ color: '#FFF' }}>Send Email</Text>
                 </Button>
               </View>
             </Content>
@@ -124,7 +126,7 @@ class ForgotPasswordForm extends Component {
           <Footer
             style={{
               paddingLeft: 20,
-              paddingRight: 20
+              paddingRight: 20,
             }}
           >
             <Button transparent onPress={() => this.props.navigation.goBack()}>
@@ -138,6 +140,6 @@ class ForgotPasswordForm extends Component {
 }
 
 const ForgotPassword = reduxForm({
-  form: "help"
+  form: 'help',
 })(ForgotPasswordForm);
 export default ForgotPassword;

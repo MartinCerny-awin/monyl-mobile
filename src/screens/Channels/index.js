@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image } from "react-native";
+import React, { Component } from 'react';
+import { Image } from 'react-native';
 import {
   Container,
   Header,
@@ -12,16 +12,16 @@ import {
   Tabs,
   Tab,
   Text,
-  TabHeading
-} from "native-base";
+  TabHeading,
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
-import TabOne from "./tabOne";
-import TabTwo from "./tabTwo";
-import TabThree from "./tabThree";
+import TabOne from './tabOne';
+import TabTwo from './tabTwo';
+import TabThree from './tabThree';
 
-const headerLogo = require("../../../assets/header-logo.png");
+const headerLogo = require('../../../assets/header-logo.png');
 
 class Channels extends Component {
   render() {
@@ -31,7 +31,7 @@ class Channels extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+              onPress={() => this.props.navigation.navigate('DrawerOpen')}
             >
               <Icon active name="menu" />
             </Button>
@@ -41,7 +41,7 @@ class Channels extends Component {
           </Body>
           <Right />
         </Header>
-        <Tabs style={{ backgroundColor: "#fff" }}>
+        <Tabs style={{ backgroundColor: '#fff' }}>
           <Tab
             heading={
               <TabHeading>

@@ -1,15 +1,15 @@
 // import get from "lodash/get";
 // import isFunction from "lodash/isFunction";
 
-const isEmpty = value => value === undefined || value === null || value === "";
+const isEmpty = value => value === undefined || value === null || value === '';
 // const join = rules => (value, data) =>
 //   rules.map(rule => rule(value, data)).filter(error => !!error)[0];
 
 export function required(value) {
   if (isEmpty(value)) {
-    return "Required";
+    return 'Required';
   }
-  return "";
+  return '';
 }
 
 export function email(value) {
@@ -17,9 +17,9 @@ export function email(value) {
     !isEmpty(value) &&
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
   ) {
-    return "Invalid email address";
+    return 'Invalid email address';
   }
-  return "";
+  return '';
 }
 
 // export function price(value) {
@@ -39,12 +39,12 @@ export function email(value) {
 
 export function url(str) {
   if (!str) {
-    return "";
+    return '';
   }
   // disable eslint no-irregular-whitespace for regex doesn't work
   // eslint-disable-next-line no-irregular-whitespace
   const pattern = /^(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9]{2,256}\.[a-z‌A-Z​]{2,6}(\.[a-z‌A-Z​]{2,6})?/g;
-  return pattern.test(str) ? "" : "Invalid Url";
+  return pattern.test(str) ? '' : 'Invalid Url';
 }
 
 // // used to validate checkbox
@@ -56,20 +56,20 @@ export function url(str) {
 // }
 
 export function minLength(min) {
-  return value => {
+  return (value) => {
     if (!isEmpty(value) && value.length < min) {
       return `Must be at least ${min} characters`;
     }
-    return "";
+    return '';
   };
 }
 
 export function maxLength(max) {
-  return value => {
+  return (value) => {
     if (!isEmpty(value) && value.length > max) {
       return `Must be no more than ${max} characters`;
     }
-    return "";
+    return '';
   };
 }
 
@@ -78,7 +78,7 @@ export function equalWith(field, label) {
     if (value !== data[field]) {
       return `Must be matched with ${label || field}`;
     }
-    return "";
+    return '';
   };
 }
 
@@ -91,9 +91,9 @@ export function equalWith(field, label) {
 
 export function alphaNumeric(value) {
   if (!isEmpty(value) && /[^a-zA-Z0-9 ]/i.test(value)) {
-    return "Only alphanumeric characters";
+    return 'Only alphanumeric characters';
   }
-  return "";
+  return '';
 }
 
 // export function oneOf(enumeration) {

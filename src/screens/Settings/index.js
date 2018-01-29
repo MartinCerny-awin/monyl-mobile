@@ -1,7 +1,8 @@
 // @flow
-var Color = require("color");
-import React, { Component } from "react";
-import { Image, Switch, TouchableOpacity, Platform } from "react-native";
+const Color = require('color');
+
+import React, { Component } from 'react';
+import { Image, Switch, TouchableOpacity, Platform } from 'react-native';
 
 import {
   Container,
@@ -16,14 +17,15 @@ import {
   View,
   Left,
   Right,
-  Body
-} from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
+  Body,
+} from 'native-base';
+import { Grid, Col } from 'react-native-easy-grid';
 
-import styles from "./styles";
+import styles from './styles';
 
-const headerLogo = require("../../../assets/header-logo.png");
-const primary = require("../../theme/variables/commonColor").brandPrimary;
+const headerLogo = require('../../../assets/header-logo.png');
+const primary = require('../../theme/variables/commonColor').brandPrimary;
+
 const light = Color(primary).alpha(0.3);
 
 type Props = {
@@ -57,13 +59,13 @@ class Settings extends Component {
       friSwitch: false,
       satSwitch: false,
       sunSwitch: false,
-      Username: "",
-      email: "",
-      password: "",
+      Username: '',
+      email: '',
+      password: '',
       offset: {
         x: 0,
-        y: 0
-      }
+        y: 0,
+      },
     };
   }
 
@@ -75,7 +77,7 @@ class Settings extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => navigation.navigate("DrawerOpen")}
+              onPress={() => navigation.navigate('DrawerOpen')}
             >
               <Icon active name="menu" />
             </Button>
@@ -93,15 +95,15 @@ class Settings extends Component {
                 <Icon
                   name="cloud-upload"
                   style={
-                    Platform.OS === "android"
-                      ? { color: "#FFF", width: 23 }
-                      : { color: "#FFF", width: 22 }
+                    Platform.OS === 'android'
+                      ? { color: '#FFF', width: 23 }
+                      : { color: '#FFF', width: 22 }
                   }
                 />
               </Button>
-              <TouchableOpacity style={{ alignSelf: "center" }}>
+              <TouchableOpacity style={{ alignSelf: 'center' }}>
                 <Thumbnail
-                  source={require("../../../assets/Contacts/sanket.png")}
+                  source={require('../../../assets/Contacts/sanket.png')}
                   style={styles.profilePic}
                 />
               </TouchableOpacity>
@@ -109,9 +111,9 @@ class Settings extends Component {
                 <Icon
                   name="cloud-download"
                   style={
-                    Platform.OS === "android"
-                      ? { color: "#FFF", width: 23 }
-                      : { lineHeight: 0, color: "#FFF", width: 22 }
+                    Platform.OS === 'android'
+                      ? { color: '#FFF', width: 23 }
+                      : { lineHeight: 0, color: '#FFF', width: 22 }
                   }
                 />
               </Button>
@@ -154,7 +156,7 @@ class Settings extends Component {
                 <Col>
                   <Text
                     style={
-                      Platform.OS === "android"
+                      Platform.OS === 'android'
                         ? styles.aswitchText
                         : styles.switchText
                     }
@@ -164,7 +166,7 @@ class Settings extends Component {
                 </Col>
                 <Col
                   style={
-                    Platform.OS === "android"
+                    Platform.OS === 'android'
                       ? styles.aswitchContainer
                       : styles.switchContainer
                   }
@@ -183,7 +185,7 @@ class Settings extends Component {
                 <Col>
                   <Text
                     style={
-                      Platform.OS === "android"
+                      Platform.OS === 'android'
                         ? styles.aswitchText
                         : styles.switchText
                     }
@@ -193,7 +195,7 @@ class Settings extends Component {
                 </Col>
                 <Col
                   style={
-                    Platform.OS === "android"
+                    Platform.OS === 'android'
                       ? styles.aswitchContainer
                       : styles.switchContainer
                   }
@@ -212,7 +214,7 @@ class Settings extends Component {
                 <Col>
                   <Text
                     style={
-                      Platform.OS === "android"
+                      Platform.OS === 'android'
                         ? styles.aswitchText
                         : styles.switchText
                     }
@@ -222,7 +224,7 @@ class Settings extends Component {
                 </Col>
                 <Col
                   style={
-                    Platform.OS === "android"
+                    Platform.OS === 'android'
                       ? styles.aswitchContainer
                       : styles.switchContainer
                   }
@@ -241,7 +243,7 @@ class Settings extends Component {
                 <Col>
                   <Text
                     style={
-                      Platform.OS === "android"
+                      Platform.OS === 'android'
                         ? styles.aswitchText
                         : styles.switchText
                     }
@@ -251,7 +253,7 @@ class Settings extends Component {
                 </Col>
                 <Col
                   style={
-                    Platform.OS === "android"
+                    Platform.OS === 'android'
                       ? styles.aswitchContainer
                       : styles.switchContainer
                   }
@@ -270,7 +272,7 @@ class Settings extends Component {
                 <Col>
                   <Text
                     style={
-                      Platform.OS === "android"
+                      Platform.OS === 'android'
                         ? styles.aswitchText
                         : styles.switchText
                     }
@@ -280,7 +282,7 @@ class Settings extends Component {
                 </Col>
                 <Col
                   style={
-                    Platform.OS === "android"
+                    Platform.OS === 'android'
                       ? styles.aswitchContainer
                       : styles.switchContainer
                   }
@@ -299,7 +301,7 @@ class Settings extends Component {
                 <Col>
                   <Text
                     style={
-                      Platform.OS === "android"
+                      Platform.OS === 'android'
                         ? styles.aswitchText
                         : styles.switchText
                     }
@@ -309,7 +311,7 @@ class Settings extends Component {
                 </Col>
                 <Col
                   style={
-                    Platform.OS === "android"
+                    Platform.OS === 'android'
                       ? styles.aswitchContainer
                       : styles.switchContainer
                   }
@@ -328,7 +330,7 @@ class Settings extends Component {
                 <Col>
                   <Text
                     style={
-                      Platform.OS === "android"
+                      Platform.OS === 'android'
                         ? styles.aswitchText
                         : styles.switchText
                     }
@@ -338,7 +340,7 @@ class Settings extends Component {
                 </Col>
                 <Col
                   style={
-                    Platform.OS === "android"
+                    Platform.OS === 'android'
                       ? styles.aswitchContainer
                       : styles.switchContainer
                   }

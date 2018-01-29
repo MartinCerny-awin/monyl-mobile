@@ -1,249 +1,246 @@
 // @flow
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Platform,
   ImageBackground,
   TouchableOpacity,
   Dimensions,
   FlatList,
-  View as RNView
-} from "react-native";
-import { connect } from "react-redux";
-import { Container, Content, Text, Icon, View, Spinner } from "native-base";
-import CustomHeader from "../../components/CustomHeader";
+  View as RNView,
+} from 'react-native';
+import { connect } from 'react-redux';
+import { Container, Content, Text, Icon, View, Spinner } from 'native-base';
+import CustomHeader from '../../components/CustomHeader';
 
-import { Grid, Col } from "react-native-easy-grid";
-import Carousel from "react-native-carousel-view";
+import { Grid, Col } from 'react-native-easy-grid';
+import Carousel from 'react-native-carousel-view';
 
-import { itemsFetchData } from "../../actions";
-import data from "./data.json";
+import { itemsFetchData } from '../../actions';
+import data from './data.json';
 
-import styles from "./styles";
+import styles from './styles';
 
-const deviceWidth = Dimensions.get("window").width;
+const deviceWidth = Dimensions.get('window').width;
 
 class Home extends Component {
   componentDidMount() {
     this.props.fetchData(data);
   }
-  _renderItem = ({ item }) => {
-    return (
-      <TouchableOpacity
-        style={{ flexDirection: "row" }}
-        onPress={() => this.props.navigation.navigate("Story")}
-      >
-        <View style={styles.newsContent}>
-          <Text numberOfLines={2} style={styles.newsHeader}>
-            {item.headline}
-          </Text>
-          <Grid style={styles.swiperContentBox}>
-            <Col style={{ flexDirection: "row" }}>
-              <Text style={styles.newsLink}>{item.link}</Text>
-              <Icon name="ios-time-outline" style={styles.timeIcon} />
-              <Text style={styles.newsLink}>{item.time}</Text>
-            </Col>
-            <Col>
-              <TouchableOpacity
-                style={styles.newsTypeView}
-                onPress={() => this.props.navigation.navigate("Channel")}
-              >
-                <Text style={styles.newsTypeText}>{item.category}</Text>
-              </TouchableOpacity>
-            </Col>
-          </Grid>
-        </View>
-      </TouchableOpacity>
-    );
-  };
+  _renderItem = ({ item }) => (
+    <TouchableOpacity
+      style={{ flexDirection: 'row' }}
+      onPress={() => this.props.navigation.navigate('Story')}
+    >
+      <View style={styles.newsContent}>
+        <Text numberOfLines={2} style={styles.newsHeader}>
+          {item.headline}
+        </Text>
+        <Grid style={styles.swiperContentBox}>
+          <Col style={{ flexDirection: 'row' }}>
+            <Text style={styles.newsLink}>{item.link}</Text>
+            <Icon name="ios-time-outline" style={styles.timeIcon} />
+            <Text style={styles.newsLink}>{item.time}</Text>
+          </Col>
+          <Col>
+            <TouchableOpacity
+              style={styles.newsTypeView}
+              onPress={() => this.props.navigation.navigate('Channel')}
+            >
+              <Text style={styles.newsTypeText}>{item.category}</Text>
+            </TouchableOpacity>
+          </Col>
+        </Grid>
+      </View>
+    </TouchableOpacity>
+  );
   render() {
     const navigation = this.props.navigation;
     if (this.props.isLoading) {
       return <Spinner />;
-    } else {
-      return (
-        <Container>
-          <CustomHeader hasTabs navigation={navigation} />
-          <Content
-            showsVerticalScrollIndicator={false}
-            style={{ backgroundColor: "#fff" }}
-          >
+    }
+    return (
+      <Container>
+        <CustomHeader hasTabs navigation={navigation} />
+        <Content
+          showsVerticalScrollIndicator={false}
+          style={{ backgroundColor: '#fff' }}
+        >
+          <View>
             <View>
-              <View>
-                <Carousel
-                  width={deviceWidth}
-                  height={330}
-                  indicatorAtBottom
-                  indicatorSize={Platform.OS === "android" ? 15 : 10}
-                  indicatorColor="#FFF"
-                  indicatorOffset={10}
-                  animate={false}
-                >
-                  <RNView>
-                    <TouchableOpacity
-                      activeOpacity={1}
-                      onPress={() => this.props.navigation.navigate("Story")}
-                      style={styles.slide}
+              <Carousel
+                width={deviceWidth}
+                height={330}
+                indicatorAtBottom
+                indicatorSize={Platform.OS === 'android' ? 15 : 10}
+                indicatorColor="#FFF"
+                indicatorOffset={10}
+                animate={false}
+              >
+                <RNView>
+                  <TouchableOpacity
+                    activeOpacity={1}
+                    onPress={() => this.props.navigation.navigate('Story')}
+                    style={styles.slide}
+                  >
+                    <ImageBackground
+                      style={styles.newsPoster}
+                      source={require('../../../assets/NewsIcons/1.jpg')}
                     >
-                      <ImageBackground
-                        style={styles.newsPoster}
-                        source={require("../../../assets/NewsIcons/1.jpg")}
-                      >
-                        <View style={styles.swiperTextContent}>
-                          <Text
-                            numberOfLines={2}
-                            style={styles.newsPosterHeader}
-                          >
+                      <View style={styles.swiperTextContent}>
+                        <Text
+                          numberOfLines={2}
+                          style={styles.newsPosterHeader}
+                        >
                             Flat App is a style of interface design emphasizing
                             minimal use of stylistic elements.
-                          </Text>
-                          <Grid style={styles.swiperContentBox}>
-                            <Col style={{ flexDirection: "row" }}>
-                              <Text style={styles.newsPosterLink}>
+                        </Text>
+                        <Grid style={styles.swiperContentBox}>
+                          <Col style={{ flexDirection: 'row' }}>
+                            <Text style={styles.newsPosterLink}>
                                 SPACE.com
-                              </Text>
-                              <Icon
-                                name="ios-time-outline"
-                                style={styles.timePosterIcon}
-                              />
-                              <Text style={styles.newsPosterLink}>20m ago</Text>
-                            </Col>
-                            <Col>
-                              <TouchableOpacity
-                                style={styles.newsPosterTypeView}
-                              >
-                                <Text
-                                  style={styles.newsPosterTypeText}
-                                  onPress={() =>
-                                    this.props.navigation.navigate("Channel")
+                            </Text>
+                            <Icon
+                              name="ios-time-outline"
+                              style={styles.timePosterIcon}
+                            />
+                            <Text style={styles.newsPosterLink}>20m ago</Text>
+                          </Col>
+                          <Col>
+                            <TouchableOpacity
+                              style={styles.newsPosterTypeView}
+                            >
+                              <Text
+                                style={styles.newsPosterTypeText}
+                                onPress={() =>
+                                    this.props.navigation.navigate('Channel')
                                   }
-                                >
+                              >
                                   SCIENCE
-                                </Text>
-                              </TouchableOpacity>
-                            </Col>
-                          </Grid>
-                        </View>
-                      </ImageBackground>
-                    </TouchableOpacity>
-                  </RNView>
-                  <RNView>
-                    <TouchableOpacity
-                      activeOpacity={1}
-                      onPress={() => this.props.navigation.navigate("Story")}
-                      style={styles.slide}
+                              </Text>
+                            </TouchableOpacity>
+                          </Col>
+                        </Grid>
+                      </View>
+                    </ImageBackground>
+                  </TouchableOpacity>
+                </RNView>
+                <RNView>
+                  <TouchableOpacity
+                    activeOpacity={1}
+                    onPress={() => this.props.navigation.navigate('Story')}
+                    style={styles.slide}
+                  >
+                    <ImageBackground
+                      style={styles.newsPoster}
+                      source={require('../../../assets/NewsIcons/3.jpg')}
                     >
-                      <ImageBackground
-                        style={styles.newsPoster}
-                        source={require("../../../assets/NewsIcons/3.jpg")}
-                      >
-                        <View style={styles.swiperTextContent}>
-                          <Text
-                            numberOfLines={2}
-                            style={styles.newsPosterHeader}
-                          >
+                      <View style={styles.swiperTextContent}>
+                        <Text
+                          numberOfLines={2}
+                          style={styles.newsPosterHeader}
+                        >
                             So that the applications are able to load faster and
                             resize easily.
-                          </Text>
-                          <Grid style={styles.swiperContentBox}>
-                            <Col style={{ flexDirection: "row" }}>
-                              <Text style={styles.newsPosterLink}>CDC</Text>
-                              <Icon
-                                name="ios-time-outline"
-                                style={styles.timePosterIcon}
-                              />
-                              <Text style={styles.newsPosterLink}>2hr ago</Text>
-                            </Col>
-                            <Col>
-                              <TouchableOpacity
-                                style={styles.newsPosterTypeView}
-                              >
-                                <Text
-                                  style={styles.newsPosterTypeText}
-                                  onPress={() =>
-                                    this.props.navigation.navigate("Channel")
+                        </Text>
+                        <Grid style={styles.swiperContentBox}>
+                          <Col style={{ flexDirection: 'row' }}>
+                            <Text style={styles.newsPosterLink}>CDC</Text>
+                            <Icon
+                              name="ios-time-outline"
+                              style={styles.timePosterIcon}
+                            />
+                            <Text style={styles.newsPosterLink}>2hr ago</Text>
+                          </Col>
+                          <Col>
+                            <TouchableOpacity
+                              style={styles.newsPosterTypeView}
+                            >
+                              <Text
+                                style={styles.newsPosterTypeText}
+                                onPress={() =>
+                                    this.props.navigation.navigate('Channel')
                                   }
-                                >
+                              >
                                   ENVIRONMENT
-                                </Text>
-                              </TouchableOpacity>
-                            </Col>
-                          </Grid>
-                        </View>
-                      </ImageBackground>
-                    </TouchableOpacity>
-                  </RNView>
-                  <RNView>
-                    <TouchableOpacity
-                      activeOpacity={1}
-                      onPress={() => this.props.navigation.navigate("Story")}
-                      style={styles.slide}
-                    >
-                      <ImageBackground
-                        style={styles.newsPoster}
-                        source={require("../../../assets/NewsIcons/4.jpg")}
-                      >
-                        <View style={styles.swiperTextContent}>
-                          <Text
-                            numberOfLines={2}
-                            style={styles.newsPosterHeader}
-                          >
-                            But still look sharp on high-definition screens.
-                          </Text>
-                          <Grid style={styles.swiperContentBox}>
-                            <Col style={{ flexDirection: "row" }}>
-                              <Text style={styles.newsPosterLink}>SKY.com</Text>
-                              <Icon
-                                name="ios-time-outline"
-                                style={styles.timePosterIcon}
-                              />
-                              <Text style={styles.newsPosterLink}>
-                                1day ago
                               </Text>
-                            </Col>
-                            <Col>
-                              <TouchableOpacity
-                                style={styles.newsPosterTypeView}
-                              >
-                                <Text
-                                  style={styles.newsPosterTypeText}
-                                  onPress={() =>
-                                    this.props.navigation.navigate("Channel")
+                            </TouchableOpacity>
+                          </Col>
+                        </Grid>
+                      </View>
+                    </ImageBackground>
+                  </TouchableOpacity>
+                </RNView>
+                <RNView>
+                  <TouchableOpacity
+                    activeOpacity={1}
+                    onPress={() => this.props.navigation.navigate('Story')}
+                    style={styles.slide}
+                  >
+                    <ImageBackground
+                      style={styles.newsPoster}
+                      source={require('../../../assets/NewsIcons/4.jpg')}
+                    >
+                      <View style={styles.swiperTextContent}>
+                        <Text
+                          numberOfLines={2}
+                          style={styles.newsPosterHeader}
+                        >
+                            But still look sharp on high-definition screens.
+                        </Text>
+                        <Grid style={styles.swiperContentBox}>
+                          <Col style={{ flexDirection: 'row' }}>
+                            <Text style={styles.newsPosterLink}>SKY.com</Text>
+                            <Icon
+                              name="ios-time-outline"
+                              style={styles.timePosterIcon}
+                            />
+                            <Text style={styles.newsPosterLink}>
+                                1day ago
+                            </Text>
+                          </Col>
+                          <Col>
+                            <TouchableOpacity
+                              style={styles.newsPosterTypeView}
+                            >
+                              <Text
+                                style={styles.newsPosterTypeText}
+                                onPress={() =>
+                                    this.props.navigation.navigate('Channel')
                                   }
-                                >
+                              >
                                   WORLD
-                                </Text>
-                              </TouchableOpacity>
-                            </Col>
-                          </Grid>
-                        </View>
-                      </ImageBackground>
-                    </TouchableOpacity>
-                  </RNView>
-                </Carousel>
-              </View>
+                              </Text>
+                            </TouchableOpacity>
+                          </Col>
+                        </Grid>
+                      </View>
+                    </ImageBackground>
+                  </TouchableOpacity>
+                </RNView>
+              </Carousel>
             </View>
+          </View>
 
-            <FlatList
-              data={this.props.items}
-              renderItem={this._renderItem}
-              keyExtractor={item => item.id}
-            />
-          </Content>
-        </Container>
-      );
-    }
+          <FlatList
+            data={this.props.items}
+            renderItem={this._renderItem}
+            keyExtractor={item => item.id}
+          />
+        </Content>
+      </Container>
+    );
   }
 }
 
 function bindAction(dispatch) {
   return {
-    fetchData: url => dispatch(itemsFetchData(url))
+    fetchData: url => dispatch(itemsFetchData(url)),
   };
 }
 
 const mapStateToProps = state => ({
   items: state.homeReducer.items,
   hasErrored: state.homeReducer.hasErrored,
-  isLoading: state.homeReducer.isLoading
+  isLoading: state.homeReducer.isLoading,
 });
 export default connect(mapStateToProps, bindAction)(Home);

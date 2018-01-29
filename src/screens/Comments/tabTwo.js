@@ -1,7 +1,7 @@
 // @flow
-import React, { Component } from "react";
-import { Platform, TouchableOpacity } from "react-native";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { Platform, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
 
 import {
   Container,
@@ -12,30 +12,30 @@ import {
   Thumbnail,
   Text,
   View,
-  List
-} from "native-base";
+  List,
+} from 'native-base';
 
-import datas from "./data";
-import styles from "./style";
+import datas from './data';
+import styles from './style';
 
 class TabTwo extends Component {
   render() {
     return (
-      <Container style={{ backgroundColor: "#FFF" }}>
+      <Container style={{ backgroundColor: '#FFF' }}>
         <Content showsVerticalScrollIndicator={false}>
-          <View style={{ backgroundColor: "#FFF" }}>
+          <View style={{ backgroundColor: '#FFF' }}>
             <List
               dataArray={datas}
               renderRow={data =>
-                <Card style={styles.card}>
+                (<Card style={styles.card}>
                   <CardItem style={styles.cardHeader} header>
                     <Thumbnail
                       small
                       source={data.image}
                       style={
-                        Platform.OS === "android"
-                          ? { borderRadius: 40, alignSelf: "flex-start" }
-                          : { alignSelf: "flex-start" }
+                        Platform.OS === 'android'
+                          ? { borderRadius: 40, alignSelf: 'flex-start' }
+                          : { alignSelf: 'flex-start' }
                       }
                     />
                     <View>
@@ -59,7 +59,7 @@ class TabTwo extends Component {
                       </Text>
                     </TouchableOpacity>
                   </CardItem>
-                </Card>}
+                 </Card>)}
             />
           </View>
         </Content>

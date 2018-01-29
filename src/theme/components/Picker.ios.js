@@ -1,7 +1,5 @@
-import variable from "./../variables/platform";
+export default () => {
+  const pickerTheme = {};
 
-export default (variables = variable) => {
-	const pickerTheme = {};
-
-	return pickerTheme;
+  return pickerTheme;
 };

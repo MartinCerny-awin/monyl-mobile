@@ -1,51 +1,37 @@
 // @flow
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Image,
   TouchableOpacity,
   Platform,
   Slider,
   Dimensions,
-  View as RNView
-} from "react-native";
+  View as RNView,
+} from 'react-native';
 
-import {
-  Container,
-  Header,
-  Content,
-  Text,
-  Button,
-  Icon,
-  Body,
-  View
-} from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
+import { Container, Header, Content, Text, Button, Icon, Body, View } from 'native-base';
+import { Grid, Col } from 'react-native-easy-grid';
 
-import Modal from "react-native-modalbox";
-import Carousel from "react-native-carousel-view";
+import Modal from 'react-native-modalbox';
+import Carousel from 'react-native-carousel-view';
 
-import styles from "./styles";
+import styles from './styles';
 
-const deviceWidth = Dimensions.get("window").width;
+const deviceWidth = Dimensions.get('window').width;
 
 type Props = {
-  navigation: () => void
+  navigation: () => void,
 };
-class Story extends Component {
+
+type State = {
+  open: boolean,
+};
+
+class Story extends Component<Props, State> {
   state = {
-    animationType: "slideInDown",
     open: false,
-    value: 0
   };
   props: Props;
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      animationType: "slideInDown",
-      open: false,
-      value: 0
-    };
-  }
 
   modalO() {
     this.setState({ open: true });
@@ -61,19 +47,14 @@ class Story extends Component {
         <Header
           style={[
             styles.headerStyle,
-            this.state.open ? styles.headerModalStyle : styles.headerStyle
+            this.state.open ? styles.headerModalStyle : styles.headerStyle,
           ]}
         >
-          <Body
-            style={{ flexDirection: "row", justifyContent: "space-around" }}
-          >
+          <Body style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon active name="arrow-back" style={styles.headerIcons} />
             </Button>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("Comments")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('Comments')}>
               <Icon name="chatboxes" style={styles.headerIcons} />
             </Button>
             <Button transparent onPress={() => this.modalO()}>
@@ -88,21 +69,18 @@ class Story extends Component {
           </Body>
         </Header>
 
-        <Content
-          showsVerticalScrollIndicator={false}
-          style={{ backgroundColor: "#fff" }}
-        >
+        <Content showsVerticalScrollIndicator={false} style={{ backgroundColor: '#fff' }}>
           <View style={{ flex: 1 }}>
             <View>
               <Image
-                source={require("../../../assets/NewsIcons/5.jpg")}
+                source={require('../../../assets/NewsIcons/5.jpg')}
                 style={styles.newsPoster}
               />
             </View>
-            <View style={{ backgroundColor: "#fff" }}>
+            <View style={{ backgroundColor: '#fff' }}>
               <View style={styles.newsContent}>
                 <Grid style={{ paddingBottom: 20 }}>
-                  <Col style={{ flexDirection: "row" }}>
+                  <Col style={{ flexDirection: 'row' }}>
                     <TouchableOpacity>
                       <Text style={styles.newsLink}>CDC</Text>
                     </TouchableOpacity>
@@ -116,40 +94,37 @@ class Story extends Component {
                   </Col>
                 </Grid>
                 <Text style={styles.newsHeader}>
-                  React Native Flat App Theme, a fascinating React Native
-                  starter kit with flat UI design, Redux and NativeBase
-                  components for your application.
+                  React Native Flat App Theme, a fascinating React Native starter kit with flat UI
+                  design, Redux and NativeBase components for your application.
                 </Text>
               </View>
 
               <View style={{ padding: 20 }}>
                 <View style={styles.newsCommentContainer}>
                   <Text style={styles.newsComment}>
-                    It’s a responsive theme with clean and modern look highly
-                    focussed on efficiency. The flat design enables resizing the
-                    contents easily to fit various screen devices. Eye soothing
-                    color makes the React Native Flat app theme simple yet eye
-                    catchy and smooth running.
+                    It’s a responsive theme with clean and modern look highly focussed on
+                    efficiency. The flat design enables resizing the contents easily to fit various
+                    screen devices. Eye soothing color makes the React Native Flat app theme simple
+                    yet eye catchy and smooth running.
                   </Text>
                   <Text style={styles.newsComment}>- StrapMobile</Text>
                 </View>
                 <Text style={styles.newsHeader}>
-                  The flat UI design adds an aesthetic touch to the native look
-                  and feel of React Native apps.
+                  The flat UI design adds an aesthetic touch to the native look and feel of React
+                  Native apps.
                 </Text>
                 <View style={{ paddingBottom: 15 }}>
                   <Text style={styles.newsHeader}>
-                    NativeBase is a free and open source framework that enables
-                    developers to build high-quality mobile apps using React
-                    Native iOS and Android apps with a fusion of ES6.
+                    NativeBase is a free and open source framework that enables developers to build
+                    high-quality mobile apps using React Native iOS and Android apps with a fusion
+                    of ES6.
                   </Text>
                 </View>
                 <View style={{ paddingBottom: 20 }}>
                   <Text style={styles.newsHeader}>
-                    NativeBase builds a layer on top of React Native that
-                    provides you with basic set of components for mobile
-                    application development. This helps you to build world-class
-                    application experiences on native platforms.
+                    NativeBase builds a layer on top of React Native that provides you with basic
+                    set of components for mobile application development. This helps you to build
+                    world-class application experiences on native platforms.
                   </Text>
                 </View>
               </View>
@@ -159,7 +134,7 @@ class Story extends Component {
                   width={deviceWidth}
                   height={230}
                   indicatorAtBottom
-                  indicatorSize={Platform.OS === "android" ? 15 : 10}
+                  indicatorSize={Platform.OS === 'android' ? 15 : 10}
                   indicatorColor="#FFF"
                   indicatorOffset={10}
                   animate={false}
@@ -167,36 +142,36 @@ class Story extends Component {
                   <RNView style={styles.slide}>
                     <Image
                       style={styles.newsPoster}
-                      source={require("../../../assets/NewsIcons/1.jpg")}
+                      source={require('../../../assets/NewsIcons/1.jpg')}
                     />
                   </RNView>
                   <RNView style={styles.slide}>
                     <Image
                       style={styles.newsPoster}
-                      source={require("../../../assets/NewsIcons/3.jpg")}
+                      source={require('../../../assets/NewsIcons/3.jpg')}
                     />
                   </RNView>
                   <RNView style={styles.slide}>
                     <Image
                       style={styles.newsPoster}
-                      source={require("../../../assets/NewsIcons/4.jpg")}
+                      source={require('../../../assets/NewsIcons/4.jpg')}
                     />
                   </RNView>
                   <RNView style={styles.slide}>
                     <Image
                       style={styles.newsPoster}
-                      source={require("../../../assets/NewsIcons/5.jpg")}
+                      source={require('../../../assets/NewsIcons/5.jpg')}
                     />
                   </RNView>
                 </Carousel>
               </View>
 
-              <View style={{ alignSelf: "center" }}>
+              <View style={{ alignSelf: 'center' }}>
                 <Button
                   transparent
                   iconRight
                   onPress={() => this.props.navigation.goBack()}
-                  textStyle={{ color: "#222", fontWeight: "700" }}
+                  textStyle={{ color: '#222', fontWeight: '700' }}
                 >
                   <Text>NEXT STORY</Text>
                   <Icon name="ios-arrow-forward" style={styles.forwardBtn} />
@@ -225,7 +200,7 @@ class Story extends Component {
                 </Col>
                 <Col>
                   <Button transparent style={styles.nightButton}>
-                    <Icon name="ios-moon-outline" style={{ color: "#fff" }} />
+                    <Icon name="ios-moon-outline" style={{ color: '#fff' }} />
                   </Button>
                 </Col>
               </Grid>
@@ -233,17 +208,11 @@ class Story extends Component {
             <View style={styles.modalContentBox}>
               <Grid style={styles.modalContentGrid1}>
                 <Col>
-                  <Text style={styles.modalContentGridText}>
-                    CHOOSE TYPESPACE
-                  </Text>
+                  <Text style={styles.modalContentGridText}>CHOOSE TYPESPACE</Text>
                 </Col>
                 <Col>
-                  <Button
-                    transparent
-                    iconRight
-                    style={{ marginTop: -5, alignSelf: "center" }}
-                  >
-                    <Text style={{ color: "#FFF" }}>SANS SERIF</Text>
+                  <Button transparent iconRight style={{ marginTop: -5, alignSelf: 'center' }}>
+                    <Text style={{ color: '#FFF' }}>SANS SERIF</Text>
                     <Icon name="ios-arrow-forward" style={{ fontSize: 28 }} />
                   </Button>
                 </Col>
@@ -254,16 +223,11 @@ class Story extends Component {
                 <Col>
                   <Text style={styles.modalSmallText}>A</Text>
                 </Col>
-                <Col style={{ alignSelf: "flex-end" }}>
+                <Col style={{ alignSelf: 'flex-end' }}>
                   <Text style={styles.modalLargeText}>A</Text>
                 </Col>
               </Grid>
-              <Slider
-                {...this.props}
-                minimumTrackTintColor="#fff"
-                thumbTintColor="#fff"
-                onValueChange={value => this.setState({ value })}
-              />
+              <Slider {...this.props} minimumTrackTintColor="#fff" thumbTintColor="#fff" />
             </View>
           </View>
         </Modal>

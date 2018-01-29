@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image, TouchableOpacity } from "react-native";
+import React, { Component } from 'react';
+import { Image, TouchableOpacity } from 'react-native';
 import {
   Container,
   Header,
@@ -11,14 +11,15 @@ import {
   Body,
   Button,
   Icon,
-  View
-} from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
-import { Calendar as MonthCalendar } from "react-native-calendars";
+  View,
+} from 'native-base';
+import { Grid, Col } from 'react-native-easy-grid';
+import { Calendar as MonthCalendar } from 'react-native-calendars';
 
-import styles from "./styles";
+import styles from './styles';
 
-const headerLogo = require("../../../assets/header-logo.png");
+const headerLogo = require('../../../assets/header-logo.png');
+
 type Props = {
   navigation: () => void,
   day: string
@@ -33,7 +34,7 @@ class Calendar extends Component {
     super(props);
     this.state = {
       date: new Date(),
-      selected: ""
+      selected: '',
     };
   }
 
@@ -42,7 +43,7 @@ class Calendar extends Component {
   }
   onDayPress(day: any) {
     this.setState({
-      selected: day.dateString
+      selected: day.dateString,
     });
   }
 
@@ -54,7 +55,7 @@ class Calendar extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => navigation.navigate("DrawerOpen")}
+              onPress={() => navigation.navigate('DrawerOpen')}
             >
               <Icon active name="menu" />
             </Button>
@@ -67,36 +68,36 @@ class Calendar extends Component {
 
         <Content
           showsVerticalScrollIndicator={false}
-          style={{ backgroundColor: "#fff" }}
+          style={{ backgroundColor: '#fff' }}
         >
           <View style={styles.bg}>
             <MonthCalendar
               onDayPress={e => this.onDayPress(e)}
-              disableMonthChange={true}
+              disableMonthChange
               markedDates={{ [this.state.selected]: { selected: true } }}
               theme={{
-                calendarBackground: "#ffffff",
-                textSectionTitleColor: "#01cca1",
-                selectedDayBackgroundColor: "#01cca1",
-                selectedDayTextColor: "#ffffff",
-                todayTextColor: "#01cca1",
-                dayTextColor: "#2d4150",
-                textDisabledColor: "#d9e1e8",
-                dotColor: "#00adf5",
-                selectedDotColor: "#ffffff",
-                arrowColor: "#01cca1",
-                monthTextColor: "#000"
+                calendarBackground: '#ffffff',
+                textSectionTitleColor: '#01cca1',
+                selectedDayBackgroundColor: '#01cca1',
+                selectedDayTextColor: '#ffffff',
+                todayTextColor: '#01cca1',
+                dayTextColor: '#2d4150',
+                textDisabledColor: '#d9e1e8',
+                dotColor: '#00adf5',
+                selectedDotColor: '#ffffff',
+                arrowColor: '#01cca1',
+                monthTextColor: '#000',
               }}
             />
           </View>
 
-          <View style={{ backgroundColor: "#fff" }}>
+          <View style={{ backgroundColor: '#fff' }}>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <Image
-                source={require("../../../assets/NewsIcons/1.jpg")}
+                source={require('../../../assets/NewsIcons/1.jpg')}
                 style={styles.newsImage}
               />
               <View style={styles.newsContent}>
@@ -110,7 +111,7 @@ class Calendar extends Component {
                   <Col>
                     <TouchableOpacity
                       style={styles.newsTypeView}
-                      onPress={() => this.props.navigation.navigate("Channel")}
+                      onPress={() => this.props.navigation.navigate('Channel')}
                     >
                       <Text style={styles.newsTypeText}>ENVIRONMENT</Text>
                     </TouchableOpacity>
@@ -119,11 +120,11 @@ class Calendar extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <Image
-                source={require("../../../assets/NewsIcons/3.jpg")}
+                source={require('../../../assets/NewsIcons/3.jpg')}
                 style={styles.newsImage}
               />
               <View style={styles.newsContent}>
@@ -138,7 +139,7 @@ class Calendar extends Component {
                   <Col>
                     <TouchableOpacity
                       style={styles.newsTypeView}
-                      onPress={() => this.props.navigation.navigate("Channel")}
+                      onPress={() => this.props.navigation.navigate('Channel')}
                     >
                       <Text style={styles.newsTypeText}>SCIENCE</Text>
                     </TouchableOpacity>
@@ -147,11 +148,11 @@ class Calendar extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <Image
-                source={require("../../../assets/NewsIcons/4.jpg")}
+                source={require('../../../assets/NewsIcons/4.jpg')}
                 style={styles.newsImage}
               />
               <View style={styles.newsContent}>
@@ -165,7 +166,7 @@ class Calendar extends Component {
                   <Col>
                     <TouchableOpacity
                       style={styles.newsTypeView}
-                      onPress={() => this.props.navigation.navigate("Channel")}
+                      onPress={() => this.props.navigation.navigate('Channel')}
                     >
                       <Text style={styles.newsTypeText}>WORLD</Text>
                     </TouchableOpacity>
@@ -174,11 +175,11 @@ class Calendar extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <Image
-                source={require("../../../assets/NewsIcons/11.jpg")}
+                source={require('../../../assets/NewsIcons/11.jpg')}
                 style={styles.newsImage}
               />
               <View style={styles.newsContent}>
@@ -193,7 +194,7 @@ class Calendar extends Component {
                   <Col>
                     <TouchableOpacity
                       style={styles.newsTypeView}
-                      onPress={() => this.props.navigation.navigate("Channel")}
+                      onPress={() => this.props.navigation.navigate('Channel')}
                     >
                       <Text style={styles.newsTypeText}>SPORTS</Text>
                     </TouchableOpacity>
@@ -202,11 +203,11 @@ class Calendar extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <Image
-                source={require("../../../assets/NewsIcons/13.jpg")}
+                source={require('../../../assets/NewsIcons/13.jpg')}
                 style={styles.newsImage}
               />
               <View style={styles.newsContent}>
@@ -220,7 +221,7 @@ class Calendar extends Component {
                   <Col>
                     <TouchableOpacity
                       style={styles.newsTypeView}
-                      onPress={() => this.props.navigation.navigate("Channel")}
+                      onPress={() => this.props.navigation.navigate('Channel')}
                     >
                       <Text style={styles.newsTypeText}>EDUCATION</Text>
                     </TouchableOpacity>
@@ -229,11 +230,11 @@ class Calendar extends Component {
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{ flexDirection: "row" }}
-              onPress={() => navigation.navigate("Story")}
+              style={{ flexDirection: 'row' }}
+              onPress={() => navigation.navigate('Story')}
             >
               <Image
-                source={require("../../../assets/NewsIcons/12.jpg")}
+                source={require('../../../assets/NewsIcons/12.jpg')}
                 style={styles.newsImage}
               />
               <View style={styles.newsContent}>
@@ -247,7 +248,7 @@ class Calendar extends Component {
                   <Col>
                     <TouchableOpacity
                       style={styles.newsTypeView}
-                      onPress={() => this.props.navigation.navigate("Channel")}
+                      onPress={() => this.props.navigation.navigate('Channel')}
                     >
                       <Text style={styles.newsTypeText}>ART</Text>
                     </TouchableOpacity>
