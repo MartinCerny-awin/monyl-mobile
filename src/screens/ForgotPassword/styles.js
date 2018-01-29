@@ -12,13 +12,10 @@ export default {
     paddingLeft: 20,
     paddingRight: 20,
     marginTop:
+      // eslint-disable-next-line no-nested-ternary
       deviceWidth < 330
-        ? Platform.OS === 'android'
-          ? deviceHeight / 9 - 20
-          : deviceHeight / 8 - 10
-        : Platform.OS === 'android'
-          ? deviceHeight / 7 - 20
-          : deviceHeight / 6 - 30,
+        ? Platform.OS === 'android' ? deviceHeight / 9 - 20 : deviceHeight / 8 - 10
+        : Platform.OS === 'android' ? deviceHeight / 7 - 20 : deviceHeight / 6 - 30,
   },
   forgotPasswordHeader: {
     alignSelf: 'center',
@@ -26,8 +23,7 @@ export default {
     padding: 10,
     fontWeight: 'bold',
     color: '#FFF',
-    marginTop:
-      Platform.OS === 'android' ? deviceHeight / 6 : deviceHeight / 6 + 10,
+    marginTop: Platform.OS === 'android' ? deviceHeight / 6 : deviceHeight / 6 + 10,
   },
   background: {
     flex: 1,

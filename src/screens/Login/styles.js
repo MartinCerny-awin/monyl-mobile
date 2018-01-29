@@ -32,6 +32,7 @@ export default {
     height: 50,
   },
   otherLinksContainer: {
+    // eslint-disable-next-line no-nested-ternary
     paddingTop: deviceHeight < 600 ? 5 : Platform.OS === 'android' ? 10 : 15,
     flexDirection: 'row',
   },

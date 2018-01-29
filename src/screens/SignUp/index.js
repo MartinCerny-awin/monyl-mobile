@@ -33,56 +33,16 @@ const email = value =>
     ? 'Invalid email address'
     : undefined);
 const alphaNumeric = value =>
-  (value && /[^a-zA-Z0-9 ]/i.test(value)
-    ? 'Only alphanumeric characters'
-    : undefined);
+  (value && /[^a-zA-Z0-9 ]/i.test(value) ? 'Only alphanumeric characters' : undefined);
 
-class SignUpForm extends Component {
+type Props = {
+  navigation: () => void,
+  valid: boolean,
+};
+
+class SignUpForm extends Component<Props> {
   textInput: any;
-  renderInput({
-    input, label, type, meta: { touched, error, warning },
-  }) {
-    return (
-      <View>
-        <Item error={error && touched} rounded style={styles.inputGrp}>
-          <Icon
-            active
-            name={
-              input.name === 'username'
-                ? 'person'
-                : input.name === 'email' ? 'mail' : 'unlock'
-            }
-            style={{ color: '#fff' }}
-          />
-          <Input
-            ref={c => (this.textInput = c)}
-            placeholderTextColor="#FFF"
-            style={styles.input}
-            placeholder={
-              input.name === 'username'
-                ? 'Username'
-                : input.name === 'email' ? 'Email' : 'Password'
-            }
-            secureTextEntry={input.name === 'password'}
-            {...input}
-          />
-          {touched && error
-            ? <Icon
-              active
-              style={styles.formErrorIcon}
-              onPress={() => this.textInput._root.clear()}
-              name="close"
-            />
-            : <Text />}
-        </Item>
-        {touched && error
-          ? <Text style={styles.formErrorText1}>
-            {error}
-            </Text>
-          : <Text style={styles.formErrorText2}>> error here</Text>}
-      </View>
-    );
-  }
+
   signUp() {
     if (this.props.valid) {
       this.props.navigation.goBack();
@@ -96,13 +56,45 @@ class SignUpForm extends Component {
     }
   }
 
+  renderInput({ input, meta: { touched, error } }) {
+    return (
+      <View>
+        <Item error={error && touched} rounded style={styles.inputGrp}>
+          <Icon active name={input.icon} style={{ color: '#fff' }} />
+          <Input
+            // eslint-disable-next-line no-return-assign
+            ref={c => (this.textInput = c)}
+            placeholderTextColor="#FFF"
+            style={styles.input}
+            placeholder={input.name}
+            secureTextEntry={input.name === 'password'}
+            {...input}
+          />
+          {touched && error ? (
+            <Icon
+              active
+              style={styles.formErrorIcon}
+              // eslint-disable-next-line no-underscore-dangle
+              onPress={() => this.textInput._root.clear()}
+              name="close"
+            />
+          ) : (
+            <Text />
+          )}
+        </Item>
+        {touched && error ? (
+          <Text style={styles.formErrorText1}>{error}</Text>
+        ) : (
+          <Text style={styles.formErrorText2}> error here</Text>
+        )}
+      </View>
+    );
+  }
+
   render() {
     return (
       <Container>
-        <StatusBar
-          backgroundColor={commonColor.statusBarColor}
-          barStyle="light-content"
-        />
+        <StatusBar backgroundColor={commonColor.statusBarColor} barStyle="light-content" />
         <ImageBackground
           source={require('../../../assets/bg-signup.png')}
           style={styles.background}
@@ -112,6 +104,7 @@ class SignUpForm extends Component {
             <View style={styles.signupContainer}>
               <Field
                 name="username"
+                icon="person"
                 component={this.renderInput}
                 type="text"
                 validate={[required, alphaNumeric, minLength5]}
@@ -119,24 +112,20 @@ class SignUpForm extends Component {
 
               <Field
                 name="email"
+                icon="mail"
                 component={this.renderInput}
                 type="email"
                 validate={[email, required]}
               />
               <Field
                 name="password"
+                icon="unlock"
                 component={this.renderInput}
                 type="password"
                 validate={[alphaNumeric, minLength8, maxLength15, required]}
               />
 
-              <Button
-                rounded
-                bordered
-                block
-                onPress={() => this.signUp()}
-                style={styles.signupBtn}
-              >
+              <Button rounded bordered block onPress={() => this.signUp()} style={styles.signupBtn}>
                 <Text style={{ color: '#FFF' }}>Continue</Text>
               </Button>
             </View>
@@ -153,11 +142,7 @@ class SignUpForm extends Component {
               </Button>
             </Left>
             <Right style={{ flex: 1 }}>
-              <Button
-                small
-                transparent
-                onPress={() => this.props.navigation.goBack()}
-              >
+              <Button small transparent onPress={() => this.props.navigation.goBack()}>
                 <Text style={styles.helpBtns}>SignIn</Text>
               </Button>
             </Right>

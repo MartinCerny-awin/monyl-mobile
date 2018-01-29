@@ -1,16 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Image, ImageBackground, Platform, StatusBar } from 'react-native';
-import {
-  Container,
-  Content,
-  Text,
-  Button,
-  View,
-  Left,
-  Right,
-  Toast,
-} from 'native-base';
+import { Container, Content, Text, Button, View, Left, Right, Toast } from 'native-base';
 import { Field, reduxForm } from 'redux-form';
 
 import InputField from '../../components/form/InputField';
@@ -21,7 +12,8 @@ const bg = require('../../../assets/bg.png');
 const logo = require('../../../assets/logo.png');
 
 type Props = {
-  navigation: () => void
+  navigation: () => void,
+  valid: boolean,
 };
 
 class LoginForm extends Component<Props> {
@@ -39,7 +31,7 @@ class LoginForm extends Component<Props> {
   }
 
   render() {
-    const navigation = this.props.navigation;
+    const { navigation } = this.props;
     return (
       <Container>
         <StatusBar barStyle="light-content" />
@@ -112,12 +104,7 @@ class LoginForm extends Component<Props> {
                     style={styles.skipBtn}
                     onPress={() => navigation.navigate('Walkthrough')}
                   >
-                    <Text
-                      style={
-                        ([styles.helpBtns],
-                        { top: Platform.OS === 'ios' ? null : 0 })
-                      }
-                    >
+                    <Text style={([styles.helpBtns], { top: Platform.OS === 'ios' ? null : 0 })}>
                       Skip
                     </Text>
                   </Button>

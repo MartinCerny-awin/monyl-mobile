@@ -1,15 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import {
-  Container,
-  Content,
-  Text,
-  Button,
-  Icon,
-  Item,
-  Input,
-  View,
-} from 'native-base';
+import { Container, Content, Text, Button, Icon, Item, Input, View } from 'native-base';
 
 import styles from './styles';
 import CustomHeader from '../../components/CustomHeader';
@@ -18,28 +9,24 @@ import CustomHeader from '../../components/CustomHeader';
 const primary = require('../../theme/variables/commonColor').brandPrimary;
 
 type Props = {
-  navigation: () => void
+  navigation: () => void,
 };
-class Feedback extends Component {
-  state: {
+type State = {
+  offset: {
+    x: number,
+    y: number,
+  },
+};
+class Feedback extends Component<Props, State> {
+  state = {
     offset: {
       x: 0,
-      y: 0
-    }
+      y: 0,
+    },
   };
-  props: Props;
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      offset: {
-        x: 0,
-        y: 0,
-      },
-    };
-  }
 
   render() {
-    const navigation = this.props.navigation;
+    const { navigation } = this.props;
     return (
       <Container style={{ backgroundColor: '#FFF' }}>
         <CustomHeader hasTabs navigation={navigation} />
@@ -51,10 +38,7 @@ class Feedback extends Component {
           <View style={styles.bg}>
             <View style={styles.contentIconsContainer}>
               <Button transparent style={styles.roundedButton}>
-                <Icon
-                  name="ios-call-outline"
-                  style={{ fontSize: 30, width: 30, color: '#FFF' }}
-                />
+                <Icon name="ios-call-outline" style={{ fontSize: 30, width: 30, color: '#FFF' }} />
               </Button>
               <Button transparent style={styles.roundedCustomButton}>
                 <Icon
@@ -68,10 +52,7 @@ class Feedback extends Component {
                 />
               </Button>
               <Button transparent style={styles.roundedButton}>
-                <Icon
-                  name="ios-pin-outline"
-                  style={{ fontSize: 28, width: 30, color: '#FFF' }}
-                />
+                <Icon name="ios-pin-outline" style={{ fontSize: 28, width: 30, color: '#FFF' }} />
               </Button>
             </View>
             <View style={styles.feedbackHeaderContainer}>
@@ -84,10 +65,7 @@ class Feedback extends Component {
 
           <View style={styles.feedbackContainer}>
             <Item rounded style={styles.inputGrp}>
-              <Icon
-                name="ios-mail-outline"
-                style={{ color: 'rgba(0,0,0,0.5)', marginTop: 3 }}
-              />
+              <Icon name="ios-mail-outline" style={{ color: 'rgba(0,0,0,0.5)', marginTop: 3 }} />
               <Input
                 placeholder="Email"
                 placeholderTextColor="rgba(0,0,0,0.3)"
@@ -104,9 +82,7 @@ class Feedback extends Component {
                 returnKeyType="default"
               />
             </Item>
-            <Button
-              style={{ alignSelf: 'flex-end', marginTop: 10, height: 40 }}
-            >
+            <Button style={{ alignSelf: 'flex-end', marginTop: 10, height: 40 }}>
               <Text>Send</Text>
             </Button>
           </View>

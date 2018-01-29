@@ -22,25 +22,17 @@ const headerLogo = require('../../../assets/header-logo.png');
 
 type Props = {
   navigation: () => void,
-  day: string
 };
-class Calendar extends Component {
-  state: {
-    date: Object,
-    selected: string
-  };
-  props: Props;
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-      selected: '',
-    };
-  }
 
-  onDateChange(date: Object) {
-    this.setState({ date });
-  }
+type State = {
+  selected: string,
+};
+
+class Calendar extends Component<Props, State> {
+  state = {
+    selected: '',
+  };
+
   onDayPress(day: any) {
     this.setState({
       selected: day.dateString,
@@ -48,15 +40,12 @@ class Calendar extends Component {
   }
 
   render() {
-    const navigation = this.props.navigation;
+    const { navigation } = this.props;
     return (
       <Container>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => navigation.navigate('DrawerOpen')}
-            >
+            <Button transparent onPress={() => navigation.navigate('DrawerOpen')}>
               <Icon active name="menu" />
             </Button>
           </Left>
@@ -66,10 +55,7 @@ class Calendar extends Component {
           <Right />
         </Header>
 
-        <Content
-          showsVerticalScrollIndicator={false}
-          style={{ backgroundColor: '#fff' }}
-        >
+        <Content showsVerticalScrollIndicator={false} style={{ backgroundColor: '#fff' }}>
           <View style={styles.bg}>
             <MonthCalendar
               onDayPress={e => this.onDayPress(e)}
@@ -96,10 +82,7 @@ class Calendar extends Component {
               style={{ flexDirection: 'row' }}
               onPress={() => navigation.navigate('Story')}
             >
-              <Image
-                source={require('../../../assets/NewsIcons/1.jpg')}
-                style={styles.newsImage}
-              />
+              <Image source={require('../../../assets/NewsIcons/1.jpg')} style={styles.newsImage} />
               <View style={styles.newsContent}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
                   Flat App is focussed on a minimal use of simple elements.
@@ -123,14 +106,10 @@ class Calendar extends Component {
               style={{ flexDirection: 'row' }}
               onPress={() => navigation.navigate('Story')}
             >
-              <Image
-                source={require('../../../assets/NewsIcons/3.jpg')}
-                style={styles.newsImage}
-              />
+              <Image source={require('../../../assets/NewsIcons/3.jpg')} style={styles.newsImage} />
               <View style={styles.newsContent}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
-                  So that the applications are able to load faster and reaize
-                  easily.
+                  So that the applications are able to load faster and reaize easily.
                 </Text>
                 <Grid style={{ marginTop: 25 }}>
                   <Col>
@@ -151,10 +130,7 @@ class Calendar extends Component {
               style={{ flexDirection: 'row' }}
               onPress={() => navigation.navigate('Story')}
             >
-              <Image
-                source={require('../../../assets/NewsIcons/4.jpg')}
-                style={styles.newsImage}
-              />
+              <Image source={require('../../../assets/NewsIcons/4.jpg')} style={styles.newsImage} />
               <View style={styles.newsContent}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
                   But still look sharp on high-definition screens.
@@ -184,8 +160,7 @@ class Calendar extends Component {
               />
               <View style={styles.newsContent}>
                 <Text numberOfLines={2} style={styles.newsHeader}>
-                  Highly customizable widgets are part of our never ending
-                  mission.
+                  Highly customizable widgets are part of our never ending mission.
                 </Text>
                 <Grid style={{ marginTop: 25 }}>
                   <Col>

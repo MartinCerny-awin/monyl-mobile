@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 import { Image } from 'react-native';
 import {
   Container,
@@ -23,44 +23,41 @@ import TabThree from './tabThree';
 
 const headerLogo = require('../../../assets/header-logo.png');
 
-class Channels extends Component {
-  render() {
-    return (
-      <Container>
-        <Header hasTabs>
-          <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate('DrawerOpen')}
-            >
-              <Icon active name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Image source={headerLogo} style={styles.imageHeader} />
-          </Body>
-          <Right />
-        </Header>
-        <Tabs style={{ backgroundColor: '#fff' }}>
-          <Tab
-            heading={
-              <TabHeading>
-                <Text>Following</Text>
-              </TabHeading>
-            }
-          >
-            <TabOne navigation={this.props.navigation} />
-          </Tab>
-          <Tab heading="Popular">
-            <TabTwo navigation={this.props.navigation} />
-          </Tab>
-          <Tab heading="Explore">
-            <TabThree navigation={this.props.navigation} />
-          </Tab>
-        </Tabs>
-      </Container>
-    );
-  }
-}
+type Props = {
+  navigation: () => void,
+};
+
+const Channels = (props: Props) => (
+  <Container>
+    <Header hasTabs>
+      <Left>
+        <Button transparent onPress={() => props.navigation.navigate('DrawerOpen')}>
+          <Icon active name="menu" />
+        </Button>
+      </Left>
+      <Body>
+        <Image source={headerLogo} style={styles.imageHeader} />
+      </Body>
+      <Right />
+    </Header>
+    <Tabs style={{ backgroundColor: '#fff' }}>
+      <Tab
+        heading={
+          <TabHeading>
+            <Text>Following</Text>
+          </TabHeading>
+        }
+      >
+        <TabOne navigation={props.navigation} />
+      </Tab>
+      <Tab heading="Popular">
+        <TabTwo navigation={props.navigation} />
+      </Tab>
+      <Tab heading="Explore">
+        <TabThree navigation={props.navigation} />
+      </Tab>
+    </Tabs>
+  </Container>
+);
 
 export default Channels;

@@ -17,24 +17,25 @@ import { Grid, Col } from 'react-native-easy-grid';
 import CustomHeader from '../../components/CustomHeader';
 
 import styles from './styles';
-import datas from './data';
+import data from './data';
 
 type Props = {
-  navigation: () => void
+  navigation: () => void,
 };
-class Profile extends Component {
-  state: {
-    listViewData: any
-  };
-  props: Props;
-  ds: Object;
+
+type State = {
+  listViewData: any,
+};
+class Profile extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      listViewData: datas,
-    };
   }
+
+  state = {
+    listViewData: data,
+  };
+  ds: Object;
 
   deleteRow(secId: string, rowId: string, rowMap: any) {
     rowMap[`${secId}${rowId}`].props.closeRow();
@@ -43,7 +44,7 @@ class Profile extends Component {
     this.setState({ listViewData: newData });
   }
   render() {
-    const navigation = this.props.navigation;
+    const { navigation } = this.props;
     return (
       <Container>
         <ImageBackground
@@ -66,10 +67,7 @@ class Profile extends Component {
               </Text>
             </View>
           </View>
-          <Content
-            showsVerticalScrollIndicator={false}
-            style={{ backgroundColor: '#fff' }}
-          >
+          <Content showsVerticalScrollIndicator={false} style={{ backgroundColor: '#fff' }}>
             <View style={styles.linkTabs}>
               <Grid>
                 <Col>
@@ -99,88 +97,80 @@ class Profile extends Component {
               </Grid>
             </View>
 
-            {this.ds.cloneWithRows(this.state.listViewData).getRowCount() === 0
-              ? <View style={styles.linkTabs}>
+            {this.ds.cloneWithRows(this.state.listViewData).getRowCount() === 0 ? (
+              <View style={styles.linkTabs}>
                 <ListItem
                   style={{
-                      backgroundColor: '#fff',
-                      justifyContent: 'center',
-                    }}
+                    backgroundColor: '#fff',
+                    justifyContent: 'center',
+                  }}
                 >
                   <Text style={styles.textNote}>Empty List</Text>
                 </ListItem>
-                </View>
-              : <View>
+              </View>
+            ) : (
+              <View>
                 <View style={styles.linkTabs}>
                   <ListItem
                     style={{
-                        backgroundColor: '#fff',
-                        justifyContent: 'center',
-                      }}
+                      backgroundColor: '#fff',
+                      justifyContent: 'center',
+                    }}
                   >
-                    <Text style={styles.textNote}>
-                        Swipe the items to left and right
-                    </Text>
+                    <Text style={styles.textNote}>Swipe the items to left and right</Text>
                   </ListItem>
                 </View>
                 <List
                   dataSource={this.ds.cloneWithRows(this.state.listViewData)}
-                  renderRow={data =>
-                      (<ListItem
-                        swipeList
-                        style={{
-                          flexDirection: 'row',
-                          backgroundColor: '#FFF',
-                        }}
-                        onPress={() => navigation.navigate('Story')}
-                      >
-                        <Image source={data.url} style={styles.newsImage} />
-                        <View style={styles.newsContent}>
-                          <Text numberOfLines={2} style={styles.newsHeader}>
-                            {data.headline}
-                          </Text>
-                          <Grid style={{ marginTop: 25 }}>
-                            <Col>
-                              <TouchableOpacity>
-                                <Text style={styles.newsLink}>
-                                  {data.link}
-                                </Text>
-                              </TouchableOpacity>
-                            </Col>
-                            <Col>
-                              <TouchableOpacity style={styles.newsTypeView}>
-                                <Text style={styles.newsTypeText}>
-                                  {data.category}
-                                </Text>
-                              </TouchableOpacity>
-                            </Col>
-                          </Grid>
-                        </View>
-                       </ListItem>)}
-                  renderLeftHiddenRow={data =>
-                      (<Button
-                        full
-                        style={([styles.swipeBtn], { backgroundColor: '#CCC' })}
-                      >
-                        <Icon
-                          active
-                          name="information-circle"
-                          style={{ fontSize: 35 }}
-                        />
-                       </Button>)}
-                  renderRightHiddenRow={(data, secId, rowId, rowMap) =>
-                      (<Button
-                        full
-                        danger
-                        onPress={_ => this.deleteRow(secId, rowId, rowMap)}
-                        style={styles.swipeBtn}
-                      >
-                        <Icon active name="trash" style={{ fontSize: 35 }} />
-                       </Button>)}
+                  renderRow={() => (
+                    <ListItem
+                      swipeList
+                      style={{
+                        flexDirection: 'row',
+                        backgroundColor: '#FFF',
+                      }}
+                      onPress={() => navigation.navigate('Story')}
+                    >
+                      <Image source={data.url} style={styles.newsImage} />
+                      <View style={styles.newsContent}>
+                        <Text numberOfLines={2} style={styles.newsHeader}>
+                          {data.headline}
+                        </Text>
+                        <Grid style={{ marginTop: 25 }}>
+                          <Col>
+                            <TouchableOpacity>
+                              <Text style={styles.newsLink}>{data.link}</Text>
+                            </TouchableOpacity>
+                          </Col>
+                          <Col>
+                            <TouchableOpacity style={styles.newsTypeView}>
+                              <Text style={styles.newsTypeText}>{data.category}</Text>
+                            </TouchableOpacity>
+                          </Col>
+                        </Grid>
+                      </View>
+                    </ListItem>
+                  )}
+                  renderLeftHiddenRow={() => (
+                    <Button full style={([styles.swipeBtn], { backgroundColor: '#CCC' })}>
+                      <Icon active name="information-circle" style={{ fontSize: 35 }} />
+                    </Button>
+                  )}
+                  renderRightHiddenRow={(secId, rowId, rowMap) => (
+                    <Button
+                      full
+                      danger
+                      onPress={() => this.deleteRow(secId, rowId, rowMap)}
+                      style={styles.swipeBtn}
+                    >
+                      <Icon active name="trash" style={{ fontSize: 35 }} />
+                    </Button>
+                  )}
                   leftOpenValue={100}
                   rightOpenValue={-100}
                 />
-                </View>}
+              </View>
+            )}
           </Content>
         </ImageBackground>
       </Container>

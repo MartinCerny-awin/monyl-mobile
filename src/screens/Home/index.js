@@ -10,10 +10,10 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Content, Text, Icon, View, Spinner } from 'native-base';
-import CustomHeader from '../../components/CustomHeader';
-
 import { Grid, Col } from 'react-native-easy-grid';
 import Carousel from 'react-native-carousel-view';
+
+import CustomHeader from '../../components/CustomHeader';
 
 import { itemsFetchData } from '../../actions';
 import data from './data.json';
@@ -22,7 +22,14 @@ import styles from './styles';
 
 const deviceWidth = Dimensions.get('window').width;
 
-class Home extends Component {
+type Props = {
+  fetchData: any => void,
+  navigation: () => void,
+  isLoading: boolean,
+  items: any,
+};
+
+class Home extends Component<Props> {
   componentDidMount() {
     this.props.fetchData(data);
   }
@@ -54,17 +61,14 @@ class Home extends Component {
     </TouchableOpacity>
   );
   render() {
-    const navigation = this.props.navigation;
+    const { navigation } = this.props;
     if (this.props.isLoading) {
       return <Spinner />;
     }
     return (
       <Container>
         <CustomHeader hasTabs navigation={navigation} />
-        <Content
-          showsVerticalScrollIndicator={false}
-          style={{ backgroundColor: '#fff' }}
-        >
+        <Content showsVerticalScrollIndicator={false} style={{ backgroundColor: '#fff' }}>
           <View>
             <View>
               <Carousel
@@ -87,35 +91,23 @@ class Home extends Component {
                       source={require('../../../assets/NewsIcons/1.jpg')}
                     >
                       <View style={styles.swiperTextContent}>
-                        <Text
-                          numberOfLines={2}
-                          style={styles.newsPosterHeader}
-                        >
-                            Flat App is a style of interface design emphasizing
-                            minimal use of stylistic elements.
+                        <Text numberOfLines={2} style={styles.newsPosterHeader}>
+                          Flat App is a style of interface design emphasizing minimal use of
+                          stylistic elements.
                         </Text>
                         <Grid style={styles.swiperContentBox}>
                           <Col style={{ flexDirection: 'row' }}>
-                            <Text style={styles.newsPosterLink}>
-                                SPACE.com
-                            </Text>
-                            <Icon
-                              name="ios-time-outline"
-                              style={styles.timePosterIcon}
-                            />
+                            <Text style={styles.newsPosterLink}>SPACE.com</Text>
+                            <Icon name="ios-time-outline" style={styles.timePosterIcon} />
                             <Text style={styles.newsPosterLink}>20m ago</Text>
                           </Col>
                           <Col>
-                            <TouchableOpacity
-                              style={styles.newsPosterTypeView}
-                            >
+                            <TouchableOpacity style={styles.newsPosterTypeView}>
                               <Text
                                 style={styles.newsPosterTypeText}
-                                onPress={() =>
-                                    this.props.navigation.navigate('Channel')
-                                  }
+                                onPress={() => this.props.navigation.navigate('Channel')}
                               >
-                                  SCIENCE
+                                SCIENCE
                               </Text>
                             </TouchableOpacity>
                           </Col>
@@ -135,33 +127,22 @@ class Home extends Component {
                       source={require('../../../assets/NewsIcons/3.jpg')}
                     >
                       <View style={styles.swiperTextContent}>
-                        <Text
-                          numberOfLines={2}
-                          style={styles.newsPosterHeader}
-                        >
-                            So that the applications are able to load faster and
-                            resize easily.
+                        <Text numberOfLines={2} style={styles.newsPosterHeader}>
+                          So that the applications are able to load faster and resize easily.
                         </Text>
                         <Grid style={styles.swiperContentBox}>
                           <Col style={{ flexDirection: 'row' }}>
                             <Text style={styles.newsPosterLink}>CDC</Text>
-                            <Icon
-                              name="ios-time-outline"
-                              style={styles.timePosterIcon}
-                            />
+                            <Icon name="ios-time-outline" style={styles.timePosterIcon} />
                             <Text style={styles.newsPosterLink}>2hr ago</Text>
                           </Col>
                           <Col>
-                            <TouchableOpacity
-                              style={styles.newsPosterTypeView}
-                            >
+                            <TouchableOpacity style={styles.newsPosterTypeView}>
                               <Text
                                 style={styles.newsPosterTypeText}
-                                onPress={() =>
-                                    this.props.navigation.navigate('Channel')
-                                  }
+                                onPress={() => this.props.navigation.navigate('Channel')}
                               >
-                                  ENVIRONMENT
+                                ENVIRONMENT
                               </Text>
                             </TouchableOpacity>
                           </Col>
@@ -181,34 +162,22 @@ class Home extends Component {
                       source={require('../../../assets/NewsIcons/4.jpg')}
                     >
                       <View style={styles.swiperTextContent}>
-                        <Text
-                          numberOfLines={2}
-                          style={styles.newsPosterHeader}
-                        >
-                            But still look sharp on high-definition screens.
+                        <Text numberOfLines={2} style={styles.newsPosterHeader}>
+                          But still look sharp on high-definition screens.
                         </Text>
                         <Grid style={styles.swiperContentBox}>
                           <Col style={{ flexDirection: 'row' }}>
                             <Text style={styles.newsPosterLink}>SKY.com</Text>
-                            <Icon
-                              name="ios-time-outline"
-                              style={styles.timePosterIcon}
-                            />
-                            <Text style={styles.newsPosterLink}>
-                                1day ago
-                            </Text>
+                            <Icon name="ios-time-outline" style={styles.timePosterIcon} />
+                            <Text style={styles.newsPosterLink}>1day ago</Text>
                           </Col>
                           <Col>
-                            <TouchableOpacity
-                              style={styles.newsPosterTypeView}
-                            >
+                            <TouchableOpacity style={styles.newsPosterTypeView}>
                               <Text
                                 style={styles.newsPosterTypeText}
-                                onPress={() =>
-                                    this.props.navigation.navigate('Channel')
-                                  }
+                                onPress={() => this.props.navigation.navigate('Channel')}
                               >
-                                  WORLD
+                                WORLD
                               </Text>
                             </TouchableOpacity>
                           </Col>
@@ -223,6 +192,7 @@ class Home extends Component {
 
           <FlatList
             data={this.props.items}
+            // eslint-disable-next-line no-underscore-dangle
             renderItem={this._renderItem}
             keyExtractor={item => item.id}
           />

@@ -1,9 +1,7 @@
 // @flow
-const Color = require('color');
 
 import React, { Component } from 'react';
 import { Image, Switch, TouchableOpacity, Platform } from 'react-native';
-
 import {
   Container,
   Header,
@@ -23,16 +21,29 @@ import { Grid, Col } from 'react-native-easy-grid';
 
 import styles from './styles';
 
+const Color = require('color');
+
 const headerLogo = require('../../../assets/header-logo.png');
 const primary = require('../../theme/variables/commonColor').brandPrimary;
 
 const light = Color(primary).alpha(0.3);
 
 type Props = {
-  navigation: () => void
+  navigation: () => void,
 };
-class Settings extends Component {
-  state: {
+
+type State = {
+  monSwitch: boolean,
+  tueSwitch: boolean,
+  wedSwitch: boolean,
+  thuSwitch: boolean,
+  friSwitch: boolean,
+  satSwitch: boolean,
+  sunSwitch: boolean,
+};
+
+class Settings extends Component<Props, State> {
+  state = {
     monSwitch: true,
     tueSwitch: false,
     wedSwitch: false,
@@ -40,45 +51,15 @@ class Settings extends Component {
     friSwitch: false,
     satSwitch: false,
     sunSwitch: false,
-    Username: "",
-    email: "",
-    password: "",
-    offset: {
-      x: 0,
-      y: 0
-    }
   };
-  props: Props;
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      monSwitch: true,
-      tueSwitch: false,
-      wedSwitch: false,
-      thuSwitch: false,
-      friSwitch: false,
-      satSwitch: false,
-      sunSwitch: false,
-      Username: '',
-      email: '',
-      password: '',
-      offset: {
-        x: 0,
-        y: 0,
-      },
-    };
-  }
 
   render() {
-    const navigation = this.props.navigation;
+    const { navigation } = this.props;
     return (
       <Container>
         <Header hasTabs>
           <Left>
-            <Button
-              transparent
-              onPress={() => navigation.navigate('DrawerOpen')}
-            >
+            <Button transparent onPress={() => navigation.navigate('DrawerOpen')}>
               <Icon active name="menu" />
             </Button>
           </Left>
@@ -154,21 +135,13 @@ class Settings extends Component {
             <View>
               <Grid style={styles.child}>
                 <Col>
-                  <Text
-                    style={
-                      Platform.OS === 'android'
-                        ? styles.aswitchText
-                        : styles.switchText
-                    }
-                  >
+                  <Text style={Platform.OS === 'android' ? styles.aswitchText : styles.switchText}>
                     Monday
                   </Text>
                 </Col>
                 <Col
                   style={
-                    Platform.OS === 'android'
-                      ? styles.aswitchContainer
-                      : styles.switchContainer
+                    Platform.OS === 'android' ? styles.aswitchContainer : styles.switchContainer
                   }
                 >
                   <Switch
@@ -183,21 +156,13 @@ class Settings extends Component {
               </Grid>
               <Grid style={styles.child}>
                 <Col>
-                  <Text
-                    style={
-                      Platform.OS === 'android'
-                        ? styles.aswitchText
-                        : styles.switchText
-                    }
-                  >
+                  <Text style={Platform.OS === 'android' ? styles.aswitchText : styles.switchText}>
                     Tuesday
                   </Text>
                 </Col>
                 <Col
                   style={
-                    Platform.OS === 'android'
-                      ? styles.aswitchContainer
-                      : styles.switchContainer
+                    Platform.OS === 'android' ? styles.aswitchContainer : styles.switchContainer
                   }
                 >
                   <Switch
@@ -212,21 +177,13 @@ class Settings extends Component {
               </Grid>
               <Grid style={styles.child}>
                 <Col>
-                  <Text
-                    style={
-                      Platform.OS === 'android'
-                        ? styles.aswitchText
-                        : styles.switchText
-                    }
-                  >
+                  <Text style={Platform.OS === 'android' ? styles.aswitchText : styles.switchText}>
                     Wednesday
                   </Text>
                 </Col>
                 <Col
                   style={
-                    Platform.OS === 'android'
-                      ? styles.aswitchContainer
-                      : styles.switchContainer
+                    Platform.OS === 'android' ? styles.aswitchContainer : styles.switchContainer
                   }
                 >
                   <Switch
@@ -241,21 +198,13 @@ class Settings extends Component {
               </Grid>
               <Grid style={styles.child}>
                 <Col>
-                  <Text
-                    style={
-                      Platform.OS === 'android'
-                        ? styles.aswitchText
-                        : styles.switchText
-                    }
-                  >
+                  <Text style={Platform.OS === 'android' ? styles.aswitchText : styles.switchText}>
                     Thursday
                   </Text>
                 </Col>
                 <Col
                   style={
-                    Platform.OS === 'android'
-                      ? styles.aswitchContainer
-                      : styles.switchContainer
+                    Platform.OS === 'android' ? styles.aswitchContainer : styles.switchContainer
                   }
                 >
                   <Switch
@@ -270,21 +219,13 @@ class Settings extends Component {
               </Grid>
               <Grid style={styles.child}>
                 <Col>
-                  <Text
-                    style={
-                      Platform.OS === 'android'
-                        ? styles.aswitchText
-                        : styles.switchText
-                    }
-                  >
+                  <Text style={Platform.OS === 'android' ? styles.aswitchText : styles.switchText}>
                     Friday
                   </Text>
                 </Col>
                 <Col
                   style={
-                    Platform.OS === 'android'
-                      ? styles.aswitchContainer
-                      : styles.switchContainer
+                    Platform.OS === 'android' ? styles.aswitchContainer : styles.switchContainer
                   }
                 >
                   <Switch
@@ -299,21 +240,13 @@ class Settings extends Component {
               </Grid>
               <Grid style={styles.child}>
                 <Col>
-                  <Text
-                    style={
-                      Platform.OS === 'android'
-                        ? styles.aswitchText
-                        : styles.switchText
-                    }
-                  >
+                  <Text style={Platform.OS === 'android' ? styles.aswitchText : styles.switchText}>
                     Saturday
                   </Text>
                 </Col>
                 <Col
                   style={
-                    Platform.OS === 'android'
-                      ? styles.aswitchContainer
-                      : styles.switchContainer
+                    Platform.OS === 'android' ? styles.aswitchContainer : styles.switchContainer
                   }
                 >
                   <Switch
@@ -328,21 +261,13 @@ class Settings extends Component {
               </Grid>
               <Grid style={styles.child}>
                 <Col>
-                  <Text
-                    style={
-                      Platform.OS === 'android'
-                        ? styles.aswitchText
-                        : styles.switchText
-                    }
-                  >
+                  <Text style={Platform.OS === 'android' ? styles.aswitchText : styles.switchText}>
                     Sunday
                   </Text>
                 </Col>
                 <Col
                   style={
-                    Platform.OS === 'android'
-                      ? styles.aswitchContainer
-                      : styles.switchContainer
+                    Platform.OS === 'android' ? styles.aswitchContainer : styles.switchContainer
                   }
                 >
                   <Switch
