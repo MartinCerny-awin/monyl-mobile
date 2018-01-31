@@ -60,8 +60,9 @@
     // React Native has JSX in JS files
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
     // React Native includes images via require('../images/example.png')
-    "global-require": "off",
-    "no-mixed-operators": "off"
+    "global-require": 0,
+    "no-mixed-operators": 0,
+    "no-use-before-define": 0
   }
   //   // Flow Plugin
   //   // The following rules are made available via `eslint-plugin-flowtype`
