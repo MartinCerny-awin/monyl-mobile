@@ -15,6 +15,7 @@ const persistConfig = {
 const persistedReducer = persistCombineReducers(persistConfig, reducers);
 
 export default function configureStore(): any {
+  const preloadedState = {};
   const enhancer = compose(
     applyMiddleware(thunk),
     devTools({
@@ -23,7 +24,7 @@ export default function configureStore(): any {
     }),
   );
 
-  const store = createStore(persistedReducer, enhancer);
+  const store = createStore(persistedReducer, preloadedState, enhancer);
   const persistor = persistStore(store);
 
   return { store, persistor };

@@ -25,7 +25,6 @@
 ; Ignore metro
 .*/node_modules/metro/.*
 
-<PROJECT_ROOT>/node_modules/.*
 [include]
 
 [libs]
