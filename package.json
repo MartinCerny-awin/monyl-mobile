@@ -3,8 +3,10 @@
   "version": "8.1.0",
   "private": true,
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "8.2.1",
-    "babel-preset-react-native-stage-0": "1.0.1",
+    "babel-plugin-react-intl": "^2.4.0",
+    "babel-preset-react-native": "4.0.0",
     "eslint": "4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-flowtype": "2.42.0",
@@ -30,7 +32,9 @@
     "test": "jest && eslint",
     "precommit": "yarn test",
     "react-devtools": "react-devtools",
-    "flow": "flow"
+    "flow": "flow",
+    "i18n-extract": "babel --plugins react-intl src/*",
+    "i18n-tran": "babel scripts/translate.js | node"
   },
   "jest": {
     "preset": "react-native",
@@ -40,11 +44,14 @@
   },
   "dependencies": {
     "color": "3.0.0",
+    "intl": "^1.2.5",
     "jest-cli": "22.1.4",
     "lodash": "4.13.1",
     "moment": "2.20.1",
     "native-base": "2.3.7",
     "react": "16.2.0",
+    "react-intl": "^2.4.0",
+    "react-intl-redux": "^0.7.0",
     "react-native": "0.52.2",
     "react-native-calendars": "1.16.1",
     "react-native-carousel-view": "0.5.1",
