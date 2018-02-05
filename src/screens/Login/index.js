@@ -1,11 +1,25 @@
 // @flow
 import React, { Component } from 'react';
-import { Dimensions, Image, ImageBackground, Platform, StatusBar, StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
+import type { MapStateToProps } from 'react-redux';
+import {
+  Picker,
+  Dimensions,
+  Image,
+  ImageBackground,
+  Platform,
+  StatusBar,
+  StyleSheet,
+} from 'react-native';
 import { Container, Content, Text, Button, View, Left, Right, Toast } from 'native-base';
+import { FormattedMessage } from 'react-intl';
 import { Field, reduxForm } from 'redux-form';
+import type { FormProps } from 'redux-form';
 
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
+
+import { updateLocale } from '../../reducers/localesReducer';
 
 const bg = require('../../../assets/bg.png');
 const logo = require('../../../assets/logo.png');
@@ -14,7 +28,7 @@ type Props = {
   navigation: () => void,
   valid: boolean,
   change: void,
-};
+} & FormProps;
 
 class LoginForm extends Component<Props> {
   login() {
@@ -30,6 +44,10 @@ class LoginForm extends Component<Props> {
     }
   }
 
+  changeLocale = (value) => {
+    this.props.dispatch(updateLocale(value));
+  };
+
   render() {
     const { navigation, change } = this.props;
     return (
@@ -37,8 +55,22 @@ class LoginForm extends Component<Props> {
         <StatusBar barStyle="light-content" />
         <ImageBackground source={bg} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
-            <View style={styles.logoContainer}>
-              <Image source={logo} style={styles.logo} />
+            <View style={styles.topContainer}>
+              <View style={styles.emptyContainer} />
+              <View style={styles.logoContainer}>
+                <Image source={logo} style={styles.logo} />
+              </View>
+              <View style={styles.languageSwitcher}>
+                <Picker
+                  style={{ width: 100 }}
+                  selectedValue={this.props.currentLocale}
+                  onValueChange={value => this.changeLocale(value)}
+                >
+                  <Picker.Item label="en" value="en" />
+                  <Picker.Item label="cs" value="cs" />
+                </Picker>
+                <Text>{this.props.currentLocale}</Text>
+              </View>
             </View>
             <View style={styles.formContainer}>
               <View style={styles.form}>
@@ -65,7 +97,12 @@ class LoginForm extends Component<Props> {
                   style={styles.loginBtn}
                   onPress={() => this.login()}
                 >
-                  <Text style={styles.loginBtnText}>Get Started</Text>
+                  <Text style={styles.loginBtnText}>
+                    <FormattedMessage
+                      id="screens.login.btn.getStarted"
+                      defaultMessage="Get Started"
+                    />
+                  </Text>
                 </Button>
 
                 <View style={styles.otherLinksContainer}>
@@ -88,7 +125,9 @@ class LoginForm extends Component<Props> {
                     style={styles.skipBtn}
                     onPress={() => navigation.navigate('Walkthrough')}
                   >
-                    <Text style={([styles.helpBtns], { top: Platform.OS === 'ios' ? null : 0 })}>
+                    <Text
+                      style={([styles.secondaryBtn], { top: Platform.OS === 'ios' ? null : 0 })}
+                    >
                       Skip
                     </Text>
                   </Button>
@@ -111,6 +150,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
+  topContainer: { flex: 1, flexDirection: 'row' },
+  emptyContainer: { flex: 1 },
   logoContainer: {
     flex: 1,
     flexDirection: 'row',
@@ -122,6 +163,11 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     height: 100,
     width: undefined,
+  },
+  languageSwitcher: {
+    flex: 1,
+    alignItems: 'center',
+    marginTop: 20,
   },
   formContainer: {
     flex: 2,
@@ -158,7 +204,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Login = reduxForm({
+const mapStateToProps: MapStateToProps<*, *, *> = appState => ({
+  currentLocale: appState.locales.locale,
+});
+
+export default connect(mapStateToProps, null, null, { pure: false })(reduxForm({
   form: 'login',
-})(LoginForm);
-export default Login;
+})(LoginForm));

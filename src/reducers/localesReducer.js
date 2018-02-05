@@ -1,20 +1,45 @@
 import en from '../../i18n/locales/en.json';
+import cs from '../../i18n/locales/cs.json';
 
-const UPDATE_LOCALES = 'UPDATE_LOCALES';
+const UPDATE_LOCALE = 'UPDATE_LOCALE';
 
-const initialState = {
-  en: {
+export const updateLocale = locale => ({
+  type: UPDATE_LOCALE,
+  payload: {
+    locale,
+  },
+});
+
+const englishState = {
+  locale: 'en',
+  messages: {
     ...en,
   },
 };
 
-export default (state: any = initialState, action: Function) => {
+const czechState = {
+  locale: 'cs',
+  messages: {
+    ...cs,
+  },
+};
+
+export default (state: any = englishState, action: Function) => {
   switch (action.type) {
-    case UPDATE_LOCALES:
-      return {
-        ...state,
-        ...action.payload,
-      };
+    case UPDATE_LOCALE:
+      switch (action.payload.locale) {
+        case 'cs':
+          return {
+            ...state,
+            ...czechState,
+          };
+
+        default:
+          return {
+            ...state,
+            ...englishState,
+          };
+      }
     default:
       return state;
   }

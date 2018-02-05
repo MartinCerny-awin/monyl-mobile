@@ -51,7 +51,6 @@
     "native-base": "2.3.7",
     "react": "16.2.0",
     "react-intl": "^2.4.0",
-    "react-intl-redux": "^0.7.0",
     "react-native": "0.52.2",
     "react-native-calendars": "1.16.1",
     "react-native-carousel-view": "0.5.1",
