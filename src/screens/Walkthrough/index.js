@@ -35,7 +35,7 @@ const Walkthrough = (props: Props) => (
           </Text>
           <Icon name="ios-paper-outline" style={styles.imageIcons} />
           <Text numberOfLines={2} style={Platform.OS === 'android' ? styles.aText : styles.iosText}>
-            Explore the latest news from your mobile device
+            Join us in Monyl. The bank of the future.
           </Text>
           <Button
             transparent
@@ -55,7 +55,7 @@ const Walkthrough = (props: Props) => (
           </Text>
           <Icon name="ios-information-circle-outline" style={styles.imageIcons} />
           <Text numberOfLines={2} style={Platform.OS === 'android' ? styles.aText : styles.iosText}>
-            Get News Feed of variuos domains at one place
+            Sharia compliant bank that will fit your needs.
           </Text>
           <Button
             transparent
@@ -75,7 +75,7 @@ const Walkthrough = (props: Props) => (
           </Text>
           <Icon name="ios-volume-up-outline" style={styles.imageIcons} />
           <Text numberOfLines={2} style={Platform.OS === 'android' ? styles.aText : styles.iosText}>
-            Get going with the React Native Flat App Theme
+            Just one swipe and you are with us.
           </Text>
           <Button
             transparent
