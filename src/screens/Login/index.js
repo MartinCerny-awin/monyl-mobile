@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import type { MapStateToProps } from 'react-redux';
 import {
-  Picker,
   Dimensions,
   Image,
   ImageBackground,
@@ -16,6 +15,7 @@ import { FormattedMessage } from 'react-intl';
 import { Field, reduxForm } from 'redux-form';
 import type { FormProps } from 'redux-form';
 
+import ActionSheetPicker from '../../components/ActionSheetPicker';
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 
@@ -61,15 +61,11 @@ class LoginForm extends Component<Props> {
                 <Image source={logo} style={styles.logo} />
               </View>
               <View style={styles.languageSwitcher}>
-                <Picker
-                  style={{ width: 100 }}
-                  selectedValue={this.props.currentLocale}
-                  onValueChange={value => this.changeLocale(value)}
-                >
-                  <Picker.Item label="en" value="en" />
-                  <Picker.Item label="cs" value="cs" />
-                </Picker>
-                <Text>{this.props.currentLocale}</Text>
+                <ActionSheetPicker
+                  currentOption={this.props.currentLocale}
+                  options={{ cs: 'Czech', en: 'English' }}
+                  onChange={this.changeLocale}
+                />
               </View>
             </View>
             <View style={styles.formContainer}>
@@ -167,7 +163,7 @@ const styles = StyleSheet.create({
   languageSwitcher: {
     flex: 1,
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 50,
   },
   formContainer: {
     flex: 2,
