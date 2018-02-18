@@ -40,8 +40,7 @@ export class ActionSheet extends Component<Props> {
 
 const style = StyleSheet.create({
   button: {
-    marginBottom: 10,
-    fontWeight: '500',
+    fontSize: 18,
     color: '#fff',
   },
 });
