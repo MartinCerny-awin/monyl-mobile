@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
   topContainer: { flex: 1, flexDirection: 'row' },
   emptyContainer: { flex: 1 },
   logoContainer: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
