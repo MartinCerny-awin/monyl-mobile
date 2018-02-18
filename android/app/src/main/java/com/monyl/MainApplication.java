@@ -1,4 +1,4 @@
-package com.strapflatapp;
+package com.monyl;
 
 import android.app.Application;
 
