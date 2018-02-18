@@ -2,14 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import type { MapStateToProps } from 'react-redux';
-import {
-  Dimensions,
-  Image,
-  ImageBackground,
-  Platform,
-  StatusBar,
-  StyleSheet,
-} from 'react-native';
+import { Dimensions, Image, ImageBackground, Platform, StatusBar, StyleSheet } from 'react-native';
 import { Container, Content, Text, Button, View, Left, Right, Toast } from 'native-base';
 import { FormattedMessage } from 'react-intl';
 import { Field, reduxForm } from 'redux-form';
@@ -63,7 +56,7 @@ class LoginForm extends Component<Props> {
               <View style={styles.languageSwitcher}>
                 <ActionSheetPicker
                   currentOption={this.props.currentLocale}
-                  options={{ cs: 'Czech', en: 'English' }}
+                  options={{ en: 'English', cs: 'Čeština' }}
                   onChange={this.changeLocale}
                 />
               </View>
@@ -104,12 +97,22 @@ class LoginForm extends Component<Props> {
                 <View style={styles.otherLinksContainer}>
                   <Left>
                     <Button small transparent onPress={() => navigation.navigate('SignUp')}>
-                      <Text style={styles.secondaryBtn}>Create Account</Text>
+                      <Text style={styles.secondaryBtn}>
+                        <FormattedMessage
+                          id="screens.login.btn.createAccount"
+                          defaultMessage="Create Account"
+                        />
+                      </Text>
                     </Button>
                   </Left>
                   <Right>
                     <Button small transparent onPress={() => navigation.navigate('ForgotPassword')}>
-                      <Text style={styles.secondaryBtn}>Forgot Password</Text>
+                      <Text style={styles.secondaryBtn}>
+                        <FormattedMessage
+                          id="screens.login.btn.forgotPassword"
+                          defaultMessage="Forgot Password"
+                        />
+                      </Text>
                     </Button>
                   </Right>
                 </View>
@@ -124,7 +127,7 @@ class LoginForm extends Component<Props> {
                     <Text
                       style={([styles.secondaryBtn], { top: Platform.OS === 'ios' ? null : 0 })}
                     >
-                      Skip
+                      <FormattedMessage id="screens.login.btn.skip" defaultMessage="Skip" />
                     </Text>
                   </Button>
                 </View>

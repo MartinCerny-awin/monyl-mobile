@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import { ActionSheetIOS, StyleSheet, Text, View } from 'react-native';
+import type { intlShape } from 'redux-form';
+import { injectIntl } from 'react-intl';
 
 type Props = {
+  ...intlShape,
   currentOption: string,
   options: Array<string>,
   onChange: void,
 };
 
-export class ActionSheet extends Component<Props> {
+class ActionSheet extends Component<Props> {
   showActionSheet = () => {
     const { options } = this.props;
     const values = Object.values(options);
-    values.push('Cancel');
+    values.push(this.props.intl.formatMessage({
+      id: 'components.cancel',
+      defaultMessage: 'Cancel',
+    }));
     const keys = Object.keys(options);
 
     ActionSheetIOS.showActionSheetWithOptions(
@@ -45,4 +51,4 @@ const style = StyleSheet.create({
   },
 });
 
-export default ActionSheet;
+export default injectIntl(ActionSheet);

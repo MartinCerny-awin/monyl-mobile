@@ -2,5 +2,17 @@
   {
     "id": "screens.login.btn.getStarted",
     "defaultMessage": "Get Started"
+  },
+  {
+    "id": "screens.login.btn.createAccount",
+    "defaultMessage": "Create Account"
+  },
+  {
+    "id": "screens.login.btn.forgotPassword",
+    "defaultMessage": "Forgot Password"
+  },
+  {
+    "id": "screens.login.btn.skip",
+    "defaultMessage": "Skip"
   }
 ]

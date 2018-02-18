@@ -1,3 +1,7 @@
 {
-  "screens.login.btn.getStarted": "Get Started123"
+  "components.cancel": "Cancel",
+  "screens.login.btn.getStarted": "Get Started",
+  "screens.login.btn.createAccount": "Create Account",
+  "screens.login.btn.forgotPassword": "Forgot Password",
+  "screens.login.btn.skip": "Skip"
 }
