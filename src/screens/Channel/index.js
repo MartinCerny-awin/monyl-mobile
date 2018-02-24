@@ -31,7 +31,7 @@ const Channel = (props: Props) => {
     <Container style={{ backgroundColor: '#fff' }}>
       <Header>
         <Left>
-          <Button transparent onPress={() => navigation.goBack()}>
+          <Button transparent onPress={() => navigation.goBack(null)}>
             <Icon active name="arrow-back" />
           </Button>
         </Left>

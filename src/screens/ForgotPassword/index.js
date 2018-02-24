@@ -44,7 +44,7 @@ class ForgotPasswordForm extends Component<Props, State> {
 
   forgotPassword() {
     if (this.props.valid) {
-      this.props.navigation.goBack();
+      this.props.navigation.goBack(null);
     } else {
       Toast.show({
         text: 'Enter Valid Email',
@@ -126,7 +126,7 @@ class ForgotPasswordForm extends Component<Props, State> {
               paddingRight: 20,
             }}
           >
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
+            <Button transparent onPress={() => this.props.navigation.goBack(null)}>
               <Text style={styles.helpBtns}>Back To Login</Text>
             </Button>
           </Footer>

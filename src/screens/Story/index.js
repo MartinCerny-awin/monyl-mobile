@@ -51,7 +51,7 @@ class Story extends Component<Props, State> {
           ]}
         >
           <Body style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
+            <Button transparent onPress={() => this.props.navigation.goBack(null)}>
               <Icon active name="arrow-back" style={styles.headerIcons} />
             </Button>
             <Button transparent onPress={() => this.props.navigation.navigate('Comments')}>
@@ -170,7 +170,7 @@ class Story extends Component<Props, State> {
                 <Button
                   transparent
                   iconRight
-                  onPress={() => this.props.navigation.goBack()}
+                  onPress={() => this.props.navigation.goBack(null)}
                   textStyle={{ color: '#222', fontWeight: '700' }}
                 >
                   <Text>NEXT STORY</Text>

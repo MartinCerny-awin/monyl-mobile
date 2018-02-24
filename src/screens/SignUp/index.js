@@ -45,7 +45,7 @@ class SignUpForm extends Component<Props> {
 
   signUp() {
     if (this.props.valid) {
-      this.props.navigation.goBack();
+      this.props.navigation.goBack(null);
     } else {
       Toast.show({
         text: 'All the fields are compulsory!',
@@ -142,7 +142,7 @@ class SignUpForm extends Component<Props> {
               </Button>
             </Left>
             <Right style={{ flex: 1 }}>
-              <Button small transparent onPress={() => this.props.navigation.goBack()}>
+              <Button small transparent onPress={() => this.props.navigation.goBack(null)}>
                 <Text style={styles.helpBtns}>SignIn</Text>
               </Button>
             </Right>

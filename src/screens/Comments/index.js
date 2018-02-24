@@ -33,7 +33,7 @@ const Comments = (props: Props) => (
     <ImageBackground source={bg} style={styles.container}>
       <Header style={styles.headerStyle}>
         <Body style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-          <Button transparent onPress={() => props.navigation.goBack()}>
+          <Button transparent onPress={() => props.navigation.goBack(null)}>
             <Icon active name="arrow-back" style={styles.headerIcons} />
           </Button>
           <Button transparent>
