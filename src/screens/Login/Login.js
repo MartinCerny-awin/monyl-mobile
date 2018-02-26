@@ -28,7 +28,7 @@ class Login extends Component<Props> {
       this.props.navigation.navigate('Walkthrough');
     } else {
       Toast.show({
-        text: 'Enter Valid Username & password!',
+        text: 'Enter valid username & password!',
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },
@@ -89,7 +89,15 @@ class Login extends Component<Props> {
                   validate={[required]}
                 />
 
-                <Button rounded primary block large style={styles.loginBtn} onPress={this.login}>
+                <Button
+                  jest="getStarted"
+                  rounded
+                  primary
+                  block
+                  large
+                  style={styles.loginBtn}
+                  onPress={this.login}
+                >
                   <Text style={styles.loginBtnText}>
                     <FormattedMessage
                       id="screens.login.btn.getStarted"

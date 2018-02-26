@@ -1,9 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-// import createComponentWithIntl from '../../../utils/tests/createComponentWithIntl';
 import Login from '../Login';
 import ActionSheetPicker from '../../../components/ActionSheetPicker';
+
+jest.mock('native-base');
+const { Toast } = require('native-base');
+
+Toast.show = jest.fn();
 
 const navigate = jest.fn();
 const navigation = {
@@ -20,6 +24,24 @@ describe('Login Screen', () => {
     const wrapper = shallow(<Login />);
 
     expect(wrapper).toHaveLength(1);
+  });
+
+  it('shows tooltip error when wrong login details are entered', () => {
+    const wrapper = shallow(<Login />);
+
+    const skipButton = wrapper.find({ jest: 'getStarted' });
+    skipButton.simulate('press');
+
+    expect(Toast.show).toHaveBeenCalled();
+  });
+
+  it('navigates to walkthrough when form is valid', () => {
+    const wrapper = shallow(<Login navigation={navigation} valid />);
+
+    const skipButton = wrapper.find({ jest: 'getStarted' });
+    skipButton.simulate('press');
+
+    expect(navigate).toHaveBeenCalledWith('Walkthrough');
   });
 
   it('changes locale', () => {
