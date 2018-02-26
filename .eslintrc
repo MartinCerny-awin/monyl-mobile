@@ -1,6 +1,5 @@
 {
   "root": true,
-
   "parser": "babel-eslint",
   "extends": "airbnb",
   "env": {
@@ -9,7 +8,7 @@
     "jest": true
   },
 
-  "plugins": ["flowtype", "react", "json"],
+  "plugins": ["flowtype", "react", "json", "jest"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -62,6 +61,8 @@
     // React Native includes images via require('../images/example.png')
     "global-require": 0,
     "no-mixed-operators": 0,
-    "no-use-before-define": 0
+    "no-use-before-define": 0,
+    "function-paren-newline": 0,
+    "import/no-extraneous-dependencies": 0
   }
 }

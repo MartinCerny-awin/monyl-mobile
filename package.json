@@ -7,10 +7,13 @@
     "babel-eslint": "8.2.2",
     "babel-plugin-react-intl": "2.4.0",
     "babel-preset-react-native": "4.0.0",
-    "eslint": "4.16.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "4.18.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-plugin-flowtype": "2.46.1",
     "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-jest": "^21.12.2",
     "eslint-plugin-json": "1.2.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.7.0",
@@ -22,6 +25,7 @@
     "jest-expo": "25.1.0",
     "prettier-eslint": "8.8.1",
     "react-devtools": "3.1.0",
+    "react-dom": "^16.2.0",
     "react-test-renderer": "16.2.0"
   },
   "scripts": {
@@ -29,8 +33,9 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest && eslint",
-    "precommit": "yarn test",
+    "test": "jest",
+    "test-dev": "jest --coverage --watch",
+    "precommit": "yarn test && eslint",
     "react-devtools": "react-devtools",
     "flow": "flow",
     "i18n-extract": "babel --plugins react-intl src/*",
@@ -40,6 +45,9 @@
     "preset": "react-native",
     "transformIgnorePatterns": [
       "node_modules/(?!(react-native|react-native-iphone-x-helper|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal)/)"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
     ]
   },
   "dependencies": {

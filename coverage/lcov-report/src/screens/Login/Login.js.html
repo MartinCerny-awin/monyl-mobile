@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/screens/Login/Login.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/screens/Login</a> Login.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.73% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
+import React, { Component } from 'react';
+import { Image, ImageBackground, Platform, StatusBar } from 'react-native';
+import { Container, Content, Text, Button, View, Left, Right, Toast } from 'native-base';
+import { FormattedMessage } from 'react-intl';
+import { Field } from 'redux-form';
+import type { FormProps } from 'redux-form';
+&nbsp;
+import ActionSheetPicker from '../../components/ActionSheetPicker';
+import InputField from '../../components/form/InputField';
+import { required, email } from '../../utils/validator';
+&nbsp;
+import { updateLocale } from '../../reducers/localesReducer';
+import styles from './styles';
+&nbsp;
+const bg = require('../../../assets/bg.png');
+const logo = require('../../../assets/logo.png');
+&nbsp;
+type Props = {
+  navigation: () =&gt; void,
+  valid: boolean,
+  change: void,
+} &amp; FormProps;
+&nbsp;
+class Login extends Component&lt;Props&gt; {
+  login = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (this.props.valid) {</span>
+<span class="cstat-no" title="statement not covered" >      this.props.navigation.navigate('Walkthrough');</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      Toast.show({</span>
+        text: 'Enter Valid Username &amp; password!',
+        duration: 2500,
+        position: 'top',
+        textStyle: { textAlign: 'center' },
+      });
+    }
+  };
+&nbsp;
+  changeLocale = (value) =&gt; {
+    this.props.dispatch(updateLocale(value));
+  };
+&nbsp;
+  navigateForgotPassword = () =&gt; {
+    this.props.navigation.navigate('ForgotPassword');
+  };
+&nbsp;
+  navigateSignUp = () =&gt; {
+    this.props.navigation.navigate('SignUp');
+  };
+&nbsp;
+  navigateWalkthrought = () =&gt; {
+    this.props.navigation.navigate('Walkthrough');
+  };
+&nbsp;
+  render() {
+    const { change } = this.props;
+    return (
+      &lt;Container&gt;
+        &lt;StatusBar barStyle="light-content" /&gt;
+        &lt;ImageBackground source={bg} style={styles.background}&gt;
+          &lt;Content contentContainerStyle={styles.contentContainer}&gt;
+            &lt;View style={styles.topContainer}&gt;
+              &lt;View style={styles.emptyContainer} /&gt;
+              &lt;View style={styles.logoContainer}&gt;
+                &lt;Image source={logo} style={styles.logo} /&gt;
+              &lt;/View&gt;
+              &lt;View style={styles.languageSwitcher}&gt;
+                &lt;ActionSheetPicker
+                  currentOption={this.props.currentLocale}
+                  options={{ en: 'English', cs: 'Čeština' }}
+                  onChange={this.changeLocale}
+                /&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;View style={styles.formContainer}&gt;
+              &lt;View style={styles.form}&gt;
+                &lt;Field
+                  name="email"
+                  component={InputField}
+                  type="email"
+                  change={change}
+                  validate={[required, email]}
+                /&gt;
+                &lt;Field
+                  name="password"
+                  component={InputField}
+                  type="password"
+                  change={change}
+                  validate={[required]}
+                /&gt;
+&nbsp;
+                &lt;Button rounded primary block large style={styles.loginBtn} onPress={this.login}&gt;
+                  &lt;Text style={styles.loginBtnText}&gt;
+                    &lt;FormattedMessage
+                      id="screens.login.btn.getStarted"
+                      defaultMessage="Get Started"
+                    /&gt;
+                  &lt;/Text&gt;
+                &lt;/Button&gt;
+&nbsp;
+                &lt;View style={styles.otherLinksContainer}&gt;
+                  &lt;Left&gt;
+                    &lt;Button jest="signUp" small transparent onPress={this.navigateSignUp}&gt;
+                      &lt;Text style={styles.secondaryBtn}&gt;
+                        &lt;FormattedMessage
+                          id="screens.login.btn.createAccount"
+                          defaultMessage="Create Account"
+                        /&gt;
+                      &lt;/Text&gt;
+                    &lt;/Button&gt;
+                  &lt;/Left&gt;
+                  &lt;Right&gt;
+                    &lt;Button
+                      jest="forgotPassword"
+                      small
+                      transparent
+                      onPress={this.navigateForgotPassword}
+                    &gt;
+                      &lt;Text style={styles.secondaryBtn}&gt;
+                        &lt;FormattedMessage
+                          id="screens.login.btn.forgotPassword"
+                          defaultMessage="Forgot Password"
+                        /&gt;
+                      &lt;/Text&gt;
+                    &lt;/Button&gt;
+                  &lt;/Right&gt;
+                &lt;/View&gt;
+                &lt;View style={{ alignSelf: 'flex-end' }}&gt;
+                  &lt;Button
+                    jest="skip"
+                    light
+                    small
+                    transparent
+                    style={styles.skipBtn}
+                    onPress={this.navigateWalkthrought}
+                  &gt;
+                    &lt;Text
+                      style={([styles.secondaryBtn], { top: Platform.OS === 'ios' ? null : <span class="branch-1 cbranch-no" title="branch not covered" >0 </span>})}
+                    &gt;
+                      &lt;FormattedMessage id="screens.login.btn.skip" defaultMessage="Skip" /&gt;
+                    &lt;/Text&gt;
+                  &lt;/Button&gt;
+                &lt;/View&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+          &lt;/Content&gt;
+        &lt;/ImageBackground&gt;
+      &lt;/Container&gt;
+    );
+  }
+}
+&nbsp;
+export default Login;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 25 2018 22:17:32 GMT+0000 (GMT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
