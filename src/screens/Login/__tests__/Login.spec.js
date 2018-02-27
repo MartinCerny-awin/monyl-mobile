@@ -29,19 +29,19 @@ describe('Login Screen', () => {
   it('shows tooltip error when wrong login details are entered', () => {
     const wrapper = shallow(<Login />);
 
-    const skipButton = wrapper.find({ jest: 'getStarted' });
+    const skipButton = wrapper.find({ jest: 'login' });
     skipButton.simulate('press');
 
     expect(Toast.show).toHaveBeenCalled();
   });
 
-  it('navigates to walkthrough when form is valid', () => {
+  it('navigates to home when form is valid', () => {
     const wrapper = shallow(<Login navigation={navigation} valid />);
 
-    const skipButton = wrapper.find({ jest: 'getStarted' });
+    const skipButton = wrapper.find({ jest: 'login' });
     skipButton.simulate('press');
 
-    expect(navigate).toHaveBeenCalledWith('Walkthrough');
+    expect(navigate).toHaveBeenCalledWith('Home');
   });
 
   it('changes locale', () => {
@@ -71,14 +71,5 @@ describe('Login Screen', () => {
     skipButton.simulate('press');
 
     expect(navigate).toHaveBeenCalledWith('ForgotPassword');
-  });
-
-  it('navigates to walkthrough', () => {
-    const wrapper = shallow(<Login navigation={navigation} />);
-
-    const skipButton = wrapper.find({ jest: 'skip' });
-    skipButton.simulate('press');
-
-    expect(navigate).toHaveBeenCalledWith('Walkthrough');
   });
 });

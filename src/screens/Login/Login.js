@@ -25,7 +25,7 @@ type Props = {
 class Login extends Component<Props> {
   login = () => {
     if (this.props.valid) {
-      this.props.navigation.navigate('Walkthrough');
+      this.props.navigation.navigate('Home');
     } else {
       Toast.show({
         text: 'Enter valid username & password!',
@@ -46,10 +46,6 @@ class Login extends Component<Props> {
 
   navigateSignUp = () => {
     this.props.navigation.navigate('SignUp');
-  };
-
-  navigateWalkthrought = () => {
-    this.props.navigation.navigate('Walkthrough');
   };
 
   render() {
@@ -90,7 +86,7 @@ class Login extends Component<Props> {
                 />
 
                 <Button
-                  jest="getStarted"
+                  jest="login"
                   rounded
                   primary
                   block
@@ -99,55 +95,36 @@ class Login extends Component<Props> {
                   onPress={this.login}
                 >
                   <Text style={styles.loginBtnText}>
-                    <FormattedMessage
-                      id="screens.login.btn.getStarted"
-                      defaultMessage="Get Started"
-                    />
+                    <FormattedMessage id="screens.login.btn.login" defaultMessage="Login" />
                   </Text>
                 </Button>
 
-                <View style={styles.otherLinksContainer}>
-                  <Left>
+                <View style={styles.bottomLinksContainer}>
+                  <View>
                     <Button jest="signUp" small transparent onPress={this.navigateSignUp}>
-                      <Text style={styles.secondaryBtn}>
+                      <Text style={styles.secondaryBtnText}>
                         <FormattedMessage
                           id="screens.login.btn.createAccount"
                           defaultMessage="Create Account"
                         />
                       </Text>
                     </Button>
-                  </Left>
-                  <Right>
+                  </View>
+                  <View>
                     <Button
                       jest="forgotPassword"
                       small
                       transparent
                       onPress={this.navigateForgotPassword}
                     >
-                      <Text style={styles.secondaryBtn}>
+                      <Text style={styles.secondaryBtnText}>
                         <FormattedMessage
                           id="screens.login.btn.forgotPassword"
                           defaultMessage="Forgot Password"
                         />
                       </Text>
                     </Button>
-                  </Right>
-                </View>
-                <View style={{ alignSelf: 'flex-end' }}>
-                  <Button
-                    jest="skip"
-                    light
-                    small
-                    transparent
-                    style={styles.skipBtn}
-                    onPress={this.navigateWalkthrought}
-                  >
-                    <Text
-                      style={([styles.secondaryBtn], { top: Platform.OS === 'ios' ? null : 0 })}
-                    >
-                      <FormattedMessage id="screens.login.btn.skip" defaultMessage="Skip" />
-                    </Text>
-                  </Button>
+                  </View>
                 </View>
               </View>
             </View>

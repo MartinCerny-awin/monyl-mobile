@@ -45,20 +45,17 @@ export default {
   loginBtnText: {
     fontSize: 16,
   },
-  otherLinksContainer: {
+  bottomLinksContainer: {
     // eslint-disable-next-line no-nested-ternary
-    paddingTop: deviceHeight < 600 ? 5 : Platform.OS === 'android' ? 10 : 15,
+    paddingTop: 15,
+    paddingBottom: 20,
     flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  secondaryBtn: {
+  secondaryBtnText: {
     opacity: 0.9,
     fontWeight: 'bold',
     color: '#fff',
     fontSize: 14,
-  },
-  skipBtn: {
-    margin: 10,
-    borderWidth: 0.4,
-    borderColor: '#FFF',
   },
 };
