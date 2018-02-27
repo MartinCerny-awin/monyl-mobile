@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">90.91% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/11</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">83.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/6</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">90.91% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/11</span>
+        <span class='fraction'>10/10</span>
       </div>
     </div>
   </div>
@@ -182,13 +182,7 @@
 137
 138
 139
-140
-141
-142
-143
-144
-145
-146</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+140</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -239,14 +233,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -335,8 +323,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
 import React, { Component } from 'react';
-import { Image, ImageBackground, Platform, StatusBar } from 'react-native';
-import { Container, Content, Text, Button, View, Left, Right, Toast } from 'native-base';
+import { Image, ImageBackground, StatusBar } from 'react-native';
+import { Container, Content, Text, Button, View, Toast } from 'native-base';
 import { FormattedMessage } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
@@ -360,7 +348,7 @@ type Props = {
 class Login extends Component&lt;Props&gt; {
   login = () =&gt; {
     if (this.props.valid) {
-      this.props.navigation.navigate('Walkthrough');
+      this.props.navigation.navigate('Home');
     } else {
       Toast.show({
         text: 'Enter valid username &amp; password!',
@@ -381,10 +369,6 @@ class Login extends Component&lt;Props&gt; {
 &nbsp;
   navigateSignUp = () =&gt; {
     this.props.navigation.navigate('SignUp');
-  };
-&nbsp;
-  navigateWalkthrought = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    this.props.navigation.navigate('Walkthrough');</span>
   };
 &nbsp;
   render() {
@@ -410,22 +394,23 @@ class Login extends Component&lt;Props&gt; {
             &lt;View style={styles.formContainer}&gt;
               &lt;View style={styles.form}&gt;
                 &lt;Field
-                  name="email"
+                  name="Email"
                   component={InputField}
-                  type="email"
+                  icon="mail"
                   change={change}
                   validate={[required, email]}
                 /&gt;
                 &lt;Field
-                  name="password"
+                  secureTextEntry
+                  name="Password"
                   component={InputField}
-                  type="password"
+                  icon="lock"
                   change={change}
                   validate={[required]}
                 /&gt;
 &nbsp;
                 &lt;Button
-                  jest="getStarted"
+                  jest="login"
                   rounded
                   primary
                   block
@@ -434,39 +419,36 @@ class Login extends Component&lt;Props&gt; {
                   onPress={this.login}
                 &gt;
                   &lt;Text style={styles.loginBtnText}&gt;
-                    &lt;FormattedMessage
-                      id="screens.login.btn.getStarted"
-                      defaultMessage="Get Started"
-                    /&gt;
+                    &lt;FormattedMessage id="screens.login.btn.login" defaultMessage="Login" /&gt;
                   &lt;/Text&gt;
                 &lt;/Button&gt;
 &nbsp;
-                &lt;View style={styles.otherLinksContainer}&gt;
-                  &lt;Left&gt;
+                &lt;View style={styles.bottomLinksContainer}&gt;
+                  &lt;View&gt;
                     &lt;Button jest="signUp" small transparent onPress={this.navigateSignUp}&gt;
-                      &lt;Text style={styles.secondaryBtn}&gt;
+                      &lt;Text style={styles.secondaryBtnText}&gt;
                         &lt;FormattedMessage
                           id="screens.login.btn.createAccount"
                           defaultMessage="Create Account"
                         /&gt;
                       &lt;/Text&gt;
                     &lt;/Button&gt;
-                  &lt;/Left&gt;
-                  &lt;Right&gt;
+                  &lt;/View&gt;
+                  &lt;View&gt;
                     &lt;Button
                       jest="forgotPassword"
                       small
                       transparent
                       onPress={this.navigateForgotPassword}
                     &gt;
-                      &lt;Text style={styles.secondaryBtn}&gt;
+                      &lt;Text style={styles.secondaryBtnText}&gt;
                         &lt;FormattedMessage
                           id="screens.login.btn.forgotPassword"
                           defaultMessage="Forgot Password"
                         /&gt;
                       &lt;/Text&gt;
                     &lt;/Button&gt;
-                  &lt;/Right&gt;
+                  &lt;/View&gt;
                 &lt;/View&gt;
               &lt;/View&gt;
             &lt;/View&gt;
@@ -484,7 +466,7 @@ export default Login;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 27 2018 08:53:35 GMT+0000 (GMT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 27 2018 12:41:14 GMT+0000 (GMT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

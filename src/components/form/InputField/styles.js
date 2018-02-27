@@ -15,6 +15,9 @@ export default {
     paddingLeft: 10,
     color: '#fff',
   },
+  icon: {
+    color: '#fff',
+  },
   formErrorIcon: {
     color: '#fff',
     marginTop: 5,

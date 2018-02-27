@@ -39,8 +39,8 @@
     "precommit": "yarn test:changed && eslint",
     "react-devtools": "react-devtools",
     "flow": "flow",
-    "i18n-extract": "babel --plugins react-intl src/*",
-    "i18n-tran": "babel scripts/translate.js | node"
+    "i18n:extract": "babel --plugins react-intl src/*",
+    "i18n:tran": "babel scripts/translate.js | node"
   },
   "jest": {
     "preset": "react-native",

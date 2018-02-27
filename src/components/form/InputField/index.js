@@ -9,16 +9,18 @@ type Props = {
 };
 
 const InputField = (props: Props) => {
-  const { input, meta: { touched, error } } = props;
+  const {
+    input, meta: { touched, error }, icon, secureTextEntry, label,
+  } = props;
   return (
     <View>
       <Item error={error && touched} rounded style={styles.inputGrp}>
-        <Icon active name={input.name === 'email' ? 'mail' : 'unlock'} style={{ color: '#fff' }} />
+        {icon && <Icon active name={icon} style={styles.icon} />}
         <Input
           placeholderTextColor="#FFF"
           style={styles.input}
-          placeholder={input.name === 'email' ? 'Email' : 'Password'}
-          secureTextEntry={input.name === 'password'}
+          placeholder={label}
+          secureTextEntry={secureTextEntry}
           {...input}
         />
         {touched && error ? (

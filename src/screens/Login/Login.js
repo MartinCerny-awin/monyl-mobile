@@ -1,11 +1,12 @@
 // @flow
 import React, { Component } from 'react';
-import { Image, ImageBackground, Platform, StatusBar } from 'react-native';
-import { Container, Content, Text, Button, View, Left, Right, Toast } from 'native-base';
-import { FormattedMessage } from 'react-intl';
+import { Image, ImageBackground, StatusBar } from 'react-native';
+import { Container, Content, Text, Button, View, Toast } from 'native-base';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
 
+import commonMessages from '../../i18n/common';
 import ActionSheetPicker from '../../components/ActionSheetPicker';
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
@@ -72,15 +73,18 @@ class Login extends Component<Props> {
               <View style={styles.form}>
                 <Field
                   name="email"
+                  label={this.props.intl.formatMessage(commonMessages.email)}
                   component={InputField}
-                  type="email"
+                  icon="mail"
                   change={change}
                   validate={[required, email]}
                 />
                 <Field
+                  secureTextEntry
                   name="password"
+                  label={this.props.intl.formatMessage(commonMessages.password)}
                   component={InputField}
-                  type="password"
+                  icon="lock"
                   change={change}
                   validate={[required]}
                 />
@@ -135,4 +139,4 @@ class Login extends Component<Props> {
   }
 }
 
-export default Login;
+export default injectIntl(Login);

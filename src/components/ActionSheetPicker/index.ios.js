@@ -3,6 +3,8 @@ import { ActionSheetIOS, StyleSheet, Text, View } from 'react-native';
 import type { intlShape } from 'redux-form';
 import { injectIntl } from 'react-intl';
 
+import commonMessages from '../../i18n/common';
+
 type Props = {
   ...intlShape,
   currentOption: string,
@@ -14,10 +16,7 @@ class ActionSheet extends Component<Props> {
   showActionSheet = () => {
     const { options } = this.props;
     const values = Object.values(options);
-    values.push(this.props.intl.formatMessage({
-      id: 'components.cancel',
-      defaultMessage: 'Cancel',
-    }));
+    values.push(this.props.intl.formatMessage(commonMessages.cancel));
     const keys = Object.keys(options);
 
     ActionSheetIOS.showActionSheetWithOptions(

@@ -1,9 +1,10 @@
 {
-  "components.cancel": "Cancel",
+  "common.email": "Email",
+  "common.password": "Password",
+  "common.cancel": "Cancel",
   "screens.initial.btn.signUp": "Create account",
   "screens.initial.btn.login": "I already have account",
-  "screens.login.btn.getStarted": "Get Started",
+  "screens.login.btn.login": "Login",
   "screens.login.btn.createAccount": "Create Account",
-  "screens.login.btn.forgotPassword": "Forgot Password",
-  "screens.login.btn.login": "Login"
+  "screens.login.btn.forgotPassword": "Forgot Password"
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "common.email",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "common.password",
+    "defaultMessage": "Password"
+  },
+  {
+    "id": "common.cancel",
+    "defaultMessage": "Cancel"
+  }
+]
