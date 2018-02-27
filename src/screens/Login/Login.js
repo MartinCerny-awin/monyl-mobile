@@ -56,21 +56,12 @@ class Login extends Component<Props> {
         <StatusBar barStyle="light-content" />
         <ImageBackground source={bg} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
-            <View style={styles.topContainer}>
-              <View style={styles.emptyContainer} />
-              <View style={styles.logoContainer}>
-                <Image source={logo} style={styles.logo} />
-              </View>
-              <View style={styles.languageSwitcher}>
-                <ActionSheetPicker
-                  currentOption={this.props.currentLocale}
-                  options={{ en: 'English', cs: 'Čeština' }}
-                  onChange={this.changeLocale}
-                />
-              </View>
+            <View style={styles.emptyContainer} />
+            <View style={styles.logoContainer}>
+              <Image source={logo} style={styles.logo} />
             </View>
             <View style={styles.formContainer}>
-              <View style={styles.form}>
+              <View>
                 <Field
                   name="email"
                   label={this.props.intl.formatMessage(commonMessages.email)}
@@ -106,7 +97,7 @@ class Login extends Component<Props> {
                 <View style={styles.bottomLinksContainer}>
                   <View>
                     <Button jest="signUp" small transparent onPress={this.navigateSignUp}>
-                      <Text style={styles.secondaryBtnText}>
+                      <Text style={styles.bottomLinkText}>
                         <FormattedMessage
                           id="screens.login.btn.createAccount"
                           defaultMessage="Create Account"
@@ -121,7 +112,7 @@ class Login extends Component<Props> {
                       transparent
                       onPress={this.navigateForgotPassword}
                     >
-                      <Text style={styles.secondaryBtnText}>
+                      <Text style={styles.bottomLinkText}>
                         <FormattedMessage
                           id="screens.login.btn.forgotPassword"
                           defaultMessage="Forgot Password"

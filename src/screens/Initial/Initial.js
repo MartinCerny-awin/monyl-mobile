@@ -47,7 +47,7 @@ class Login extends Component<Props> {
             <View style={styles.logoContainer}>
               <Image source={logo} style={styles.logo} />
             </View>
-            <View style={styles.btns}>
+            <View style={styles.btnContainer}>
               <Button
                 jest="signUp"
                 rounded

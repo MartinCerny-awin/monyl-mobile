@@ -10,7 +10,6 @@ export default {
     flex: 1,
     alignItems: 'flex-end',
     justifyContent: 'center',
-    marginTop: -50,
     marginRight: 50,
   },
   logoContainer: {
@@ -23,14 +22,14 @@ export default {
     resizeMode: 'contain',
     height: 50,
   },
-  btns: {
-    flex: 1,
-    alignItems: 'center',
+  btnContainer: {
+    flex: 2,
     justifyContent: 'flex-end',
-    margin: 20,
+    alignItems: 'center',
   },
   btn: {
     margin: 10,
+    height: 50,
   },
   btnText: {
     fontWeight: 'bold',
