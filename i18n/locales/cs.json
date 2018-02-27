@@ -1,5 +1,7 @@
 {
   "components.cancel": "Zrušit",
+  "screens.initial.btn.signUp": "Založit účet",
+  "screens.initial.btn.login": "Přihlásit",
   "screens.login.btn.getStarted": "Začít",
   "screens.login.btn.createAccount": "Vytvořit účet",
   "screens.login.btn.forgotPassword": "Zapomenuté heslo",

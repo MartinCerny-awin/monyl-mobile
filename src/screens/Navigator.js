@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
-import Login from './Login/';
+import Initial from './Initial';
+import Login from './Login';
 import ForgotPassword from './ForgotPassword';
 import SignUp from './SignUp';
 import Walkthrough from './Walkthrough';
@@ -37,6 +38,7 @@ const Drawer = DrawerNavigator(
 
 const Navigator = StackNavigator(
   {
+    Initial: { screen: Initial },
     Login: { screen: Login },
     SignUp: { screen: SignUp },
     ForgotPassword: { screen: ForgotPassword },
@@ -48,7 +50,7 @@ const Navigator = StackNavigator(
   },
   {
     index: 0,
-    initialRouteName: 'Login',
+    initialRouteName: 'Initial',
     headerMode: 'none',
   },
 );
