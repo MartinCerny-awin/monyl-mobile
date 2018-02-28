@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallowWithIntl } from 'enzyme-react-intl';
 
 import Login from '../Login';
 import ActionSheetPicker from '../../../components/ActionSheetPicker';
@@ -21,13 +21,13 @@ describe('Login Screen', () => {
   });
 
   it('renders correctly', () => {
-    const wrapper = shallow(<Login />);
+    const wrapper = shallowWithIntl(<Login />);
 
     expect(wrapper).toHaveLength(1);
   });
 
   it('shows tooltip error when wrong login details are entered', () => {
-    const wrapper = shallow(<Login />);
+    const wrapper = shallowWithIntl(<Login />);
 
     const skipButton = wrapper.find({ jest: 'login' });
     skipButton.simulate('press');
@@ -36,7 +36,7 @@ describe('Login Screen', () => {
   });
 
   it('navigates to home when form is valid', () => {
-    const wrapper = shallow(<Login navigation={navigation} valid />);
+    const wrapper = shallowWithIntl(<Login navigation={navigation} valid />);
 
     const skipButton = wrapper.find({ jest: 'login' });
     skipButton.simulate('press');
@@ -44,19 +44,8 @@ describe('Login Screen', () => {
     expect(navigate).toHaveBeenCalledWith('Home');
   });
 
-  it('changes locale', () => {
-    const wrapper = shallow(<Login dispatch={dispatch} currentLocale="en" />);
-
-    wrapper.find(ActionSheetPicker).simulate('change', { target: { value: 'cs' } });
-    expect(dispatch).toBeCalledWith(
-      expect.objectContaining({
-        type: 'UPDATE_LOCALE',
-      }),
-    );
-  });
-
   it('navigates to sign up', () => {
-    const wrapper = shallow(<Login navigation={navigation} />);
+    const wrapper = shallowWithIntl(<Login navigation={navigation} />);
 
     const skipButton = wrapper.find({ jest: 'signUp' });
     skipButton.simulate('press');
@@ -65,7 +54,7 @@ describe('Login Screen', () => {
   });
 
   it('navigates to forgot password', () => {
-    const wrapper = shallow(<Login navigation={navigation} />);
+    const wrapper = shallowWithIntl(<Login navigation={navigation} />);
 
     const skipButton = wrapper.find({ jest: 'forgotPassword' });
     skipButton.simulate('press');

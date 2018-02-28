@@ -129,4 +129,4 @@ class Login extends Component<Props> {
   }
 }
 
-export default injectIntl(Login);
+export default Login;
