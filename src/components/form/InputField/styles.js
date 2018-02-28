@@ -6,22 +6,16 @@ const commonColor = require('../../../theme/variables/commonColor');
 export default {
   inputGrp: {
     flexDirection: 'row',
-    backgroundColor: 'rgba(255,255,255,0.3)',
+    backgroundColor: '#fff',
     marginBottom: 8,
     borderWidth: 0,
     borderColor: 'transparent',
   },
   input: {
     paddingLeft: 10,
-    color: '#fff',
   },
   icon: {
-    color: '#fff',
-  },
-  formErrorIcon: {
-    color: '#fff',
-    marginTop: 5,
-    right: 10,
+    color: '#000',
   },
   formErrorText1: {
     fontSize: Platform.OS === 'android' ? 12 : 15,

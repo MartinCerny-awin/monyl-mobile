@@ -7,7 +7,6 @@ import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
 
 import commonMessages from '../../i18n/common';
-import ActionSheetPicker from '../../components/ActionSheetPicker';
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 

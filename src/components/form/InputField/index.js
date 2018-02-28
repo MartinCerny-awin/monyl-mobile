@@ -17,22 +17,11 @@ const InputField = (props: Props) => {
       <Item error={error && touched} rounded style={styles.inputGrp}>
         {icon && <Icon active name={icon} style={styles.icon} />}
         <Input
-          placeholderTextColor="#FFF"
           style={styles.input}
           placeholder={label}
           secureTextEntry={secureTextEntry}
           {...input}
         />
-        {touched && error ? (
-          <Icon
-            active
-            style={styles.formErrorIcon}
-            onPress={() => props.change(props.input.name, '')}
-            name="close"
-          />
-        ) : (
-          <Text />
-        )}
       </Item>
       {touched && error ? (
         <Text style={styles.formErrorText1}>{error}</Text>
