@@ -2,10 +2,10 @@
 import { reduxForm } from 'redux-form';
 import { injectIntl } from 'react-intl';
 
-import Login from './Login';
+import ForgotPassword from './ForgotPassword';
 
 export default injectIntl(
   reduxForm({
-    form: 'login',
-  })(Login),
+    form: 'forgotPassword',
+  })(ForgotPassword),
 );

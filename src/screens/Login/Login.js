@@ -10,8 +10,9 @@ import commonMessages from '../../i18n/common';
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 
-import { updateLocale } from '../../reducers/localesReducer';
 import styles from './styles';
+
+const commonColor = require('../../theme/variables/commonColor');
 
 const bg = require('../../../assets/bg.png');
 const logo = require('../../../assets/logo.png');
@@ -23,7 +24,7 @@ type Props = {
 } & FormProps;
 
 class Login extends Component<Props> {
-  login = () => {
+  submit = () => {
     if (this.props.valid) {
       this.props.navigation.navigate('Home');
     } else {
@@ -34,10 +35,6 @@ class Login extends Component<Props> {
         textStyle: { textAlign: 'center' },
       });
     }
-  };
-
-  changeLocale = (value) => {
-    this.props.dispatch(updateLocale(value));
   };
 
   navigateForgotPassword = () => {
@@ -78,47 +75,28 @@ class Login extends Component<Props> {
                   change={change}
                   validate={[required]}
                 />
-
-                <Button
-                  jest="login"
-                  rounded
-                  primary
-                  block
-                  large
-                  style={styles.loginBtn}
-                  onPress={this.login}
-                >
-                  <Text style={styles.loginBtnText}>
-                    <FormattedMessage id="screens.login.btn.login" defaultMessage="Login" />
-                  </Text>
+                <Button jest="login" rounded primary block onPress={this.submit}>
+                  <FormattedMessage id="screens.login.btn.login" defaultMessage="Login" />
                 </Button>
 
                 <View style={styles.bottomLinksContainer}>
-                  <View>
-                    <Button jest="signUp" small transparent onPress={this.navigateSignUp}>
-                      <Text style={styles.bottomLinkText}>
-                        <FormattedMessage
-                          id="screens.login.btn.createAccount"
-                          defaultMessage="Create Account"
-                        />
-                      </Text>
-                    </Button>
-                  </View>
-                  <View>
-                    <Button
-                      jest="forgotPassword"
-                      small
-                      transparent
-                      onPress={this.navigateForgotPassword}
-                    >
-                      <Text style={styles.bottomLinkText}>
-                        <FormattedMessage
-                          id="screens.login.btn.forgotPassword"
-                          defaultMessage="Forgot Password"
-                        />
-                      </Text>
-                    </Button>
-                  </View>
+                  <Button jest="signUp" small transparent onPress={this.navigateSignUp}>
+                    <FormattedMessage
+                      id="screens.login.btn.createAccount"
+                      defaultMessage="Create Account"
+                    />
+                  </Button>
+                  <Button
+                    jest="forgotPassword"
+                    small
+                    transparent
+                    onPress={this.navigateForgotPassword}
+                  >
+                    <FormattedMessage
+                      id="screens.login.btn.forgotPassword"
+                      defaultMessage="Forgot Password"
+                    />
+                  </Button>
                 </View>
               </View>
             </View>

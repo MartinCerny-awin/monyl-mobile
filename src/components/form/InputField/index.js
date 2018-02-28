@@ -16,18 +16,9 @@ const InputField = (props: Props) => {
     <View>
       <Item error={error && touched} rounded style={styles.inputGrp}>
         {icon && <Icon active name={icon} />}
-        <Input
-          style={styles.input}
-          placeholder={label}
-          secureTextEntry={secureTextEntry}
-          {...input}
-        />
+        <Input placeholder={label} secureTextEntry={secureTextEntry} {...input} />
+        {touched && error && <Text style={styles.formErrorText1}>{error}</Text>}
       </Item>
-      {touched && error ? (
-        <Text style={styles.formErrorText1}>{error}</Text>
-      ) : (
-        <Text style={styles.formErrorText2}>error here</Text>
-      )}
     </View>
   );
 };

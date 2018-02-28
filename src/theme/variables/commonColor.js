@@ -104,7 +104,7 @@ export default {
 
   // Font
   fontFamily: platform === 'ios' ? 'System' : 'Roboto',
-  fontSizeBase: 15,
+  fontSizeBase: 16,
   get fontSizeH1() {
     return this.fontSizeBase * 1.8;
   },
@@ -159,10 +159,10 @@ export default {
   inputFontSize: 17,
   inputBorderColor: '#D9D5DC',
   inputSuccessBorderColor: '#2b8339',
-  inputErrorBorderColor: '#ed2f2f',
+  inputErrorBorderColor: '#000',
   inputHeightBase: 50,
   get inputColor() {
-    return this.inverseTextColor;
+    return this.textColor;
   },
   get inputColorPlaceholder() {
     return '#575757';
@@ -218,8 +218,8 @@ export default {
   tabFontSize: 15,
 
   // Text
-  textColor: '#fff',
-  inverseTextColor: '#000',
+  textColor: '#000',
+  inverseTextColor: '#fff',
   noteFontSize: 16,
   get defaultTextColor() {
     return this.textColor;

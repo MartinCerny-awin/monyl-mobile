@@ -53,33 +53,25 @@ class Login extends Component<Props> {
                 rounded
                 primary
                 block
-                large
                 style={styles.btn}
                 onPress={this.navigateSignUp}
               >
-                <Text style={styles.btnText}>
-                  <FormattedMessage
-                    id="screens.initial.btn.signUp"
-                    defaultMessage="Create account"
-                  />
-                </Text>
+                <FormattedMessage id="screens.initial.btn.signUp" defaultMessage="Create account" />
               </Button>
               <Button
                 jest="login"
                 rounded
                 primary
                 block
-                large
                 bordered
                 style={styles.btn}
+                textStyle={{ fontWeight: 900 }}
                 onPress={this.navigateLogin}
               >
-                <Text style={styles.btnText}>
-                  <FormattedMessage
-                    id="screens.initial.btn.login"
-                    defaultMessage="I already have account"
-                  />
-                </Text>
+                <FormattedMessage
+                  id="screens.initial.btn.login"
+                  defaultMessage="I already have account"
+                />
               </Button>
             </View>
           </Content>

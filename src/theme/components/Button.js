@@ -283,6 +283,7 @@ export default (variables = variable) => {
       lineHeight: variables.btnLineHeight,
       paddingHorizontal: 16,
       backgroundColor: 'transparent',
+      fontWeight: 'bold',
       // childPosition: 1
     },
 
@@ -340,7 +341,7 @@ export default (variables = variable) => {
     borderRadius: variables.borderRadiusBase,
     borderColor: variables.btnPrimaryBg,
     borderWidth: null,
-    height: 45,
+    height: 50,
     alignSelf: 'flex-start',
     flexDirection: 'row',
     elevation: 2,

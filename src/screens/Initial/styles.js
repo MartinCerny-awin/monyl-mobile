@@ -29,10 +29,5 @@ export default {
   },
   btn: {
     margin: 10,
-    height: 50,
-  },
-  btnText: {
-    fontWeight: 'bold',
-    fontSize: 16,
   },
 };
