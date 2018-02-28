@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">40% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>4/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>1/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">40% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>4/10</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -175,14 +175,7 @@
 130
 131
 132
-133
-134
-135
-136
-137
-138
-139
-140</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+133</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -208,12 +201,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -221,27 +212,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -325,11 +311,11 @@
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
 import { Container, Content, Text, Button, View, Toast } from 'native-base';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
 &nbsp;
-import ActionSheetPicker from '../../components/ActionSheetPicker';
+import commonMessages from '../../i18n/common';
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 &nbsp;
@@ -346,11 +332,11 @@ type Props = {
 } &amp; FormProps;
 &nbsp;
 class Login extends Component&lt;Props&gt; {
-  login = () =&gt; {
-    if (this.props.valid) {
-      this.props.navigation.navigate('Home');
+  login = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (this.props.valid) {</span>
+<span class="cstat-no" title="statement not covered" >      this.props.navigation.navigate('Home');</span>
     } else {
-      Toast.show({
+<span class="cstat-no" title="statement not covered" >      Toast.show({</span>
         text: 'Enter valid username &amp; password!',
         duration: 2500,
         position: 'top',
@@ -359,16 +345,16 @@ class Login extends Component&lt;Props&gt; {
     }
   };
 &nbsp;
-  changeLocale = (value) =&gt; {
-    this.props.dispatch(updateLocale(value));
+  changeLocale = <span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {
+<span class="cstat-no" title="statement not covered" >    this.props.dispatch(updateLocale(value));</span>
   };
 &nbsp;
-  navigateForgotPassword = () =&gt; {
-    this.props.navigation.navigate('ForgotPassword');
+  navigateForgotPassword = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    this.props.navigation.navigate('ForgotPassword');</span>
   };
 &nbsp;
-  navigateSignUp = () =&gt; {
-    this.props.navigation.navigate('SignUp');
+  navigateSignUp = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    this.props.navigation.navigate('SignUp');</span>
   };
 &nbsp;
   render() {
@@ -378,23 +364,15 @@ class Login extends Component&lt;Props&gt; {
         &lt;StatusBar barStyle="light-content" /&gt;
         &lt;ImageBackground source={bg} style={styles.background}&gt;
           &lt;Content contentContainerStyle={styles.contentContainer}&gt;
-            &lt;View style={styles.topContainer}&gt;
-              &lt;View style={styles.emptyContainer} /&gt;
-              &lt;View style={styles.logoContainer}&gt;
-                &lt;Image source={logo} style={styles.logo} /&gt;
-              &lt;/View&gt;
-              &lt;View style={styles.languageSwitcher}&gt;
-                &lt;ActionSheetPicker
-                  currentOption={this.props.currentLocale}
-                  options={{ en: 'English', cs: 'Čeština' }}
-                  onChange={this.changeLocale}
-                /&gt;
-              &lt;/View&gt;
+            &lt;View style={styles.emptyContainer} /&gt;
+            &lt;View style={styles.logoContainer}&gt;
+              &lt;Image source={logo} style={styles.logo} /&gt;
             &lt;/View&gt;
             &lt;View style={styles.formContainer}&gt;
-              &lt;View style={styles.form}&gt;
+              &lt;View&gt;
                 &lt;Field
-                  name="Email"
+                  name="email"
+                  label={this.props.intl.formatMessage(commonMessages.email)}
                   component={InputField}
                   icon="mail"
                   change={change}
@@ -402,7 +380,8 @@ class Login extends Component&lt;Props&gt; {
                 /&gt;
                 &lt;Field
                   secureTextEntry
-                  name="Password"
+                  name="password"
+                  label={this.props.intl.formatMessage(commonMessages.password)}
                   component={InputField}
                   icon="lock"
                   change={change}
@@ -426,7 +405,7 @@ class Login extends Component&lt;Props&gt; {
                 &lt;View style={styles.bottomLinksContainer}&gt;
                   &lt;View&gt;
                     &lt;Button jest="signUp" small transparent onPress={this.navigateSignUp}&gt;
-                      &lt;Text style={styles.secondaryBtnText}&gt;
+                      &lt;Text style={styles.bottomLinkText}&gt;
                         &lt;FormattedMessage
                           id="screens.login.btn.createAccount"
                           defaultMessage="Create Account"
@@ -441,7 +420,7 @@ class Login extends Component&lt;Props&gt; {
                       transparent
                       onPress={this.navigateForgotPassword}
                     &gt;
-                      &lt;Text style={styles.secondaryBtnText}&gt;
+                      &lt;Text style={styles.bottomLinkText}&gt;
                         &lt;FormattedMessage
                           id="screens.login.btn.forgotPassword"
                           defaultMessage="Forgot Password"
@@ -466,7 +445,7 @@ export default Login;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 27 2018 12:41:14 GMT+0000 (GMT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 28 2018 10:54:45 GMT+0000 (GMT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
