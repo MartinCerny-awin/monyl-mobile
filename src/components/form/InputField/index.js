@@ -15,7 +15,7 @@ const InputField = (props: Props) => {
   return (
     <View>
       <Item error={error && touched} rounded style={styles.inputGrp}>
-        {icon && <Icon active name={icon} style={styles.icon} />}
+        {icon && <Icon active name={icon} />}
         <Input
           style={styles.input}
           placeholder={label}

@@ -162,7 +162,7 @@ export default {
   inputErrorBorderColor: '#ed2f2f',
   inputHeightBase: 50,
   get inputColor() {
-    return this.textColor;
+    return this.inverseTextColor;
   },
   get inputColorPlaceholder() {
     return '#575757';
@@ -219,8 +219,8 @@ export default {
 
   // Text
   textColor: '#fff',
-  inverseTextColor: '#fff',
-  noteFontSize: 14,
+  inverseTextColor: '#000',
+  noteFontSize: 16,
   get defaultTextColor() {
     return this.textColor;
   },
