@@ -1,7 +1,9 @@
 import variable from './../variables/platform';
 
 export default (variables = variable) => {
-  const pickerTheme = {};
+  const switchTheme = {
+    marginVertical: -5,
+  };
 
-  return pickerTheme;
+  return switchTheme;
 };

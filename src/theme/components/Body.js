@@ -1,10 +1,11 @@
 import variable from './../variables/platform';
 
 export default (variables = variable) => {
-  const tabTheme = {
+  const bodyTheme = {
     flex: 1,
-    backgroundColor: '#FFF',
+    alignItems: 'center',
+    alignSelf: 'center',
   };
 
-  return tabTheme;
+  return bodyTheme;
 };

@@ -6,11 +6,14 @@ export default (variables = variable) => {
   const itemTheme = {
     '.floatingLabel': {
       'NativeBase.Input': {
-        height: 60,
+        height: 50,
         top: 8,
       },
       'NativeBase.Label': {
         top: 8,
+      },
+      'NativeBase.Icon': {
+        top: 6,
       },
     },
     '.fixedLabel': {
@@ -39,6 +42,9 @@ export default (variables = variable) => {
         alignSelf: 'flex-start',
         fontSize: variables.inputFontSize - 2,
       },
+      'NativeBase.Icon': {
+        marginTop: 36,
+      },
       'NativeBase.Input': {
         alignSelf: Platform.OS === 'ios' ? 'stretch' : 'flex-start',
         flex: 1,
@@ -46,6 +52,7 @@ export default (variables = variable) => {
         fontSize: variables.inputFontSize,
       },
       flexDirection: null,
+      height: variables.inputHeightBase + 15,
     },
     '.inlineLabel': {
       'NativeBase.Label': {
@@ -78,6 +85,9 @@ export default (variables = variable) => {
       paddingRight: 8,
     },
     'NativeBase.Input': {
+      '.multiline': {
+        height: null,
+      },
       height: variables.inputHeightBase,
       color: variables.inputColor,
       flex: 1,
@@ -122,7 +132,7 @@ export default (variables = variable) => {
         paddingLeft: 8,
       },
       'NativeBase.Icon': {
-        paddingLeft: 15,
+        paddingLeft: 10,
       },
       '.success': {
         borderColor: variables.inputSuccessBorderColor,

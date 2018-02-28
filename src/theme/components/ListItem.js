@@ -4,7 +4,7 @@ import pickerTheme from './Picker';
 import variable from './../variables/platform';
 
 export default (variables = variable) => {
-  const { platform } = variables;
+  const platform = variables.platform;
 
   const listItemTheme = {
     'NativeBase.InputGroup': {
@@ -67,6 +67,7 @@ export default (variables = variable) => {
     },
     'NativeBase.CheckBox': {
       marginLeft: -10,
+      marginRight: 10,
     },
     '.first': {
       '.itemHeader': {
@@ -207,7 +208,7 @@ export default (variables = variable) => {
         color: variables.listNoteColor,
         fontWeight: '200',
       },
-      alignSelf: null,
+      alignSelf: 'center',
     },
 
     '.last': {
@@ -385,11 +386,6 @@ export default (variables = variable) => {
     },
     '.noBorder': {
       borderBottomWidth: null,
-    },
-    '.swipeList': {
-      paddingBottom: 0,
-      paddingRight: 0,
-      paddingTop: 0,
     },
     alignItems: 'center',
     flexDirection: 'row',

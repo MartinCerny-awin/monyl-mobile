@@ -7,6 +7,10 @@ export default (variables = variable) => {
     },
     flex: 1,
     backgroundColor: 'transparent',
+    'NativeBase.Segment': {
+      borderWidth: 0,
+      backgroundColor: 'transparent',
+    },
   };
 
   return contentTheme;

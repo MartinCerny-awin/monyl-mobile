@@ -1,7 +1,24 @@
 import variable from './../variables/platform';
 
 export default (variables = variable) => {
-  const { platform } = variables;
+  const platform = variables.platform;
+  const transparentBtnCommon = {
+    'NativeBase.Text': {
+      fontSize: variables.DefaultFontSize - 4,
+      color: variables.sTabBarActiveTextColor,
+    },
+    'NativeBase.Icon': {
+      fontSize: variables.iconFontSize - 10,
+      color: variables.sTabBarActiveTextColor,
+      marginHorizontal: null,
+    },
+    'NativeBase.IconNB': {
+      fontSize: variables.iconFontSize - 10,
+      color: variables.sTabBarActiveTextColor,
+    },
+    paddingVertical: null,
+    paddingHorizontal: null,
+  };
 
   const cardItemTheme = {
     'NativeBase.Left': {
@@ -29,21 +46,7 @@ export default (variables = variable) => {
       },
       'NativeBase.Button': {
         '.transparent': {
-          'NativeBase.Text': {
-            fontSize: variables.DefaultFontSize - 4,
-            color: variables.sTabBarActiveTextColor,
-          },
-          'NativeBase.Icon': {
-            fontSize: variables.iconFontSize - 10,
-            color: variables.sTabBarActiveTextColor,
-            marginHorizontal: null,
-          },
-          'NativeBase.IconNB': {
-            fontSize: variables.iconFontSize - 10,
-            color: variables.sTabBarActiveTextColor,
-          },
-          paddingVertical: null,
-          paddingHorizontal: null,
+          ...transparentBtnCommon,
           paddingRight: variables.listItemPadding + 5,
         },
       },
@@ -59,6 +62,7 @@ export default (variables = variable) => {
       },
     },
     '.cardBody': {
+      padding: -5,
       'NativeBase.Text': {
         marginTop: 5,
       },
@@ -70,26 +74,10 @@ export default (variables = variable) => {
           fontWeight: '200',
           marginRight: 20,
         },
-        lineHeight: 20,
-        fontSize: variables.DefaultFontSize - 2,
       },
       'NativeBase.Button': {
         '.transparent': {
-          'NativeBase.Text': {
-            fontSize: variables.DefaultFontSize - 4,
-            color: variables.sTabBarActiveTextColor,
-          },
-          'NativeBase.Icon': {
-            fontSize: variables.iconFontSize - 10,
-            color: variables.sTabBarActiveTextColor,
-            marginHorizontal: null,
-          },
-          'NativeBase.IconNB': {
-            fontSize: variables.iconFontSize - 10,
-            color: variables.sTabBarActiveTextColor,
-          },
-          paddingVertical: null,
-          paddingHorizontal: null,
+          ...transparentBtnCommon,
           paddingRight: variables.listItemPadding + 5,
           alignSelf: 'stretch',
         },
@@ -104,21 +92,7 @@ export default (variables = variable) => {
       },
       'NativeBase.Button': {
         '.transparent': {
-          'NativeBase.Text': {
-            fontSize: variables.DefaultFontSize - 4,
-            color: variables.sTabBarActiveTextColor,
-          },
-          'NativeBase.Icon': {
-            fontSize: variables.iconFontSize - 10,
-            color: variables.sTabBarActiveTextColor,
-            marginHorizontal: null,
-          },
-          'NativeBase.IconNB': {
-            fontSize: variables.iconFontSize - 10,
-            color: variables.sTabBarActiveTextColor,
-          },
-          paddingVertical: null,
-          paddingHorizontal: null,
+          ...transparentBtnCommon,
         },
         alignSelf: null,
       },
@@ -202,6 +176,9 @@ export default (variables = variable) => {
       borderBottomWidth: variables.borderWidth,
       borderColor: variables.cardBorderColor,
     },
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 2,
     padding: variables.listItemPadding + 5,
     paddingVertical: variables.listItemPadding,
     backgroundColor: variables.cardDefaultBg,

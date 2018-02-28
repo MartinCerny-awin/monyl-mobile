@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 import variable from './../variables/platform';
 
 export default (variables = variable) => {
-  const { platform } = variables;
+  const platform = variables.platform;
 
   const footerTabTheme = {
     'NativeBase.Button': {
@@ -31,7 +31,7 @@ export default (variables = variable) => {
       shadowOpacity: null,
       alignSelf: 'center',
       flex: 1,
-      height: variables.footerHeight,
+      height: variables.footerHeight - (variables.isIphoneX ? 34 : 0),
       justifyContent: 'center',
       '.badge': {
         'NativeBase.Badge': {
