@@ -9,4 +9,7 @@ export default {
   formContainer: {
     margin: 20,
   },
+  body: {
+    flex: 3,
+  },
 };

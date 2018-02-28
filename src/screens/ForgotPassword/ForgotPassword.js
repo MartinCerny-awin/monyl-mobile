@@ -1,7 +1,20 @@
 // @flow
 import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
-import { Container, Content, Text, Button, View, Toast, Left, Header, Icon } from 'native-base';
+import {
+  Body,
+  Title,
+  Container,
+  Content,
+  Text,
+  Button,
+  View,
+  Toast,
+  Left,
+  Right,
+  Header,
+  Icon,
+} from 'native-base';
 import { Field } from 'redux-form';
 import type { IntlShape } from 'react-intl';
 
@@ -30,16 +43,23 @@ class ForgotPassword extends Component<Props> {
     }
   }
 
+  navigateBack = () => {
+    this.props.navigation.goBack(null);
+  };
+
   render() {
     return (
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.props.navigation.goBack(null)}>
+            <Button transparent onPress={this.navigateBack}>
               <Icon active name="arrow-back" />
             </Button>
           </Left>
-          <Text style={styles.forgotPasswordHeader}>Forgot Your Password?</Text>
+          <Body style={styles.body}>
+            <Title>Forgot your password?</Title>
+          </Body>
+          <Right />
         </Header>
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
