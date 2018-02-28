@@ -2,7 +2,6 @@ import React from 'react';
 import { shallowWithIntl } from 'enzyme-react-intl';
 
 import Login from '../Login';
-import ActionSheetPicker from '../../../components/ActionSheetPicker';
 
 jest.mock('native-base');
 const { Toast } = require('native-base');

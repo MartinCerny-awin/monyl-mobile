@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
 import { Container, Content, Text, Button, View, Toast } from 'native-base';
-import { FormattedMessage, injectIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
 
