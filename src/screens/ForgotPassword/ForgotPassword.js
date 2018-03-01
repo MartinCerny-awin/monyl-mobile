@@ -30,7 +30,7 @@ type Props = {
 };
 
 class ForgotPassword extends Component<Props> {
-  submit() {
+  submit = () => {
     if (this.props.valid) {
       this.props.navigation.goBack(null);
     } else {
@@ -41,7 +41,7 @@ class ForgotPassword extends Component<Props> {
         textStyle: { textAlign: 'center' },
       });
     }
-  }
+  };
 
   navigateBack = () => {
     this.props.navigation.goBack(null);
@@ -72,7 +72,7 @@ class ForgotPassword extends Component<Props> {
                 validate={[required, email]}
               />
 
-              <Button rounded primary block onPress={this.submit}>
+              <Button jest="sendEmail" rounded primary block onPress={this.submit}>
                 <Text>Send Email</Text>
               </Button>
             </View>

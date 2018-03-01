@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
-import { Container, Content, Text, Button, View, Toast } from 'native-base';
+import { Container, Content, Button, View, Toast } from 'native-base';
 import { FormattedMessage } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
@@ -11,8 +11,6 @@ import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 
 import styles from './styles';
-
-const commonColor = require('../../theme/variables/commonColor');
 
 const bg = require('../../../assets/bg.png');
 const logo = require('../../../assets/logo.png');
