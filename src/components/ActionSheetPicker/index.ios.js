@@ -3,7 +3,7 @@ import { ActionSheetIOS, StyleSheet, Text, View } from 'react-native';
 import type { intlShape } from 'redux-form';
 import { injectIntl } from 'react-intl';
 
-import commonMessages from '../../i18n/common';
+import commonMessages from '../../i18n/commonMessages';
 
 type Props = {
   ...intlShape,

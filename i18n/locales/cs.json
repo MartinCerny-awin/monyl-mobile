@@ -2,9 +2,13 @@
   "common.email": "Email",
   "common.password": "Heslo",
   "common.cancel": "Zrušit",
+  "common.firstName": "Křestní jméno",
+  "common.lastName": "Příjmení",
+  "common.continue": "Pokračovat",
   "screens.initial.btn.signUp": "Založit účet",
   "screens.initial.btn.login": "Přihlásit",
   "screens.login.btn.createAccount": "Vytvořit účet",
   "screens.login.btn.forgotPassword": "Zapomenuté heslo",
-  "screens.login.btn.login": "Přihlásit"
+  "screens.login.btn.login": "Přihlásit",
+  "screens.signUp.createAccount": "Vytvořit účet"
 }

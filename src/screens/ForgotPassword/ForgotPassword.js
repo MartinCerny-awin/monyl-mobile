@@ -19,7 +19,7 @@ import { Field } from 'redux-form';
 import type { IntlShape } from 'react-intl';
 
 import { required, email } from '../../utils/validator';
-import commonMessages from '../../i18n/common';
+import commonMessages from '../../i18n/commonMessages';
 import InputField from '../../components/form/InputField';
 import styles from './styles';
 

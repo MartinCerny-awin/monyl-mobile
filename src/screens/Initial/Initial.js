@@ -9,9 +9,6 @@ import ActionSheetPicker from '../../components/ActionSheetPicker';
 import { updateLocale } from '../../reducers/localesReducer';
 import styles from './styles';
 
-const bg = require('../../../assets/bg.png');
-const logo = require('../../../assets/logo.png');
-
 type Props = {
   navigation: () => void,
   dispatch: void,
@@ -35,7 +32,7 @@ class Login extends Component<Props> {
     return (
       <Container>
         <StatusBar barStyle="light-content" />
-        <ImageBackground source={bg} style={styles.background}>
+        <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
             <View style={styles.languageSwitcher}>
               <ActionSheetPicker
@@ -45,7 +42,7 @@ class Login extends Component<Props> {
               />
             </View>
             <View style={styles.logoContainer}>
-              <Image source={logo} style={styles.logo} />
+              <Image source={require('../../../assets/logo.png')} style={styles.logo} />
             </View>
             <View style={styles.btnContainer}>
               <Button

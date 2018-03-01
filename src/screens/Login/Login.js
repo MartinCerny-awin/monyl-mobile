@@ -6,14 +6,11 @@ import { FormattedMessage } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
 
-import commonMessages from '../../i18n/common';
+import commonMessages from '../../i18n/commonMessages';
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 
 import styles from './styles';
-
-const bg = require('../../../assets/bg.png');
-const logo = require('../../../assets/logo.png');
 
 type Props = {
   navigation: () => void,
@@ -48,11 +45,11 @@ class Login extends Component<Props> {
     return (
       <Container>
         <StatusBar barStyle="light-content" />
-        <ImageBackground source={bg} style={styles.background}>
+        <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
             <View style={styles.emptyContainer} />
             <View style={styles.logoContainer}>
-              <Image source={logo} style={styles.logo} />
+              <Image source={require('../../../assets/logo.png')} style={styles.logo} />
             </View>
             <View style={styles.formContainer}>
               <View>

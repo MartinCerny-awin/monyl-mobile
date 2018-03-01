@@ -1,10 +1,14 @@
 {
   "common.email": "Email",
   "common.password": "Password",
+  "common.firstName": "First Name",
+  "common.lastName": "Last Name",
   "common.cancel": "Cancel",
+  "common.continue": "Continue",
   "screens.initial.btn.signUp": "Create account",
   "screens.initial.btn.login": "I already have account",
   "screens.login.btn.login": "Login",
   "screens.login.btn.createAccount": "Create Account",
-  "screens.login.btn.forgotPassword": "Forgot Password"
+  "screens.login.btn.forgotPassword": "Forgot Password",
+  "screens.signUp.createAccount": "Create Account"
 }
