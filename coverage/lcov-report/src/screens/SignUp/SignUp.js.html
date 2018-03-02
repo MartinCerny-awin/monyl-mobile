@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/screens/Login/Login.js</title>
+    <title>Code coverage report for src/screens/SignUp/SignUp.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/screens/Login</a> Login.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/screens/SignUp</a> SignUp.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/8</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/8</span>
+        <span class='fraction'>5/5</span>
       </div>
     </div>
   </div>
@@ -151,11 +151,7 @@
 106
 107
 108
-109
-110
-111
-112
-113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+109</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -176,6 +172,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -197,16 +197,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -269,35 +261,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
 import React, { Component } from 'react';
-import { Image, ImageBackground, StatusBar } from 'react-native';
-import { Container, Content, Button, View, Toast } from 'native-base';
-import { FormattedMessage, defineMessages } from 'react-intl';
+import { ImageBackground } from 'react-native';
+import { Container, Content, Button, Toast } from 'native-base';
 import { Field } from 'redux-form';
-import type { FormProps } from 'redux-form';
+import { defineMessages, FormattedMessage } from 'react-intl';
+import type { IntlShape } from 'react-intl';
 &nbsp;
+import HeaderBack from '../../components/header/HeaderBack';
 import commonMessages from '../../i18n/commonMessages';
+import { minLength, required, email } from '../../utils/validator';
 import InputField from '../../components/form/InputField';
-import { required, email } from '../../utils/validator';
-&nbsp;
 import styles from './styles';
 &nbsp;
 type Props = {
   navigation: () =&gt; void,
   valid: boolean,
-  change: void,
-} &amp; FormProps;
+  intl: IntlShape,
+};
 &nbsp;
 const messages = defineMessages({
+  signUp: {
+    id: 'screens.signUp.createAccount',
+    defaultMessage: 'Create Account',
+  },
   validation: {
-    id: 'screens.login.validation',
-    defaultMessage: 'Enter username and password',
+    id: 'screens.signUp.validation',
+    defaultMessage: 'You have to fill all fields.',
   },
 });
 &nbsp;
-class Login extends Component&lt;Props&gt; {
+class SignUp extends Component&lt;Props&gt; {
   submit = () =&gt; {
     if (this.props.valid) {
-      this.props.navigation.navigate('Home');
+      this.props.navigation.goBack(null);
     } else {
       Toast.show({
         text: this.props.intl.formatMessage(messages.validation),
@@ -308,69 +304,61 @@ class Login extends Component&lt;Props&gt; {
     }
   };
 &nbsp;
-  navigateForgotPassword = () =&gt; {
-    this.props.navigation.navigate('ForgotPassword');
-  };
-&nbsp;
-  navigateSignUp = () =&gt; {
-    this.props.navigation.navigate('SignUp');
-  };
-&nbsp;
   render() {
-    const { change } = this.props;
     return (
       &lt;Container&gt;
-        &lt;StatusBar barStyle="light-content" /&gt;
+        &lt;HeaderBack
+          title={this.props.intl.formatMessage(messages.signUp)}
+          navigation={this.props.navigation}
+        /&gt;
         &lt;ImageBackground source={require('../../../assets/bg.png')} style={styles.background}&gt;
           &lt;Content contentContainerStyle={styles.contentContainer}&gt;
-            &lt;View style={styles.emptyContainer} /&gt;
-            &lt;View style={styles.logoContainer}&gt;
-              &lt;Image source={require('../../../assets/logo.png')} style={styles.logo} /&gt;
-            &lt;/View&gt;
-            &lt;View style={styles.formContainer}&gt;
-              &lt;View&gt;
-                &lt;Field
-                  name="email"
-                  label={this.props.intl.formatMessage(commonMessages.email)}
-                  component={InputField}
-                  icon="mail"
-                  change={change}
-                  validate={[required, email]}
-                /&gt;
-                &lt;Field
-                  secureTextEntry
-                  name="password"
-                  label={this.props.intl.formatMessage(commonMessages.password)}
-                  component={InputField}
-                  icon="lock"
-                  change={change}
-                  validate={[required]}
-                /&gt;
-                &lt;Button jest="login" rounded primary block onPress={this.submit}&gt;
-                  &lt;FormattedMessage id="screens.login.btn.login" defaultMessage="Login" /&gt;
-                &lt;/Button&gt;
+            &lt;Field
+              name="firstName"
+              icon="person"
+              label={this.props.intl.formatMessage(commonMessages.firstName)}
+              component={InputField}
+              type="text"
+              validate={[required]}
+            /&gt;
 &nbsp;
-                &lt;View style={styles.bottomLinksContainer}&gt;
-                  &lt;Button jest="signUp" small transparent onPress={this.navigateSignUp}&gt;
-                    &lt;FormattedMessage
-                      id="screens.login.btn.createAccount"
-                      defaultMessage="Create Account"
-                    /&gt;
-                  &lt;/Button&gt;
-                  &lt;Button
-                    jest="forgotPassword"
-                    small
-                    transparent
-                    onPress={this.navigateForgotPassword}
-                  &gt;
-                    &lt;FormattedMessage
-                      id="screens.login.btn.forgotPassword"
-                      defaultMessage="Forgot Password"
-                    /&gt;
-                  &lt;/Button&gt;
-                &lt;/View&gt;
-              &lt;/View&gt;
-            &lt;/View&gt;
+            &lt;Field
+              name="lastName"
+              icon="person"
+              label={this.props.intl.formatMessage(commonMessages.lastName)}
+              component={InputField}
+              type="text"
+              validate={[required]}
+            /&gt;
+&nbsp;
+            &lt;Field
+              name="email"
+              icon="mail"
+              label={this.props.intl.formatMessage(commonMessages.email)}
+              component={InputField}
+              type="email"
+              validate={[email, required]}
+            /&gt;
+            &lt;Field
+              secureTextEntry
+              name="password"
+              icon="unlock"
+              label={this.props.intl.formatMessage(commonMessages.password)}
+              component={InputField}
+              type="password"
+              validate={[required, minLength(8)]}
+            /&gt;
+&nbsp;
+            &lt;Button
+              jest="signUp"
+              rounded
+              bordered
+              block
+              onPress={this.submit}
+              style={styles.signupBtn}
+            &gt;
+              &lt;FormattedMessage {...commonMessages.continue} /&gt;
+            &lt;/Button&gt;
           &lt;/Content&gt;
         &lt;/ImageBackground&gt;
       &lt;/Container&gt;
@@ -378,7 +366,7 @@ class Login extends Component&lt;Props&gt; {
   }
 }
 &nbsp;
-export default Login;
+export default SignUp;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
