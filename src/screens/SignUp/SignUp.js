@@ -1,22 +1,12 @@
 // @flow
 import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
-import {
-  Header,
-  Icon,
-  Container,
-  Content,
-  Body,
-  Title,
-  Button,
-  Toast,
-  Left,
-  Right,
-} from 'native-base';
+import { Container, Content, Button, Toast } from 'native-base';
 import { Field } from 'redux-form';
 import { defineMessages, FormattedMessage } from 'react-intl';
 import type { IntlShape } from 'react-intl';
 
+import HeaderBack from '../../components/header/HeaderBack';
 import commonMessages from '../../i18n/commonMessages';
 import { minLength, required, email } from '../../utils/validator';
 import InputField from '../../components/form/InputField';
@@ -41,7 +31,7 @@ class SignUp extends Component<Props> {
       this.props.navigation.goBack(null);
     } else {
       Toast.show({
-        text: 'All the fields are compulsory!',
+        text: 'You have to fill all fields.',
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },
@@ -56,18 +46,10 @@ class SignUp extends Component<Props> {
   render() {
     return (
       <Container>
-        <Header>
-          <Left>
-            <Button transparent onPress={this.navigateBack}>
-              <Icon active name="arrow-back" />
-            </Button>
-          </Left>
-
-          <Body style={styles.body}>
-            <Title>{this.props.intl.formatMessage(messages.signUp)}</Title>
-          </Body>
-          <Right />
-        </Header>
+        <HeaderBack
+          title={this.props.intl.formatMessage(messages.signUp)}
+          action={this.navigateBack}
+        />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
             <Field

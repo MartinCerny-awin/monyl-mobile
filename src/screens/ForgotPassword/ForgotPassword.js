@@ -1,25 +1,14 @@
 // @flow
 import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
-import {
-  Body,
-  Title,
-  Container,
-  Content,
-  Button,
-  View,
-  Toast,
-  Left,
-  Right,
-  Header,
-  Icon,
-} from 'native-base';
+import { Container, Content, Button, View, Toast } from 'native-base';
 import { Field } from 'redux-form';
 import { FormattedMessage, defineMessages } from 'react-intl';
 import type { IntlShape } from 'react-intl';
 
 import { required, email } from '../../utils/validator';
 import commonMessages from '../../i18n/commonMessages';
+import HeaderBack from '../../components/header/HeaderBack';
 import InputField from '../../components/form/InputField';
 import styles from './styles';
 
@@ -57,17 +46,10 @@ class ForgotPassword extends Component<Props> {
   render() {
     return (
       <Container>
-        <Header>
-          <Left>
-            <Button transparent onPress={this.navigateBack}>
-              <Icon active name="arrow-back" />
-            </Button>
-          </Left>
-          <Body style={styles.body}>
-            <Title>{this.props.intl.formatMessage(messages.title)}</Title>
-          </Body>
-          <Right />
-        </Header>
+        <HeaderBack
+          title={this.props.intl.formatMessage(messages.title)}
+          action={this.navigateBack}
+        />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
             <View style={styles.formContainer}>

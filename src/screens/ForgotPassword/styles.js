@@ -7,7 +7,4 @@ export default {
     justifyContent: 'center',
     margin: 20,
   },
-  body: {
-    flex: 3,
-  },
 };
