@@ -5,6 +5,8 @@
   "common.lastName": "Last Name",
   "common.cancel": "Cancel",
   "common.continue": "Continue",
+  "screens.forgotPassword.title": "Reset your password",
+  "screens.forgotPassword.sendEmail": "Send Email",
   "screens.initial.btn.signUp": "Create account",
   "screens.initial.btn.login": "I already have account",
   "screens.login.btn.login": "Login",

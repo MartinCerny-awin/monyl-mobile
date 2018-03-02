@@ -6,7 +6,6 @@ import {
   Title,
   Container,
   Content,
-  Text,
   Button,
   View,
   Toast,
@@ -16,6 +15,7 @@ import {
   Icon,
 } from 'native-base';
 import { Field } from 'redux-form';
+import { FormattedMessage, defineMessages } from 'react-intl';
 import type { IntlShape } from 'react-intl';
 
 import { required, email } from '../../utils/validator';
@@ -28,6 +28,13 @@ type Props = {
   valid: boolean,
   intl: IntlShape,
 };
+
+const messages = defineMessages({
+  title: {
+    id: 'screens.forgotPassword.title',
+    defaultMessage: 'Reset your password',
+  },
+});
 
 class ForgotPassword extends Component<Props> {
   submit = () => {
@@ -57,7 +64,7 @@ class ForgotPassword extends Component<Props> {
             </Button>
           </Left>
           <Body style={styles.body}>
-            <Title>Forgot your password?</Title>
+            <Title>{this.props.intl.formatMessage(messages.title)}</Title>
           </Body>
           <Right />
         </Header>
@@ -73,7 +80,10 @@ class ForgotPassword extends Component<Props> {
               />
 
               <Button jest="sendEmail" rounded primary block onPress={this.submit}>
-                <Text>Send Email</Text>
+                <FormattedMessage
+                  id="screens.forgotPassword.sendEmail"
+                  defaultMessage="Send Email"
+                />
               </Button>
             </View>
           </Content>

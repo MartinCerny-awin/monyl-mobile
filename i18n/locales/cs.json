@@ -5,6 +5,8 @@
   "common.firstName": "Křestní jméno",
   "common.lastName": "Příjmení",
   "common.continue": "Pokračovat",
+  "screens.forgotPassword.title": "Obnovit heslo",
+  "screens.forgotPassword.sendEmail": "Odeslat email",
   "screens.initial.btn.signUp": "Založit účet",
   "screens.initial.btn.login": "Přihlásit",
   "screens.login.btn.createAccount": "Vytvořit účet",

@@ -5,6 +5,7 @@ export default {
   contentContainer: {
     flex: 1,
     justifyContent: 'center',
+    margin: 20,
   },
   body: {
     flex: 3,
