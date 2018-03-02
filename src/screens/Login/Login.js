@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
 import { Container, Content, Button, View, Toast } from 'native-base';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, defineMessages } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
 
@@ -18,13 +18,20 @@ type Props = {
   change: void,
 } & FormProps;
 
+const messages = defineMessages({
+  validation: {
+    id: 'screens.login.validation',
+    defaultMessage: 'Enter username and password',
+  },
+});
+
 class Login extends Component<Props> {
   submit = () => {
     if (this.props.valid) {
       this.props.navigation.navigate('Home');
     } else {
       Toast.show({
-        text: 'Enter valid username & password!',
+        text: this.props.intl.formatMessage(messages.validation),
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },

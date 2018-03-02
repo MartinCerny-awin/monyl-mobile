@@ -1,5 +1,9 @@
 [
   {
+    "id": "screens.login.validation",
+    "defaultMessage": "Enter username and password"
+  },
+  {
     "id": "screens.login.btn.login",
     "defaultMessage": "Login"
   },

@@ -23,6 +23,10 @@ const messages = defineMessages({
     id: 'screens.signUp.createAccount',
     defaultMessage: 'Create Account',
   },
+  validation: {
+    id: 'screens.signUp.validation',
+    defaultMessage: 'You have to fill all fields.',
+  },
 });
 
 class SignUp extends Component<Props> {
@@ -31,7 +35,7 @@ class SignUp extends Component<Props> {
       this.props.navigation.goBack(null);
     } else {
       Toast.show({
-        text: 'You have to fill all fields.',
+        text: this.props.intl.formatMessage(messages.validation),
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },

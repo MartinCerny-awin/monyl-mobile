@@ -9,8 +9,10 @@
   "screens.forgotPassword.sendEmail": "Odeslat email",
   "screens.initial.btn.signUp": "Založit účet",
   "screens.initial.btn.login": "Přihlásit",
+  "screens.login.validation": "Vložte email a heslo",
   "screens.login.btn.createAccount": "Vytvořit účet",
   "screens.login.btn.forgotPassword": "Zapomenuté heslo",
   "screens.login.btn.login": "Přihlásit",
-  "screens.signUp.createAccount": "Vytvořit účet"
+  "screens.signUp.createAccount": "Vytvořit účet",
+  "screens.signUp.validation": "Musíte vyplnit všechna pole"
 }

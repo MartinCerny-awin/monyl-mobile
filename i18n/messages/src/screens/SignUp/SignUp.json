@@ -2,5 +2,9 @@
   {
     "id": "screens.signUp.createAccount",
     "defaultMessage": "Create Account"
+  },
+  {
+    "id": "screens.signUp.validation",
+    "defaultMessage": "You have to fill all fields."
   }
 ]
