@@ -2,11 +2,11 @@ import { Platform } from 'react-native';
 import commonColor from '../../../theme/variables/commonColor';
 
 export default {
-  inputGrp: {
+  inputGroup: {
     backgroundColor: '#fff',
     marginBottom: 15,
   },
-  formErrorText1: {
+  error: {
     fontSize: Platform.OS === 'android' ? 12 : 15,
     color: commonColor.brandDanger,
     textAlign: 'right',

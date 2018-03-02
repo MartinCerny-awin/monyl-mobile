@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallowWithIntl } from 'enzyme-react-intl';
-import { shallow } from 'enzyme';
 
 import ForgotPassword from '../ForgotPassword';
 
@@ -13,13 +12,8 @@ const goBack = jest.fn();
 const navigation = {
   goBack,
 };
-const dispatch = jest.fn();
 
 describe('ForgotPassword Screen', () => {
-  beforeAll(() => {
-    dispatch.mockClear();
-  });
-
   it('renders correctly', () => {
     const wrapper = shallowWithIntl(<ForgotPassword />);
 

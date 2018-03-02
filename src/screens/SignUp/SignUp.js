@@ -43,16 +43,12 @@ class SignUp extends Component<Props> {
     }
   };
 
-  navigateBack = () => {
-    this.props.navigation.goBack(null);
-  };
-
   render() {
     return (
       <Container>
         <HeaderBack
           title={this.props.intl.formatMessage(messages.signUp)}
-          action={this.navigateBack}
+          navigation={this.props.navigation}
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
