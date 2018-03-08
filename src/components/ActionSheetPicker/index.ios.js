@@ -4,6 +4,7 @@ import type { intlShape } from 'redux-form';
 import { injectIntl } from 'react-intl';
 
 import commonMessages from '../../i18n/commonMessages';
+import translateLabel from "../../i18n/translateLabel";
 
 type Props = {
   ...intlShape,
@@ -16,7 +17,7 @@ class ActionSheet extends Component<Props> {
   showActionSheet = () => {
     const { options } = this.props;
     const values = Object.values(options);
-    values.push(this.props.intl.formatMessage(commonMessages.cancel));
+    values.push(translateLabel(commonMessages.cancel));
     const keys = Object.keys(options);
 
     ActionSheetIOS.showActionSheetWithOptions(

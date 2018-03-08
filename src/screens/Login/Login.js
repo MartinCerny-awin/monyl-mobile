@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
 import { Container, Content, Button, View, Toast } from 'native-base';
-import { FormattedMessage, defineMessages } from 'react-intl';
+import { defineMessages } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
 
@@ -11,6 +11,8 @@ import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 
 import styles from './styles';
+import FormattedMessage from "../../i18n/FormattedMessage";
+import translateLabel from "../../i18n/translateLabel";
 
 type Props = {
   navigation: () => void,
@@ -31,7 +33,7 @@ class Login extends Component<Props> {
       this.props.navigation.navigate('Home');
     } else {
       Toast.show({
-        text: this.props.intl.formatMessage(messages.validation),
+        text: translateLabel(messages.validation),
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },
@@ -59,10 +61,10 @@ class Login extends Component<Props> {
               <Image source={require('../../../assets/logo.png')} style={styles.logo} />
             </View>
             <View style={styles.formContainer}>
-              <View>
+              <View style={{flex: 1, paddingLeft: 20, paddingRight: 20}}>
                 <Field
                   name="email"
-                  label={this.props.intl.formatMessage(commonMessages.email)}
+                  label={translateLabel(commonMessages.email)}
                   component={InputField}
                   icon="mail"
                   change={change}
@@ -71,14 +73,14 @@ class Login extends Component<Props> {
                 <Field
                   secureTextEntry
                   name="password"
-                  label={this.props.intl.formatMessage(commonMessages.password)}
+                  label={translateLabel(commonMessages.password)}
                   component={InputField}
                   icon="lock"
                   change={change}
                   validate={[required]}
                 />
                 <Button jest="login" rounded primary block onPress={this.submit}>
-                  <FormattedMessage id="screens.login.btn.login" defaultMessage="Login" />
+                  <FormattedMessage  style={{color: "#FFFFFF"}} id="screens.login.btn.login" defaultMessage="Login" />
                 </Button>
 
                 <View style={styles.bottomLinksContainer}>

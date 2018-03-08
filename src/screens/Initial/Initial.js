@@ -2,22 +2,35 @@
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
 import { Container, Content, Button, View } from 'native-base';
-import { FormattedMessage } from 'react-intl';
 
 import ActionSheetPicker from '../../components/ActionSheetPicker';
 
 import { updateLocale } from '../../reducers/localesReducer';
 import styles from './styles';
+import FormattedMessage from "../../i18n/FormattedMessage";
+import I18n from "../../i18n/i18n";
 
 type Props = {
   navigation: () => void,
-  dispatch: void,
+  dispatch: (event: any) => void,
   currentLocale: string,
 };
 
-class Login extends Component<Props> {
-  changeLocale = (value) => {
+type State = {
+  lang: string
+}
+
+class Login extends Component<Props, State> {
+
+  state = {
+    lang: I18n.locale === 'cs-CZ' ? 'cs' : 'en'
+  }
+
+  changeLocale = (value: string) => {
     this.props.dispatch(updateLocale(value));
+    this.setState({
+      lang: value
+    })
   };
 
   navigateSignUp = () => {
@@ -29,6 +42,7 @@ class Login extends Component<Props> {
   };
 
   render() {
+    console.log(this.props.currentLocale);
     return (
       <Container>
         <StatusBar barStyle="light-content" />
@@ -36,7 +50,7 @@ class Login extends Component<Props> {
           <Content contentContainerStyle={styles.contentContainer}>
             <View style={styles.languageSwitcher}>
               <ActionSheetPicker
-                currentOption={this.props.currentLocale}
+                currentOption={this.state.lang}
                 options={{ en: 'English', cs: 'Čeština' }}
                 onChange={this.changeLocale}
               />
@@ -53,7 +67,7 @@ class Login extends Component<Props> {
                 style={styles.btn}
                 onPress={this.navigateSignUp}
               >
-                <FormattedMessage id="screens.initial.btn.signUp" defaultMessage="Create account" />
+                <FormattedMessage style={{color: "#FFFFFF"}} id="screens.initial.btn.signUp" defaultMessage="Create account" />
               </Button>
               <Button
                 jest="login"

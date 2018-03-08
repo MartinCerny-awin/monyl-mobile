@@ -2,17 +2,5 @@
   {
     "id": "screens.login.validation",
     "defaultMessage": "Enter username and password"
-  },
-  {
-    "id": "screens.login.btn.login",
-    "defaultMessage": "Login"
-  },
-  {
-    "id": "screens.login.btn.createAccount",
-    "defaultMessage": "Create Account"
-  },
-  {
-    "id": "screens.login.btn.forgotPassword",
-    "defaultMessage": "Forgot Password"
   }
 ]

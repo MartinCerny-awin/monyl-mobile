@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
 import { Container, Content, Button, View, Toast } from 'native-base';
 import { Field } from 'redux-form';
-import { FormattedMessage, defineMessages } from 'react-intl';
+import { defineMessages } from 'react-intl';
 import type { IntlShape } from 'react-intl';
 
 import { required, email } from '../../utils/validator';
@@ -11,6 +11,8 @@ import commonMessages from '../../i18n/commonMessages';
 import HeaderBack from '../../components/header/HeaderBack';
 import InputField from '../../components/form/InputField';
 import styles from './styles';
+import FormattedMessage from "../../i18n/FormattedMessage";
+import translateLabel from "../../i18n/translateLabel";
 
 type Props = {
   navigation: () => void,
@@ -47,7 +49,7 @@ class ForgotPassword extends Component<Props> {
     return (
       <Container>
         <HeaderBack
-          title={this.props.intl.formatMessage(messages.title)}
+          title={translateLabel(messages.title)}
           action={this.navigateBack}
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
@@ -55,7 +57,7 @@ class ForgotPassword extends Component<Props> {
             <View style={styles.formContainer}>
               <Field
                 name="email"
-                label={this.props.intl.formatMessage(commonMessages.email)}
+                label={translateLabel(commonMessages.email)}
                 component={InputField}
                 icon="mail"
                 validate={[required, email]}
@@ -63,6 +65,7 @@ class ForgotPassword extends Component<Props> {
 
               <Button jest="sendEmail" rounded primary block onPress={this.submit}>
                 <FormattedMessage
+                  style={{color: "#FFFFFF"}}
                   id="screens.forgotPassword.sendEmail"
                   defaultMessage="Send Email"
                 />

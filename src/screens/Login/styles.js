@@ -26,5 +26,6 @@ export default {
     paddingTop: 15,
     paddingBottom: 20,
     flexDirection: 'row',
+    justifyContent: 'space-around'
   },
 };

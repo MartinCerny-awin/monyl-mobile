@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
 import { Container, Content, Button, Toast } from 'native-base';
 import { Field } from 'redux-form';
-import { defineMessages, FormattedMessage } from 'react-intl';
+import { defineMessages } from 'react-intl';
 import type { IntlShape } from 'react-intl';
 
 import HeaderBack from '../../components/header/HeaderBack';
@@ -11,6 +11,8 @@ import commonMessages from '../../i18n/commonMessages';
 import { minLength, required, email } from '../../utils/validator';
 import InputField from '../../components/form/InputField';
 import styles from './styles';
+import FormattedMessage from "../../i18n/FormattedMessage";
+import translateLabel from "../../i18n/translateLabel";
 
 type Props = {
   navigation: () => void,
@@ -35,7 +37,7 @@ class SignUp extends Component<Props> {
       this.props.navigation.goBack(null);
     } else {
       Toast.show({
-        text: this.props.intl.formatMessage(messages.validation),
+        text: translateLabel(messages.validation),
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },
@@ -51,7 +53,7 @@ class SignUp extends Component<Props> {
     return (
       <Container>
         <HeaderBack
-          title={this.props.intl.formatMessage(messages.signUp)}
+          title={translateLabel(messages.signUp)}
           action={this.navigateBack}
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
@@ -59,7 +61,7 @@ class SignUp extends Component<Props> {
             <Field
               name="firstName"
               icon="person"
-              label={this.props.intl.formatMessage(commonMessages.firstName)}
+              label={translateLabel(commonMessages.firstName)}
               component={InputField}
               type="text"
               validate={[required]}
@@ -68,7 +70,7 @@ class SignUp extends Component<Props> {
             <Field
               name="lastName"
               icon="person"
-              label={this.props.intl.formatMessage(commonMessages.lastName)}
+              label={translateLabel(commonMessages.lastName)}
               component={InputField}
               type="text"
               validate={[required]}
@@ -77,7 +79,7 @@ class SignUp extends Component<Props> {
             <Field
               name="email"
               icon="mail"
-              label={this.props.intl.formatMessage(commonMessages.email)}
+              label={translateLabel(commonMessages.email)}
               component={InputField}
               type="email"
               validate={[email, required]}
@@ -86,7 +88,7 @@ class SignUp extends Component<Props> {
               secureTextEntry
               name="password"
               icon="unlock"
-              label={this.props.intl.formatMessage(commonMessages.password)}
+              label={translateLabel(commonMessages.password)}
               component={InputField}
               type="password"
               validate={[required, minLength(8)]}
