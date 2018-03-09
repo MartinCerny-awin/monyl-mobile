@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import I18n from 'react-native-i18n';
 
 import Initial from '../Initial';
 import ActionSheetPicker from '../../../components/ActionSheetPicker';
@@ -27,14 +28,11 @@ describe('Initial Screen', () => {
   });
 
   it('changes locale', () => {
-    const wrapper = shallow(<Initial dispatch={dispatch} currentLocale="en" />);
+    const wrapper = shallow(<Initial dispatch={dispatch} />);
 
-    wrapper.find(ActionSheetPicker).simulate('change', { target: { value: 'cs' } });
-    expect(dispatch).toBeCalledWith(
-      expect.objectContaining({
-        type: 'UPDATE_LOCALE',
-      }),
-    );
+    wrapper.find(ActionSheetPicker).simulate('change', 'cs');
+
+    expect(I18n.locale).toBe('cs');
   });
 
   it('navigates to sign up', () => {

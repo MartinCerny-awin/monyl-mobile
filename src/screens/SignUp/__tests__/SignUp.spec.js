@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallowWithIntl } from 'enzyme-react-intl';
+import { shallow } from 'enzyme';
 
 import SignUp from '../SignUp';
 
@@ -20,13 +20,13 @@ describe('SignUp Screen', () => {
   });
 
   it('renders correctly', () => {
-    const wrapper = shallowWithIntl(<SignUp />);
+    const wrapper = shallow(<SignUp />);
 
     expect(wrapper).toHaveLength(1);
   });
 
   it('shows tooltip error when wrong SignUp details are entered', () => {
-    const wrapper = shallowWithIntl(<SignUp />);
+    const wrapper = shallow(<SignUp />);
 
     const button = wrapper.find({ jest: 'signUp' });
     button.simulate('press');
@@ -35,7 +35,7 @@ describe('SignUp Screen', () => {
   });
 
   it('navigates back when the form is valid', () => {
-    const wrapper = shallowWithIntl(<SignUp navigation={navigation} valid />);
+    const wrapper = shallow(<SignUp navigation={navigation} valid />);
 
     const button = wrapper.find({ jest: 'signUp' });
     button.simulate('press');

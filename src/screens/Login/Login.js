@@ -1,31 +1,21 @@
 // @flow
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
-import { Container, Content, Button, View, Toast } from 'native-base';
-import { defineMessages } from 'react-intl';
+import { Text, Container, Content, Button, View, Toast } from 'native-base';
 import { Field } from 'redux-form';
-import type { FormProps } from 'redux-form';
 
 import commonMessages from '../../i18n/commonMessages';
+import translate from '../../i18n/translate';
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 
 import styles from './styles';
-import FormattedMessage from "../../i18n/FormattedMessage";
-import translateLabel from "../../i18n/translateLabel";
 
 type Props = {
   navigation: () => void,
   valid: boolean,
   change: void,
-} & FormProps;
-
-const messages = defineMessages({
-  validation: {
-    id: 'screens.login.validation',
-    defaultMessage: 'Enter username and password',
-  },
-});
+};
 
 class Login extends Component<Props> {
   submit = () => {
@@ -33,7 +23,10 @@ class Login extends Component<Props> {
       this.props.navigation.navigate('Home');
     } else {
       Toast.show({
-        text: translateLabel(messages.validation),
+        text: translate({
+          id: 'screens.login.validation',
+          defaultValue: 'Enter username and password',
+        }),
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },
@@ -61,10 +54,10 @@ class Login extends Component<Props> {
               <Image source={require('../../../assets/logo.png')} style={styles.logo} />
             </View>
             <View style={styles.formContainer}>
-              <View style={{flex: 1, paddingLeft: 20, paddingRight: 20}}>
+              <View style={{ flex: 1, paddingLeft: 20, paddingRight: 20 }}>
                 <Field
                   name="email"
-                  label={translateLabel(commonMessages.email)}
+                  label={translate(commonMessages.email)}
                   component={InputField}
                   icon="mail"
                   change={change}
@@ -73,22 +66,29 @@ class Login extends Component<Props> {
                 <Field
                   secureTextEntry
                   name="password"
-                  label={translateLabel(commonMessages.password)}
+                  label={translate(commonMessages.password)}
                   component={InputField}
                   icon="lock"
                   change={change}
                   validate={[required]}
                 />
                 <Button jest="login" rounded primary block onPress={this.submit}>
-                  <FormattedMessage  style={{color: "#FFFFFF"}} id="screens.login.btn.login" defaultMessage="Login" />
+                  <Text>
+                    {translate({
+                      id: 'screens.login.btn.login',
+                      defaultValue: 'Login',
+                    })}
+                  </Text>
                 </Button>
 
                 <View style={styles.bottomLinksContainer}>
                   <Button jest="signUp" small transparent onPress={this.navigateSignUp}>
-                    <FormattedMessage
-                      id="screens.login.btn.createAccount"
-                      defaultMessage="Create Account"
-                    />
+                    <Text>
+                      {translate({
+                        id: 'screens.login.btn.createAccount',
+                        defaultValue: 'Create Account',
+                      })}
+                    </Text>
                   </Button>
                   <Button
                     jest="forgotPassword"
@@ -96,10 +96,12 @@ class Login extends Component<Props> {
                     transparent
                     onPress={this.navigateForgotPassword}
                   >
-                    <FormattedMessage
-                      id="screens.login.btn.forgotPassword"
-                      defaultMessage="Forgot Password"
-                    />
+                    <Text>
+                      {translate({
+                        id: 'screens.login.btn.forgotPassword',
+                        defaultValue: 'Forgot Password',
+                      })}
+                    </Text>
                   </Button>
                 </View>
               </View>

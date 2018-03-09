@@ -6,9 +6,7 @@ I18n.fallbacks = true;
 
 I18n.translations = {
   en,
-  cs
+  cs,
 };
-
-console.log(I18n.translations)
 
 export default I18n;

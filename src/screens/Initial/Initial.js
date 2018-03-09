@@ -1,36 +1,32 @@
 // @flow
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
-import { Container, Content, Button, View } from 'native-base';
+import { Text, Container, Content, Button, View } from 'native-base';
+import I18n from 'react-native-i18n';
 
 import ActionSheetPicker from '../../components/ActionSheetPicker';
 
-import { updateLocale } from '../../reducers/localesReducer';
 import styles from './styles';
-import FormattedMessage from "../../i18n/FormattedMessage";
-import I18n from "../../i18n/i18n";
+import translate from '../../i18n/translate';
 
 type Props = {
   navigation: () => void,
-  dispatch: (event: any) => void,
-  currentLocale: string,
 };
 
 type State = {
-  lang: string
-}
+  lang: string,
+};
 
 class Login extends Component<Props, State> {
-
   state = {
-    lang: I18n.locale === 'cs-CZ' ? 'cs' : 'en'
-  }
+    lang: I18n.locale === 'cs-CZ' ? 'cs' : 'en',
+  };
 
   changeLocale = (value: string) => {
-    this.props.dispatch(updateLocale(value));
+    I18n.locale = value;
     this.setState({
-      lang: value
-    })
+      lang: value,
+    });
   };
 
   navigateSignUp = () => {
@@ -42,7 +38,6 @@ class Login extends Component<Props, State> {
   };
 
   render() {
-    console.log(this.props.currentLocale);
     return (
       <Container>
         <StatusBar barStyle="light-content" />
@@ -67,7 +62,12 @@ class Login extends Component<Props, State> {
                 style={styles.btn}
                 onPress={this.navigateSignUp}
               >
-                <FormattedMessage style={{color: "#FFFFFF"}} id="screens.initial.btn.signUp" defaultMessage="Create account" />
+                <Text>
+                  {translate({
+                    id: 'screens.login.btn.createAccount',
+                    defaultValue: 'Create Account',
+                  })}
+                </Text>
               </Button>
               <Button
                 jest="login"
@@ -76,13 +76,14 @@ class Login extends Component<Props, State> {
                 block
                 bordered
                 style={styles.btn}
-                textStyle={{ fontWeight: 900 }}
                 onPress={this.navigateLogin}
               >
-                <FormattedMessage
-                  id="screens.initial.btn.login"
-                  defaultMessage="I already have account"
-                />
+                <Text>
+                  {translate({
+                    id: 'screens.initial.btn.login',
+                    defaultValue: 'I already have account',
+                  })}
+                </Text>
               </Button>
             </View>
           </Content>

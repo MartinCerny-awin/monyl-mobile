@@ -1,28 +1,26 @@
-import { defineMessages } from 'react-intl';
-
-export default defineMessages({
+export default {
   email: {
     id: 'common.email',
-    defaultMessage: 'Email',
+    defaultValue: 'Email',
   },
   password: {
     id: 'common.password',
-    defaultMessage: 'Password',
+    defaultValue: 'Password',
   },
   firstName: {
     id: 'common.firstName',
-    defaultMessage: 'First Name',
+    defaultValue: 'First Name',
   },
   lastName: {
     id: 'common.lastName',
-    defaultMessage: 'Last Name',
+    defaultValue: 'Last Name',
   },
   cancel: {
     id: 'common.cancel',
-    defaultMessage: 'Cancel',
+    defaultValue: 'Cancel',
   },
   continue: {
     id: 'common.continue',
-    defaultMessage: 'Continue',
+    defaultValue: 'Continue',
   },
-});
+};

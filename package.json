@@ -5,11 +5,9 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.2",
-    "babel-plugin-react-intl": "2.4.0",
     "babel-preset-react-native": "4.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-react-intl": "^1.4.8",
     "eslint": "4.18.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-plugin-flowtype": "2.46.1",
@@ -39,18 +37,14 @@
     "test:dev": "jest --coverage --watch",
     "precommit": "yarn test:changed && eslint",
     "react-devtools": "react-devtools",
-    "flow": "flow",
-    "i18n:extract": "babel --plugins react-intl src/*",
-    "i18n:tran": "babel scripts/translate.js | node"
+    "flow": "flow"
   },
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|react-native-iphone-x-helper|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal)/)"
+      "node_modules/(?!(react-native|react-native-i18n|react-native-iphone-x-helper|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal)/)"
     ],
-    "setupFiles": [
-      "<rootDir>/jest/setup.js"
-    ]
+    "setupFiles": ["<rootDir>/jest/setup.js"]
   },
   "dependencies": {
     "color": "3.0.0",
@@ -60,7 +54,6 @@
     "moment": "2.20.1",
     "native-base": "2.3.9",
     "react": "16.2.0",
-    "react-intl": "2.4.0",
     "react-native": "0.53.3",
     "react-native-calendars": "1.17.2",
     "react-native-carousel-view": "0.5.1",

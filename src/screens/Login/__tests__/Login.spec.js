@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallowWithIntl } from 'enzyme-react-intl';
+import { shallow } from 'enzyme';
 
 import Login from '../Login';
 
@@ -20,13 +20,13 @@ describe('Login Screen', () => {
   });
 
   it('renders correctly', () => {
-    const wrapper = shallowWithIntl(<Login />);
+    const wrapper = shallow(<Login />);
 
     expect(wrapper).toHaveLength(1);
   });
 
   it('shows tooltip error when wrong login details are entered', () => {
-    const wrapper = shallowWithIntl(<Login />);
+    const wrapper = shallow(<Login />);
 
     const button = wrapper.find({ jest: 'login' });
     button.simulate('press');
@@ -35,7 +35,7 @@ describe('Login Screen', () => {
   });
 
   it('navigates to home when form is valid', () => {
-    const wrapper = shallowWithIntl(<Login navigation={navigation} valid />);
+    const wrapper = shallow(<Login navigation={navigation} valid />);
 
     const button = wrapper.find({ jest: 'login' });
     button.simulate('press');
@@ -44,7 +44,7 @@ describe('Login Screen', () => {
   });
 
   it('navigates to sign up', () => {
-    const wrapper = shallowWithIntl(<Login navigation={navigation} />);
+    const wrapper = shallow(<Login navigation={navigation} />);
 
     const button = wrapper.find({ jest: 'signUp' });
     button.simulate('press');
@@ -53,7 +53,7 @@ describe('Login Screen', () => {
   });
 
   it('navigates to forgot password', () => {
-    const wrapper = shallowWithIntl(<Login navigation={navigation} />);
+    const wrapper = shallow(<Login navigation={navigation} />);
 
     const button = wrapper.find({ jest: 'forgotPassword' });
     button.simulate('press');

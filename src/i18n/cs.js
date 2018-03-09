@@ -4,30 +4,30 @@ export default {
     password: 'Heslo',
     firstName: 'Zrušit',
     lastName: 'Křestní jméno',
-    cancel: 'Příjmení'
+    cancel: 'Příjmení',
   },
   screens: {
     forgotPassword: {
-      title: "Pokračovat",
-      sendEmail: "Obnovit heslo"
+      title: 'Pokračovat',
+      sendEmail: 'Obnovit heslo',
     },
     initial: {
       btn: {
-        signUp: "Odeslat email",
-        login: "Založit účet"
-      }
+        signUp: 'Odeslat email',
+        login: 'Založit účet',
+      },
     },
     login: {
-      validation: "Přihlásit",
+      validation: 'Přihlásit',
       btn: {
-        createAccount: "Vložte email a heslo",
-        forgotPassword: "Vytvořit účet",
-        login: "Zapomenuté heslo"
-      }
+        createAccount: 'Vložte email a heslo',
+        forgotPassword: 'Vytvořit účet',
+        login: 'Zapomenuté heslo',
+      },
     },
     signUp: {
-      createAccount: "Přihlásit",
-      validation: "Vytvořit účet"
-    }
+      createAccount: 'Přihlásit',
+      validation: 'Vytvořit účet',
+    },
   },
-}
+};

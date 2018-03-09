@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallowWithIntl } from 'enzyme-react-intl';
 import { shallow } from 'enzyme';
 
 import ForgotPassword from '../ForgotPassword';
@@ -19,15 +18,14 @@ describe('ForgotPassword Screen', () => {
   beforeAll(() => {
     dispatch.mockClear();
   });
-
   it('renders correctly', () => {
-    const wrapper = shallowWithIntl(<ForgotPassword />);
+    const wrapper = shallow(<ForgotPassword />);
 
     expect(wrapper).toHaveLength(1);
   });
 
   it('shows tooltip error when wrong ForgotPassword details are entered', () => {
-    const wrapper = shallowWithIntl(<ForgotPassword />);
+    const wrapper = shallow(<ForgotPassword />);
 
     const button = wrapper.find({ jest: 'sendEmail' });
     button.simulate('press');
@@ -36,7 +34,7 @@ describe('ForgotPassword Screen', () => {
   });
 
   it('navigates to home when form is valid', () => {
-    const wrapper = shallowWithIntl(<ForgotPassword navigation={navigation} valid />);
+    const wrapper = shallow(<ForgotPassword navigation={navigation} valid />);
 
     const skipButton = wrapper.find({ jest: 'sendEmail' });
     skipButton.simulate('press');

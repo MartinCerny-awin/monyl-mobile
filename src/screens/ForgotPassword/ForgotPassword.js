@@ -1,31 +1,20 @@
 // @flow
 import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
-import { Container, Content, Button, View, Toast } from 'native-base';
+import { Text, Container, Content, Button, View, Toast } from 'native-base';
 import { Field } from 'redux-form';
-import { defineMessages } from 'react-intl';
-import type { IntlShape } from 'react-intl';
 
 import { required, email } from '../../utils/validator';
 import commonMessages from '../../i18n/commonMessages';
+import translate from '../../i18n/translate';
 import HeaderBack from '../../components/header/HeaderBack';
 import InputField from '../../components/form/InputField';
 import styles from './styles';
-import FormattedMessage from "../../i18n/FormattedMessage";
-import translateLabel from "../../i18n/translateLabel";
 
 type Props = {
   navigation: () => void,
   valid: boolean,
-  intl: IntlShape,
 };
-
-const messages = defineMessages({
-  title: {
-    id: 'screens.forgotPassword.title',
-    defaultMessage: 'Reset your password',
-  },
-});
 
 class ForgotPassword extends Component<Props> {
   submit = () => {
@@ -49,7 +38,10 @@ class ForgotPassword extends Component<Props> {
     return (
       <Container>
         <HeaderBack
-          title={translateLabel(messages.title)}
+          title={translate({
+            id: 'screens.forgotPassword.title',
+            defaultValue: 'Reset your password',
+          })}
           action={this.navigateBack}
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
@@ -57,18 +49,19 @@ class ForgotPassword extends Component<Props> {
             <View style={styles.formContainer}>
               <Field
                 name="email"
-                label={translateLabel(commonMessages.email)}
+                label={translate(commonMessages.email)}
                 component={InputField}
                 icon="mail"
                 validate={[required, email]}
               />
 
               <Button jest="sendEmail" rounded primary block onPress={this.submit}>
-                <FormattedMessage
-                  style={{color: "#FFFFFF"}}
-                  id="screens.forgotPassword.sendEmail"
-                  defaultMessage="Send Email"
-                />
+                <Text style={{ color: '#FFFFFF' }}>
+                  {translate({
+                    id: 'screens.forgotPassword.sendEmail',
+                    defaultValue: 'Send Email',
+                  })}
+                </Text>
               </Button>
             </View>
           </Content>

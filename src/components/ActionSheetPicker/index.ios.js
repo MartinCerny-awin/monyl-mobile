@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { ActionSheetIOS, StyleSheet, Text, View } from 'react-native';
 import type { intlShape } from 'redux-form';
-import { injectIntl } from 'react-intl';
 
 import commonMessages from '../../i18n/commonMessages';
-import translateLabel from "../../i18n/translateLabel";
+import translate from '../../i18n/translate';
 
 type Props = {
   ...intlShape,
@@ -17,7 +16,7 @@ class ActionSheet extends Component<Props> {
   showActionSheet = () => {
     const { options } = this.props;
     const values = Object.values(options);
-    values.push(translateLabel(commonMessages.cancel));
+    values.push(translate(commonMessages.cancel));
     const keys = Object.keys(options);
 
     ActionSheetIOS.showActionSheetWithOptions(
@@ -51,4 +50,4 @@ const style = StyleSheet.create({
   },
 });
 
-export default injectIntl(ActionSheet);
+export default ActionSheet;
