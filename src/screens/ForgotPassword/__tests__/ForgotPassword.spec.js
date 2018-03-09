@@ -12,12 +12,8 @@ const goBack = jest.fn();
 const navigation = {
   goBack,
 };
-const dispatch = jest.fn();
 
 describe('ForgotPassword Screen', () => {
-  beforeAll(() => {
-    dispatch.mockClear();
-  });
   it('renders correctly', () => {
     const wrapper = shallow(<ForgotPassword />);
 

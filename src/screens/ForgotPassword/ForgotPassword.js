@@ -30,10 +30,6 @@ class ForgotPassword extends Component<Props> {
     }
   };
 
-  navigateBack = () => {
-    this.props.navigation.goBack(null);
-  };
-
   render() {
     return (
       <Container>
@@ -42,7 +38,7 @@ class ForgotPassword extends Component<Props> {
             id: 'screens.forgotPassword.title',
             defaultValue: 'Reset your password',
           })}
-          action={this.navigateBack}
+          navigation={this.props.navigation}
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>

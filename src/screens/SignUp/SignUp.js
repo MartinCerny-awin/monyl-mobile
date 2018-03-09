@@ -33,10 +33,6 @@ class SignUp extends Component<Props> {
     }
   };
 
-  navigateBack = () => {
-    this.props.navigation.goBack(null);
-  };
-
   render() {
     return (
       <Container>
@@ -45,7 +41,7 @@ class SignUp extends Component<Props> {
             id: 'screens.signUp.createAccount',
             defaultValue: 'Create Account',
           })}
-          action={this.navigateBack}
+          navigation={this.props.navigation}
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
