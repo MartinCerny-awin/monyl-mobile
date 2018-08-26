@@ -9,7 +9,9 @@ import {
   View as RNView,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Content, Text, Icon, View, Spinner } from 'native-base';
+import {
+  Container, Content, Text, Icon, View, Spinner,
+} from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
 import Carousel from 'react-native-carousel-view';
 
@@ -33,6 +35,7 @@ class Home extends Component<Props> {
   componentDidMount() {
     this.props.fetchData(data);
   }
+
   _renderItem = ({ item }) => (
     <TouchableOpacity
       style={{ flexDirection: 'row' }}
@@ -60,6 +63,7 @@ class Home extends Component<Props> {
       </View>
     </TouchableOpacity>
   );
+
   render() {
     const { navigation } = this.props;
     if (this.props.isLoading) {

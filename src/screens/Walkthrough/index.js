@@ -1,7 +1,11 @@
 // @flow
 import React from 'react';
-import { Platform, Dimensions, StatusBar, View } from 'react-native';
-import { Container, Content, Text, Button, Icon } from 'native-base';
+import {
+  Platform, Dimensions, StatusBar, View,
+} from 'react-native';
+import {
+  Container, Content, Text, Button, Icon,
+} from 'native-base';
 import Carousel from 'react-native-carousel-view';
 
 import styles from './styles';

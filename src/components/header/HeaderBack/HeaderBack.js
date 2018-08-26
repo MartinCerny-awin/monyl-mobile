@@ -1,6 +1,8 @@
 // @flow
 import React from 'react';
-import { Title, Icon, Button, Left, Right, Body, Header } from 'native-base';
+import {
+  Title, Icon, Button, Left, Right, Body, Header,
+} from 'native-base';
 
 import styles from './styles';
 

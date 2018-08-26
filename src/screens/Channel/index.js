@@ -1,6 +1,8 @@
 // @flow
 import React from 'react';
-import { Image, ImageBackground, TouchableOpacity, Platform } from 'react-native';
+import {
+  Image, ImageBackground, TouchableOpacity, Platform,
+} from 'react-native';
 
 import {
   Container,
@@ -62,11 +64,11 @@ const Channel = (props: Props) => {
                   style={
                     Platform.OS === 'android'
                       ? {
-                          color: primary,
-                          fontSize: 13,
-                          fontWeight: '900',
-                          textAlign: 'center',
-                        }
+                        color: primary,
+                        fontSize: 13,
+                        fontWeight: '900',
+                        textAlign: 'center',
+                      }
                       : { color: primary, fontSize: 13, fontWeight: '900' }
                   }
                 >

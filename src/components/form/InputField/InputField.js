@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, Item, Input, Icon, View } from 'native-base';
+import {
+  Text, Item, Input, Icon, View,
+} from 'native-base';
 import type { FieldProps } from 'redux-form';
 import styles from './styles';
 
@@ -17,12 +19,12 @@ const InputField = (props: Props) => {
       <Item error={error && touched} rounded style={styles.inputGroup}>
         {icon && <Icon active name={icon} />}
         <Input placeholder={label} secureTextEntry={secureTextEntry} {...input} />
-        {touched &&
-          error && (
+        {touched
+          && error && (
             <Text jest="errorMessage" style={styles.error}>
               {error}
             </Text>
-          )}
+        )}
       </Item>
     </View>
   );

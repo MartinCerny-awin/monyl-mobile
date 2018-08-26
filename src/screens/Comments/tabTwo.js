@@ -3,7 +3,9 @@ import React from 'react';
 import { Platform, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
-import { Container, Content, Icon, Card, CardItem, Thumbnail, Text, View, List } from 'native-base';
+import {
+  Container, Content, Icon, Card, CardItem, Thumbnail, Text, View, List,
+} from 'native-base';
 
 import datas from './data';
 import styles from './style';

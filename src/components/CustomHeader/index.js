@@ -1,7 +1,9 @@
 // @flow
 import React from 'react';
 import { Image } from 'react-native';
-import { Icon, Button, Left, Right, Body, Header } from 'native-base';
+import {
+  Icon, Button, Left, Right, Body, Header,
+} from 'native-base';
 
 import styles from './styles';
 

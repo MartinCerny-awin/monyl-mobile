@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { ActionSheetIOS, StyleSheet, Text, View } from 'react-native';
+import {
+  ActionSheetIOS, StyleSheet, Text, View,
+} from 'react-native';
 import type { intlShape } from 'redux-form';
 import { injectIntl } from 'react-intl';
 

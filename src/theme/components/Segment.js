@@ -1,7 +1,7 @@
-import variable from './../variables/platform';
+import variable from '../variables/platform';
 
 export default (variables = variable) => {
-  const platform = variables.platform;
+  const { platform } = variables;
 
   const segmentTheme = {
     height: 45,

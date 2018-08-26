@@ -1,7 +1,9 @@
 // @flow
 import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
-import { Container, Content, Button, Toast } from 'native-base';
+import {
+  Container, Content, Button, Toast,
+} from 'native-base';
 import { Field } from 'redux-form';
 import { defineMessages, FormattedMessage } from 'react-intl';
 import type { IntlShape } from 'react-intl';
@@ -31,11 +33,12 @@ const messages = defineMessages({
 
 class SignUp extends Component<Props> {
   submit = () => {
-    if (this.props.valid) {
-      this.props.navigation.goBack(null);
+    const { navigation, intl, valid } = this.props;
+    if (valid) {
+      navigation.goBack(null);
     } else {
       Toast.show({
-        text: this.props.intl.formatMessage(messages.validation),
+        text: intl.formatMessage(messages.validation),
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },
@@ -44,18 +47,20 @@ class SignUp extends Component<Props> {
   };
 
   render() {
+    const { navigation, intl } = this.props;
+
     return (
       <Container>
         <HeaderBack
-          title={this.props.intl.formatMessage(messages.signUp)}
-          navigation={this.props.navigation}
+          title={intl.formatMessage(messages.signUp)}
+          navigation={navigation}
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
             <Field
               name="firstName"
               icon="person"
-              label={this.props.intl.formatMessage(commonMessages.firstName)}
+              label={intl.formatMessage(commonMessages.firstName)}
               component={InputField}
               type="text"
               validate={[required]}
@@ -64,7 +69,7 @@ class SignUp extends Component<Props> {
             <Field
               name="lastName"
               icon="person"
-              label={this.props.intl.formatMessage(commonMessages.lastName)}
+              label={intl.formatMessage(commonMessages.lastName)}
               component={InputField}
               type="text"
               validate={[required]}
@@ -73,7 +78,7 @@ class SignUp extends Component<Props> {
             <Field
               name="email"
               icon="mail"
-              label={this.props.intl.formatMessage(commonMessages.email)}
+              label={intl.formatMessage(commonMessages.email)}
               component={InputField}
               type="email"
               validate={[email, required]}
@@ -82,7 +87,7 @@ class SignUp extends Component<Props> {
               secureTextEntry
               name="password"
               icon="unlock"
-              label={this.props.intl.formatMessage(commonMessages.password)}
+              label={intl.formatMessage(commonMessages.password)}
               component={InputField}
               type="password"
               validate={[required, minLength(8)]}

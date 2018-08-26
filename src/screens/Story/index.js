@@ -9,7 +9,9 @@ import {
   View as RNView,
 } from 'react-native';
 
-import { Container, Header, Content, Text, Button, Icon, Body, View } from 'native-base';
+import {
+  Container, Header, Content, Text, Button, Icon, Body, View,
+} from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
 
 import Modal from 'react-native-modalbox';
@@ -31,6 +33,7 @@ class Story extends Component<Props, State> {
   state = {
     open: false,
   };
+
   props: Props;
 
   modalO() {
@@ -42,19 +45,21 @@ class Story extends Component<Props, State> {
   }
 
   render() {
+    const { open } = this.state;
+    const { navigation } = this.props;
     return (
       <Container>
         <Header
           style={[
             styles.headerStyle,
-            this.state.open ? styles.headerModalStyle : styles.headerStyle,
+            open ? styles.headerModalStyle : styles.headerStyle,
           ]}
         >
           <Body style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-            <Button transparent onPress={() => this.props.navigation.goBack(null)}>
+            <Button transparent onPress={() => navigation.goBack(null)}>
               <Icon active name="arrow-back" style={styles.headerIcons} />
             </Button>
-            <Button transparent onPress={() => this.props.navigation.navigate('Comments')}>
+            <Button transparent onPress={() => navigation.navigate('Comments')}>
               <Icon name="chatboxes" style={styles.headerIcons} />
             </Button>
             <Button transparent onPress={() => this.modalO()}>
@@ -170,7 +175,7 @@ class Story extends Component<Props, State> {
                 <Button
                   transparent
                   iconRight
-                  onPress={() => this.props.navigation.goBack(null)}
+                  onPress={() => navigation.goBack(null)}
                   textStyle={{ color: '#222', fontWeight: '700' }}
                 >
                   <Text>NEXT STORY</Text>
@@ -184,7 +189,7 @@ class Story extends Component<Props, State> {
         <Modal
           position="top"
           entry="top"
-          isOpen={this.state.open}
+          isOpen={open}
           onOpened={() => this.setState({ open: true })}
           onClosed={() => this.setState({ open: false })}
           backButtonClose

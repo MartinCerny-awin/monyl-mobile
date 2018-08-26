@@ -14,8 +14,8 @@ export function required(value) {
 
 export function email(value) {
   if (
-    !isEmpty(value) &&
-    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+    !isEmpty(value)
+    && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
   ) {
     return 'Invalid email address';
   }

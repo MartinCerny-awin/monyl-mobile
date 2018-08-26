@@ -2,7 +2,9 @@
 import React from 'react';
 import { Platform, TouchableOpacity } from 'react-native';
 
-import { Container, Content, Icon, Card, CardItem, Thumbnail, View, Text, List } from 'native-base';
+import {
+  Container, Content, Icon, Card, CardItem, Thumbnail, View, Text, List,
+} from 'native-base';
 
 import datas from './data';
 import styles from './style';

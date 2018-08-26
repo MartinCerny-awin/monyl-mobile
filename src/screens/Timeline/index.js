@@ -2,7 +2,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Container, Content, Text, Icon, View } from 'native-base';
+import {
+  Container, Content, Text, Icon, View,
+} from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
 
 import CustomHeader from '../../components/CustomHeader';

@@ -1,6 +1,8 @@
 // @flow
 import React, { Component } from 'react';
-import { Image, ImageBackground, TouchableOpacity, ListView } from 'react-native';
+import {
+  Image, ImageBackground, TouchableOpacity, ListView,
+} from 'react-native';
 
 import {
   Container,
@@ -35,15 +37,19 @@ class Profile extends Component<Props, State> {
   state = {
     listViewData: data,
   };
+
   ds: Object;
 
   deleteRow(secId: string, rowId: string, rowMap: any) {
     rowMap[`${secId}${rowId}`].props.closeRow();
+    // eslint-disable-next-line
     const newData = [...this.state.listViewData];
     newData.splice(rowId, 1);
     this.setState({ listViewData: newData });
   }
+
   render() {
+    const { listViewData } = this.state;
     const { navigation } = this.props;
     return (
       <Container>
@@ -97,7 +103,7 @@ class Profile extends Component<Props, State> {
               </Grid>
             </View>
 
-            {this.ds.cloneWithRows(this.state.listViewData).getRowCount() === 0 ? (
+            {this.ds.cloneWithRows(listViewData).getRowCount() === 0 ? (
               <View style={styles.linkTabs}>
                 <ListItem
                   style={{
@@ -121,7 +127,7 @@ class Profile extends Component<Props, State> {
                   </ListItem>
                 </View>
                 <List
-                  dataSource={this.ds.cloneWithRows(this.state.listViewData)}
+                  dataSource={this.ds.cloneWithRows(listViewData)}
                   renderRow={() => (
                     <ListItem
                       swipeList

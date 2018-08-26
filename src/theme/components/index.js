@@ -40,7 +40,7 @@ import cardItemTheme from './CardItem';
 import listItemTheme from './ListItem';
 import formTheme from './Form';
 import separatorTheme from './Separator';
-import variable from './../variables/platform';
+import variable from '../variables/platform';
 
 export default (variables = variable) => {
   const theme = {
@@ -218,8 +218,10 @@ export default (variables = variable) => {
       if (styleName.indexOf('.') === 0 && parentKey && parentKey.indexOf('.') === 0) {
         if (grandparent) {
           if (!grandparent[styleName]) {
+            // eslint-disable-next-line
             grandparent[styleName] = {};
           } else {
+            // eslint-disable-next-line
             grandparent[styleName][parentKey] = style;
           }
         }

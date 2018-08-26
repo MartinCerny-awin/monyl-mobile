@@ -1,6 +1,8 @@
 // @flow
 import React, { Component } from 'react';
-import { Container, Content, Text, Button, Icon, Item, Input, View } from 'native-base';
+import {
+  Container, Content, Text, Button, Icon, Item, Input, View,
+} from 'native-base';
 
 import styles from './styles';
 import CustomHeader from '../../components/CustomHeader';

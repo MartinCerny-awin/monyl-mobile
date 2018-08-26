@@ -3,7 +3,9 @@ import React from 'react';
 import { ImageBackground, TouchableOpacity } from 'react-native';
 
 import { NavigationActions } from 'react-navigation';
-import { Container, Content, Text, Icon, ListItem, Thumbnail, View } from 'native-base';
+import {
+  Container, Content, Text, Icon, ListItem, Thumbnail, View,
+} from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
 
 import styles from './style';

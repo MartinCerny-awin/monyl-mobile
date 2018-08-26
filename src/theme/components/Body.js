@@ -1,6 +1,4 @@
-import variable from './../variables/platform';
-
-export default (variables = variable) => {
+export default () => {
   const bodyTheme = {
     flex: 1,
     alignItems: 'center',

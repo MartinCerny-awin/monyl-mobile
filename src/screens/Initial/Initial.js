@@ -1,7 +1,9 @@
 // @flow
 import React, { Component } from 'react';
 import { Image, ImageBackground, StatusBar } from 'react-native';
-import { Container, Content, Button, View } from 'native-base';
+import {
+  Container, Content, Button, View,
+} from 'native-base';
 import { FormattedMessage } from 'react-intl';
 
 import ActionSheetPicker from '../../components/ActionSheetPicker';

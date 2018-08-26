@@ -42,11 +42,11 @@ const Channels = (props: Props) => (
     </Header>
     <Tabs style={{ backgroundColor: '#fff' }}>
       <Tab
-        heading={
+        heading={(
           <TabHeading>
             <Text>Following</Text>
           </TabHeading>
-        }
+)}
       >
         <TabOne navigation={props.navigation} />
       </Tab>

@@ -1,7 +1,9 @@
 // @flow
 import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
-import { Container, Content, Button, View, Toast } from 'native-base';
+import {
+  Container, Content, Button, View, Toast,
+} from 'native-base';
 import { Field } from 'redux-form';
 import { FormattedMessage, defineMessages } from 'react-intl';
 import type { IntlShape } from 'react-intl';

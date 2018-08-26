@@ -1,7 +1,9 @@
 // @flow
 
 import React, { Component } from 'react';
-import { Image, Switch, TouchableOpacity, Platform } from 'react-native';
+import {
+  Image, Switch, TouchableOpacity, Platform,
+} from 'react-native';
 import {
   Container,
   Header,
@@ -54,6 +56,15 @@ class Settings extends Component<Props, State> {
   };
 
   render() {
+    const {
+      monSwitch,
+      tueSwitch,
+      wedSwitch,
+      thuSwitch,
+      friSwitch,
+      satSwitch,
+      sunSwitch,
+    } = this.state;
     const { navigation } = this.props;
     return (
       <Container>
@@ -150,7 +161,7 @@ class Settings extends Component<Props, State> {
                     style={styles.switch}
                     thumbTintColor={primary}
                     tintColor={primary}
-                    value={this.state.monSwitch}
+                    value={monSwitch}
                   />
                 </Col>
               </Grid>
@@ -171,7 +182,7 @@ class Settings extends Component<Props, State> {
                     style={styles.switch}
                     thumbTintColor={primary}
                     tintColor={primary}
-                    value={this.state.tueSwitch}
+                    value={tueSwitch}
                   />
                 </Col>
               </Grid>
@@ -192,7 +203,7 @@ class Settings extends Component<Props, State> {
                     style={styles.switch}
                     thumbTintColor={primary}
                     tintColor={primary}
-                    value={this.state.wedSwitch}
+                    value={wedSwitch}
                   />
                 </Col>
               </Grid>
@@ -213,7 +224,7 @@ class Settings extends Component<Props, State> {
                     style={styles.switch}
                     thumbTintColor={primary}
                     tintColor={primary}
-                    value={this.state.thuSwitch}
+                    value={thuSwitch}
                   />
                 </Col>
               </Grid>
@@ -234,7 +245,7 @@ class Settings extends Component<Props, State> {
                     style={styles.switch}
                     thumbTintColor={primary}
                     tintColor={primary}
-                    value={this.state.friSwitch}
+                    value={friSwitch}
                   />
                 </Col>
               </Grid>
@@ -255,7 +266,7 @@ class Settings extends Component<Props, State> {
                     style={styles.switch}
                     thumbTintColor={primary}
                     tintColor={primary}
-                    value={this.state.satSwitch}
+                    value={satSwitch}
                   />
                 </Col>
               </Grid>
@@ -276,7 +287,7 @@ class Settings extends Component<Props, State> {
                     style={styles.switch}
                     thumbTintColor={primary}
                     tintColor={primary}
-                    value={this.state.sunSwitch}
+                    value={sunSwitch}
                   />
                 </Col>
               </Grid>
