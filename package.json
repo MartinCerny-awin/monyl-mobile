@@ -31,7 +31,7 @@
     "jest-cli": "23.5.0",
     "lodash": "4.17.5",
     "moment": "2.20.1",
-    "native-base": "2.3.9",
+    "native-base": "2.7.2",
     "react": "16.4.1",
     "react-intl": "2.4.0",
     "react-native": "0.56.0",
