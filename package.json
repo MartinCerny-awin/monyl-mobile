@@ -73,6 +73,7 @@
     "jest-expo": "29.0.0",
     "prettier-eslint": "8.8.1",
     "react-devtools": "3.2.3",
+    "react-dom": "16.4.1",
     "react-test-renderer": "16.4.2"
   }
 }
