@@ -20,6 +20,7 @@ import {
   Body,
 } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './styles';
 
@@ -31,7 +32,7 @@ const primary = require('../../theme/variables/commonColor').brandPrimary;
 const light = Color(primary).alpha(0.3);
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 type State = {
@@ -65,14 +66,16 @@ class Settings extends Component<Props, State> {
       satSwitch,
       sunSwitch,
     } = this.state;
-    const { navigation } = this.props;
+    const { navigation: { openDrawer } } = this.props;
     return (
       <Container>
         <Header hasTabs>
           <Left>
-            <Button transparent onPress={() => navigation.navigate('DrawerOpen')}>
-              <Icon active name="menu" />
-            </Button>
+            {openDrawer && (
+              <Button transparent onPress={() => openDrawer()}>
+                <Icon active name="menu" />
+              </Button>
+            )}
           </Left>
           <Body>
             <Image source={headerLogo} style={styles.imageHeader} />

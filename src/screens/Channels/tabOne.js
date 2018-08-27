@@ -1,14 +1,14 @@
 // @flow
 import React from 'react';
 import { ImageBackground, TouchableOpacity, Platform } from 'react-native';
-
 import { Content, Text, View } from 'native-base';
 import { Grid, Col, Row } from 'react-native-easy-grid';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './styles';
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 const TabOne = (props: Props) => {

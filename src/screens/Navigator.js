@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StackNavigator, DrawerNavigator } from 'react-navigation';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 import Initial from './Initial';
 import Login from './Login';
 import ForgotPassword from './ForgotPassword';
@@ -19,7 +19,7 @@ import Feedback from './Feedback';
 import Profile from './Profile';
 import Settings from './Settings';
 
-const Drawer = DrawerNavigator(
+const Drawer = createDrawerNavigator(
   {
     Home: { screen: Home },
     Channels: { screen: Channels },
@@ -36,7 +36,7 @@ const Drawer = DrawerNavigator(
   },
 );
 
-const Navigator = StackNavigator(
+const Navigator = createStackNavigator(
   {
     Initial: { screen: Initial },
     Login: { screen: Login },

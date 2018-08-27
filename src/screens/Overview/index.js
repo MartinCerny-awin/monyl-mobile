@@ -15,6 +15,7 @@ import {
   Grid,
   Col,
 } from 'native-base';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 
@@ -23,18 +24,20 @@ import styles from './styles';
 const headerLogo = require('../../../assets/header-logo.png');
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 const Overview = (props: Props) => {
-  const { navigation } = props;
+  const { navigation: { openDrawer } } = props;
   const primary = require('../../theme/variables/commonColor').brandPrimary;
   return (
     <Container>
       <Header hasTabs>
         <Left>
-          <Button transparent onPress={() => navigation.navigate('DrawerOpen')}>
-            <Icon active name="menu" />
-          </Button>
+          {openDrawer && (
+            <Button transparent onPress={() => openDrawer()}>
+              <Icon active name="menu" />
+            </Button>
+          )}
         </Left>
         <Body>
           <Image source={headerLogo} style={styles.imageHeader} />

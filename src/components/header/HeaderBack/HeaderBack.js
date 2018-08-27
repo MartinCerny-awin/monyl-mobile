@@ -3,11 +3,12 @@ import React from 'react';
 import {
   Title, Icon, Button, Left, Right, Body, Header,
 } from 'native-base';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './styles';
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
   title?: string,
 };
 

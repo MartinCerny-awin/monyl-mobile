@@ -7,6 +7,7 @@ import {
 import { Field } from 'redux-form';
 import { FormattedMessage, defineMessages } from 'react-intl';
 import type { IntlShape } from 'react-intl';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import { required, email } from '../../utils/validator';
 import commonMessages from '../../i18n/commonMessages';
@@ -15,7 +16,7 @@ import InputField from '../../components/form/InputField';
 import styles from './styles';
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
   valid: boolean,
   intl: IntlShape,
 };

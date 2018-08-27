@@ -13,16 +13,16 @@ import {
   Container, Header, Content, Text, Button, Icon, Body, View,
 } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
-
 import Modal from 'react-native-modalbox';
 import Carousel from 'react-native-carousel-view';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './styles';
 
 const deviceWidth = Dimensions.get('window').width;
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 type State = {

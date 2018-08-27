@@ -14,6 +14,7 @@ import {
 } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
 import Carousel from 'react-native-carousel-view';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import CustomHeader from '../../components/CustomHeader';
 
@@ -26,7 +27,7 @@ const deviceWidth = Dimensions.get('window').width;
 
 type Props = {
   fetchData: any => void,
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
   isLoading: boolean,
   items: any,
 };

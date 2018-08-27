@@ -7,6 +7,7 @@ import {
   Container, Content, Text, Button, Icon,
 } from 'native-base';
 import Carousel from 'react-native-carousel-view';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './styles';
 
@@ -14,7 +15,7 @@ const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 const Walkthrough = (props: Props) => (

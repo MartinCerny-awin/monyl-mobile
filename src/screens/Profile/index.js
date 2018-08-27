@@ -16,13 +16,15 @@ import {
   Icon,
 } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
+import type { NavigationScreenProp } from 'react-navigation';
+
 import CustomHeader from '../../components/CustomHeader';
 
 import styles from './styles';
 import data from './data';
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 type State = {

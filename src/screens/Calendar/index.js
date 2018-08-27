@@ -15,13 +15,14 @@ import {
 } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
 import { Calendar as MonthCalendar } from 'react-native-calendars';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './styles';
 
 const headerLogo = require('../../../assets/header-logo.png');
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 type State = {
@@ -41,13 +42,16 @@ class Calendar extends Component<Props, State> {
 
   render() {
     const { navigation } = this.props;
+    const { openDrawer } = navigation;
     return (
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={() => navigation.navigate('DrawerOpen')}>
-              <Icon active name="menu" />
-            </Button>
+            {openDrawer && (
+              <Button transparent onPress={() => openDrawer()}>
+                <Icon active name="menu" />
+              </Button>
+            )}
           </Left>
           <Body>
             <Image source={headerLogo} style={styles.imageHeader} />

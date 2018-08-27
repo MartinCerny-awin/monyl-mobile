@@ -1,22 +1,23 @@
 // @flow
 import React from 'react';
 import { ImageBackground, TouchableOpacity } from 'react-native';
-
-import { NavigationActions } from 'react-navigation';
+import { NavigationActions, StackActions } from 'react-navigation';
 import {
   Container, Content, Text, Icon, ListItem, Thumbnail, View,
 } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './style';
 
-const resetAction = NavigationActions.reset({
+const resetAction = StackActions.reset({
   index: 0,
+  key: null,
   actions: [NavigationActions.navigate({ routeName: 'Login' })],
 });
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 const SideBar = (props: Props) => {

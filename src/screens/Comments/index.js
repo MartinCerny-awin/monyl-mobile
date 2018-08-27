@@ -15,6 +15,7 @@ import {
   Tab,
   Content,
 } from 'native-base';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './style';
 
@@ -25,7 +26,7 @@ import TabThree from './tabThree';
 const bg = require('../../../assets/bg-transparent.png');
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 const Comments = (props: Props) => (

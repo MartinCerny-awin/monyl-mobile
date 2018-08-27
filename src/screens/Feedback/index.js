@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
   Container, Content, Text, Button, Icon, Item, Input, View,
 } from 'native-base';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './styles';
 import CustomHeader from '../../components/CustomHeader';
@@ -11,7 +12,7 @@ import CustomHeader from '../../components/CustomHeader';
 const primary = require('../../theme/variables/commonColor').brandPrimary;
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 type State = {
   offset: {

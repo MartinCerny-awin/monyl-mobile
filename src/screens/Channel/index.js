@@ -24,7 +24,7 @@ const headerLogo = require('../../../assets/header-logo.png');
 const primary = require('../../theme/variables/commonColor').brandPrimary;
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 const Channel = (props: Props) => {

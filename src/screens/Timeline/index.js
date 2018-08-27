@@ -1,18 +1,18 @@
 // @flow
 import React from 'react';
 import { connect } from 'react-redux';
-
 import {
   Container, Content, Text, Icon, View,
 } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import CustomHeader from '../../components/CustomHeader';
 
 import styles from './styles';
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
 };
 
 const Timeline = (props: Props) => {

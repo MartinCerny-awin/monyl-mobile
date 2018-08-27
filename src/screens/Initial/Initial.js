@@ -5,6 +5,7 @@ import {
   Container, Content, Button, View,
 } from 'native-base';
 import { FormattedMessage } from 'react-intl';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import ActionSheetPicker from '../../components/ActionSheetPicker';
 
@@ -12,13 +13,13 @@ import { updateLocale } from '../../reducers/localesReducer';
 import styles from './styles';
 
 type Props = {
-  navigation: () => void,
+  navigation: NavigationScreenProp<{}>,
   dispatch: void,
   currentLocale: string,
 };
 
 class Login extends Component<Props> {
-  changeLocale = (value) => {
+  changeLocale = (value: string) => {
     this.props.dispatch(updateLocale(value));
   };
 
