@@ -3,6 +3,7 @@ import React from 'react';
 import {
   Image, ImageBackground, TouchableOpacity, Platform,
 } from 'react-native';
+import type { NavigationScreenProp } from 'react-navigation';
 
 import {
   Container,

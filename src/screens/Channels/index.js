@@ -63,7 +63,7 @@ const Channels = (props: Props) => {
         </Tab>
       </Tabs>
     </Container>
-  )
+  );
 };
 
 export default Channels;
