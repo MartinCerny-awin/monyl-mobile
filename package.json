@@ -32,7 +32,7 @@
     "color": "3.0.0",
     "intl": "1.2.5",
     "jest-cli": "23.5.0",
-    "lodash": "4.17.5",
+    "lodash": "4.17.10",
     "moment": "2.20.1",
     "native-base": "2.7.2",
     "react": "16.4.1",
@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
-    "babel-eslint": "8.2.2",
+    "babel-eslint": "8.2.6",
     "babel-plugin-react-intl": "2.4.0",
     "babel-preset-react-native": "5.0.2",
     "enzyme": "3.5.0",
@@ -74,7 +74,7 @@
     "husky": "0.14.3",
     "jest": "23.5.0",
     "jest-expo": "29.0.0",
-    "prettier-eslint": "8.8.1",
+    "prettier-eslint": "8.8.2",
     "react-devtools": "3.2.3",
     "react-dom": "16.4.1",
     "react-test-renderer": "16.4.2"
