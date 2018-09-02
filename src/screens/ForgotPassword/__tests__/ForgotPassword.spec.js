@@ -1,10 +1,8 @@
 import React from 'react';
 import { shallowWithIntl } from 'enzyme-react-intl';
+import { Toast } from 'native-base';
 
 import ForgotPassword from '../ForgotPassword';
-
-jest.mock('native-base');
-const { Toast } = require('native-base');
 
 Toast.show = jest.fn();
 

@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports['$1 renders correctly 1'] = `
+exports[`Channels renders correctly 1`] = `
 <View
   style={
     Object {
+      "backgroundColor": "#fff",
       "flex": 1,
       "height": 1334,
     }
   }
-  virtual={undefined}
 >
-  <View>
+  <View
+    onLayout={[Function]}
+  >
     <View
       hasTabs={true}
       style={
@@ -23,9 +25,9 @@ exports['$1 renders correctly 1'] = `
           "height": 64,
           "justifyContent": "center",
           "left": 0,
-          "paddingLeft": 10,
+          "paddingLeft": 6,
           "paddingRight": 10,
-          "paddingTop": 15,
+          "paddingTop": 18,
           "right": 0,
           "shadowColor": null,
           "shadowOffset": null,
@@ -34,7 +36,6 @@ exports['$1 renders correctly 1'] = `
           "top": 0,
         }
       }
-      virtual={undefined}
     >
       <View
         style={
@@ -44,93 +45,7 @@ exports['$1 renders correctly 1'] = `
             "flex": 1,
           }
         }
-        virtual={undefined}
-      >
-        <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
-          accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
-          isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "alignSelf": null,
-              "backgroundColor": "transparent",
-              "borderBottomWidth": null,
-              "borderColor": null,
-              "borderLeftWidth": null,
-              "borderRadius": 5,
-              "borderRightWidth": null,
-              "borderTopWidth": null,
-              "elevation": 0,
-              "flexDirection": "row",
-              "height": 45,
-              "justifyContent": "space-between",
-              "marginLeft": -3,
-              "opacity": 1,
-              "paddingBottom": 6,
-              "paddingLeft": 6,
-              "paddingRight": 6,
-              "paddingTop": 6,
-              "shadowColor": null,
-              "shadowOffset": null,
-              "shadowOpacity": null,
-              "shadowRadius": null,
-            }
-          }
-          testID={undefined}
-          tvParallaxProperties={undefined}
-        >
-          <Text
-            accessible={true}
-            active={true}
-            allowFontScaling={false}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": undefined,
-                  "fontSize": 12,
-                },
-                Array [
-                  Object {
-                    "color": "#000",
-                    "fontSize": 30,
-                  },
-                  Object {
-                    "color": "#007aff",
-                    "fontSize": 33,
-                    "marginLeft": 2,
-                    "marginRight": 2,
-                    "marginTop": 2,
-                    "paddingTop": 2,
-                  },
-                ],
-                Object {
-                  "fontFamily": "Ionicons",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-              ]
-            }
-            virtual={undefined}
-          >
-            
-          </Text>
-        </View>
-      </View>
+      />
       <View
         style={
           Object {
@@ -139,7 +54,6 @@ exports['$1 renders correctly 1'] = `
             "flex": 1,
           }
         }
-        virtual={undefined}
       >
         <Image
           source={
@@ -166,7 +80,6 @@ exports['$1 renders correctly 1'] = `
             "justifyContent": "flex-end",
           }
         }
-        virtual={undefined}
       />
     </View>
   </View>
@@ -198,22 +111,16 @@ exports['$1 renders correctly 1'] = `
             "shadowOpacity": undefined,
             "shadowRadius": undefined,
           },
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
           Object {},
         ]
       }
-      virtual={undefined}
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -226,8 +133,6 @@ exports['$1 renders correctly 1'] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           active={true}
@@ -240,12 +145,8 @@ exports['$1 renders correctly 1'] = `
               "justifyContent": "center",
             }
           }
-          virtual={undefined}
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#007aff",
@@ -257,23 +158,14 @@ exports['$1 renders correctly 1'] = `
               }
             }
             uppercase={false}
-            virtual={undefined}
           >
             Following
           </Text>
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -286,8 +178,6 @@ exports['$1 renders correctly 1'] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           active={false}
@@ -300,39 +190,32 @@ exports['$1 renders correctly 1'] = `
               "justifyContent": "center",
             }
           }
-          virtual={undefined}
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#6b6b6b",
-                "fontFamily": "System",
-                "fontSize": 16,
-                "marginLeft": 7,
-                "marginRight": 7,
-              }
+              Array [
+                Object {
+                  "color": "#6b6b6b",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "marginLeft": 7,
+                  "marginRight": 7,
+                },
+                Object {
+                  "fontSize": 15,
+                },
+                undefined,
+              ]
             }
             uppercase={false}
-            virtual={undefined}
           >
             Popular
           </Text>
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -345,8 +228,6 @@ exports['$1 renders correctly 1'] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           active={false}
@@ -359,30 +240,30 @@ exports['$1 renders correctly 1'] = `
               "justifyContent": "center",
             }
           }
-          virtual={undefined}
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#6b6b6b",
-                "fontFamily": "System",
-                "fontSize": 16,
-                "marginLeft": 7,
-                "marginRight": 7,
-              }
+              Array [
+                Object {
+                  "color": "#6b6b6b",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "marginLeft": 7,
+                  "marginRight": 7,
+                },
+                Object {
+                  "fontSize": 15,
+                },
+                undefined,
+              ]
             }
             uppercase={false}
-            virtual={undefined}
           >
             Explore
           </Text>
         </View>
       </View>
       <View
-        collapsable={undefined}
         style={
           Object {
             "backgroundColor": "#007aff",
@@ -406,6 +287,7 @@ exports['$1 renders correctly 1'] = `
       directionalLockEnabled={true}
       horizontal={true}
       keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="handled"
       onMomentumScrollBegin={[Function]}
       onMomentumScrollEnd={[Function]}
       onScroll={[Function]}
@@ -425,12 +307,8 @@ exports['$1 renders correctly 1'] = `
         >
           <View
             heading={
-              <Styled(TabHeadingNB)
-                virtual={undefined}
-              >
-                <Styled(Text)
-                  virtual={undefined}
-                >
+              <Styled(TabHeadingNB)>
+                <Styled(Text)>
                   Following
                 </Styled(Text)>
               </Styled(TabHeadingNB)>
@@ -441,17 +319,23 @@ exports['$1 renders correctly 1'] = `
                 "flex": 1,
               }
             }
-            virtual={undefined}
           >
             <RCTScrollView
               automaticallyAdjustContentInsets={false}
-              contentContainerStyle={undefined}
+              contentContainerStyle={
+                Array [
+                  Object {
+                    "padding": undefined,
+                  },
+                  undefined,
+                ]
+              }
               contentInset={
                 Object {
                   "bottom": 0,
                 }
               }
-              enableAutoAutomaticScroll={true}
+              enableAutomaticScroll={true}
               enableResetScrollToCoords={true}
               extraHeight={75}
               extraScrollHeight={0}
@@ -482,12 +366,10 @@ exports['$1 renders correctly 1'] = `
                 }
               }
               viewIsInsideTabBar={false}
-              virtual={undefined}
             >
               <View>
                 <View
                   style={Object {}}
-                  virtual={undefined}
                 >
                   <View
                     style={
@@ -514,16 +396,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -535,8 +409,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -570,9 +442,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -593,7 +462,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               FASHION
                             </Text>
@@ -609,16 +477,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -630,8 +490,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -665,9 +523,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -688,7 +543,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               SCIENCE
                             </Text>
@@ -713,16 +567,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -734,8 +580,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -769,9 +613,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -792,7 +633,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               AUTO
                             </Text>
@@ -808,16 +648,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -829,8 +661,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -864,9 +694,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -887,7 +714,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               TECHNOLOGY
                             </Text>
@@ -912,16 +738,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -933,8 +751,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -968,9 +784,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -991,7 +804,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               FINANCES
                             </Text>
@@ -1007,16 +819,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -1028,8 +832,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -1063,9 +865,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -1086,7 +885,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               ENVIRONMENT
                             </Text>
@@ -1111,16 +909,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -1132,8 +922,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -1167,9 +955,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -1190,7 +975,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               SPORTS
                             </Text>
@@ -1206,16 +990,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -1227,8 +1003,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -1262,9 +1036,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -1285,7 +1056,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               ART
                             </Text>
@@ -1310,16 +1080,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -1331,8 +1093,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -1366,9 +1126,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -1389,7 +1146,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               ANIMATION
                             </Text>
@@ -1405,16 +1161,8 @@ exports['$1 renders correctly 1'] = `
                         }
                       >
                         <View
-                          accessibilityComponentType={undefined}
-                          accessibilityLabel={undefined}
-                          accessibilityTraits={undefined}
                           accessible={true}
-                          collapsable={undefined}
-                          hasTVPreferredFocus={undefined}
-                          hitSlop={undefined}
                           isTVSelectable={true}
-                          nativeID={undefined}
-                          onLayout={undefined}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -1426,8 +1174,6 @@ exports['$1 renders correctly 1'] = `
                               "opacity": 1,
                             }
                           }
-                          testID={undefined}
-                          tvParallaxProperties={undefined}
                         >
                           <View
                             style={
@@ -1461,9 +1207,6 @@ exports['$1 renders correctly 1'] = `
                               }
                             />
                             <Text
-                              accessible={true}
-                              allowFontScaling={true}
-                              ellipsizeMode="tail"
                               style={
                                 Array [
                                   Object {
@@ -1484,7 +1227,6 @@ exports['$1 renders correctly 1'] = `
                                 ]
                               }
                               uppercase={false}
-                              virtual={undefined}
                             >
                               EDUCATION
                             </Text>

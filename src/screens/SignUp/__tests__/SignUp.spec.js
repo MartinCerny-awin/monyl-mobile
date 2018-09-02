@@ -1,10 +1,8 @@
 import React from 'react';
 import { shallowWithIntl } from 'enzyme-react-intl';
+import { Button, Toast } from 'native-base';
 
 import SignUp from '../SignUp';
-
-jest.mock('native-base');
-const { Toast } = require('native-base');
 
 Toast.show = jest.fn();
 
@@ -26,9 +24,9 @@ describe('SignUp Screen', () => {
   });
 
   it('shows tooltip error when wrong SignUp details are entered', () => {
-    const wrapper = shallowWithIntl(<SignUp />);
+    const wrapper = shallowWithIntl(<SignUp navigation={navigation} valid={false} />);
 
-    const button = wrapper.find({ jest: 'signUp' });
+    const button = wrapper.find(Button);
     button.simulate('press');
 
     expect(Toast.show).toHaveBeenCalled();
@@ -37,7 +35,7 @@ describe('SignUp Screen', () => {
   it('navigates back when the form is valid', () => {
     const wrapper = shallowWithIntl(<SignUp navigation={navigation} valid />);
 
-    const button = wrapper.find({ jest: 'signUp' });
+    const button = wrapper.find(Button);
     button.simulate('press');
 
     expect(goBack).toHaveBeenCalled();

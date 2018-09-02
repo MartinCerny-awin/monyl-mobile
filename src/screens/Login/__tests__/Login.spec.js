@@ -1,10 +1,8 @@
 import React from 'react';
 import { shallowWithIntl } from 'enzyme-react-intl';
+import { Toast } from 'native-base';
 
 import Login from '../Login';
-
-jest.mock('native-base');
-const { Toast } = require('native-base');
 
 Toast.show = jest.fn();
 
@@ -34,13 +32,13 @@ describe('Login Screen', () => {
     expect(Toast.show).toHaveBeenCalled();
   });
 
-  it('navigates to home when form is valid', () => {
+  it('navigates to channels when form is valid', () => {
     const wrapper = shallowWithIntl(<Login navigation={navigation} valid />);
 
     const button = wrapper.find({ jest: 'login' });
     button.simulate('press');
 
-    expect(navigate).toHaveBeenCalledWith('Home');
+    expect(navigate).toHaveBeenCalledWith('Channels');
   });
 
   it('navigates to sign up', () => {

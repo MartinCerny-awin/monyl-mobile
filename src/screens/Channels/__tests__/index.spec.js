@@ -5,9 +5,11 @@ import renderer from 'react-test-renderer';
 
 import Channels from '../index';
 
-describe('$1', () => {
+const navigation = {};
+
+describe('Channels', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<Channels />).toJSON();
+    const tree = renderer.create(<Channels navigation />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
