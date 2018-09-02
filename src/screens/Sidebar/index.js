@@ -32,17 +32,6 @@ const SideBar = (props: Props) => {
           <ListItem
             button
             onPress={() => {
-              navigation.navigate('Home');
-            }}
-            iconLeft
-            style={styles.links}
-          >
-            <Icon name="ios-grid-outline" />
-            <Text style={styles.linkText}>NEWS</Text>
-          </ListItem>
-          <ListItem
-            button
-            onPress={() => {
               navigation.navigate('Channels');
             }}
             iconLeft
@@ -50,50 +39,6 @@ const SideBar = (props: Props) => {
           >
             <Icon name="ios-keypad-outline" />
             <Text style={styles.linkText}>CHANNELS</Text>
-          </ListItem>
-          <ListItem
-            button
-            onPress={() => {
-              navigation.navigate('Overview');
-            }}
-            iconLeft
-            style={styles.links}
-          >
-            <Icon name="ios-stats" />
-            <Text style={styles.linkText}> OVERVIEW</Text>
-          </ListItem>
-          <ListItem
-            button
-            onPress={() => {
-              navigation.navigate('Calendar');
-            }}
-            iconLeft
-            style={styles.links}
-          >
-            <Icon name="ios-calendar-outline" />
-            <Text style={styles.linkText}>CALENDAR</Text>
-          </ListItem>
-          <ListItem
-            button
-            onPress={() => {
-              navigation.navigate('Timeline');
-            }}
-            iconLeft
-            style={styles.links}
-          >
-            <Icon name="ios-timer-outline" />
-            <Text style={styles.linkText}>TIMELINE</Text>
-          </ListItem>
-          <ListItem
-            button
-            onPress={() => {
-              navigation.navigate('Profile');
-            }}
-            iconLeft
-            style={styles.links}
-          >
-            <Icon name="ios-person-outline" />
-            <Text style={styles.linkText}> PROFILE</Text>
           </ListItem>
           <ListItem
             button

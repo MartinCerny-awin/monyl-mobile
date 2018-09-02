@@ -31,7 +31,7 @@ const messages = defineMessages({
 class Login extends Component<Props> {
   submit = () => {
     if (this.props.valid) {
-      this.props.navigation.navigate('Home');
+      this.props.navigation.navigate('Channels');
     } else {
       Toast.show({
         text: this.props.intl.formatMessage(messages.validation),
