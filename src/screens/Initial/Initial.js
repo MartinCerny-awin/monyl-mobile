@@ -6,15 +6,17 @@ import {
 } from 'native-base';
 import { FormattedMessage } from 'react-intl';
 import type { NavigationScreenProp } from 'react-navigation';
+import type { Dispatch } from 'redux';
 
 import ActionSheetPicker from '../../components/ActionSheetPicker';
 
+import type { LocalesActions } from '../../reducers/localesReducer';
 import { updateLocale } from '../../reducers/localesReducer';
 import styles from './styles';
 
 type Props = {
   navigation: NavigationScreenProp<{}>,
-  dispatch: void,
+  dispatch: Dispatch<LocalesActions>,
   currentLocale: string,
 };
 

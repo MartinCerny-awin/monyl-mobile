@@ -25,6 +25,9 @@
 ; Ignore metro
 .*/node_modules/metro/.*
 
+; Custom ignores
+.*/node_modules/react-native-carousel-view/src/carousel.js
+
 [include]
 
 [libs]

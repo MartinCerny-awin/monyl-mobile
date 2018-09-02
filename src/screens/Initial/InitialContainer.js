@@ -1,10 +1,9 @@
 // @flow
 import { connect } from 'react-redux';
-import type { MapStateToProps } from 'react-redux';
 
 import Initial from './Initial';
 
-const mapStateToProps: MapStateToProps<*, *, *> = appState => ({
+const mapStateToProps = appState => ({
   currentLocale: appState.locales.locale,
 });
 

@@ -1,14 +1,23 @@
+// @flow
+
+import type { ExtractReturn } from '../types';
+
 import en from '../../i18n/locales/en.json';
 import cs from '../../i18n/locales/cs.json';
 
 const UPDATE_LOCALE = 'UPDATE_LOCALE';
 
-export const updateLocale = locale => ({
+export const updateLocale = (locale: string) => ({
   type: UPDATE_LOCALE,
   payload: {
     locale,
   },
 });
+
+export type UpdateLocaleAction = ExtractReturn<typeof updateLocale>;
+
+export type LocalesActions =
+  | UpdateLocaleAction;
 
 const englishState = {
   locale: 'en',

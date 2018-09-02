@@ -1,4 +1,5 @@
 // @flow
+
 import { AsyncStorage } from 'react-native';
 import devTools from 'remote-redux-devtools';
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -24,6 +25,8 @@ export default function configureStore(): any {
     }),
   );
 
+  // https://github.com/rt2zz/redux-persist/issues/780
+  // $FlowFixMe
   const store = createStore(persistedReducer, preloadedState, enhancer);
   const persistor = persistStore(store);
 
