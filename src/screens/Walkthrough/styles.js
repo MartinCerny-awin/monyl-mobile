@@ -1,8 +1,10 @@
+// @flow
+
 const React = require('react-native');
 
 const { Dimensions } = React;
 
-const primary = require('../../theme/variables/commonColor').brandPrimary;
+const commonColor = require('../../theme/variables/commonColor').default;
 
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
@@ -12,7 +14,7 @@ export default {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: primary,
+    backgroundColor: commonColor.brandPrimary,
     height: deviceHeight,
     width: deviceWidth,
   },
