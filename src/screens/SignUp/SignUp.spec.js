@@ -2,7 +2,7 @@ import React from 'react';
 import { shallowWithIntl } from 'enzyme-react-intl';
 import { Button, Toast } from 'native-base';
 
-import SignUp from '../SignUp';
+import SignUp from './SignUp';
 
 Toast.show = jest.fn();
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Initial from '../Initial';
-import ActionSheetPicker from '../../../components/ActionSheetPicker';
+import Initial from './Initial';
+import ActionSheetPicker from '../../components/ActionSheetPicker';
 
 jest.mock('native-base');
 const { Toast } = require('native-base');

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallowWithIntl } from 'enzyme-react-intl';
 import { Toast } from 'native-base';
 
-import ForgotPassword from '../ForgotPassword';
+import ForgotPassword from './ForgotPassword';
 
 Toast.show = jest.fn();
 
