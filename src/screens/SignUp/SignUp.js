@@ -1,4 +1,5 @@
 // @flow
+
 import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
 import {
@@ -36,7 +37,7 @@ class SignUp extends Component<Props> {
   submit = () => {
     const { navigation, intl, valid } = this.props;
     if (valid) {
-      navigation.goBack(null);
+      navigation.navigate('Walkthrough');
     } else {
       Toast.show({
         text: intl.formatMessage(messages.validation),

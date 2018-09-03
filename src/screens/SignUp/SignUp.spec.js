@@ -6,9 +6,9 @@ import SignUp from '../SignUp';
 
 Toast.show = jest.fn();
 
-const goBack = jest.fn();
+const navigate = jest.fn();
 const navigation = {
-  goBack,
+  navigate,
 };
 const dispatch = jest.fn();
 
@@ -32,12 +32,12 @@ describe('SignUp Screen', () => {
     expect(Toast.show).toHaveBeenCalled();
   });
 
-  it('navigates back when the form is valid', () => {
+  it('navigates to Story when the form is valid', () => {
     const wrapper = shallowWithIntl(<SignUp navigation={navigation} valid />);
 
     const button = wrapper.find(Button);
     button.simulate('press');
 
-    expect(goBack).toHaveBeenCalled();
+    expect(navigate).toHaveBeenCalledWith('Walkthrough');
   });
 });

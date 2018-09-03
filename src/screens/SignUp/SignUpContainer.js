@@ -1,4 +1,5 @@
 // @flow
+
 import { reduxForm } from 'redux-form';
 import { injectIntl } from 'react-intl';
 
