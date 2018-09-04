@@ -1,3 +1,5 @@
+// @flow
+
 export default {
   background: {
     flex: 1,

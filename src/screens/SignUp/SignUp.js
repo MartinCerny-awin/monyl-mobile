@@ -96,12 +96,10 @@ class SignUp extends Component<Props> {
             />
 
             <Button
-              jest="signUp"
               rounded
               bordered
               block
               onPress={this.submit}
-              style={styles.signupBtn}
             >
               <FormattedMessage {...commonMessages.continue} />
             </Button>
