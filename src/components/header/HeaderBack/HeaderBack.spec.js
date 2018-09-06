@@ -2,7 +2,7 @@ import React from 'react';
 import { shallowWithIntl } from 'enzyme-react-intl';
 import { Title, Button } from 'native-base';
 
-import HeaderBack from '../HeaderBack';
+import HeaderBack from './HeaderBack';
 
 const goBack = jest.fn();
 const navigation = {

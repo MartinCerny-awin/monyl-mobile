@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from 'native-base';
 import { shallowWithIntl } from 'enzyme-react-intl';
 
-import InputField from '../InputField';
+import InputField from './InputField';
 
 describe('InputField Component', () => {
   it('renders without errors when not touched and without icon', () => {

@@ -1,4 +1,4 @@
-import * as validator from '../index';
+import * as validator from './index';
 
 describe('validator test', () => {
   it('required', () => {
