@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "Monyl-tvOS.app"
-               BlueprintName = "Monyl-tvOS"
-               ReferencedContainer = "container:Monyl.xcodeproj">
+               BuildableName = "Karel-tvOS.app"
+               BlueprintName = "Karel-tvOS"
+               ReferencedContainer = "container:Karel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "Monyl-tvOSTests.xctest"
-               BlueprintName = "Monyl-tvOSTests"
-               ReferencedContainer = "container:Monyl.xcodeproj">
+               BuildableName = "Karel-tvOSTests.xctest"
+               BlueprintName = "Karel-tvOSTests"
+               ReferencedContainer = "container:Karel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "Monyl-tvOSTests.xctest"
-               BlueprintName = "Monyl-tvOSTests"
-               ReferencedContainer = "container:Monyl.xcodeproj">
+               BuildableName = "Karel-tvOSTests.xctest"
+               BlueprintName = "Karel-tvOSTests"
+               ReferencedContainer = "container:Karel.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Monyl-tvOS.app"
-            BlueprintName = "Monyl-tvOS"
-            ReferencedContainer = "container:Monyl.xcodeproj">
+            BuildableName = "Karel-tvOS.app"
+            BlueprintName = "Karel-tvOS"
+            ReferencedContainer = "container:Karel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Monyl-tvOS.app"
-            BlueprintName = "Monyl-tvOS"
-            ReferencedContainer = "container:Monyl.xcodeproj">
+            BuildableName = "Karel-tvOS.app"
+            BlueprintName = "Karel-tvOS"
+            ReferencedContainer = "container:Karel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Monyl-tvOS.app"
-            BlueprintName = "Monyl-tvOS"
-            ReferencedContainer = "container:Monyl.xcodeproj">
+            BuildableName = "Karel-tvOS.app"
+            BlueprintName = "Karel-tvOS"
+            ReferencedContainer = "container:Karel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
