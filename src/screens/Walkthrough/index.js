@@ -1,3 +1,3 @@
 // @flow
 
-export { default } from './WalkthroughContainer';
+export { default } from './Walkthrough';

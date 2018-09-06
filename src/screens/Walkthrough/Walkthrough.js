@@ -6,7 +6,7 @@ import {
   Container, Content, Text, Button, Icon,
 } from 'native-base';
 import Carousel from 'react-native-carousel-view';
-import { defineMessages } from 'react-intl';
+import { injectIntl, defineMessages } from 'react-intl';
 import type { IntlShape } from 'react-intl';
 import type { NavigationScreenProp } from 'react-navigation';
 
@@ -119,4 +119,4 @@ class Walkthrough extends React.PureComponent<Props> {
   }
 }
 
-export default Walkthrough;
+export default injectIntl(Walkthrough);
