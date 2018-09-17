@@ -7,17 +7,17 @@ import ForgotPassword from './ForgotPassword';
 import SignUp from './SignUp';
 import Walkthrough from './Walkthrough';
 import Story from './Story';
-import Channels from './Channels';
+import Cards from './Cards';
 import Sidebar from './Sidebar';
 import Feedback from './Feedback';
 
 const Drawer = createDrawerNavigator(
   {
-    Channels: { screen: Channels },
+    Cards: { screen: Cards },
     Feedback: { screen: Feedback },
   },
   {
-    initialRouteName: 'Channels',
+    initialRouteName: 'Cards',
     contentComponent: props => <Sidebar {...props} />,
   },
 );

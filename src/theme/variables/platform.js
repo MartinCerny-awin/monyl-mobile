@@ -94,9 +94,9 @@ export default {
   checkboxTickColor: '#fff',
 
   // Color
-  brandPrimary: '#007aff',
-  brandInfo: '#62B1F6',
-  brandSuccess: '#5cb85c',
+  brandPrimary: '#02bbdc',
+  brandInfo: '#0696de',
+  brandSuccess: '#25b259',
   brandDanger: '#d9534f',
   brandWarning: '#f0ad4e',
   brandDark: '#000',
@@ -124,12 +124,12 @@ export default {
   tabBarTextColor: '#2874F0',
   tabBarTextSize: platform === 'ios' ? 14 : 11,
   activeTab: '#fff',
-  sTabBarActiveTextColor: '#007aff',
+  sTabBarActiveTextColor: '#02bbdc',
   tabBarActiveTextColor: '#2874F0',
   tabActiveBgColor: '#cde1f9',
 
   // Header
-  toolbarBtnColor: platform === 'ios' ? '#007aff' : '#fff',
+  toolbarBtnColor: platform === 'ios' ? '#02bbdc' : '#fff',
   toolbarDefaultBg: platform === 'ios' ? '#F8F8F8' : '#3F51B5',
   toolbarHeight: platform === 'ios' ? (isIphoneX ? 88 : 64) : 56,
   toolbarSearchIconSize: platform === 'ios' ? 20 : 23,
@@ -196,10 +196,10 @@ export default {
 
   // Segment
   segmentBackgroundColor: platform === 'ios' ? '#F8F8F8' : '#3F51B5',
-  segmentActiveBackgroundColor: platform === 'ios' ? '#007aff' : '#fff',
-  segmentTextColor: platform === 'ios' ? '#007aff' : '#fff',
+  segmentActiveBackgroundColor: platform === 'ios' ? '#02bbdc' : '#fff',
+  segmentTextColor: platform === 'ios' ? '#02bbdc' : '#fff',
   segmentActiveTextColor: platform === 'ios' ? '#fff' : '#3F51B5',
-  segmentBorderColor: platform === 'ios' ? '#007aff' : '#fff',
+  segmentBorderColor: platform === 'ios' ? '#02bbdc' : '#fff',
   segmentBorderColorMain: platform === 'ios' ? '#a7a6ab' : '#3F51B5',
 
   // Spinner
@@ -209,9 +209,9 @@ export default {
   // Tab
   tabDefaultBg: platform === 'ios' ? '#F8F8F8' : '#3F51B5',
   topTabBarTextColor: platform === 'ios' ? '#6b6b6b' : '#b3c7f9',
-  topTabBarActiveTextColor: platform === 'ios' ? '#007aff' : '#fff',
+  topTabBarActiveTextColor: platform === 'ios' ? '#02bbdc' : '#fff',
   topTabBarBorderColor: platform === 'ios' ? '#a7a6ab' : '#fff',
-  topTabBarActiveBorderColor: platform === 'ios' ? '#007aff' : '#fff',
+  topTabBarActiveBorderColor: platform === 'ios' ? '#02bbdc' : '#fff',
 
   // Tabs
   tabBgColor: '#F8F8F8',

@@ -32,13 +32,13 @@ const SideBar = (props: Props) => {
           <ListItem
             button
             onPress={() => {
-              navigation.navigate('Channels');
+              navigation.navigate('Cards');
             }}
             iconLeft
             style={styles.links}
           >
             <Icon name="ios-keypad-outline" />
-            <Text style={styles.linkText}>CHANNELS</Text>
+            <Text style={styles.linkText}>CARDS</Text>
           </ListItem>
           <ListItem
             button

@@ -124,7 +124,7 @@ export default {
   tabBarTextColor: '#fff',
   tabBarTextSize: 11,
   activeTab: '#fff',
-  sTabBarActiveTextColor: '#007aff',
+  sTabBarActiveTextColor: '#02bbdc',
   tabBarActiveTextColor: '#fff',
   tabActiveBgColor: '#3F51B5',
 
