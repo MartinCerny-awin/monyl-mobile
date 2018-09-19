@@ -29,6 +29,7 @@
     }
   },
   "dependencies": {
+    "babel-core": "^7.0.0-bridge.0",
     "color": "3.0.0",
     "intl": "1.2.5",
     "jest-cli": "23.6.0",
@@ -52,9 +53,11 @@
     "remotedev-rn-debugger": "0.8.3"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
-    "babel-plugin-react-intl": "2.4.0",
+    "babel-plugin-react-intl": "https://github.com/MartinCerny-awin/babel-plugin-react-intl",
     "enzyme": "3.6.0",
     "enzyme-adapter-react-16": "1.5.0",
     "enzyme-react-intl": "2.0.1",
@@ -70,7 +73,7 @@
     "flow-bin": "0.78.0",
     "flow-typed": "2.5.1",
     "husky": "0.14.3",
-    "jest": "23.5.0",
+    "jest": "23.6.0",
     "jest-expo": "30.0.0",
     "metro-react-native-babel-preset": "^0.45.3",
     "prettier-eslint": "8.8.2",
