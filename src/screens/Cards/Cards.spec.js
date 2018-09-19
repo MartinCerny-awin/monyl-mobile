@@ -24,7 +24,7 @@ describe('Login Screen', () => {
   });
 
   it('renders deck swipper', () => {
-    const wrapper = shallow(<Cards navigation={navigation} />);
+    const wrapper = shallowWithIntl(<Cards navigation={navigation} />).shallow();
     const deckSwiper = wrapper.find('Styled(DeckSwiper)');
     const innerWrapper = shallow(deckSwiper.prop('renderItem')(data[0]));
     const defaultSource = innerWrapper.find('Styled(Thumbnail)').prop('source');

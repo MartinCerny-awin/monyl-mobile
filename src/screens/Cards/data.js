@@ -1,14 +1,14 @@
 export default [
   {
-    text: 'Sunset on Greece island',
-    note: 'Rhodes',
-    name: 'Sunset',
+    text: 'sunsetText',
+    note: 'rhodes',
+    name: 'sunset',
     image: require('../../../assets/photos/scene.jpg'),
   },
   {
-    text: 'Korean girl',
-    note: 'Seoraksan National Park',
-    name: 'Girl',
+    text: 'korean',
+    note: 'koreanNP',
+    name: 'girl',
     image: require('../../../assets/photos/girl.jpg'),
   },
 ];

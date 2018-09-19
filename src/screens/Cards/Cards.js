@@ -19,6 +19,7 @@ import {
   Text,
   View,
 } from 'native-base';
+import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import type { DeckSwiper as DeckSwiperType } from 'native-base';
 import type { NavigationScreenProp } from 'react-navigation';
 
@@ -31,11 +32,38 @@ type Props = {
   navigation: NavigationScreenProp<{}>,
 };
 
+const messages = defineMessages({
+  sunsetText: {
+    id: 'screens.cards.data.sunsetText',
+    defaultMessage: 'Sunset on Greece island',
+  },
+  rhodes: {
+    id: 'screens.cards.data.rhodes',
+    defaultMessage: 'Rhodes',
+  },
+  sunset: {
+    id: 'screens.cards.data.sunset',
+    defaultMessage: 'Sunset',
+  },
+  korean: {
+    id: 'screens.cards.data.korean',
+    defaultMessage: 'Korean girl',
+  },
+  koreanNP: {
+    id: 'screens.cards.data.koreanNP',
+    defaultMessage: 'Seoraksan National Park',
+  },
+  girl: {
+    id: 'screens.cards.data.girl',
+    defaultMessage: 'Girl',
+  },
+});
+
 class Cards extends React.Component<Props> {
   customDeckSwiper: DeckSwiperType
 
   render() {
-    const { navigation: { openDrawer } } = this.props;
+    const { intl, navigation: { openDrawer } } = this.props;
     return (
       <Container>
         <Header hasTabs>
@@ -62,8 +90,8 @@ class Cards extends React.Component<Props> {
                   <Left>
                     <Thumbnail source={item.image} />
                     <Body>
-                      <Text>{item.text}</Text>
-                      <Text note>{item.note}</Text>
+                      <Text>{intl.formatMessage(messages[item.text])}</Text>
+                      <Text note>{intl.formatMessage(messages[item.note])}</Text>
                     </Body>
                   </Left>
                 </CardItem>
@@ -72,7 +100,7 @@ class Cards extends React.Component<Props> {
                 </CardItem>
                 <CardItem>
                   <Icon name="heart" style={{ color: '#ED4A6A' }} />
-                  <Text>{item.name}</Text>
+                  <Text>{intl.formatMessage(messages[item.name])}</Text>
                 </CardItem>
               </Card>
             )}
@@ -85,10 +113,16 @@ class Cards extends React.Component<Props> {
         >
           <Button onPress={() => this.customDeckSwiper._root.swipeLeft()}>
             <Icon name="arrow-back" />
-            <Text>Swipe Left</Text>
+            <FormattedMessage
+              id="screens.cards.swipeLeft"
+              defaultMessage="Swipe Left"
+            />
           </Button>
           <Button onPress={() => this.customDeckSwiper._root.swipeRight()}>
-            <Text>Swipe Right</Text>
+            <FormattedMessage
+              id="screens.cards.swipeRight"
+              defaultMessage="Swipe Right"
+            />
             <Icon name="arrow-forward" />
           </Button>
         </View>
@@ -98,4 +132,4 @@ class Cards extends React.Component<Props> {
   }
 }
 
-export default Cards;
+export default injectIntl(Cards);
