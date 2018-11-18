@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallowWithIntl } from 'enzyme-react-intl';
+import { shallow } from 'enzyme';
 import { Title, Button } from 'native-base';
 
 import HeaderBack from './HeaderBack';
@@ -11,19 +11,19 @@ const navigation = {
 
 describe('HeaderBack Component', () => {
   it('renders correctly default title', () => {
-    const wrapper = shallowWithIntl(<HeaderBack />);
+    const wrapper = shallow(<HeaderBack />);
 
     expect(wrapper.find(Title).props().children).toBe('');
   });
 
   it('renders correctly title', () => {
-    const wrapper = shallowWithIntl(<HeaderBack title="Hello" />);
+    const wrapper = shallow(<HeaderBack title="Hello" />);
 
     expect(wrapper.find(Title).props().children).toBe('Hello');
   });
 
   it('calls action when the button is pressed', () => {
-    const wrapper = shallowWithIntl(<HeaderBack navigation={navigation} />);
+    const wrapper = shallow(<HeaderBack navigation={navigation} />);
 
     const button = wrapper.find(Button);
     button.simulate('press');

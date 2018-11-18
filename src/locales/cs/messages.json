@@ -1,0 +1,278 @@
+{
+  "<0>CONTINUE TO APP</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        91
+      ]
+    ]
+  },
+  "<0>SKIP TOUR</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        53
+      ],
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        72
+      ]
+    ]
+  },
+  "Continue": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        91
+      ]
+    ]
+  },
+  "Create account": {
+    "translation": "Vytvoř účet",
+    "origin": [
+      [
+        "src/screens/Initial/Initial.js",
+        60
+      ],
+      [
+        "src/screens/Login/Login.js",
+        82
+      ],
+      [
+        "src/screens/SignUp/SignUp.js",
+        44
+      ]
+    ]
+  },
+  "Email": {
+    "translation": "Email",
+    "origin": [
+      [
+        "src/screens/ForgotPassword/ForgotPassword.js",
+        48
+      ],
+      [
+        "src/screens/Login/Login.js",
+        61
+      ],
+      [
+        "src/screens/SignUp/SignUp.js",
+        70
+      ]
+    ]
+  },
+  "Enter Valid Email": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/ForgotPassword/ForgotPassword.js",
+        28
+      ]
+    ]
+  },
+  "Enter username and password": {
+    "translation": "Zadej uživatelské jméno a heslo",
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        30
+      ]
+    ]
+  },
+  "Everything is synchronized into the cloud. There is nothing to worry about.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        64
+      ]
+    ]
+  },
+  "First name": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        52
+      ]
+    ]
+  },
+  "Forgot password": {
+    "translation": "Zapomenuté heslo",
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        90
+      ]
+    ]
+  },
+  "Girl": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Cards/data.js",
+        15
+      ]
+    ]
+  },
+  "I already have account": {
+    "translation": "Už mám účet",
+    "origin": [
+      [
+        "src/screens/Initial/Initial.js",
+        72
+      ]
+    ]
+  },
+  "Join us in Monyl. The app of a future.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        44
+      ]
+    ]
+  },
+  "Just one swipe and you are with us.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        83
+      ]
+    ]
+  },
+  "Korean girl": {
+    "translation": "Korejska slecna",
+    "origin": [
+      [
+        "src/screens/Cards/data.js",
+        13
+      ]
+    ]
+  },
+  "Last name": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        61
+      ]
+    ]
+  },
+  "Login": {
+    "translation": "Přihlášení",
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        77
+      ]
+    ]
+  },
+  "Password": {
+    "translation": "Heslo",
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        70
+      ],
+      [
+        "src/screens/SignUp/SignUp.js",
+        79
+      ]
+    ]
+  },
+  "Required": {
+    "translation": "",
+    "origin": [
+      [
+        "src/utils/validator/index.js",
+        13
+      ]
+    ]
+  },
+  "Reset your password": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/ForgotPassword/ForgotPassword.js",
+        40
+      ]
+    ]
+  },
+  "Rhodes": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Cards/data.js",
+        8
+      ]
+    ]
+  },
+  "Send email": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/ForgotPassword/ForgotPassword.js",
+        55
+      ]
+    ]
+  },
+  "Seoraksan National Park": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Cards/data.js",
+        14
+      ]
+    ]
+  },
+  "Sunset": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Cards/data.js",
+        9
+      ]
+    ]
+  },
+  "Sunset on Greece island": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Cards/data.js",
+        7
+      ]
+    ]
+  },
+  "Swipe Left": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Cards/Cards.js",
+        89
+      ]
+    ]
+  },
+  "Swipe Right": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/Cards/Cards.js",
+        92
+      ]
+    ]
+  },
+  "You have to fill all fields.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        30
+      ]
+    ]
+  }
+}

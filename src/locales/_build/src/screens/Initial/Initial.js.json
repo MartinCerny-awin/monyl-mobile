@@ -1,0 +1,18 @@
+{
+  "Create account": {
+    "origin": [
+      [
+        "src/screens/Initial/Initial.js",
+        60
+      ]
+    ]
+  },
+  "I already have account": {
+    "origin": [
+      [
+        "src/screens/Initial/Initial.js",
+        72
+      ]
+    ]
+  }
+}

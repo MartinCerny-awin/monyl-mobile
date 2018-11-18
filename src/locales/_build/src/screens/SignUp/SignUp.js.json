@@ -1,0 +1,58 @@
+{
+  "You have to fill all fields.": {
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        30
+      ]
+    ]
+  },
+  "Create account": {
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        44
+      ]
+    ]
+  },
+  "First name": {
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        52
+      ]
+    ]
+  },
+  "Last name": {
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        61
+      ]
+    ]
+  },
+  "Email": {
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        70
+      ]
+    ]
+  },
+  "Password": {
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        79
+      ]
+    ]
+  },
+  "Continue": {
+    "origin": [
+      [
+        "src/screens/SignUp/SignUp.js",
+        91
+      ]
+    ]
+  }
+}

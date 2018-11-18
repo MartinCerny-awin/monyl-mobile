@@ -3,8 +3,11 @@ import { connect } from 'react-redux';
 
 import Initial from './Initial';
 
-const mapStateToProps = appState => ({
-  currentLocale: appState.locales.locale,
-});
+const mapStateToProps = (appState) => {
+  const { currentLocale } = appState.locales;
+  return {
+    currentLocale,
+  };
+};
 
-export default connect(mapStateToProps, null, null, { pure: false })(Initial);
+export default connect(mapStateToProps)(Initial);

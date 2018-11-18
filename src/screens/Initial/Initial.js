@@ -1,23 +1,22 @@
 // @flow
 import React, { Component } from 'react';
+import type { Dispatch } from 'redux';
 import { Image, ImageBackground, StatusBar } from 'react-native';
+import { Trans } from '@lingui/macro';
 import {
   Container, Content, Button, View,
 } from 'native-base';
-import { FormattedMessage } from 'react-intl';
 import type { NavigationScreenProp } from 'react-navigation';
-import type { Dispatch } from 'redux';
 
 import ActionSheetPicker from '../../components/ActionSheetPicker';
-
 import type { LocalesActions } from '../../reducers/localesReducer';
 import { updateLocale } from '../../reducers/localesReducer';
 import styles from './styles';
 
 type Props = {
   navigation: NavigationScreenProp<{}>,
-  dispatch: Dispatch<LocalesActions>,
   currentLocale: string,
+  dispatch: Dispatch<LocalesActions>,
 };
 
 class Login extends Component<Props> {
@@ -58,7 +57,7 @@ class Login extends Component<Props> {
                 style={styles.btn}
                 onPress={this.navigateSignUp}
               >
-                <FormattedMessage id="screens.initial.btn.signUp" defaultMessage="Create account" />
+                <Trans>Create account</Trans>
               </Button>
               <Button
                 jest="login"
@@ -70,10 +69,7 @@ class Login extends Component<Props> {
                 textStyle={{ fontWeight: 900 }}
                 onPress={this.navigateLogin}
               >
-                <FormattedMessage
-                  id="screens.initial.btn.login"
-                  defaultMessage="I already have account"
-                />
+                <Trans>I already have account</Trans>
               </Button>
             </View>
           </Content>

@@ -1,54 +1,42 @@
 // @flow
 
+import i18n from '../utils/i18n';
 import type { ExtractReturn } from '../types';
 
-import en from '../../i18n/locales/en.json';
-import cs from '../../i18n/locales/cs.json';
+const UPDATE_LANGUAGE = 'UPDATE_LANGUAGE';
 
-const UPDATE_LOCALE = 'UPDATE_LOCALE';
-
-export const updateLocale = (locale: string) => ({
-  type: UPDATE_LOCALE,
-  payload: {
-    locale,
-  },
-});
+export const updateLocale = (currentLocale: string) => {
+  i18n.activate(currentLocale);
+  return {
+    type: UPDATE_LANGUAGE,
+    payload: {
+      currentLocale,
+    },
+  };
+};
 
 export type UpdateLocaleAction = ExtractReturn<typeof updateLocale>;
 
 export type LocalesActions =
   | UpdateLocaleAction;
 
-const englishState = {
-  locale: 'en',
-  messages: {
-    ...en,
-  },
+
+export const initialState = {
+  currentLocale: 'cs',
 };
 
-const czechState = {
-  locale: 'cs',
-  messages: {
-    ...cs,
-  },
-};
+export type LocalesStoreFlowType = {
+  currentLocale: string,
+}
 
-export default (state: any = englishState, action: Function) => {
+export default (state: LocalesStoreFlowType = initialState, action: LocalesActions) => {
   switch (action.type) {
-    case UPDATE_LOCALE:
-      switch (action.payload.locale) {
-        case 'cs':
-          return {
-            ...state,
-            ...czechState,
-          };
+    case UPDATE_LANGUAGE:
+      return {
+        ...state,
+        currentLocale: action.payload.currentLocale,
+      };
 
-        default:
-          return {
-            ...state,
-            ...englishState,
-          };
-      }
     default:
       return state;
   }

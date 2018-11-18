@@ -1,0 +1,46 @@
+{
+  "Join us in Monyl. The app of a future.": {
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        44
+      ]
+    ]
+  },
+  "<0>SKIP TOUR</0>": {
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        53
+      ],
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        72
+      ]
+    ]
+  },
+  "Everything is synchronized into the cloud. There is nothing to worry about.": {
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        64
+      ]
+    ]
+  },
+  "Just one swipe and you are with us.": {
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        83
+      ]
+    ]
+  },
+  "<0>CONTINUE TO APP</0>": {
+    "origin": [
+      [
+        "src/screens/Walkthrough/Walkthrough.js",
+        91
+      ]
+    ]
+  }
+}

@@ -68,6 +68,7 @@ module.exports = {
     "function-paren-newline": 0,
     "import/no-extraneous-dependencies": 0,
     "react/destructuring-assignment": 0,
-    "no-nested-ternary": 0
+    "no-nested-ternary": 0,
+    "import/prefer-default-export": 0,
   }
 }

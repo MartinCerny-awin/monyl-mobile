@@ -1,13 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Initial from './Initial';
+import i18n from '../../utils/i18n';
 import ActionSheetPicker from '../../components/ActionSheetPicker';
 
-jest.mock('native-base');
-const { Toast } = require('native-base');
+const activate = jest.spyOn(i18n, 'activate');
 
-Toast.show = jest.fn();
+const Initial = require('./Initial').default;
 
 const navigate = jest.fn();
 const navigation = {
@@ -26,13 +25,18 @@ describe('Initial Screen', () => {
     expect(wrapper).toHaveLength(1);
   });
 
-  it('changes locale', () => {
+  it.only('changes language', () => {
     const wrapper = shallow(<Initial dispatch={dispatch} currentLocale="en" />);
 
-    wrapper.find(ActionSheetPicker).simulate('change', { target: { value: 'cs' } });
+    wrapper.find(ActionSheetPicker).simulate('change', 'cs');
+
+    expect(activate).toHaveBeenCalled();
     expect(dispatch).toBeCalledWith(
       expect.objectContaining({
-        type: 'UPDATE_LOCALE',
+        type: 'UPDATE_LANGUAGE',
+        payload: {
+          currentLocale: 'cs',
+        },
       }),
     );
   });

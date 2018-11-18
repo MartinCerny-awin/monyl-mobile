@@ -1,24 +1,24 @@
+// @flow
+
 import React, { Component } from 'react';
 import {
   ActionSheetIOS, StyleSheet, Text, View,
 } from 'react-native';
-import type { intlShape } from 'redux-form';
-import { injectIntl } from 'react-intl';
+import { t } from '@lingui/macro';
 
-import commonMessages from '../../i18n/commonMessages';
+import i18n from '../../utils/i18n';
 
 type Props = {
-  ...intlShape,
   currentOption: string,
-  options: Array<string>,
-  onChange: void,
-};
+  options: {[string]: mixed},
+  onChange: (value: string) => void,
+}
 
 class ActionSheet extends Component<Props> {
   showActionSheet = () => {
     const { options } = this.props;
     const values = Object.values(options);
-    values.push(this.props.intl.formatMessage(commonMessages.cancel));
+    values.push(i18n._(t`Cancel`));
     const keys = Object.keys(options);
 
     ActionSheetIOS.showActionSheetWithOptions(
@@ -52,4 +52,4 @@ const style = StyleSheet.create({
   },
 });
 
-export default injectIntl(ActionSheet);
+export default ActionSheet;

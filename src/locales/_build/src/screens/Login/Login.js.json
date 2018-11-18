@@ -1,0 +1,50 @@
+{
+  "Enter username and password": {
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        30
+      ]
+    ]
+  },
+  "Email": {
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        61
+      ]
+    ]
+  },
+  "Password": {
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        70
+      ]
+    ]
+  },
+  "Login": {
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        77
+      ]
+    ]
+  },
+  "Create account": {
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        82
+      ]
+    ]
+  },
+  "Forgot password": {
+    "origin": [
+      [
+        "src/screens/Login/Login.js",
+        90
+      ]
+    ]
+  }
+}

@@ -13,8 +13,8 @@
     "precommit": "yarn test:changed && eslint",
     "react-devtools": "react-devtools",
     "flow": "flow",
-    "i18n:extract": "babel --plugins react-intl src/*",
-    "i18n:tran": "babel scripts/translate.js | node"
+    "i18n:extract": "lingui extract",
+    "i18n:compile": "lingui compile"
   },
   "jest": {
     "preset": "react-native",
@@ -29,14 +29,12 @@
     }
   },
   "dependencies": {
-    "babel-core": "^7.0.0-bridge.0",
+    "@lingui/react": "2.7.2",
     "color": "3.0.0",
-    "intl": "1.2.5",
     "jest-cli": "23.6.0",
     "lodash": "4.17.11",
-    "native-base": "2.8.0",
+    "native-base": "2.8.1",
     "react": "16.5.1",
-    "react-intl": "2.6.0",
     "react-native": "0.57.0",
     "react-native-calendars": "1.20.0",
     "react-native-carousel-view": "0.5.1",
@@ -55,12 +53,13 @@
   "devDependencies": {
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
+    "@lingui/cli": "^2.7.2",
+    "@lingui/macro": "2.7.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
-    "babel-plugin-react-intl": "https://github.com/MartinCerny-awin/babel-plugin-react-intl",
+    "babel-plugin-macros": "2.4.2",
     "enzyme": "3.6.0",
     "enzyme-adapter-react-16": "1.5.0",
-    "enzyme-react-intl": "2.0.1",
     "eslint": "5.6.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-flowtype": "^2.50.0",

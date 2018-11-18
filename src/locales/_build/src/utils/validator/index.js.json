@@ -1,0 +1,10 @@
+{
+  "Required": {
+    "origin": [
+      [
+        "src/utils/validator/index.js",
+        13
+      ]
+    ]
+  }
+}

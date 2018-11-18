@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from 'native-base';
-import { shallowWithIntl } from 'enzyme-react-intl';
+import { shallow } from 'enzyme';
 
 import InputField from './InputField';
 
@@ -8,7 +8,7 @@ describe('InputField Component', () => {
   it('renders without errors when not touched and without icon', () => {
     const meta = { touched: false, error: '' };
 
-    const wrapper = shallowWithIntl(<InputField meta={meta} />);
+    const wrapper = shallow(<InputField meta={meta} />);
 
     const message = wrapper.find({ jest: 'errorMessage' });
     const iconWrapper = wrapper.find(Icon);
@@ -21,7 +21,7 @@ describe('InputField Component', () => {
   it('renders without errors when touched', () => {
     const meta = { touched: true, error: '' };
 
-    const wrapper = shallowWithIntl(<InputField meta={meta} />);
+    const wrapper = shallow(<InputField meta={meta} />);
 
     const message = wrapper.find({ jest: 'errorMessage' });
 
@@ -32,7 +32,7 @@ describe('InputField Component', () => {
   it('renders errors when touched', () => {
     const meta = { touched: true, error: 'Big Error' };
 
-    const wrapper = shallowWithIntl(<InputField meta={meta} />);
+    const wrapper = shallow(<InputField meta={meta} />);
 
     const message = wrapper.find({ jest: 'errorMessage' });
 
@@ -44,7 +44,7 @@ describe('InputField Component', () => {
     const meta = { touched: true, error: '' };
     const icon = 'bigBigBigIcon';
 
-    const wrapper = shallowWithIntl(<InputField meta={meta} icon={icon} />);
+    const wrapper = shallow(<InputField meta={meta} icon={icon} />);
     const iconWrapper = wrapper.find(Icon);
 
     expect(iconWrapper).toHaveLength(1);

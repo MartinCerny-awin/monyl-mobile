@@ -1,12 +1,6 @@
 {
   "presets": ["module:metro-react-native-babel-preset"],
   "plugins": [
-    [
-      "react-intl",
-      {
-        "messagesDir": "./i18n/messages",
-        "enforceDescriptions": false
-      }
-    ]
+    "macros"
   ]
 }

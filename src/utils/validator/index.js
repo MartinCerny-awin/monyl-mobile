@@ -1,5 +1,8 @@
 // import get from "lodash/get";
 // import isFunction from "lodash/isFunction";
+import { t } from '@lingui/macro';
+
+import i18n from '../i18n';
 
 const isEmpty = value => value === undefined || value === null || value === '';
 // const join = rules => (value, data) =>
@@ -7,7 +10,7 @@ const isEmpty = value => value === undefined || value === null || value === '';
 
 export function required(value) {
   if (isEmpty(value)) {
-    return 'Required';
+    return i18n._(t`Required`);
   }
   return '';
 }

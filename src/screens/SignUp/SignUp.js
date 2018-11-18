@@ -6,12 +6,11 @@ import {
   Container, Content, Button, Toast,
 } from 'native-base';
 import { Field } from 'redux-form';
-import { defineMessages, FormattedMessage } from 'react-intl';
-import type { IntlShape } from 'react-intl';
+import { Trans, t } from '@lingui/macro';
 import type { NavigationScreenProp } from 'react-navigation';
 
+import i18n from '../../utils/i18n';
 import HeaderBack from '../../components/header/HeaderBack';
-import commonMessages from '../../i18n/commonMessages';
 import { minLength, required, email } from '../../utils/validator';
 import InputField from '../../components/form/InputField';
 import styles from './styles';
@@ -19,28 +18,16 @@ import styles from './styles';
 type Props = {
   navigation: NavigationScreenProp<{}>,
   valid: boolean,
-  intl: IntlShape,
 };
-
-const messages = defineMessages({
-  signUp: {
-    id: 'screens.signUp.createAccount',
-    defaultMessage: 'Create Account',
-  },
-  validation: {
-    id: 'screens.signUp.validation',
-    defaultMessage: 'You have to fill all fields.',
-  },
-});
 
 class SignUp extends Component<Props> {
   submit = () => {
-    const { navigation, intl, valid } = this.props;
+    const { navigation, valid } = this.props;
     if (valid) {
       navigation.navigate('Walkthrough');
     } else {
       Toast.show({
-        text: intl.formatMessage(messages.validation),
+        text: i18n._(t`You have to fill all fields.`),
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },
@@ -49,12 +36,12 @@ class SignUp extends Component<Props> {
   };
 
   render() {
-    const { navigation, intl } = this.props;
+    const { navigation } = this.props;
 
     return (
       <Container>
         <HeaderBack
-          title={intl.formatMessage(messages.signUp)}
+          title={i18n._(t`Create account`)}
           navigation={navigation}
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
@@ -62,7 +49,7 @@ class SignUp extends Component<Props> {
             <Field
               name="firstName"
               icon="person"
-              label={intl.formatMessage(commonMessages.firstName)}
+              label={i18n._(t`First name`)}
               component={InputField}
               type="text"
               validate={[required]}
@@ -71,7 +58,7 @@ class SignUp extends Component<Props> {
             <Field
               name="lastName"
               icon="person"
-              label={intl.formatMessage(commonMessages.lastName)}
+              label={i18n._(t`Last name`)}
               component={InputField}
               type="text"
               validate={[required]}
@@ -80,7 +67,7 @@ class SignUp extends Component<Props> {
             <Field
               name="email"
               icon="mail"
-              label={intl.formatMessage(commonMessages.email)}
+              label={i18n._(t`Email`)}
               component={InputField}
               type="email"
               validate={[email, required]}
@@ -89,7 +76,7 @@ class SignUp extends Component<Props> {
               secureTextEntry
               name="password"
               icon="unlock"
-              label={intl.formatMessage(commonMessages.password)}
+              label={i18n._(t`Password`)}
               component={InputField}
               type="password"
               validate={[required, minLength(8)]}
@@ -101,7 +88,7 @@ class SignUp extends Component<Props> {
               block
               onPress={this.submit}
             >
-              <FormattedMessage {...commonMessages.continue} />
+              <Trans>Continue</Trans>
             </Button>
           </Content>
         </ImageBackground>

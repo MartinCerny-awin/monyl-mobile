@@ -29,6 +29,7 @@ export default function configureStore(): any {
   // $FlowFixMe
   const store = createStore(persistedReducer, preloadedState, enhancer);
   const persistor = persistStore(store);
+  // persistor.purge();
 
   return { store, persistor };
 }

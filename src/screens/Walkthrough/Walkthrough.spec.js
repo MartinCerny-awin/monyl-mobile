@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallowWithIntl, mountWithIntl } from 'enzyme-react-intl';
+import { shallow } from 'enzyme';
 import { Button, Toast } from 'native-base';
 
 import Walkthrough from './index';
@@ -19,13 +19,13 @@ describe('SignUp Screen', () => {
   });
 
   it('renders correctly', () => {
-    const wrapper = shallowWithIntl(<Walkthrough navigation={navigation} />);
+    const wrapper = shallow(<Walkthrough navigation={navigation} />);
 
     expect(wrapper).toHaveLength(1);
   });
 
   it('navigates to Drawer when first button clicked', () => {
-    const wrapper = shallowWithIntl(<Walkthrough navigation={navigation} valid />).shallow();
+    const wrapper = shallow(<Walkthrough navigation={navigation} valid />).shallow();
 
     const button = wrapper.find(Button).at(0);
     button.simulate('press');
@@ -34,7 +34,7 @@ describe('SignUp Screen', () => {
   });
 
   it('navigates to Drawer when second button clicked', () => {
-    const wrapper = shallowWithIntl(<Walkthrough navigation={navigation} valid />).shallow();
+    const wrapper = shallow(<Walkthrough navigation={navigation} valid />).shallow();
     const button1 = wrapper.find(Button).at(1);
     button1.simulate('press');
 
@@ -42,7 +42,7 @@ describe('SignUp Screen', () => {
   });
 
   it('navigates to Drawer when third button clicked', () => {
-    const wrapper = shallowWithIntl(<Walkthrough navigation={navigation} valid />).shallow();
+    const wrapper = shallow(<Walkthrough navigation={navigation} valid />).shallow();
     const button2 = wrapper.find(Button).at(2);
     button2.simulate('press');
 

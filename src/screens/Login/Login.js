@@ -1,15 +1,15 @@
 // @flow
 import React, { Component } from 'react';
+import { Trans, t } from '@lingui/macro';
 import { Image, ImageBackground, StatusBar } from 'react-native';
 import {
   Container, Content, Button, View, Toast,
 } from 'native-base';
-import { FormattedMessage, defineMessages } from 'react-intl';
 import { Field } from 'redux-form';
 import type { FormProps } from 'redux-form';
 import type { NavigationScreenProp } from 'react-navigation';
 
-import commonMessages from '../../i18n/commonMessages';
+import i18n from '../../utils/i18n';
 import InputField from '../../components/form/InputField';
 import { required, email } from '../../utils/validator';
 
@@ -21,20 +21,13 @@ type Props = {
   change: void,
 } & FormProps;
 
-const messages = defineMessages({
-  validation: {
-    id: 'screens.login.validation',
-    defaultMessage: 'Enter username and password',
-  },
-});
-
 class Login extends Component<Props> {
   submit = () => {
     if (this.props.valid) {
       this.props.navigation.navigate('Cards');
     } else {
       Toast.show({
-        text: this.props.intl.formatMessage(messages.validation),
+        text: i18n._(t`Enter username and password`),
         duration: 2500,
         position: 'top',
         textStyle: { textAlign: 'center' },
@@ -65,7 +58,7 @@ class Login extends Component<Props> {
               <View>
                 <Field
                   name="email"
-                  label={this.props.intl.formatMessage(commonMessages.email)}
+                  label={i18n._(t`Email`)}
                   component={InputField}
                   icon="mail"
                   change={change}
@@ -74,22 +67,19 @@ class Login extends Component<Props> {
                 <Field
                   secureTextEntry
                   name="password"
-                  label={this.props.intl.formatMessage(commonMessages.password)}
+                  label={i18n._(t`Password`)}
                   component={InputField}
                   icon="lock"
                   change={change}
                   validate={[required]}
                 />
                 <Button jest="login" rounded primary block onPress={this.submit}>
-                  <FormattedMessage id="screens.login.btn.login" defaultMessage="Login" />
+                  <Trans>Login</Trans>
                 </Button>
 
                 <View style={styles.bottomLinksContainer}>
                   <Button jest="signUp" small transparent onPress={this.navigateSignUp}>
-                    <FormattedMessage
-                      id="screens.login.btn.createAccount"
-                      defaultMessage="Create Account"
-                    />
+                    <Trans>Create account</Trans>
                   </Button>
                   <Button
                     jest="forgotPassword"
@@ -97,10 +87,7 @@ class Login extends Component<Props> {
                     transparent
                     onPress={this.navigateForgotPassword}
                   >
-                    <FormattedMessage
-                      id="screens.login.btn.forgotPassword"
-                      defaultMessage="Forgot Password"
-                    />
+                    <Trans>Forgot password</Trans>
                   </Button>
                 </View>
               </View>

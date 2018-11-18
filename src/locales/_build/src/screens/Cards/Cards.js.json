@@ -1,0 +1,18 @@
+{
+  "Swipe Left": {
+    "origin": [
+      [
+        "src/screens/Cards/Cards.js",
+        89
+      ]
+    ]
+  },
+  "Swipe Right": {
+    "origin": [
+      [
+        "src/screens/Cards/Cards.js",
+        92
+      ]
+    ]
+  }
+}
