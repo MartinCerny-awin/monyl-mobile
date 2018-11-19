@@ -21,6 +21,15 @@
       ]
     ]
   },
+  "Cancel": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ActionSheetPicker/index.ios.js",
+        21
+      ]
+    ]
+  },
   "Continue": {
     "translation": "",
     "origin": [
@@ -127,6 +136,24 @@
       ]
     ]
   },
+  "Invalid Url": {
+    "translation": "",
+    "origin": [
+      [
+        "src/utils/validator/validator.js",
+        52
+      ]
+    ]
+  },
+  "Invalid email address": {
+    "translation": "Neplatný email",
+    "origin": [
+      [
+        "src/utils/validator/validator.js",
+        25
+      ]
+    ]
+  },
   "Join us in Monyl. The app of a future.": {
     "translation": "",
     "origin": [
@@ -172,6 +199,42 @@
       ]
     ]
   },
+  "Must be at least {min} characters": {
+    "translation": "",
+    "origin": [
+      [
+        "src/utils/validator/validator.js",
+        66
+      ]
+    ]
+  },
+  "Must be matched with {0}": {
+    "translation": "",
+    "origin": [
+      [
+        "src/utils/validator/validator.js",
+        84
+      ]
+    ]
+  },
+  "Must be no more than {max} characters": {
+    "translation": "",
+    "origin": [
+      [
+        "src/utils/validator/validator.js",
+        75
+      ]
+    ]
+  },
+  "Only alphanumeric characters": {
+    "translation": "",
+    "origin": [
+      [
+        "src/utils/validator/validator.js",
+        99
+      ]
+    ]
+  },
   "Password": {
     "translation": "Heslo",
     "origin": [
@@ -186,11 +249,11 @@
     ]
   },
   "Required": {
-    "translation": "",
+    "translation": "Povinné",
     "origin": [
       [
-        "src/utils/validator/index.js",
-        13
+        "src/utils/validator/validator.js",
+        15
       ]
     ]
   },
