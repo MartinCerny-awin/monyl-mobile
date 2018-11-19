@@ -58,7 +58,7 @@ class Login extends Component<Props> {
                 style={styles.btn}
                 onPress={this.navigateSignUp}
               >
-                <Trans>Create account</Trans>
+                <Trans>Create account123</Trans>
               </Button>
               <Button
                 jest="login"
