@@ -1,10 +1,8 @@
 // @flow
 
-const React = require('react-native');
+import { Dimensions, Platform } from 'react-native';
 
-const { Dimensions, Platform } = React;
-
-const primary = require('../../theme/variables/commonColor').brandPrimary;
+import commonColor from '../../theme/variables/commonColor';
 
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
@@ -34,10 +32,10 @@ export default {
     paddingRight: 20,
     marginBottom: 15,
     borderLeftWidth: 2,
-    borderLeftColor: primary,
+    borderLeftColor: commonColor.brandPrimary,
   },
   newsComment: {
-    color: primary,
+    color: commonColor.brandPrimary,
     fontWeight: '500',
     fontSize: 14,
   },
@@ -97,7 +95,7 @@ export default {
     alignSelf: 'center',
   },
   modal: {
-    backgroundColor: primary,
+    backgroundColor: commonColor.brandPrimary,
     position: 'absolute',
     width: deviceWidth,
     height: null,
@@ -192,11 +190,11 @@ export default {
     lineHeight: 28,
   },
   nextStoryBtn: {
-    color: primary,
+    color: commonColor.brandPrimary,
     fontWeight: '900',
   },
   forwardBtn: {
-    color: primary,
+    color: commonColor.brandPrimary,
     fontSize: 26,
   },
 };

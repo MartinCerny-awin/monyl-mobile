@@ -1,4 +1,5 @@
 // @flow
+
 import React, { Component } from 'react';
 import { ImageBackground } from 'react-native';
 import {
@@ -42,7 +43,7 @@ class ForgotPassword extends Component<Props> {
         />
         <ImageBackground source={require('../../../assets/bg.png')} style={styles.background}>
           <Content contentContainerStyle={styles.contentContainer}>
-            <View style={styles.formContainer}>
+            <View>
               <Field
                 name="email"
                 label={i18n._(t`Email`)}

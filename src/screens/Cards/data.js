@@ -1,3 +1,5 @@
+// @flow
+
 import { t } from '@lingui/macro';
 
 import i18n from '../../utils/i18n';

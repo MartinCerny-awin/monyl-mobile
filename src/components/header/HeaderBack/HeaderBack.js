@@ -1,4 +1,5 @@
 // @flow
+
 import React from 'react';
 import {
   Title, Icon, Button, Left, Right, Body, Header,
@@ -26,7 +27,7 @@ class CustomHeader extends React.Component<Props> {
       <Header>
         <Left>
           <Button transparent onPress={this.navigateBack}>
-            <Icon active name="arrow-back" style={styles.headerIcons} />
+            <Icon active name="arrow-back" />
           </Button>
         </Left>
         <Body style={styles.body}>

@@ -1,4 +1,5 @@
 // @flow
+
 import React from 'react';
 import { ImageBackground, TouchableOpacity } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';

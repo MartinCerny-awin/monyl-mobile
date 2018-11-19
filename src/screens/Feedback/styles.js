@@ -1,8 +1,9 @@
-const React = require('react-native');
+// @flow
 
-const { Dimensions, Platform } = React;
+import { Dimensions, Platform } from 'react-native';
 
-const primary = require('../../theme/variables/commonColor').brandPrimary;
+
+import commonColor from '../../theme/variables/commonColor';
 
 export default {
   header: {
@@ -25,7 +26,7 @@ export default {
     flex: 1,
     width: null,
     height: null,
-    backgroundColor: primary,
+    backgroundColor: commonColor.brandPrimary,
   },
   contentIconsContainer: {
     paddingTop: 30,
@@ -96,6 +97,6 @@ export default {
     paddingBottom: 5,
   },
   bg: {
-    backgroundColor: primary,
+    backgroundColor: commonColor.brandPrimary,
   },
 };

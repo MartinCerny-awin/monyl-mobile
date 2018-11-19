@@ -1,4 +1,5 @@
 // @flow
+
 import React, { Component } from 'react';
 import type { Dispatch } from 'redux';
 import { Image, ImageBackground, StatusBar } from 'react-native';

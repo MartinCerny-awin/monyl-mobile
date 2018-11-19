@@ -1,9 +1,7 @@
-const React = require('react-native');
+// @flow
 
-const { StyleSheet } = React;
-
-module.exports = StyleSheet.create({
+export default {
   body: {
     flex: 4,
   },
-});
+};

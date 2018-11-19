@@ -1,3 +1,5 @@
+// @flow
+
 import { Platform } from 'react-native';
 import commonColor from '../../../theme/variables/commonColor';
 

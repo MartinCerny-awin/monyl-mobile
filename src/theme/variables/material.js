@@ -1,3 +1,5 @@
+// @flow
+
 import color from 'color';
 
 import { Platform, Dimensions, PixelRatio } from 'react-native';
@@ -192,6 +194,7 @@ export default {
   radioBtnSize: 23,
   radioSelectedColorAndroid: '#5067FF',
   radioBtnLineHeight: 24,
+  // $FlowFixMe
   radioColor: this.brandPrimary,
 
   // Segment

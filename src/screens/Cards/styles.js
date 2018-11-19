@@ -1,4 +1,6 @@
-const primary = require('../../theme/variables/commonColor').brandPrimary;
+// @flow
+
+import commonColor from '../../theme/variables/commonColor';
 
 export default {
   container: {
@@ -7,7 +9,7 @@ export default {
     height: null,
   },
   bgHead: {
-    backgroundColor: primary,
+    backgroundColor: commonColor.brandPrimary,
     flex: 1,
   },
   imageHeader: {

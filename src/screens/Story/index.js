@@ -1,4 +1,5 @@
 // @flow
+
 import React, { Component } from 'react';
 import {
   Image,
@@ -232,7 +233,7 @@ class Story extends Component<Props, State> {
                   <Text style={styles.modalLargeText}>A</Text>
                 </Col>
               </Grid>
-              <Slider {...this.props} minimumTrackTintColor="#fff" thumbTintColor="#fff" />
+              <Slider minimumTrackTintColor="#fff" thumbTintColor="#fff" />
             </View>
           </View>
         </Modal>

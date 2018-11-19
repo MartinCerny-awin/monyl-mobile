@@ -1,8 +1,8 @@
-const React = require('react-native');
+// @flow
 
-const { Platform } = React;
+import { Platform } from 'react-native';
 
-const primary = require('../../theme/variables/commonColor').brandPrimary;
+import commonColor from '../../theme/variables/commonColor';
 
 export default {
   links: {
@@ -29,7 +29,7 @@ export default {
     flex: 1,
     width: null,
     height: null,
-    backgroundColor: primary,
+    backgroundColor: commonColor.brandPrimary,
   },
   drawerContent: {
     paddingTop: Platform.OS === 'android' ? 20 : 30,

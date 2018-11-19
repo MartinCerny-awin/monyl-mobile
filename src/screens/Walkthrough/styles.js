@@ -1,10 +1,8 @@
 // @flow
 
-const React = require('react-native');
+import { Dimensions } from 'react-native';
 
-const { Dimensions } = React;
-
-const commonColor = require('../../theme/variables/commonColor').default;
+import commonColor from '../../theme/variables/commonColor';
 
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;

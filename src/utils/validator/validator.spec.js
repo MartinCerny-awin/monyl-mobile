@@ -1,7 +1,6 @@
 import { t } from '@lingui/macro';
 import * as validator from './index';
 
-
 import i18n from '../i18n';
 
 describe('validator test', () => {

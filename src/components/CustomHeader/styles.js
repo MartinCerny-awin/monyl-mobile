@@ -1,8 +1,8 @@
-const React = require('react-native');
+// @flow
 
-const { StyleSheet, Dimensions, Platform } = React;
+import { Dimensions, Platform } from 'react-native';
 
-module.exports = StyleSheet.create({
+export default {
   header: {
     width: Dimensions.get('window').width,
     paddingLeft: 15,
@@ -25,4 +25,4 @@ module.exports = StyleSheet.create({
     width: 95,
     resizeMode: 'contain',
   },
-});
+};

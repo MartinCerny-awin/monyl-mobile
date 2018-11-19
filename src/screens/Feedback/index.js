@@ -9,7 +9,7 @@ import styles from './styles';
 import CustomHeader from '../../components/CustomHeader';
 
 // const headerLogo = require("../../../assets/header-logo.png");
-const primary = require('../../theme/variables/commonColor').brandPrimary;
+import commonColor from '../../theme/variables/commonColor';
 
 type Props = {
   navigation: NavigationScreenProp<{}>,
@@ -48,7 +48,7 @@ class Feedback extends Component<Props, State> {
                   name="ios-mail-outline"
                   style={{
                     fontSize: 28,
-                    color: primary,
+                    color: commonColor.brandPrimary,
                     width: 22,
                     marginLeft: 5,
                   }}

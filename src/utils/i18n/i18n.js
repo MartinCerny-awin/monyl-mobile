@@ -1,4 +1,5 @@
 // @flow
+
 import { setupI18n } from '@lingui/core';
 
 import enMessages from '../../locales/en/messages';

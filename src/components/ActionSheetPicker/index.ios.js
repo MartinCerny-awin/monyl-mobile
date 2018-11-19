@@ -10,14 +10,15 @@ import i18n from '../../utils/i18n';
 
 type Props = {
   currentOption: string,
-  options: {[string]: mixed},
+  options: {[string]: string},
   onChange: (value: string) => void,
 }
 
 class ActionSheet extends Component<Props> {
   showActionSheet = () => {
     const { options } = this.props;
-    const values = Object.values(options);
+    // $FlowFixMe https://github.com/facebook/flow/issues/2221
+    const values: Array<string> = Object.values(options);
     values.push(i18n._(t`Cancel`));
     const keys = Object.keys(options);
 

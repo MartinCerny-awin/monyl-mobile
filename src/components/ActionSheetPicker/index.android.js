@@ -1,10 +1,12 @@
+// @flow
+
 import React from 'react';
-import { Picker, StyleSheet, View } from 'react-native';
+import { Picker, View } from 'react-native';
 
 type Props = {
   currentOption: string,
-  options: Array<string>,
-  onChange: void,
+  options: {[string]: string},
+  onChange: (value: string) => void,
 };
 
 export default (props: Props) => (
@@ -21,10 +23,10 @@ export default (props: Props) => (
   </View>
 );
 
-const style = StyleSheet.create({
+const style = {
   button: {
     marginBottom: 10,
     color: '#fff',
     width: 100,
   },
-});
+};

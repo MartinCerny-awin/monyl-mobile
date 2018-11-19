@@ -1,4 +1,5 @@
 // @flow
+
 import React, { Component } from 'react';
 import { Trans, t } from '@lingui/macro';
 import { Image, ImageBackground, StatusBar } from 'react-native';
