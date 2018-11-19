@@ -1,117 +1,354 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1520013519777" clover="3.2.0">
-  <project timestamp="1520013519777" name="All files">
-    <metrics statements="84" coveredstatements="36" conditionals="151" coveredconditionals="67" methods="22" coveredmethods="12" elements="257" coveredelements="115" complexity="0" loc="84" ncloc="84" packages="10" files="18" classes="18">
+<coverage generated="1542607487082" clover="3.2.0">
+  <project timestamp="1542607487082" name="All files">
+    <metrics statements="269" coveredstatements="225" conditionals="210" coveredconditionals="101" methods="71" coveredmethods="54" elements="550" coveredelements="380" complexity="0" loc="269" ncloc="269" packages="18" files="35" classes="35">
       <package name="assets">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="bg.png" path="/Users/martincerny/sites/monyl/assets/bg.png">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="bg.png" path="/Volumes/sites/monyl/assets/bg.png">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="3" type="stmt"/>
+          <line num="1" count="4" type="stmt"/>
         </file>
-        <file name="logo.png" path="/Users/martincerny/sites/monyl/assets/logo.png">
+        <file name="header-logo.png" path="/Volumes/sites/monyl/assets/header-logo.png">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+        </file>
+        <file name="logo.png" path="/Volumes/sites/monyl/assets/logo.png">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="assets.photos">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="girl.jpg" path="/Volumes/sites/monyl/assets/photos/girl.jpg">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+        </file>
+        <file name="scene.jpg" path="/Volumes/sites/monyl/assets/photos/scene.jpg">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="1" type="stmt"/>
         </file>
       </package>
       <package name="jest">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="setup.js" path="/Users/martincerny/sites/monyl/jest/setup.js">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="4" count="5" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="setup.js" path="/Volumes/sites/monyl/jest/setup.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="9" type="stmt"/>
+          <line num="2" count="9" type="stmt"/>
+          <line num="4" count="9" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.ActionSheetPicker">
+        <metrics statements="17" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="1"/>
+        <file name="index.ios.js" path="/Volumes/sites/monyl/src/components/ActionSheetPicker/index.ios.js">
+          <metrics statements="17" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.components.form.InputField">
-        <metrics statements="3" coveredstatements="3" conditionals="9" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <file name="InputField.js" path="/Users/martincerny/sites/monyl/src/components/form/InputField/InputField.js">
-          <metrics statements="3" coveredstatements="3" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
-          <line num="11" count="4" type="stmt"/>
+        <metrics statements="12" coveredstatements="12" conditionals="9" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <file name="InputField.js" path="/Volumes/sites/monyl/src/components/form/InputField/InputField.js">
+          <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+          <line num="1" count="4" type="stmt"/>
+          <line num="2" count="4" type="stmt"/>
+          <line num="6" count="4" type="stmt"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="16" count="4" type="stmt"/>
+          <line num="17" count="4" type="stmt"/>
+          <line num="33" count="4" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Volumes/sites/monyl/src/components/form/InputField/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="25" type="stmt"/>
+        </file>
+        <file name="styles.js" path="/Volumes/sites/monyl/src/components/form/InputField/styles.js">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
+          <line num="1" count="4" type="stmt"/>
+          <line num="2" count="4" type="stmt"/>
+          <line num="4" count="4" type="stmt"/>
           <line num="14" count="4" type="stmt"/>
-          <line num="15" count="4" type="stmt"/>
-        </file>
-        <file name="index.js" path="/Users/martincerny/sites/monyl/src/components/form/InputField/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-        <file name="styles.js" path="/Users/martincerny/sites/monyl/src/components/form/InputField/styles.js">
-          <metrics statements="0" coveredstatements="0" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
         </file>
       </package>
       <package name="src.components.header.HeaderBack">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <file name="HeaderBack.js" path="/Users/martincerny/sites/monyl/src/components/header/HeaderBack/HeaderBack.js">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-          <line num="18" count="1" type="stmt"/>
-          <line num="22" count="3" type="stmt"/>
-        </file>
-        <file name="index.js" path="/Users/martincerny/sites/monyl/src/components/header/HeaderBack/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-        <file name="styles.js" path="/Users/martincerny/sites/monyl/src/components/header/HeaderBack/styles.js">
-          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <file name="HeaderBack.js" path="/Volumes/sites/monyl/src/components/header/HeaderBack/HeaderBack.js">
+          <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
           <line num="1" count="3" type="stmt"/>
+          <line num="2" count="3" type="stmt"/>
           <line num="3" count="3" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="15" count="9" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="3" type="stmt"/>
+          <line num="25" count="3" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
+          <line num="41" count="3" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Volumes/sites/monyl/src/components/header/HeaderBack/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="6" type="stmt"/>
+        </file>
+        <file name="styles.js" path="/Volumes/sites/monyl/src/components/header/HeaderBack/styles.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="5" count="3" type="stmt"/>
         </file>
       </package>
-      <package name="src.i18n">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="commonMessages.js" path="/Users/martincerny/sites/monyl/src/i18n/commonMessages.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <package name="src.locales.cs">
+        <metrics statements="1" coveredstatements="1" conditionals="13" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <file name="messages.js" path="/Volumes/sites/monyl/src/locales/cs/messages.js">
+          <metrics statements="1" coveredstatements="1" conditionals="13" coveredconditionals="0" methods="4" coveredmethods="3"/>
+          <line num="1" count="7" type="cond" truecount="0" falsecount="13"/>
+        </file>
+      </package>
+      <package name="src.locales.en">
+        <metrics statements="1" coveredstatements="1" conditionals="22" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <file name="messages.js" path="/Volumes/sites/monyl/src/locales/en/messages.js">
+          <metrics statements="1" coveredstatements="1" conditionals="22" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="1" count="7" type="cond" truecount="0" falsecount="22"/>
+        </file>
+      </package>
+      <package name="src.reducers">
+        <metrics statements="14" coveredstatements="11" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <file name="localesReducer.js" path="/Volumes/sites/monyl/src/reducers/localesReducer.js">
+          <metrics statements="14" coveredstatements="11" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="32" count="1" type="cond" truecount="0" falsecount="6"/>
+          <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.screens.Cards">
+        <metrics statements="24" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="4"/>
+        <file name="Cards.js" path="/Volumes/sites/monyl/src/screens/Cards/Cards.js">
+          <metrics statements="17" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="35" count="2" type="stmt"/>
+          <line num="38" count="2" type="stmt"/>
+          <line num="39" count="2" type="stmt"/>
+          <line num="40" count="2" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="87" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="99" count="1" type="stmt"/>
+          <line num="102" count="1" type="stmt"/>
+        </file>
+        <file name="data.js" path="/Volumes/sites/monyl/src/screens/Cards/data.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+        <file name="styles.js" path="/Volumes/sites/monyl/src/screens/Cards/styles.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.screens.ForgotPassword">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <file name="ForgotPassword.js" path="/Users/martincerny/sites/monyl/src/screens/ForgotPassword/ForgotPassword.js">
-          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="31" count="1" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="43" count="3" type="stmt"/>
+        <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <file name="ForgotPassword.js" path="/Volumes/sites/monyl/src/screens/ForgotPassword/ForgotPassword.js">
+          <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="22" count="9" type="stmt"/>
+          <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="37" count="3" type="stmt"/>
+          <line num="62" count="1" type="stmt"/>
+          <line num="65" count="1" type="stmt"/>
         </file>
-        <file name="styles.js" path="/Users/martincerny/sites/monyl/src/screens/ForgotPassword/styles.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="styles.js" path="/Volumes/sites/monyl/src/screens/ForgotPassword/styles.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.screens.Initial">
+        <metrics statements="19" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+        <file name="Initial.js" path="/Volumes/sites/monyl/src/screens/Initial/Initial.js">
+          <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="22" count="3" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="79" count="1" type="stmt"/>
+          <line num="82" count="1" type="stmt"/>
+        </file>
+        <file name="styles.js" path="/Volumes/sites/monyl/src/screens/Initial/styles.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.screens.Login">
-        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-        <file name="Login.js" path="/Users/martincerny/sites/monyl/src/screens/Login/Login.js">
-          <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="31" count="1" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
+        <metrics statements="25" coveredstatements="25" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <file name="Login.js" path="/Volumes/sites/monyl/src/screens/Login/Login.js">
+          <metrics statements="22" coveredstatements="22" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="24" count="15" type="stmt"/>
+          <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="36" count="5" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="40" count="5" type="stmt"/>
           <line num="43" count="1" type="stmt"/>
-          <line num="47" count="1" type="stmt"/>
-          <line num="51" count="5" type="stmt"/>
-          <line num="52" count="5" type="stmt"/>
+          <line num="44" count="5" type="stmt"/>
+          <line num="47" count="5" type="stmt"/>
+          <line num="48" count="5" type="stmt"/>
+          <line num="99" count="1" type="stmt"/>
+          <line num="102" count="1" type="stmt"/>
         </file>
-        <file name="styles.js" path="/Users/martincerny/sites/monyl/src/screens/Login/styles.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="styles.js" path="/Volumes/sites/monyl/src/screens/Login/styles.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.screens.SignUp">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <file name="SignUp.js" path="/Users/martincerny/sites/monyl/src/screens/SignUp/SignUp.js">
-          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="34" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="35" count="1" type="stmt"/>
-          <line num="37" count="1" type="stmt"/>
-          <line num="47" count="3" type="stmt"/>
+        <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <file name="SignUp.js" path="/Volumes/sites/monyl/src/screens/SignUp/SignUp.js">
+          <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="23" count="9" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+          <line num="39" count="3" type="stmt"/>
+          <line num="41" count="3" type="stmt"/>
+          <line num="97" count="1" type="stmt"/>
+          <line num="100" count="1" type="stmt"/>
         </file>
-        <file name="styles.js" path="/Users/martincerny/sites/monyl/src/screens/SignUp/styles.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="styles.js" path="/Volumes/sites/monyl/src/screens/SignUp/styles.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.screens.Walkthrough">
+        <metrics statements="24" coveredstatements="24" conditionals="8" coveredconditionals="4" methods="7" coveredmethods="7"/>
+        <file name="Walkthrough.js" path="/Volumes/sites/monyl/src/screens/Walkthrough/Walkthrough.js">
+          <metrics statements="17" coveredstatements="17" conditionals="8" coveredconditionals="4" methods="6" coveredmethods="6"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="23" count="4" type="stmt"/>
+          <line num="25" count="4" type="stmt"/>
+          <line num="27" count="4" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="69" count="1" type="stmt"/>
+          <line num="88" count="1" type="stmt"/>
+          <line num="102" count="1" type="stmt"/>
+          <line num="105" count="1" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Volumes/sites/monyl/src/screens/Walkthrough/index.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="4" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+        </file>
+        <file name="styles.js" path="/Volumes/sites/monyl/src/screens/Walkthrough/styles.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="79" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.theme.variables">
-        <metrics statements="29" coveredstatements="5" conditionals="107" coveredconditionals="53" methods="0" coveredmethods="0"/>
-        <file name="commonColor.js" path="/Users/martincerny/sites/monyl/src/theme/variables/commonColor.js">
-          <metrics statements="29" coveredstatements="5" conditionals="107" coveredconditionals="53" methods="0" coveredmethods="0"/>
-          <line num="5" count="4" type="stmt"/>
-          <line num="6" count="4" type="stmt"/>
-          <line num="7" count="4" type="stmt"/>
-          <line num="8" count="4" type="stmt"/>
-          <line num="9" count="4" type="cond" truecount="2" falsecount="1"/>
+        <metrics statements="33" coveredstatements="9" conditionals="107" coveredconditionals="53" methods="0" coveredmethods="0"/>
+        <file name="commonColor.js" path="/Volumes/sites/monyl/src/theme/variables/commonColor.js">
+          <metrics statements="33" coveredstatements="9" conditionals="107" coveredconditionals="53" methods="0" coveredmethods="0"/>
+          <line num="1" count="6" type="stmt"/>
+          <line num="3" count="6" type="stmt"/>
+          <line num="5" count="6" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="9" count="6" type="cond" truecount="2" falsecount="1"/>
+          <line num="11" count="6" type="stmt"/>
           <line num="31" count="0" type="stmt"/>
           <line num="34" count="0" type="stmt"/>
           <line num="37" count="0" type="stmt"/>
@@ -136,38 +373,61 @@
           <line num="165" count="0" type="stmt"/>
           <line num="168" count="0" type="stmt"/>
           <line num="225" count="0" type="stmt"/>
+          <line num="244" count="6" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.utils.i18n">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="i18n.js" path="/Volumes/sites/monyl/src/utils/i18n/i18n.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="7" count="7" type="stmt"/>
+          <line num="11" count="7" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Volumes/sites/monyl/src/utils/i18n/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="82" type="stmt"/>
         </file>
       </package>
       <package name="src.utils.validator">
-        <metrics statements="26" coveredstatements="2" conditionals="29" coveredconditionals="0" methods="11" coveredmethods="1"/>
-        <file name="index.js" path="/Users/martincerny/sites/monyl/src/utils/validator/index.js">
-          <metrics statements="26" coveredstatements="2" conditionals="29" coveredconditionals="0" methods="11" coveredmethods="1"/>
-          <line num="4" count="3" type="cond" truecount="0" falsecount="3"/>
-          <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="12" count="0" type="stmt"/>
-          <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="20" count="0" type="stmt"/>
-          <line num="22" count="0" type="stmt"/>
-          <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="42" count="0" type="stmt"/>
-          <line num="46" count="0" type="stmt"/>
-          <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="59" count="3" type="stmt"/>
-          <line num="60" count="0" type="cond" truecount="0" falsecount="4"/>
-          <line num="61" count="0" type="stmt"/>
-          <line num="63" count="0" type="stmt"/>
-          <line num="68" count="0" type="stmt"/>
-          <line num="69" count="0" type="cond" truecount="0" falsecount="4"/>
-          <line num="70" count="0" type="stmt"/>
-          <line num="72" count="0" type="stmt"/>
-          <line num="77" count="0" type="stmt"/>
-          <line num="78" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="81" count="0" type="stmt"/>
-          <line num="93" count="0" type="cond" truecount="0" falsecount="4"/>
-          <line num="94" count="0" type="stmt"/>
-          <line num="96" count="0" type="stmt"/>
+        <metrics statements="29" coveredstatements="26" conditionals="33" coveredconditionals="28" methods="13" coveredmethods="12"/>
+        <file name="index.js" path="/Volumes/sites/monyl/src/utils/validator/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+          <line num="1" count="68" type="cond" truecount="3" falsecount="1"/>
+        </file>
+        <file name="validator.js" path="/Volumes/sites/monyl/src/utils/validator/validator.js">
+          <metrics statements="28" coveredstatements="25" conditionals="29" coveredconditionals="25" methods="11" coveredmethods="10"/>
+          <line num="1" count="4" type="stmt"/>
+          <line num="7" count="4" type="stmt"/>
+          <line num="9" count="19" type="cond" truecount="3" falsecount="0"/>
+          <line num="14" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="4" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="21" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="25" count="5" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="46" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="51" count="6" type="stmt"/>
+          <line num="52" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="64" count="7" type="stmt"/>
+          <line num="65" count="4" type="cond" truecount="4" falsecount="0"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="68" count="3" type="stmt"/>
+          <line num="73" count="4" type="stmt"/>
+          <line num="74" count="4" type="cond" truecount="4" falsecount="0"/>
+          <line num="75" count="1" type="stmt"/>
+          <line num="77" count="3" type="stmt"/>
+          <line num="82" count="3" type="stmt"/>
+          <line num="83" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="84" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="86" count="1" type="stmt"/>
+          <line num="98" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="99" count="0" type="stmt"/>
+          <line num="101" count="0" type="stmt"/>
         </file>
       </package>
     </metrics>
