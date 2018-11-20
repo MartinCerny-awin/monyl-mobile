@@ -32,7 +32,7 @@ describe('SignUp Screen', () => {
     expect(Toast.show).toHaveBeenCalled();
   });
 
-  it('navigates to Story when the form is valid', () => {
+  it('navigates to Walkthrough when the form is valid', () => {
     const wrapper = shallow(<SignUp navigation={navigation} valid />);
 
     const button = wrapper.find(Button);

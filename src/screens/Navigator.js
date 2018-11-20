@@ -6,7 +6,6 @@ import Login from './Login';
 import SignUp from './SignUp';
 import ForgotPassword from './ForgotPassword';
 import Walkthrough from './Walkthrough';
-import Story from './Story';
 import Home from './Home';
 import SideBar from './SideBar';
 
@@ -27,7 +26,6 @@ const Navigator = createStackNavigator(
     SignUp: { screen: SignUp },
     ForgotPassword: { screen: ForgotPassword },
     Walkthrough: { screen: Walkthrough },
-    Story: { screen: Story },
     Drawer: { screen: Drawer },
   },
   {
