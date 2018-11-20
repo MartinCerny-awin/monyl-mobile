@@ -6,9 +6,8 @@ import {
 import type { NavigationScreenProp } from 'react-navigation';
 
 import styles from './styles';
-import CustomHeader from '../../components/CustomHeader';
+import CustomHeader from '../../components/header/CustomHeader';
 
-// const headerLogo = require("../../../assets/header-logo.png");
 import commonColor from '../../theme/variables/commonColor';
 
 type Props = {

@@ -26,7 +26,7 @@ const CustomHeader = (props: Props) => {
         )}
       </Left>
       <Body>
-        <Image source={require('../../../assets/header-logo.png')} style={styles.imageHeader} />
+        <Image source={require('../../../../assets/header-logo.png')} style={styles.imageHeader} />
       </Body>
       <Right />
     </Header>

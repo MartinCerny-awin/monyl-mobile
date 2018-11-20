@@ -13,7 +13,7 @@ type Props = {
   title?: string,
 };
 
-class CustomHeader extends React.Component<Props> {
+class HeaderBack extends React.Component<Props> {
   static defaultProps = {
     title: '',
   };
@@ -39,4 +39,4 @@ class CustomHeader extends React.Component<Props> {
   }
 }
 
-export default CustomHeader;
+export default HeaderBack;

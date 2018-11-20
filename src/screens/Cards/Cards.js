@@ -6,10 +6,8 @@ import React from 'react';
 import { Image } from 'react-native';
 import {
   Container,
-  Header,
   Left,
   Body,
-  Right,
   Button,
   Icon,
   DeckSwiper,
@@ -23,10 +21,9 @@ import { Trans } from '@lingui/macro';
 import type { DeckSwiper as DeckSwiperType } from 'native-base';
 import type { NavigationScreenProp } from 'react-navigation';
 
-import styles from './styles';
-import data from './data';
+import CustomHeader from '../../components/header/CustomHeader';
 
-const headerLogo = require('../../../assets/header-logo.png');
+import data from './data';
 
 type Props = {
   navigation: NavigationScreenProp<{}>,
@@ -36,22 +33,10 @@ class Cards extends React.Component<Props> {
   customDeckSwiper: DeckSwiperType
 
   render() {
-    const { navigation: { openDrawer } } = this.props;
+    const { navigation } = this.props;
     return (
       <Container>
-        <Header hasTabs>
-          <Left>
-            {openDrawer && (
-            <Button transparent onPress={() => openDrawer()}>
-              <Icon active name="menu" />
-            </Button>
-            )}
-          </Left>
-          <Body>
-            <Image source={headerLogo} style={styles.imageHeader} />
-          </Body>
-          <Right />
-        </Header>
+        <CustomHeader hasTabs navigation={navigation} />
 
         <View>
           <DeckSwiper

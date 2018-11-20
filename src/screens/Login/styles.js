@@ -16,7 +16,7 @@ export default {
   logo: {
     flex: 1,
     resizeMode: 'contain',
-    height: 50,
+    height: 200,
   },
   formContainer: {
     flex: 2,

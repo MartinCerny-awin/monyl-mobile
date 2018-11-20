@@ -22,7 +22,7 @@ export default {
   logo: {
     flex: 1,
     resizeMode: 'contain',
-    height: 50,
+    height: 200,
   },
   btnContainer: {
     flex: 2,
