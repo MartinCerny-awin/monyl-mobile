@@ -9,12 +9,10 @@ import Walkthrough from './Walkthrough';
 import Story from './Story';
 import Home from './Home';
 import SideBar from './SideBar';
-import Feedback from './Feedback';
 
 const Drawer = createDrawerNavigator(
   {
     Home: { screen: Home },
-    Feedback: { screen: Feedback },
   },
   {
     initialRouteName: 'Home',
