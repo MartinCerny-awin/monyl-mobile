@@ -8,7 +8,7 @@ import ForgotPassword from './ForgotPassword';
 import Walkthrough from './Walkthrough';
 import Story from './Story';
 import Home from './Home';
-import Sidebar from './Sidebar';
+import SideBar from './SideBar';
 import Feedback from './Feedback';
 
 const Drawer = createDrawerNavigator(
@@ -18,7 +18,7 @@ const Drawer = createDrawerNavigator(
   },
   {
     initialRouteName: 'Home',
-    contentComponent: props => <Sidebar {...props} />,
+    contentComponent: props => <SideBar {...props} />,
   },
 );
 
