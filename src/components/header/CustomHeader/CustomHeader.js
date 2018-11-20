@@ -17,7 +17,7 @@ type Props = {
 const CustomHeader = (props: Props) => {
   const { navigation: { openDrawer } } = props;
   return (
-    <Header hasTabs={props.hasTabs}>
+    <Header hasTabs={props.hasTabs} style={styles.header}>
       <Left>
         {openDrawer && (
           <Button transparent onPress={() => openDrawer()}>
