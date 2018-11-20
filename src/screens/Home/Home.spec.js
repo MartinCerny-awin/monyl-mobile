@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import data from './data';
 
-import Cards from './Cards';
+import Home from './Home';
 
 const openDrawer = jest.fn();
 const navigation = {
@@ -11,19 +11,19 @@ const navigation = {
 };
 const dispatch = jest.fn();
 
-describe('Login Screen', () => {
+describe('Home', () => {
   beforeAll(() => {
     dispatch.mockClear();
   });
 
   it('renders correctly', () => {
-    const wrapper = shallow(<Cards navigation={navigation} />);
+    const wrapper = shallow(<Home navigation={navigation} />);
 
     expect(wrapper).toHaveLength(1);
   });
 
   it('renders deck swipper', () => {
-    const wrapper = shallow(<Cards navigation={navigation} />).shallow();
+    const wrapper = shallow(<Home navigation={navigation} />).shallow();
     const deckSwiper = wrapper.find('Styled(DeckSwiper)');
     const innerWrapper = shallow(deckSwiper.prop('renderItem')(data[0]));
     const defaultSource = innerWrapper.find('Styled(Thumbnail)').prop('source');

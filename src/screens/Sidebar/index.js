@@ -33,7 +33,7 @@ const SideBar = (props: Props) => {
           <ListItem
             button
             onPress={() => {
-              navigation.navigate('Cards');
+              navigation.navigate('Home');
             }}
             iconLeft
             style={styles.links}

@@ -32,13 +32,13 @@ describe('Login Screen', () => {
     expect(Toast.show).toHaveBeenCalled();
   });
 
-  it('navigates to Cards when form is valid', () => {
+  it('navigates to Home when form is valid', () => {
     const wrapper = shallow(<Login navigation={navigation} valid />);
 
     const button = wrapper.find({ jest: 'login' });
     button.simulate('press');
 
-    expect(navigate).toHaveBeenCalledWith('Cards');
+    expect(navigate).toHaveBeenCalledWith('Home');
   });
 
   it('navigates to sign up', () => {

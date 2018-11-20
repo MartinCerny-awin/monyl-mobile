@@ -25,7 +25,7 @@ type Props = {
 class Login extends Component<Props> {
   submit = () => {
     if (this.props.valid) {
-      this.props.navigation.navigate('Cards');
+      this.props.navigation.navigate('Home');
     } else {
       Toast.show({
         text: i18n._(t`Enter username and password`),

@@ -29,7 +29,7 @@ type Props = {
   navigation: NavigationScreenProp<{}>,
 };
 
-class Cards extends React.Component<Props> {
+class Home extends React.Component<Props> {
   customDeckSwiper: DeckSwiperType
 
   render() {
@@ -84,4 +84,4 @@ class Cards extends React.Component<Props> {
   }
 }
 
-export default Cards;
+export default Home;
