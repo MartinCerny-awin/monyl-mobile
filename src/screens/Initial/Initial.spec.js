@@ -25,7 +25,7 @@ describe('Initial Screen', () => {
     expect(wrapper).toHaveLength(1);
   });
 
-  it.only('changes language', () => {
+  it('changes language', () => {
     const wrapper = shallow(<Initial dispatch={dispatch} currentLocale="en" />);
 
     wrapper.find(ActionSheetPicker).simulate('change', 'cs');

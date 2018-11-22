@@ -10,11 +10,10 @@ const navigate = jest.fn();
 const navigation = {
   navigate,
 };
-const dispatch = jest.fn();
 
 describe('Login Screen', () => {
-  beforeAll(() => {
-    dispatch.mockClear();
+  beforeEach(() => {
+    navigate.mockClear();
   });
 
   it('renders correctly', () => {

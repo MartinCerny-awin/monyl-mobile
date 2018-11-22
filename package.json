@@ -16,6 +16,7 @@
     "i18n:compile": "lingui compile"
   },
   "dependencies": {
+    "@babel/runtime": "^7.1.5",
     "@lingui/react": "2.7.2",
     "color": "3.0.0",
     "jest-cli": "23.6.0",

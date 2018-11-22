@@ -29,7 +29,7 @@ export default (variables = variable) => {
         borderColor: variables.inputErrorBorderColor,
       },
       paddingLeft: 5,
-      borderWidth: variables.borderWidth,
+      // borderWidth: variables.borderWidth,
       borderTopWidth: 0,
       borderRightWidth: 0,
       borderLeftWidth: 0,
@@ -43,7 +43,7 @@ export default (variables = variable) => {
         borderColor: variables.inputErrorBorderColor,
       },
       paddingLeft: 5,
-      borderWidth: variables.borderWidth,
+      // borderWidth: variables.borderWidth,
       borderColor: variables.inputBorderColor,
     },
     '.rounded': {
@@ -54,7 +54,7 @@ export default (variables = variable) => {
         borderColor: variables.inputErrorBorderColor,
       },
       paddingLeft: 5,
-      borderWidth: variables.borderWidth,
+      // borderWidth: variables.borderWidth,
       borderRadius: variables.inputGroupRoundedBorderRadius,
       borderColor: variables.inputBorderColor,
     },
@@ -74,7 +74,7 @@ export default (variables = variable) => {
         borderColor: variables.inputSuccessBorderColor,
       },
       '.underline': {
-        borderWidth: variables.borderWidth,
+        // borderWidth: variables.borderWidth,
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderLeftWidth: 0,
@@ -98,7 +98,7 @@ export default (variables = variable) => {
         borderColor: variables.inputErrorBorderColor,
       },
       '.underline': {
-        borderWidth: variables.borderWidth,
+        // borderWidth: variables.borderWidth,
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderLeftWidth: 0,
@@ -116,7 +116,7 @@ export default (variables = variable) => {
     },
 
     paddingLeft: 5,
-    borderWidth: variables.borderWidth,
+    // borderWidth: variables.borderWidth,
     borderTopWidth: 0,
     borderRightWidth: 0,
     borderLeftWidth: 0,

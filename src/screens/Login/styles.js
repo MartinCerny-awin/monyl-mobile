@@ -24,7 +24,13 @@ export default {
     justifyContent: 'center',
     alignItems: 'flex-end',
   },
+  innerFormContainer: {
+    flex: 1,
+    margin: 20,
+    justifyContent: 'center',
+  },
   bottomLinksContainer: {
+    justifyContent: 'center',
     paddingTop: 15,
     paddingBottom: 20,
     flexDirection: 'row',

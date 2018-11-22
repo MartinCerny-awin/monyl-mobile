@@ -27,13 +27,17 @@ const InputField = (props: Props) => {
     <View>
       <Item error={error && touched} rounded style={styles.inputGroup}>
         {icon && <Icon active name={icon} />}
-        <Input placeholder={label} secureTextEntry={secureTextEntry} {...input} />
-        {touched
-          && error && (
-            <Text jest="errorMessage" style={styles.error}>
-              {error}
-            </Text>
-        )}
+        <View style={styles.inputWrapper}>
+          <Input
+            style={styles.inputStyle}
+            placeholder={label}
+            secureTextEntry={secureTextEntry}
+            {...input}
+          />
+          <Text style={styles.error}>
+            {touched && error ? error : ''}
+          </Text>
+        </View>
       </Item>
     </View>
   );

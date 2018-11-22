@@ -56,7 +56,7 @@ class Login extends Component<Props> {
               <Image source={require('../../../assets/header-logo.png')} style={styles.logo} />
             </View>
             <View style={styles.formContainer}>
-              <View>
+              <View style={styles.innerFormContainer}>
                 <Field
                   name="email"
                   label={i18n._(t`Email`)}
