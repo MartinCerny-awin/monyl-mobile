@@ -7,7 +7,7 @@ import SignUp from './SignUp';
 import ForgotPassword from './ForgotPassword';
 import Walkthrough from './Walkthrough';
 import Home from './Home';
-import SideBar from './SideBar';
+import SideBar from '../components/menu/SideBar';
 
 const Drawer = createDrawerNavigator(
   {
