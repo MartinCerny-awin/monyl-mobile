@@ -2,7 +2,7 @@
 
 import { Platform } from 'react-native';
 
-import commonColor from '../../theme/variables/commonColor';
+import commonColor from '../../../theme/variables/commonColor';
 
 export default {
   links: {

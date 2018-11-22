@@ -9,7 +9,7 @@ import {
 } from 'native-base';
 import type { NavigationScreenProp } from 'react-navigation';
 
-import styles from './style';
+import styles from './styles';
 
 const resetAction = StackActions.reset({
   index: 0,
