@@ -1,14 +1,10 @@
 // @flow
 
-// import get from "lodash/get";
-// import isFunction from "lodash/isFunction";
 import { t } from '@lingui/macro';
 
 import i18n from '../i18n';
 
 const isEmpty = value => value === undefined || value === null || value === '';
-// const join = rules => (value, data) =>
-//   rules.map(rule => rule(value, data)).filter(error => !!error)[0];
 
 export function required(value: string | number) {
   if (isEmpty(value)) {
@@ -27,21 +23,6 @@ export function email(value: string) {
   return '';
 }
 
-// export function price(value) {
-//   if (!isEmpty(value)) {
-//     if (value.length >= 10) {
-//       return "Maximum allowed Price is 99999999.99";
-//     } else if (/^\d+,\d+$/.test(value)) {
-//       return "Use . instead of , in Price";
-//     } else if (!/^\d+\.?\d*$/.test(value)) {
-//       return "Price must be digits";
-//     } else if (!/^\d+\.?\d?\d?$/.test(value)) {
-//       return "Price may have only two digits after a decimal point";
-//     }
-//   }
-//   return "";
-// }
-
 export function url(str: string) {
   if (!str) {
     return '';
@@ -51,14 +32,6 @@ export function url(str: string) {
   const pattern = /^(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9]{2,256}\.[a-z‌A-Z​]{2,6}(\.[a-z‌A-Z​]{2,6})?/g;
   return pattern.test(str) ? '' : i18n._(t`Invalid Url`);
 }
-
-// // used to validate checkbox
-// export function checked(value) {
-//   if (isEmpty(value) || value === 0) {
-//     return "Required";
-//   }
-//   return "";
-// }
 
 export function minLength(min: number) {
   return (value: string) => {
@@ -86,46 +59,3 @@ export function equalWith(field: string, label: string) {
     return '';
   };
 }
-
-// export function integer(value) {
-//   if (!Number.isInteger(Number(value))) {
-//     return "Must be number";
-//   }
-//   return "";
-// }
-
-export function alphaNumeric(value: string) {
-  if (!isEmpty(value) && /[^a-zA-Z0-9 ]/i.test(value)) {
-    return i18n._(t`Only alphanumeric characters`);
-  }
-  return '';
-}
-
-// export function oneOf(enumeration) {
-//   return value => {
-//     // Originally if (!~enumeration.indexOf(value)) {
-//     if (enumeration.indexOf(value) === -1) {
-//       return `Must be one of: ${enumeration.join(", ")}`;
-//     }
-//     return "";
-//   };
-// }
-
-// export function match(field) {
-//   return (value, data) => {
-//     if (data && value !== data[field]) {
-//       return "Do not match";
-//     }
-//     return "";
-//   };
-// }
-
-// export function regx(pattern, options, error) {
-//   return value => {
-//     const exp = new RegExp(pattern, options);
-//     if (!exp.test(value)) {
-//       return error || "Pattern do not match.";
-//     }
-//     return "";
-//   };
-// }

@@ -11,7 +11,7 @@ const navigation = {
 };
 const dispatch = jest.fn();
 
-describe('Home', () => {
+describe('Home (Screen)', () => {
   beforeAll(() => {
     dispatch.mockClear();
   });
@@ -29,5 +29,26 @@ describe('Home', () => {
     const defaultSource = innerWrapper.find('Styled(Thumbnail)').prop('source');
 
     expect(defaultSource).toEqual({ testUri: '../../../assets/photos/scene.jpg' });
+  });
+
+  it('swipes', () => {
+    const wrapper = shallow(<Home navigation={navigation} />);
+    const instance = wrapper.instance();
+    const swipeLeft = jest.fn();
+    const swipeRight = jest.fn();
+    instance.customDeckSwiper = {
+      _root: {
+        swipeLeft,
+        swipeRight,
+      },
+    };
+    const swipeLeftButton = wrapper.shallow().find('Styled(Button)').at(0);
+    swipeLeftButton.simulate('press');
+    expect(swipeLeft).toBeCalled();
+
+    expect(swipeRight).not.toBeCalled();
+    const swipeRightButton = wrapper.shallow().find('Styled(Button)').at(1);
+    swipeRightButton.simulate('press');
+    expect(swipeRight).toBeCalled();
   });
 });

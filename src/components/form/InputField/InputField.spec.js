@@ -6,8 +6,16 @@ import styles from './styles';
 import InputField from './InputField';
 
 describe('InputField Component', () => {
+  it('renders without meta', () => {
+    const wrapper = shallow(<InputField />);
+    const errorMessage = wrapper.find({ style: styles.error });
+
+    expect(wrapper).toHaveLength(1);
+    expect(errorMessage.prop('children')).toBe('');
+  });
+
   it('renders without icon', () => {
-    const meta = { touched: false, error: 'Big Error' };
+    const meta = { touched: false, error: '' };
     const wrapper = shallow(<InputField meta={meta} />);
     const iconWrapper = wrapper.find(Icon);
 
@@ -29,7 +37,6 @@ describe('InputField Component', () => {
     const meta = { touched: false, error: 'Big Error' };
 
     const wrapper = shallow(<InputField meta={meta} />);
-
     const errorMessage = wrapper.find({ style: styles.error });
 
     expect(wrapper).toHaveLength(1);
@@ -41,7 +48,6 @@ describe('InputField Component', () => {
     const meta = { touched: true, error: '' };
 
     const wrapper = shallow(<InputField meta={meta} />);
-
     const errorMessage = wrapper.find({ style: styles.error });
 
     expect(wrapper).toHaveLength(1);
@@ -52,7 +58,6 @@ describe('InputField Component', () => {
     const meta = { touched: true, error: 'Big Error' };
 
     const wrapper = shallow(<InputField meta={meta} />);
-
     const errorMessage = wrapper.find({ style: styles.error });
 
     expect(wrapper).toHaveLength(1);

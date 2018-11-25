@@ -17,7 +17,7 @@ export default (props: Props) => (
       style={style.button}
     >
       {Object.keys(props.options).map(locale => (
-        <Picker.Item label={props.options[locale]} value={locale} />
+        <Picker.Item key={locale} label={props.options[locale]} value={locale} />
       ))}
     </Picker>
   </View>

@@ -18,7 +18,7 @@ import {
   View,
 } from 'native-base';
 import { Trans } from '@lingui/macro';
-import type { DeckSwiper as DeckSwiperType } from 'native-base';
+import type { DeckSwiper as DeckSwiperFlowType } from 'native-base';
 import type { NavigationScreenProp } from 'react-navigation';
 
 import CustomHeader from '../../components/header/CustomHeader';
@@ -30,7 +30,7 @@ type Props = {
 };
 
 class Home extends React.Component<Props> {
-  customDeckSwiper: DeckSwiperType
+  customDeckSwiper: DeckSwiperFlowType
 
   render() {
     const { navigation } = this.props;

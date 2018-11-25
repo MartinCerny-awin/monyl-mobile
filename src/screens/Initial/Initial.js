@@ -11,7 +11,7 @@ import type { NavigationScreenProp } from 'react-navigation';
 
 import ActionSheetPicker from '../../components/ActionSheetPicker';
 import type { LocalesActions } from '../../reducers/localesReducer';
-import { updateLocale } from '../../reducers/localesReducer';
+import { localesActions } from '../../reducers/localesReducer';
 import styles from './styles';
 
 type Props = {
@@ -22,7 +22,7 @@ type Props = {
 
 class Login extends Component<Props> {
   changeLocale = (value: string) => {
-    this.props.dispatch(updateLocale(value));
+    this.props.dispatch(localesActions.updateLocale(value));
   };
 
   navigateSignUp = () => {

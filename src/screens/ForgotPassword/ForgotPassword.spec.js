@@ -11,7 +11,7 @@ const navigation = {
   goBack,
 };
 
-describe('ForgotPassword Screen', () => {
+describe('ForgotPassword (Screen)', () => {
   it('renders correctly', () => {
     const wrapper = shallow(<ForgotPassword />);
 

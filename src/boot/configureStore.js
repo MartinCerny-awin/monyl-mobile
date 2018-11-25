@@ -6,6 +6,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { persistStore, persistCombineReducers } from 'redux-persist';
 import thunk from 'redux-thunk';
 
+import type { StoreFlowType } from '../reducers/index';
+
 import reducers from '../reducers';
 
 const persistConfig = {
@@ -15,8 +17,7 @@ const persistConfig = {
 
 const persistedReducer = persistCombineReducers(persistConfig, reducers);
 
-export default function configureStore(): any {
-  const preloadedState = {};
+export default function configureStore(preloadedState: StoreFlowType = {}): any {
   const enhancer = compose(
     applyMiddleware(thunk),
     devTools({

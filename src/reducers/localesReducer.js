@@ -3,12 +3,14 @@
 import i18n from '../utils/i18n';
 import type { ExtractReturn } from '../types';
 
-const UPDATE_LANGUAGE = 'UPDATE_LANGUAGE';
+export const types = {
+  UPDATE_LANGUAGE: 'UPDATE_LANGUAGE',
+};
 
-export const updateLocale = (currentLocale: string) => {
+const updateLocale = (currentLocale: string) => {
   i18n.activate(currentLocale);
   return {
-    type: UPDATE_LANGUAGE,
+    type: types.UPDATE_LANGUAGE,
     payload: {
       currentLocale,
     },
@@ -16,10 +18,12 @@ export const updateLocale = (currentLocale: string) => {
 };
 
 export type UpdateLocaleAction = ExtractReturn<typeof updateLocale>;
-
 export type LocalesActions =
   | UpdateLocaleAction;
 
+export const localesActions = {
+  updateLocale,
+};
 
 export const initialState = {
   currentLocale: 'cs',
@@ -29,9 +33,12 @@ export type LocalesStoreFlowType = {
   currentLocale: string,
 }
 
-export default (state: LocalesStoreFlowType = initialState, action: LocalesActions) => {
+export default (
+  state: LocalesStoreFlowType = initialState,
+  action: $Shape<LocalesActions> = {},
+) => {
   switch (action.type) {
-    case UPDATE_LANGUAGE:
+    case types.UPDATE_LANGUAGE:
       return {
         ...state,
         currentLocale: action.payload.currentLocale,

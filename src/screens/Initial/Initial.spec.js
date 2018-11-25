@@ -3,30 +3,33 @@ import { shallow } from 'enzyme';
 
 import i18n from '../../utils/i18n';
 import ActionSheetPicker from '../../components/ActionSheetPicker';
+import configureStore from '../../boot/configureStore';
 
 const activate = jest.spyOn(i18n, 'activate');
 
-const Initial = require('./Initial').default;
+const Initial = require('./index').default;
 
 const navigate = jest.fn();
 const navigation = {
   navigate,
 };
-const dispatch = jest.fn();
+let dispatch;
+let store;
 
 describe('Initial Screen', () => {
   beforeAll(() => {
-    dispatch.mockClear();
+    ({ store } = configureStore({ locales: { currentLocale: 'en' } }));
+    dispatch = jest.spyOn(store, 'dispatch');
   });
 
   it('renders correctly', () => {
-    const wrapper = shallow(<Initial />);
+    const wrapper = shallow(<Initial store={store} />).shallow();
 
     expect(wrapper).toHaveLength(1);
   });
 
   it('changes language', () => {
-    const wrapper = shallow(<Initial dispatch={dispatch} currentLocale="en" />);
+    const wrapper = shallow(<Initial store={store} navigation={navigation} />).shallow();
 
     wrapper.find(ActionSheetPicker).simulate('change', 'cs');
 
@@ -42,7 +45,7 @@ describe('Initial Screen', () => {
   });
 
   it('navigates to sign up', () => {
-    const wrapper = shallow(<Initial navigation={navigation} />);
+    const wrapper = shallow(<Initial store={store} navigation={navigation} />).shallow();
 
     const skipButton = wrapper.find({ jest: 'signUp' });
     skipButton.simulate('press');
@@ -51,7 +54,7 @@ describe('Initial Screen', () => {
   });
 
   it('navigates to forgot password', () => {
-    const wrapper = shallow(<Initial navigation={navigation} />);
+    const wrapper = shallow(<Initial store={store} navigation={navigation} />).shallow();
 
     const skipButton = wrapper.find({ jest: 'login' });
     skipButton.simulate('press');
