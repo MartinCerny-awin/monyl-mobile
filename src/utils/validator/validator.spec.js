@@ -42,7 +42,7 @@ describe('validator test', () => {
     expect(validator.url('https://www.monyl.com')).toEqual('');
     expect(validator.url('www.monyl.com')).toEqual('');
     expect(validator.url('')).toEqual('');
-    expect(validator.url('ht555://ab.com')).toEqual(i18n._(t`Invalid Url`));
+    expect(validator.url('ht555://ab.com')).toEqual(i18n._(t`Invalid URL`));
   });
 
   it('equalWith', () => {

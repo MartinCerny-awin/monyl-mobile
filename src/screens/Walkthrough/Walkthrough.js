@@ -41,7 +41,7 @@ class Walkthrough extends React.PureComponent<Props> {
               <Icon name="ios-thumbs-up-outline" style={styles.imageIcons} />
               <View>
                 <Text numberOfLines={3} style={Platform.OS === 'android' ? styles.aText : styles.iosText}>
-                  {i18n._(t`Join us in Monyl. The app of a future.`)}
+                  {i18n._(t`Join us in Karel. The app of a future.`)}
                 </Text>
               </View>
               <Button

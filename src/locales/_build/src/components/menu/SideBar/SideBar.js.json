@@ -1,0 +1,18 @@
+{
+  "<0>HOME</0>": {
+    "origin": [
+      [
+        "src/components/menu/SideBar/SideBar.js",
+        41
+      ]
+    ]
+  },
+  "<0>LOG OUT</0>": {
+    "origin": [
+      [
+        "src/components/menu/SideBar/SideBar.js",
+        53
+      ]
+    ]
+  }
+}

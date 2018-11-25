@@ -2,16 +2,16 @@
   "Swipe Left": {
     "origin": [
       [
-        "src/screens/Cards/Cards.js",
-        89
+        "src/screens/Home/Home.js",
+        74
       ]
     ]
   },
   "Swipe Right": {
     "origin": [
       [
-        "src/screens/Cards/Cards.js",
-        92
+        "src/screens/Home/Home.js",
+        77
       ]
     ]
   }

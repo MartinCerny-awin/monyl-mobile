@@ -1,6 +1,6 @@
 {
   "<0>CONTINUE TO APP</0>": {
-    "translation": "",
+    "translation": "<0>POKRAČOVAT DO APLIKACE</0>",
     "origin": [
       [
         "src/screens/Walkthrough/Walkthrough.js",
@@ -8,8 +8,26 @@
       ]
     ]
   },
+  "<0>HOME</0>": {
+    "translation": "<0>Domů</0>",
+    "origin": [
+      [
+        "src/components/menu/SideBar/SideBar.js",
+        41
+      ]
+    ]
+  },
+  "<0>LOG OUT</0>": {
+    "translation": "Odhlásit",
+    "origin": [
+      [
+        "src/components/menu/SideBar/SideBar.js",
+        53
+      ]
+    ]
+  },
   "<0>SKIP TOUR</0>": {
-    "translation": "",
+    "translation": "<0>PŘESKOČIT</0>",
     "origin": [
       [
         "src/screens/Walkthrough/Walkthrough.js",
@@ -22,16 +40,16 @@
     ]
   },
   "Cancel": {
-    "translation": "",
+    "translation": "Zrušit",
     "origin": [
       [
-        "src/components/ActionSheetPicker/index.ios.js",
+        "src/components/ActionSheetPicker/ActionSheetPicker.ios.js",
         22
       ]
     ]
   },
   "Continue": {
-    "translation": "",
+    "translation": "Pokračovat",
     "origin": [
       [
         "src/screens/SignUp/SignUp.js",
@@ -40,15 +58,15 @@
     ]
   },
   "Create account": {
-    "translation": "Vytvoř účet",
+    "translation": "Vytvořit účet",
     "origin": [
       [
         "src/screens/Initial/Initial.js",
-        60
+        61
       ],
       [
         "src/screens/Login/Login.js",
-        82
+        83
       ],
       [
         "src/screens/SignUp/SignUp.js",
@@ -61,11 +79,11 @@
     "origin": [
       [
         "src/screens/ForgotPassword/ForgotPassword.js",
-        48
+        49
       ],
       [
         "src/screens/Login/Login.js",
-        61
+        62
       ],
       [
         "src/screens/SignUp/SignUp.js",
@@ -74,11 +92,11 @@
     ]
   },
   "Enter Valid Email": {
-    "translation": "",
+    "translation": "Zadej platný email",
     "origin": [
       [
         "src/screens/ForgotPassword/ForgotPassword.js",
-        28
+        29
       ]
     ]
   },
@@ -87,12 +105,12 @@
     "origin": [
       [
         "src/screens/Login/Login.js",
-        30
+        31
       ]
     ]
   },
   "Everything is synchronized into the cloud. There is nothing to worry about.": {
-    "translation": "",
+    "translation": "Všechno je synchronizováno do cloudu. Není třeba se o nic starat.",
     "origin": [
       [
         "src/screens/Walkthrough/Walkthrough.js",
@@ -101,7 +119,7 @@
     ]
   },
   "First name": {
-    "translation": "",
+    "translation": "Jméno",
     "origin": [
       [
         "src/screens/SignUp/SignUp.js",
@@ -114,16 +132,16 @@
     "origin": [
       [
         "src/screens/Login/Login.js",
-        90
+        91
       ]
     ]
   },
   "Girl": {
-    "translation": "",
+    "translation": "Slečna",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        15
+        "src/screens/Home/data.js",
+        17
       ]
     ]
   },
@@ -132,54 +150,30 @@
     "origin": [
       [
         "src/screens/Initial/Initial.js",
-        72
+        73
       ]
     ]
   },
-  "Invalid Url": {
-    "translation": "",
+  "Invalid URL": {
+    "translation": "Neplatná URL",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        52
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        45
+        "src/utils/validator/index.js",
+        33
       ]
     ]
   },
   "Invalid email address": {
-    "translation": "Neplatný email",
+    "translation": "Neplatná emailová adresa",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        25
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        31
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        32
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        33
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        34
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        35
+        "src/utils/validator/index.js",
+        21
       ]
     ]
   },
-  "Join us in Monyl. The app of a future.": {
-    "translation": "",
+  "Join us in Karel. The app of a future.": {
+    "translation": "Přidej se k nám, k aplikaci budoucnosti.",
     "origin": [
       [
         "src/screens/Walkthrough/Walkthrough.js",
@@ -188,7 +182,7 @@
     ]
   },
   "Just one swipe and you are with us.": {
-    "translation": "",
+    "translation": "Pouze jedno kliknutí a jsi s námi.",
     "origin": [
       [
         "src/screens/Walkthrough/Walkthrough.js",
@@ -197,16 +191,16 @@
     ]
   },
   "Korean girl": {
-    "translation": "Korejska slecna",
+    "translation": "Korejska slečna",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        13
+        "src/screens/Home/data.js",
+        15
       ]
     ]
   },
   "Last name": {
-    "translation": "",
+    "translation": "Příjmení",
     "origin": [
       [
         "src/screens/SignUp/SignUp.js",
@@ -219,79 +213,34 @@
     "origin": [
       [
         "src/screens/Login/Login.js",
-        77
-      ]
-    ]
-  },
-  "Must be at least 8 characters": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.spec.js",
-        16
+        78
       ]
     ]
   },
   "Must be at least {min} characters": {
-    "translation": "",
+    "translation": "Musí mít alespoň {min} znaků",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        66
-      ]
-    ]
-  },
-  "Must be matched with New password": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.spec.js",
-        51
-      ]
-    ]
-  },
-  "Must be matched with password": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.spec.js",
-        50
+        "src/utils/validator/index.js",
+        39
       ]
     ]
   },
   "Must be matched with {0}": {
-    "translation": "",
+    "translation": "Musí se shodovat s {0}",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        84
-      ]
-    ]
-  },
-  "Must be no more than 4 characters": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.spec.js",
-        26
+        "src/utils/validator/index.js",
+        57
       ]
     ]
   },
   "Must be no more than {max} characters": {
-    "translation": "",
+    "translation": "Nesmí být více než {max} znaků",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        75
-      ]
-    ]
-  },
-  "Only alphanumeric characters": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.js",
-        99
+        "src/utils/validator/index.js",
+        48
       ]
     ]
   },
@@ -300,7 +249,7 @@
     "origin": [
       [
         "src/screens/Login/Login.js",
-        70
+        71
       ],
       [
         "src/screens/SignUp/SignUp.js",
@@ -312,101 +261,85 @@
     "translation": "Povinné",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        15
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        9
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        10
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
+        "src/utils/validator/index.js",
         11
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        12
       ]
     ]
   },
   "Reset your password": {
-    "translation": "",
+    "translation": "Obnovit heslo",
     "origin": [
       [
         "src/screens/ForgotPassword/ForgotPassword.js",
-        40
+        41
       ]
     ]
   },
   "Rhodes": {
-    "translation": "",
+    "translation": "Rhodos",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        8
+        "src/screens/Home/data.js",
+        10
       ]
     ]
   },
   "Send email": {
-    "translation": "",
+    "translation": "Poslat email",
     "origin": [
       [
         "src/screens/ForgotPassword/ForgotPassword.js",
-        55
+        56
       ]
     ]
   },
   "Seoraksan National Park": {
-    "translation": "",
+    "translation": "Nárdoní park Seoraksan",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        14
+        "src/screens/Home/data.js",
+        16
       ]
     ]
   },
   "Sunset": {
-    "translation": "",
+    "translation": "Západ slunce",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        9
+        "src/screens/Home/data.js",
+        11
       ]
     ]
   },
   "Sunset on Greece island": {
-    "translation": "",
+    "translation": "Západ slunce na řeckém ostrově",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        7
+        "src/screens/Home/data.js",
+        9
       ]
     ]
   },
   "Swipe Left": {
-    "translation": "",
+    "translation": "Táhni doleva",
     "origin": [
       [
-        "src/screens/Cards/Cards.js",
-        89
+        "src/screens/Home/Home.js",
+        74
       ]
     ]
   },
   "Swipe Right": {
-    "translation": "",
+    "translation": "Táhni doprava",
     "origin": [
       [
-        "src/screens/Cards/Cards.js",
-        92
+        "src/screens/Home/Home.js",
+        77
       ]
     ]
   },
   "You have to fill all fields.": {
-    "translation": "",
+    "translation": "Musíte vyplnit všechny údaje.",
     "origin": [
       [
         "src/screens/SignUp/SignUp.js",

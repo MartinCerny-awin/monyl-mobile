@@ -2,48 +2,48 @@
   "Sunset on Greece island": {
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        7
+        "src/screens/Home/data.js",
+        9
       ]
     ]
   },
   "Rhodes": {
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        8
+        "src/screens/Home/data.js",
+        10
       ]
     ]
   },
   "Sunset": {
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        9
+        "src/screens/Home/data.js",
+        11
       ]
     ]
   },
   "Korean girl": {
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        13
+        "src/screens/Home/data.js",
+        15
       ]
     ]
   },
   "Seoraksan National Park": {
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        14
+        "src/screens/Home/data.js",
+        16
       ]
     ]
   },
   "Girl": {
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        15
+        "src/screens/Home/data.js",
+        17
       ]
     ]
   }

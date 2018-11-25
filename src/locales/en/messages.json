@@ -8,6 +8,24 @@
       ]
     ]
   },
+  "<0>HOME</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/menu/SideBar/SideBar.js",
+        41
+      ]
+    ]
+  },
+  "<0>LOG OUT</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/menu/SideBar/SideBar.js",
+        53
+      ]
+    ]
+  },
   "<0>SKIP TOUR</0>": {
     "translation": "",
     "origin": [
@@ -25,7 +43,7 @@
     "translation": "",
     "origin": [
       [
-        "src/components/ActionSheetPicker/index.ios.js",
+        "src/components/ActionSheetPicker/ActionSheetPicker.ios.js",
         22
       ]
     ]
@@ -44,11 +62,11 @@
     "origin": [
       [
         "src/screens/Initial/Initial.js",
-        60
+        61
       ],
       [
         "src/screens/Login/Login.js",
-        82
+        83
       ],
       [
         "src/screens/SignUp/SignUp.js",
@@ -61,11 +79,11 @@
     "origin": [
       [
         "src/screens/ForgotPassword/ForgotPassword.js",
-        48
+        49
       ],
       [
         "src/screens/Login/Login.js",
-        61
+        62
       ],
       [
         "src/screens/SignUp/SignUp.js",
@@ -78,7 +96,7 @@
     "origin": [
       [
         "src/screens/ForgotPassword/ForgotPassword.js",
-        28
+        29
       ]
     ]
   },
@@ -87,7 +105,7 @@
     "origin": [
       [
         "src/screens/Login/Login.js",
-        30
+        31
       ]
     ]
   },
@@ -114,7 +132,7 @@
     "origin": [
       [
         "src/screens/Login/Login.js",
-        90
+        91
       ]
     ]
   },
@@ -122,8 +140,8 @@
     "translation": "",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        15
+        "src/screens/Home/data.js",
+        17
       ]
     ]
   },
@@ -132,20 +150,16 @@
     "origin": [
       [
         "src/screens/Initial/Initial.js",
-        72
+        73
       ]
     ]
   },
-  "Invalid Url": {
+  "Invalid URL": {
     "translation": "",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        52
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        45
+        "src/utils/validator/index.js",
+        33
       ]
     ]
   },
@@ -153,32 +167,12 @@
     "translation": "",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        25
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        31
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        32
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        33
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        34
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        35
+        "src/utils/validator/index.js",
+        21
       ]
     ]
   },
-  "Join us in Monyl. The app of a future.": {
+  "Join us in Karel. The app of a future.": {
     "translation": "",
     "origin": [
       [
@@ -200,8 +194,8 @@
     "translation": "",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        13
+        "src/screens/Home/data.js",
+        15
       ]
     ]
   },
@@ -219,16 +213,7 @@
     "origin": [
       [
         "src/screens/Login/Login.js",
-        77
-      ]
-    ]
-  },
-  "Must be at least 8 characters": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.spec.js",
-        16
+        78
       ]
     ]
   },
@@ -236,26 +221,8 @@
     "translation": "",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        66
-      ]
-    ]
-  },
-  "Must be matched with New password": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.spec.js",
-        51
-      ]
-    ]
-  },
-  "Must be matched with password": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.spec.js",
-        50
+        "src/utils/validator/index.js",
+        39
       ]
     ]
   },
@@ -263,17 +230,8 @@
     "translation": "",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        84
-      ]
-    ]
-  },
-  "Must be no more than 4 characters": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.spec.js",
-        26
+        "src/utils/validator/index.js",
+        57
       ]
     ]
   },
@@ -281,17 +239,8 @@
     "translation": "",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        75
-      ]
-    ]
-  },
-  "Only alphanumeric characters": {
-    "translation": "",
-    "origin": [
-      [
-        "src/utils/validator/validator.js",
-        99
+        "src/utils/validator/index.js",
+        48
       ]
     ]
   },
@@ -300,7 +249,7 @@
     "origin": [
       [
         "src/screens/Login/Login.js",
-        70
+        71
       ],
       [
         "src/screens/SignUp/SignUp.js",
@@ -312,24 +261,8 @@
     "translation": "",
     "origin": [
       [
-        "src/utils/validator/validator.js",
-        15
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        9
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        10
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
+        "src/utils/validator/index.js",
         11
-      ],
-      [
-        "src/utils/validator/validator.spec.js",
-        12
       ]
     ]
   },
@@ -338,7 +271,7 @@
     "origin": [
       [
         "src/screens/ForgotPassword/ForgotPassword.js",
-        40
+        41
       ]
     ]
   },
@@ -346,8 +279,8 @@
     "translation": "",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        8
+        "src/screens/Home/data.js",
+        10
       ]
     ]
   },
@@ -356,7 +289,7 @@
     "origin": [
       [
         "src/screens/ForgotPassword/ForgotPassword.js",
-        55
+        56
       ]
     ]
   },
@@ -364,8 +297,8 @@
     "translation": "",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        14
+        "src/screens/Home/data.js",
+        16
       ]
     ]
   },
@@ -373,8 +306,8 @@
     "translation": "",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        9
+        "src/screens/Home/data.js",
+        11
       ]
     ]
   },
@@ -382,8 +315,8 @@
     "translation": "",
     "origin": [
       [
-        "src/screens/Cards/data.js",
-        7
+        "src/screens/Home/data.js",
+        9
       ]
     ]
   },
@@ -391,8 +324,8 @@
     "translation": "",
     "origin": [
       [
-        "src/screens/Cards/Cards.js",
-        89
+        "src/screens/Home/Home.js",
+        74
       ]
     ]
   },
@@ -400,8 +333,8 @@
     "translation": "",
     "origin": [
       [
-        "src/screens/Cards/Cards.js",
-        92
+        "src/screens/Home/Home.js",
+        77
       ]
     ]
   },

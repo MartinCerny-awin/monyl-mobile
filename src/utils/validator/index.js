@@ -30,7 +30,7 @@ export function url(str: string) {
   // disable eslint no-irregular-whitespace for regex doesn't work
   // eslint-disable-next-line no-irregular-whitespace
   const pattern = /^(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9]{2,256}\.[a-z‌A-Z​]{2,6}(\.[a-z‌A-Z​]{2,6})?/g;
-  return pattern.test(str) ? '' : i18n._(t`Invalid Url`);
+  return pattern.test(str) ? '' : i18n._(t`Invalid URL`);
 }
 
 export function minLength(min: number) {

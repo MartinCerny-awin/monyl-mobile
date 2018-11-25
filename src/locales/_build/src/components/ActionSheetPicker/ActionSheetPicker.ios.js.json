@@ -2,7 +2,7 @@
   "Cancel": {
     "origin": [
       [
-        "src/components/ActionSheetPicker/index.ios.js",
+        "src/components/ActionSheetPicker/ActionSheetPicker.ios.js",
         22
       ]
     ]

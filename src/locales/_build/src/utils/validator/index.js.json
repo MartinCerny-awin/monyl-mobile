@@ -1,0 +1,50 @@
+{
+  "Required": {
+    "origin": [
+      [
+        "src/utils/validator/index.js",
+        11
+      ]
+    ]
+  },
+  "Invalid email address": {
+    "origin": [
+      [
+        "src/utils/validator/index.js",
+        21
+      ]
+    ]
+  },
+  "Invalid URL": {
+    "origin": [
+      [
+        "src/utils/validator/index.js",
+        33
+      ]
+    ]
+  },
+  "Must be at least {min} characters": {
+    "origin": [
+      [
+        "src/utils/validator/index.js",
+        39
+      ]
+    ]
+  },
+  "Must be no more than {max} characters": {
+    "origin": [
+      [
+        "src/utils/validator/index.js",
+        48
+      ]
+    ]
+  },
+  "Must be matched with {0}": {
+    "origin": [
+      [
+        "src/utils/validator/index.js",
+        57
+      ]
+    ]
+  }
+}
