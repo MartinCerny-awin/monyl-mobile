@@ -9,6 +9,7 @@ const deviceWidth = Dimensions.get('window').width;
 const platform = Platform.OS;
 const platformStyle = undefined;
 const isIphoneX = platform === 'ios' && deviceHeight === 812 && deviceWidth === 375;
+const brandPrimary = '#02bbdc';
 
 export default {
   platformStyle,
@@ -96,7 +97,7 @@ export default {
   checkboxTickColor: '#fff',
 
   // Color
-  brandPrimary: '#02bbdc',
+  brandPrimary,
   brandInfo: '#62B1F6',
   brandSuccess: '#5cb85c',
   brandDanger: '#d9534f',
@@ -132,7 +133,7 @@ export default {
 
   // Header
   toolbarBtnColor: platform === 'ios' ? '#02bbdc' : '#fff',
-  toolbarDefaultBg: platform === 'ios' ? '#F8F8F8' : '#3F51B5',
+  toolbarDefaultBg: platform === 'ios' ? '#F8F8F8' : brandPrimary,
   toolbarHeight: platform === 'ios' ? (isIphoneX ? 88 : 64) : 56,
   toolbarSearchIconSize: platform === 'ios' ? 20 : 23,
   toolbarInputColor: platform === 'ios' ? '#CECDD2' : '#fff',

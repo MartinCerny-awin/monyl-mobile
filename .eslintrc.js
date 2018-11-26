@@ -70,5 +70,7 @@ module.exports = {
     "react/destructuring-assignment": 0,
     "no-nested-ternary": 0,
     "import/prefer-default-export": 0,
+    // https://github.com/facebook/react-native/issues/10991
+    "react/prefer-stateless-function": 0,
   }
 }

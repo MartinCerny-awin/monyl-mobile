@@ -2,7 +2,7 @@
 
 export default {
   header: {
-    marginTop: -30,
+    // marginTop: -30,
   },
   imageHeader: {
     height: 55,

@@ -12,6 +12,7 @@ import type { NavigationScreenProp } from 'react-navigation';
 import ActionSheetPicker from '../../components/ActionSheetPicker';
 import type { LocalesActions } from '../../reducers/localesReducer';
 import { localesActions } from '../../reducers/localesReducer';
+
 import styles from './styles';
 
 type Props = {

@@ -3,6 +3,9 @@ import { shallow } from 'enzyme';
 import {
   StyleSheet, Text, View,
 } from 'react-native';
+import { t } from '@lingui/macro';
+
+import i18n from '../../utils/i18n';
 
 const showActionSheetWithOptions = jest.fn();
 jest.mock(
@@ -41,7 +44,7 @@ describe('ActionSheetPicker (Component)', () => {
 
     expect(showActionSheetWithOptions)
       .toHaveBeenCalledWith(
-        { cancelButtonIndex: 2, options: ['Cestina', 'English', 'Cancel'] },
+        { cancelButtonIndex: 2, options: ['Cestina', 'English', i18n._(t`Cancel`)] },
         expect.any(Function),
       );
   });

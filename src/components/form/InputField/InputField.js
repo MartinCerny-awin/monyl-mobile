@@ -15,32 +15,34 @@ type Props = {
   label: string,
 };
 
-const InputField = (props: Props) => {
-  const {
-    input, meta, icon, secureTextEntry, label,
-  } = props;
+class InputField extends React.Component<Props> {
+  render() {
+    const {
+      input, meta, icon, secureTextEntry, label,
+    } = this.props;
 
-  const touched = meta ? meta.touched : false;
-  const error = meta ? meta.error : false;
+    const touched = meta ? meta.touched : false;
+    const error = meta ? meta.error : false;
 
-  return (
-    <View>
-      <Item error={error && touched} rounded style={styles.inputGroup}>
-        {icon && <Icon active name={icon} />}
-        <View style={styles.inputWrapper}>
-          <Input
-            style={styles.inputStyle}
-            placeholder={label}
-            secureTextEntry={secureTextEntry}
-            {...input}
-          />
-          <Text style={styles.error}>
-            {touched && error ? error : ''}
-          </Text>
-        </View>
-      </Item>
-    </View>
-  );
-};
+    return (
+      <View>
+        <Item error={error && touched} rounded style={styles.inputGroup}>
+          {icon && <Icon active name={icon} />}
+          <View style={styles.inputWrapper}>
+            <Input
+              style={styles.inputStyle}
+              placeholder={label}
+              secureTextEntry={secureTextEntry}
+              {...input}
+            />
+            <Text style={styles.error}>
+              {touched && error ? error : ' '}
+            </Text>
+          </View>
+        </Item>
+      </View>
+    );
+  }
+}
 
 export default InputField;

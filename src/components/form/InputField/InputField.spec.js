@@ -11,7 +11,7 @@ describe('InputField Component', () => {
     const errorMessage = wrapper.find({ style: styles.error });
 
     expect(wrapper).toHaveLength(1);
-    expect(errorMessage.prop('children')).toBe('');
+    expect(errorMessage.prop('children')).toBe(' ');
   });
 
   it('renders without icon', () => {
@@ -40,7 +40,7 @@ describe('InputField Component', () => {
     const errorMessage = wrapper.find({ style: styles.error });
 
     expect(wrapper).toHaveLength(1);
-    expect(errorMessage.prop('children')).toBe('');
+    expect(errorMessage.prop('children')).toBe(' ');
   });
 
 
@@ -51,7 +51,7 @@ describe('InputField Component', () => {
     const errorMessage = wrapper.find({ style: styles.error });
 
     expect(wrapper).toHaveLength(1);
-    expect(errorMessage.prop('children')).toBe('');
+    expect(errorMessage.prop('children')).toBe(' ');
   });
 
   it('renders errors when touched', () => {

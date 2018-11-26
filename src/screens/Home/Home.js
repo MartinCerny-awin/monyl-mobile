@@ -38,7 +38,7 @@ class Home extends React.Component<Props> {
       <Container>
         <CustomHeader hasTabs navigation={navigation} />
 
-        <View>
+        <View style={{ height: 450 }}>
           <DeckSwiper
             ref={(c) => { this.customDeckSwiper = c; }}
             dataSource={data}
@@ -65,10 +65,7 @@ class Home extends React.Component<Props> {
           />
         </View>
 
-        <View style={{
-          flexDirection: 'row', flex: 1, position: 'absolute', bottom: 50, left: 0, right: 0, justifyContent: 'space-between', padding: 15,
-        }}
-        >
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingBottom: 10 }}>
           <Button onPress={() => this.customDeckSwiper._root.swipeLeft()}>
             <Icon name="arrow-back" />
             <Trans>Swipe Left</Trans>
