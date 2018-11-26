@@ -14,8 +14,9 @@ export default {
     width: '80%',
   },
   inputStyle: {
-    top: Platform.OS === 'ios' ? 20 : 28,
-    paddingTop: Platform.OS === 'ios' ? 13 : 0,
+    top: Platform.OS === 'ios' ? 24 : 28,
+    paddingTop: Platform.OS === 'ios' ? 4 : 0,
+    lineHeight: 20,
     paddingBottom: 20,
     marginTop: -20,
   },
