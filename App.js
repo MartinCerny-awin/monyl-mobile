@@ -16,14 +16,14 @@ const { store, persistor } = configureStore();
 const App = () => (
   <StyleProvider style={getTheme(variables)}>
     <Provider store={store}>
-      {/* $FlowFixMe language is passed inside i18n */}
-      <I18nProvider i18n={i18n} defaultRender={({ translation }) => <Text>{translation}</Text>}>
-        <PersistGate loading={null} persistor={persistor}>
+      <PersistGate loading={null} persistor={persistor}>
+        {/* $FlowFixMe language is passed inside i18n */}
+        <I18nProvider i18n={i18n} defaultRender={({ translation }) => <Text>{translation}</Text>}>
           <Root>
             <Navigator />
           </Root>
-        </PersistGate>
-      </I18nProvider>
+        </I18nProvider>
+      </PersistGate>
     </Provider>
   </StyleProvider>
 );

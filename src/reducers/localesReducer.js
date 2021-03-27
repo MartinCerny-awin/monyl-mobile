@@ -1,5 +1,5 @@
 // @flow
-
+import { REHYDRATE } from 'redux-persist';
 import i18n from '../utils/i18n';
 import type { ExtractReturn } from '../types';
 
@@ -38,6 +38,11 @@ export default (
   action: $Shape<LocalesActions> = {},
 ) => {
   switch (action.type) {
+    case REHYDRATE:
+      // $FlowFixMe uncommon situation
+      i18n.activate(action.payload.locales.currentLocale);
+      return state;
+
     case types.UPDATE_LANGUAGE:
       return {
         ...state,

@@ -23,8 +23,6 @@ import type { NavigationScreenProp } from 'react-navigation';
 
 import CustomHeader from '../../components/header/CustomHeader';
 
-import data from './data';
-
 type Props = {
   navigation: NavigationScreenProp<{}>,
 };
@@ -33,6 +31,7 @@ class Home extends React.Component<Props> {
   customDeckSwiper: DeckSwiperFlowType
 
   render() {
+    const data = require('./data').default;
     const { navigation } = this.props;
     return (
       <Container>

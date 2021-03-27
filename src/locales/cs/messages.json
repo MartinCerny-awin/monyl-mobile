@@ -62,7 +62,7 @@
     "origin": [
       [
         "src/screens/Initial/Initial.js",
-        61
+        62
       ],
       [
         "src/screens/Login/Login.js",
@@ -150,7 +150,7 @@
     "origin": [
       [
         "src/screens/Initial/Initial.js",
-        73
+        74
       ]
     ]
   },
@@ -191,7 +191,7 @@
     ]
   },
   "Korean girl": {
-    "translation": "Korejska slečna",
+    "translation": "Korejská slečna",
     "origin": [
       [
         "src/screens/Home/data.js",
@@ -318,14 +318,14 @@
         "src/screens/Home/data.js",
         9
       ]
-    ]
+    ],
   },
   "Swipe Left": {
     "translation": "Táhni doleva",
     "origin": [
       [
         "src/screens/Home/Home.js",
-        74
+        70
       ]
     ]
   },
@@ -334,7 +334,7 @@
     "origin": [
       [
         "src/screens/Home/Home.js",
-        77
+        73
       ]
     ]
   },

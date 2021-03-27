@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1543127384560" clover="3.2.0">
-  <project timestamp="1543127384560" name="All files">
-    <metrics statements="307" coveredstatements="303" conditionals="69" coveredconditionals="67" methods="77" coveredmethods="74" elements="453" coveredelements="444" complexity="0" loc="307" ncloc="307" packages="16" files="35" classes="35">
+<coverage generated="1543299948817" clover="3.2.0">
+  <project timestamp="1543299948817" name="All files">
+    <metrics statements="309" coveredstatements="305" conditionals="69" coveredconditionals="67" methods="79" coveredmethods="76" elements="457" coveredelements="448" complexity="0" loc="309" ncloc="309" packages="16" files="35" classes="35">
       <package name="boot">
-        <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <file name="configureStore.js" path="/Volumes/sites/monyl/src/boot/configureStore.js">
-          <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
           <line num="1" count="2" type="stmt"/>
           <line num="3" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
@@ -15,11 +15,12 @@
           <line num="11" count="2" type="stmt"/>
           <line num="13" count="2" type="stmt"/>
           <line num="18" count="2" type="stmt"/>
-          <line num="20" count="3" type="cond" truecount="4" falsecount="0"/>
-          <line num="21" count="3" type="stmt"/>
-          <line num="31" count="3" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="21" count="3" type="cond" truecount="4" falsecount="0"/>
+          <line num="22" count="3" type="stmt"/>
           <line num="32" count="3" type="stmt"/>
-          <line num="35" count="3" type="stmt"/>
+          <line num="33" count="3" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
         </file>
       </package>
       <package name="components.ActionSheetPicker">
@@ -62,19 +63,20 @@
         </file>
       </package>
       <package name="components.form.InputField">
-        <metrics statements="12" coveredstatements="12" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>
+        <metrics statements="13" coveredstatements="13" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
         <file name="InputField.js" path="/Volumes/sites/monyl/src/components/form/InputField/InputField.js">
-          <metrics statements="10" coveredstatements="10" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+          <metrics statements="11" coveredstatements="11" conditionals="12" coveredconditionals="12" methods="3" coveredmethods="3"/>
           <line num="1" count="5" type="stmt"/>
           <line num="3" count="5" type="stmt"/>
           <line num="4" count="5" type="stmt"/>
           <line num="8" count="5" type="stmt"/>
-          <line num="18" count="5" type="stmt"/>
-          <line num="21" count="6" type="stmt"/>
-          <line num="23" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="6" type="stmt"/>
+          <line num="22" count="6" type="stmt"/>
           <line num="24" count="6" type="cond" truecount="2" falsecount="0"/>
-          <line num="26" count="6" type="stmt"/>
-          <line num="46" count="5" type="stmt"/>
+          <line num="25" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="6" type="stmt"/>
+          <line num="45" count="5" type="stmt"/>
+          <line num="48" count="5" type="stmt"/>
         </file>
         <file name="index.js" path="/Volumes/sites/monyl/src/components/form/InputField/index.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -245,24 +247,24 @@
           <line num="6" count="2" type="stmt"/>
           <line num="7" count="2" type="stmt"/>
           <line num="24" count="2" type="stmt"/>
-          <line num="26" count="2" type="stmt"/>
-          <line num="32" count="3" type="stmt"/>
+          <line num="30" count="3" type="stmt"/>
+          <line num="33" count="3" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
           <line num="35" count="3" type="stmt"/>
           <line num="36" count="3" type="stmt"/>
-          <line num="37" count="3" type="stmt"/>
-          <line num="43" count="0" type="stmt"/>
-          <line num="45" count="1" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="68" count="1" type="stmt"/>
           <line num="72" count="1" type="stmt"/>
-          <line num="76" count="1" type="stmt"/>
-          <line num="84" count="2" type="stmt"/>
-          <line num="87" count="2" type="stmt"/>
+          <line num="80" count="2" type="stmt"/>
+          <line num="83" count="2" type="stmt"/>
         </file>
         <file name="data.js" path="/Volumes/sites/monyl/src/screens/Home/data.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="2" type="stmt"/>
-          <line num="5" count="2" type="stmt"/>
-          <line num="7" count="2" type="stmt"/>
-          <line num="18" count="2" type="stmt"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
         </file>
         <file name="index.js" path="/Volumes/sites/monyl/src/screens/Home/index.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -280,17 +282,17 @@
           <line num="7" count="2" type="stmt"/>
           <line num="12" count="2" type="stmt"/>
           <line num="14" count="2" type="stmt"/>
-          <line num="15" count="2" type="stmt"/>
-          <line num="23" count="12" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="26" count="4" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
-          <line num="30" count="4" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="34" count="4" type="stmt"/>
-          <line num="37" count="4" type="stmt"/>
-          <line num="80" count="2" type="stmt"/>
-          <line num="83" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="24" count="12" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="4" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="31" count="4" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="4" type="stmt"/>
+          <line num="38" count="4" type="stmt"/>
+          <line num="81" count="2" type="stmt"/>
+          <line num="84" count="2" type="stmt"/>
         </file>
         <file name="InitialContainer.js" path="/Volumes/sites/monyl/src/screens/Initial/InitialContainer.js">
           <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -427,7 +429,7 @@
         </file>
         <file name="index.js" path="/Volumes/sites/monyl/src/utils/i18n/index.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="1" count="93" type="stmt"/>
+          <line num="1" count="75" type="stmt"/>
           <line num="3" count="11" type="stmt"/>
         </file>
       </package>

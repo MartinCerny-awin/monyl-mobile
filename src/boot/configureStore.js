@@ -21,13 +21,12 @@ export default function configureStore(preloadedState: StoreFlowType = {}): any 
   const enhancer = compose(
     applyMiddleware(thunk),
     devTools({
-      name: 'flatapp',
+      name: 'karel',
       realtime: true,
     }),
   );
 
-  // https://github.com/rt2zz/redux-persist/issues/780
-  // $FlowFixMe
+  // $FlowFixMe https://github.com/rt2zz/redux-persist/issues/780
   const store = createStore(persistedReducer, preloadedState, enhancer);
   const persistor = persistStore(store);
   // persistor.purge();

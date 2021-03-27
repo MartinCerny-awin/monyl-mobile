@@ -1,4 +1,4 @@
-## React Native Flat App Theme v8.1.0 - React Native
+## Karel App Theme v1.0.0 - React Native
 
 Thanks for purchasing the React Native Flat App Theme.
 
